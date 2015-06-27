@@ -40,11 +40,12 @@ struct
   include Lwt_js_events
   let bind = async_loop
   let (>-) elt (event, f) =
-    bind event elt
-      (fun a b ->
-         let _ = f a b in
-         Lwt.return_unit
-      )
+    let _ =
+      bind event elt
+        (fun a b ->
+           let _ = f a b in
+           Lwt.return_unit
+        ) in elt
   
 end
 
