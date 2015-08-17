@@ -71,6 +71,10 @@ struct
   let find_opt container selector =
     Option.safe (find container selector)
 
+  let all () =
+    Dom_html.document ## getElementsByTagName (_s "*")
+    |> Dom.list_of_nodeList
+
   module Attribute =
   struct
     
@@ -156,6 +160,45 @@ struct
   
 end
 
+module Ajax = struct
+
+  let page file =
+    let open XmlHttpRequest in
+    get file >>= (fun frame ->
+        let code = frame.code
+        and message = frame.content in 
+        if code = 0 || code = 200
+        then Lwt.return (Some message)
+        else Lwt.return None
+      ) 
+  
+end
+
+module EHtml = struct
+
+  (* Extension of HTML *)
+
+  let dataInclude elt =
+    match Get.Data.get elt "include" with
+    | None -> Lwt.return_unit
+    | Some file ->
+      Ajax.page file >>= (
+        function 
+        | None -> Lwt.return_unit
+        | Some textNode ->
+          let _ = elt ## innerHTML <- _s textNode in
+          Lwt.return_unit
+        )
+  
+  let refresh_dom () =
+    List.iter begin
+      fun elt ->
+        let _ = dataInclude elt in
+        ()
+    end (Get.all ())
+  
+end
+
 
 module type APPLICATION = sig
   val initialize : unit -> unit
@@ -163,4 +206,12 @@ end
 
 module Application(F : APPLICATION) = struct
   let _ = Promise.(run onload F.initialize)
+end
+
+module EHtml_Application(F : APPLICATION) = struct
+  include EHtml
+  let initialize () =
+    let _ = refresh_dom ()
+    in F.initialize ()
+  let _ = Promise.(run onload initialize)
 end
