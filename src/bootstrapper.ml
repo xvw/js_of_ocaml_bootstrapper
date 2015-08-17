@@ -87,6 +87,15 @@ struct
         
   end
 
+  module Data =
+  struct
+
+    let get elt data =
+      let attr = "data-"^data in
+      Attribute.get elt attr
+    
+  end
+
     
 end
 
