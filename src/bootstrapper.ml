@@ -196,6 +196,7 @@ module EHtml = struct
         let _ = dataInclude elt in
         ()
     end (Get.all ())
+    |> Lwt.return
   
 end
 
@@ -211,7 +212,7 @@ end
 module EHtml_Application(F : APPLICATION) = struct
   include EHtml
   let initialize () =
-    let _ = refresh_dom ()
-    in F.initialize ()
+    let _ = refresh_dom () in
+    let _ = F.initialize () in Lwt.wakeup
   let _ = Promise.(run onload initialize)
 end
