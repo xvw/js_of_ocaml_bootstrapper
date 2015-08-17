@@ -70,6 +70,23 @@ struct
   let byId_opt id = Option.safe (byId id)
   let find_opt container selector =
     Option.safe (find container selector)
+
+  module Attribute =
+  struct
+    
+    let get elt attr =
+      let s_attr = _s attr in
+      if (elt ## hasAttribute (s_attr)) == Js._true
+      then
+        Some (
+          elt ## getAttribute (s_attr)
+          |> unopt
+          |> s_
+        )
+      else None
+        
+  end
+
     
 end
 
