@@ -52,7 +52,7 @@ struct
            Lwt.return_unit
         ) in elt
 
-  let rec continous ?(delay=1.0) f =
+  let rec delayed_loop ?(delay=1.0) f =
     let _ = f () in
     Lwt_js.sleep delay
     >>= (fun _ -> continous ~delay f)
