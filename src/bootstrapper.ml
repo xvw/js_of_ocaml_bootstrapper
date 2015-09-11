@@ -7,6 +7,7 @@ let ( >>= )   = Lwt.bind
 let _s        = Js.string
 let s_        = Js.to_string
 let alert x   = Dom_html.window ## alert (_s x)
+let log x     = Firebug.console ## log(x)
 
 module Option =
 struct
@@ -216,3 +217,4 @@ module EHtml_Application(F : APPLICATION) = struct
     let _ = F.initialize () in Lwt.wakeup
   let _ = Promise.(run onload initialize)
 end
+

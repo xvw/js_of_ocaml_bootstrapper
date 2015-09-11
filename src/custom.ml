@@ -1,19 +1,15 @@
 (* Sample *)
 module App =
-  Bootstrapper.EHtml_Application(
+  Bootstrapper.Application(
   struct
 
     open Bootstrapper
-
+        
     let initialize () =
-      let open Event in
+        
       let app = Get.byId "application" in
-      let btn = Input.create ~into:(Some app) "button" "Click" in
-      let _   =
-        btn >- (click, (fun _ _ ->
-            Firebug.console ## log (Get.find app "#title")
-          ))
-      in ()
+      Canvas.createIn app 640 480;
+      Canvas.fillAll "#1A2530"
       
   end
   )
