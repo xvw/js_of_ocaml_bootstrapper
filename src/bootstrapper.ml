@@ -51,7 +51,12 @@ struct
            let _ = f a b in
            Lwt.return_unit
         ) in elt
-  
+
+  let rec delayed_loop ?(delay=1.0) f =
+    let _ = f () in
+    Lwt_js.sleep delay
+    >>= (fun _ -> continous ~delay f)
+        
 end
 
 module Get =
@@ -79,32 +84,41 @@ struct
   let all () =
     Dom_html.document ## getElementsByTagName (_s "*")
     |> Dom.list_of_nodeList
-
-  module Attribute =
-  struct
     
-    let get elt attr =
-      let s_attr = _s attr in
-      if (elt ## hasAttribute (s_attr)) == Js._true
-      then
-        Some (
-          elt ## getAttribute (s_attr)
-          |> unopt
-          |> s_
-        )
-      else None
-        
-  end
+end
+
+module Attribute =
+struct
+
+  let get elt attr =
+    let s_attr = _s attr in
+    if (elt ## hasAttribute (s_attr)) == Js._true
+    then
+      Some (
+        elt ## getAttribute (s_attr)
+        |> Get.unopt
+        |> s_
+      )
+    else None
+
+
+  let set elt attr value =
+    let s_attr = _s attr
+    and s_value = _s value in
+    elt ## setAttribute(s_attr, s_value) 
 
   module Data =
   struct
-
+    
     let get elt data =
       let attr = "data-"^data in
-      Attribute.get elt attr
-    
-  end
+      get elt attr
 
+    let set elt data value =
+      let attr = "data-"^data in
+      set elt attr value
+        
+  end
     
 end
 
@@ -184,7 +198,7 @@ module EHtml = struct
   (* Extension of HTML *)
 
   let dataInclude elt =
-    match Get.Data.get elt "include" with
+    match Attribute.Data.get elt "include" with
     | None -> Lwt.return_unit
     | Some file ->
       Ajax.page file >>= (
