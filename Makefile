@@ -2,7 +2,7 @@ SRC       = src
 EXO       = examples
 BYTES     = bytes
 JSOUT     = js
-LIB       = bootstrapper.cmo color.cmo canvas.cmo
+LIB       = bootstrapper.cmo color.cmo canvas.cmo storage.cmo
 
 OCAMLFIND = ocamlfind ocamlc
 PACKAGES  = -package js_of_ocaml -package js_of_ocaml.syntax
@@ -22,6 +22,7 @@ lib:
 	$(COMPILER) -c $(SRC)/bootstrapper.ml
 	$(COMPILER) -c bootstrapper.cmo $(SRC)/color.ml
 	$(COMPILER) -c bootstrapper.cmo color.cmo $(SRC)/canvas.ml
+	$(COMPILER) -c $(SRC)/storage.ml
 
 %.byte: $(SRC)/%.ml init_bytes lib
 	$(COMPILER) -o $(BYTES)/$(@) $(LIB) $(<)
