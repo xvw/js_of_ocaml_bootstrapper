@@ -25,7 +25,8 @@ lib:
 	$(COMPILER) -c bootstrapper.cmo $(SRC)/color.mli
 	$(COMPILER) -c bootstrapper.cmo $(SRC)/color.ml
 	$(COMPILER) -c bootstrapper.cmo color.cmo $(SRC)/canvas.ml
-	$(COMPILER) -c $(SRC)/storage.ml
+	$(COMPILER) -c bootstrapper.cmo $(SRC)/storage.mli	
+	$(COMPILER) -c bootstrapper.cmo $(SRC)/storage.ml
 
 %.byte: $(SRC)/%.ml init_bytes lib
 	$(COMPILER) -o $(BYTES)/$(@) $(LIB) $(<)
