@@ -218,6 +218,16 @@ module EHtml = struct
 
   (* Extension of HTML *)
 
+  let mouse_trigger_of_string = function
+    | "click" -> Event.click
+    | "dblclick" -> Event.dblclick
+    | "mousedown" -> Event.mousedown
+    | "mouseup" -> Event.mouseup
+    | "mouseover" -> Event.mouseover
+    | "mousemove" -> Event.mousemove
+    | "mouseout" -> Event.mouseout
+    | _ -> Event.click
+
   let dataInclude elt =
     match Attribute.Data.get elt "include" with
     | None -> Lwt.return_unit
@@ -228,12 +238,27 @@ module EHtml = struct
         | Some textNode ->
           let _ = elt ## innerHTML <- _s textNode in
           Lwt.return_unit
-        )
-  
-  let refresh_dom () =
+      )
+
+  let mouse_event_bind h elt =
+    match Attribute.Data.(get elt "callback", get elt "trigger") with
+    | Some cb, Some tr ->
+      let open Event in
+      let _ =
+        try
+          let cl = List.assoc cb h in
+          elt >- (mouse_trigger_of_string tr, fun e _ -> cl (e##target))
+          |> ignore
+        with _ -> ()
+      in 
+      Lwt.return_unit
+    | _ -> Lwt.return_unit
+             
+  let refresh_dom h =
     List.iter begin
       fun elt ->
         let _ = dataInclude elt in
+        let _ = mouse_event_bind h elt in 
         ()
     end (Get.all ())
     |> Lwt.return
@@ -245,14 +270,20 @@ module type APPLICATION = sig
   val initialize : unit -> unit
 end
 
+
+module type EHTML_APPLICATION = sig
+  val registered_callback : (string * ('a -> unit)) list
+  val initialize : unit -> unit
+end
+
 module Application(F : APPLICATION) = struct
   let _ = Promise.(run onload F.initialize)
 end
 
-module EHtml_Application(F : APPLICATION) = struct
+module EHtml_Application(F : EHTML_APPLICATION) = struct
   include EHtml
   let initialize () =
-    let _ = refresh_dom () in
+    let _ = refresh_dom F.registered_callback in
     let _ = F.initialize () in Lwt.wakeup
   let _ = Promise.(run onload initialize)
 end

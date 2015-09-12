@@ -281,6 +281,18 @@ module type APPLICATION = sig
   val initialize : unit -> unit
 end
 
+
+(** The interface for application building using EHTML*)
+module type EHTML_APPLICATION = sig
+
+  (** An Hashtbl for callback registration *)
+  val registered_callback : (string * ('a -> unit)) list
+  
+  (** initialize is the entry point of an application *)
+  val initialize : unit -> unit
+end
+
+
 (** Make a simple application *)
 module Application :
   functor (F : APPLICATION) -> sig end 
@@ -303,4 +315,4 @@ module Application :
 
 (** Make an application using EHtml*)
 module EHtml_Application :
-  functor (F : APPLICATION) -> sig end 
+  functor (F : EHTML_APPLICATION) -> sig end 
