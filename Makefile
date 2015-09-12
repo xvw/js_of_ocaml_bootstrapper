@@ -55,4 +55,5 @@ clean_emacs:
 	rm -rf */\#*
 
 doc:
+		mkdir -p $(DOC)
 		eliomdoc -client -html -d $(DOC) -I src src/*.mli

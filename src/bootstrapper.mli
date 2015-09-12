@@ -107,5 +107,40 @@ module Get :
 sig
 
   (** All function for retreiving element from the DOM *)
+
+  (** @raise Element_not_found if no element are found*)
+  val fail : unit -> 'a
+
+  (** Try to extract a potential unset value
+      @raise Element_not_found if the retreiving is failed
+  *)
+  val unopt : 'a Js.Opt.t -> 'a
+
+  (** try to retreive a Dom element by his ID 
+      @raise Element_not_found if the element doesn't exist
+  *)
+  val byId : string -> Dom_html.element Js.t
+
+  (** try to retreive a Dom element using a QuerySelector
+      @raise Element_not_found if the element doesn't exist
+  *)
+  val find : Dom_html.element Js.t -> string -> Dom_html.element Js.t
+
+  (** Retreive a Dom elements list using a QuerySelector
+  *)
+  val select : Dom_html.element Js.t -> string -> Dom_html.element Js.t list
+
+  (** Same as [Get.byId] but wrap the result with an option instead of an 
+      exception
+  *)
+  val byId_opt : string -> Dom_html.element Js.t option
+
+  (** Same as [Get.find] but wrap the result with an option instead of an 
+      exception
+  *)
+  val find_opt : Dom_html.element Js.t -> string -> Dom_html.element Js.t option
+
+  (** Retreive all Dom elements as a list *)
+  val all : unit -> Dom_html.element Js.t list 
   
 end
