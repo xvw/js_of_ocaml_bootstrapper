@@ -144,3 +144,30 @@ sig
   val all : unit -> Dom_html.element Js.t list 
   
 end
+
+module Attribute :
+sig
+
+  (** Easy access to Dom's element's attributes *)
+
+  (** Try to get an argument of an element : 
+      [Attribute.get div "id"] (returns Some (id value))
+  *)
+  val get : Dom_html.element Js.t -> string -> string option
+
+  (** 
+     set a value to an attribute 
+     (an creates the attribute if it doesn't exists).
+     [Attribute.set div "id" "new_id"] change the id of [div]
+  *)
+  val set : Dom_html.element Js.t -> string -> string -> unit 
+
+  module Data :
+  sig
+
+    (** Shortcut for Data Attributes (data-attr) *)
+    
+  end
+  
+
+end

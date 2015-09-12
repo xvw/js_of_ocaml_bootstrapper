@@ -200,7 +200,7 @@ end
 
 module Ajax = struct
 
-  let page file =
+  let load file =
     let open XmlHttpRequest in
     get file >>= (fun frame ->
         let code = frame.code
@@ -220,7 +220,7 @@ module EHtml = struct
     match Attribute.Data.get elt "include" with
     | None -> Lwt.return_unit
     | Some file ->
-      Ajax.page file >>= (
+      Ajax.load file >>= (
         function 
         | None -> Lwt.return_unit
         | Some textNode ->
