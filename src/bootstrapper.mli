@@ -225,3 +225,38 @@ sig
   val text : ?into:((Dom_html.element Js.t) option) -> string -> Dom.text Js.t
 
 end
+
+
+module Input :
+sig
+
+  (** Shortcuts for inputs *)
+
+  (** Convert an abstract Dom element to a concrete Input *)
+  val from_element : Dom_html.element Js.t -> Dom_html.inputElement Js.t
+
+
+    (** try to retreive an Input by his ID 
+      @raise Element_not_found if the element doesn't exist
+  *)
+  val getById : string -> Dom_html.inputElement Js.t
+
+  (** Same as [Input.getById] but wrap the result with an option instead of an 
+      exception
+  *)
+  val getById_opt : string -> Dom_html.inputElement Js.t option
+
+  (** Retreive the value of an input*)
+  val valueOf : Dom_html.inputElement Js.t -> string
+
+  (** returns true if the input is checked, else false *)
+  val isChecked : Dom_html.inputElement Js.t -> bool
+
+  (** [Input.create input_type value] creates an input *)
+  val create :
+    ?id:string option ->
+    ?classes:string list ->
+    ?into:Dom_html.element Js.t option ->
+    string -> string -> Dom_html.inputElement Js.t
+  
+end
