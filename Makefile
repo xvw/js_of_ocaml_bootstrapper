@@ -24,6 +24,7 @@ lib:
 	$(COMPILER) -c $(SRC)/bootstrapper.ml
 	$(COMPILER) -c bootstrapper.cmo $(SRC)/color.mli
 	$(COMPILER) -c bootstrapper.cmo $(SRC)/color.ml
+	$(COMPILER) -c bootstrapper.cmo color.cmo $(SRC)/canvas.mli
 	$(COMPILER) -c bootstrapper.cmo color.cmo $(SRC)/canvas.ml
 	$(COMPILER) -c bootstrapper.cmo $(SRC)/storage.mli	
 	$(COMPILER) -c bootstrapper.cmo $(SRC)/storage.ml

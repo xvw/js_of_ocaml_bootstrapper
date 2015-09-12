@@ -32,7 +32,7 @@ let append elt =
   
 
 (* Create canvas inside an element *)
-let createIn elt width height =
+let create_in elt width height =
   let _ = create width height in
   append elt
 
@@ -72,12 +72,12 @@ struct
       
 end
 
-let clearRect x y width height =
+let clear_rect x y width height =
   wrap_2d (fun canvas ctx ->
       ctx ## clearRect(x, y, width, height)
     )
       
-let fillRect fill_color stroke_color x y width height =
+let fill_rect fill_color stroke_color x y width height =
   wrap_2d (fun canvas ctx ->
       let _ = match fill_color with
         | Some color ->
@@ -92,18 +92,18 @@ let fillRect fill_color stroke_color x y width height =
       | None -> ()
     )
 
-let clearAll () =
+let clear_all () =
   wrap (fun canvas ->
       let w = float_of_int (canvas ## width)
       and h = float_of_int (canvas ## height)
-      in clearRect 0. 0. w h
+      in clear_rect 0. 0. w h
     )
 
-let fillAll color_str =
+let fill_all color_str =
   wrap (fun canvas ->
       let w = float_of_int (canvas ## width)
       and h = float_of_int (canvas ## height)
-      in fillRect (Some color_str) None  0. 0. w h
+      in fill_rect (Some color_str) None  0. 0. w h
     )
 
 let shape ?(closed=false) fill_color stroke_color points  =
@@ -119,15 +119,15 @@ let shape ?(closed=false) fill_color stroke_color points  =
       | _ -> ()
     )
 
-let closedShape = shape ~closed:true
+let closed_shape = shape ~closed:true
 
-let lineJoin style =
+let line_join style =
   wrap_2d (fun canvas ctx ->
       ctx ## lineJoin <- (Internal.join_style style)
     )
 
 
-let lineCap style =
+let line_cap style =
   wrap_2d (fun canvas ctx ->
       ctx ## lineCap <- (Internal.cap_style style)
     )
