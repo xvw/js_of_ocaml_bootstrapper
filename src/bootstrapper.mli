@@ -260,3 +260,47 @@ sig
     string -> string -> Dom_html.inputElement Js.t
   
 end
+
+
+module Ajax :
+sig
+
+  (** Ajax functions *)
+
+  (** Try to load an external file *)
+  val load : string -> string option Lwt.t
+
+end
+
+(** {2 Functors for templating } *)
+
+(** The interface for application building *)
+module type APPLICATION = sig
+
+  (** initialize is the entry point of an application *)
+  val initialize : unit -> unit
+end
+
+(** Make a simple application *)
+module Application :
+  functor (F : APPLICATION) -> sig end 
+(** 
+   Example for instanciate an application
+   {[
+     module App =
+       Bootstrapper.Application(
+       struct
+         
+         open Bootstrapper
+             
+         let initialize () =
+           allert "hello world"
+              
+       end
+  )
+   ]}
+*)
+
+(** Make an application using EHtml*)
+module EHtml_Application :
+  functor (F : APPLICATION) -> sig end 
