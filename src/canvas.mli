@@ -6,7 +6,8 @@
     (and raise an exception : [Not_created] if the canvas isn't 
     initialized. 
 
-    You could use [Color] for building color as a String
+    You could'nt use [Color] for building color as a String, colors 
+    are already wrapped into a Js context.
 *)
 
 (** {2 Exceptions } *)
