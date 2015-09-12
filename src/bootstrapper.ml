@@ -146,6 +146,8 @@ struct
 
   let add_one elt klass = elt ## classList ## add (_s klass)
   let add elt classes = List.iter (add_one elt) classes
+  let remove_one elt klass =  elt ## classList ## remove (_s klass)
+  let remove elt classes = List.iter (remove_one elt) classes
   
 end
 

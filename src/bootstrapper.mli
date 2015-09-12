@@ -192,8 +192,17 @@ sig
 
   (** Easy access for using class as a String list *)
 
+  (** [Class.add_one elt css_class] add [css_class] to [elt] *)
   val add_one : Dom_html.element Js.t -> string -> unit
+    
+  (** [Class.add elt css_class_list] add each [css_class] to [elt] *)
   val add : Dom_html.element Js.t -> string list -> unit
-  
+
+  (** Remove a css class of the gived Elt *)
+  val remove_one : Dom_html.element Js.t -> string -> unit
+
+  (** Remove all css classes of the gived Elt *)
+  val remove : Dom_html.element Js.t -> string list -> unit 
+ 
   
 end
