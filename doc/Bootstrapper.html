@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="next" href="Color.html">
+<link rel="Up" href="index.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Bootstrapper" rel="Chapter" href="Bootstrapper.html">
+<link title="Color" rel="Chapter" href="Color.html"><link title="Exceptions" rel="Section" href="#2_Exceptions">
+<link title="General function " rel="Section" href="#2_Generalfunction">
+<link title="Inner modules" rel="Section" href="#2_Innermodules">
+<title>Bootstrapper</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Color.html" title="Color">Next</a>
+</div>
+<h1>Module <a href="type_Bootstrapper.html">Bootstrapper</a></h1>
+
+<pre><span class="keyword">module</span> Bootstrapper: <code class="code">sig</code> <a href="Bootstrapper.html">..</a> <code class="code">end</code></pre><div class="info module top">
+This module is the pervasives module of the framework<br>
+</div>
+<hr width="100%">
+<br>
+<h2 id="2_Exceptions">Exceptions</h2><br>
+
+<pre><span id="EXCEPTIONElement_not_found"><span class="keyword">exception</span> Element_not_found</span></pre>
+<div class="info ">
+this exception is launched when an element is not founded<br>
+</div>
+<br>
+<h2 id="2_Generalfunction">General function </h2><br>
+
+<pre><span id="VAL(>>=)"><span class="keyword">val</span> (&gt;&gt;=)</span> : <code class="type">'a Lwt.t -> ('a -> 'b Lwt.t) -> 'b Lwt.t</code></pre><div class="info ">
+Lwt binder<br>
+</div>
+
+<pre><span id="VAL_s"><span class="keyword">val</span> _s</span> : <code class="type">string -> Js.js_string Js.t</code></pre><div class="info ">
+Convert a OCaml's string into a JavaScript's string<br>
+</div>
+
+<pre><span id="VALs_"><span class="keyword">val</span> s_</span> : <code class="type">Js.js_string Js.t -> string</code></pre><div class="info ">
+Convert a JavaScript's string into a OCaml's string<br>
+</div>
+
+<pre><span id="VALalert"><span class="keyword">val</span> alert</span> : <code class="type">string -> unit</code></pre><div class="info ">
+Perform a JavaScript alert<br>
+</div>
+
+<pre><span id="VALlog"><span class="keyword">val</span> log</span> : <code class="type">'a -> unit</code></pre><div class="info ">
+Print data int the console<br>
+</div>
+<br>
+<h2 id="2_Innermodules">Inner modules</h2><br>
+
+<pre><span class="keyword">module</span> <a href="Bootstrapper.Option.html">Option</a>: <code class="code">sig</code> <a href="Bootstrapper.Option.html">..</a> <code class="code">end</code></pre>
+<pre><span class="keyword">module</span> <a href="Bootstrapper.Promise.html">Promise</a>: <code class="code">sig</code> <a href="Bootstrapper.Promise.html">..</a> <code class="code">end</code></pre>
+<pre><span class="keyword">module</span> <a href="Bootstrapper.Event.html">Event</a>: <code class="code">sig</code> <a href="Bootstrapper.Event.html">..</a> <code class="code">end</code></pre>
+<pre><span class="keyword">module</span> <a href="Bootstrapper.Get.html">Get</a>: <code class="code">sig</code> <a href="Bootstrapper.Get.html">..</a> <code class="code">end</code></pre></body></html>

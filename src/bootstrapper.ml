@@ -12,16 +12,35 @@ let log x     = Firebug.console ## log(x)
 module Option =
 struct
   
-  let safe x = try Some x with _ -> None
+  let safe f x = try Some (f x) with _ -> None
     
   let unit_map f = function
     | Some e -> f e
     | None -> ()
-
+      
+  let some x = Some x
+  let none = None
+  
+  let default value = function
+    | None -> value
+    | Some x -> x
+      
   let map f = function
-    | Some x -> Some (f x)
     | None -> None
-
+    | Some x -> Some (f x)
+                  
+  let apply = function
+    | None -> (fun x -> x)
+    | Some f -> f
+      
+  let is_some = function
+    | Some _ -> true
+    | _ -> false
+      
+  let is_none = function
+    | None -> true
+    | _ -> false
+      
 end
 
 module Promise =
@@ -55,7 +74,7 @@ struct
   let rec delayed_loop ?(delay=1.0) f =
     let _ = f () in
     Lwt_js.sleep delay
-    >>= (fun _ -> continous ~delay f)
+    >>= (fun _ -> delayed_loop ~delay f)
         
 end
 
@@ -77,9 +96,9 @@ struct
     container ## querySelectorAll (_s selector)
     |> Dom.list_of_nodeList
 
-  let byId_opt id = Option.safe (byId id)
+  let byId_opt id = Option.safe byId id
   let find_opt container selector =
-    Option.safe (find container selector)
+    Option.safe (fun x -> find x selector) container
 
   let all () =
     Dom_html.document ## getElementsByTagName (_s "*")

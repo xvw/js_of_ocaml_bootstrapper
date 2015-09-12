@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Bootstrapper.Promise.html">
+<link rel="next" href="Bootstrapper.Get.html">
+<link rel="Up" href="Bootstrapper.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Bootstrapper" rel="Chapter" href="Bootstrapper.html">
+<link title="Color" rel="Chapter" href="Color.html"><title>Bootstrapper.Event</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Bootstrapper.Promise.html" title="Bootstrapper.Promise">Previous</a>
+&nbsp;<a class="up" href="Bootstrapper.html" title="Bootstrapper">Up</a>
+&nbsp;<a class="post" href="Bootstrapper.Get.html" title="Bootstrapper.Get">Next</a>
+</div>
+<h1>Module <a href="type_Bootstrapper.Event.html">Bootstrapper.Event</a></h1>
+
+<pre><span class="keyword">module</span> Event: <code class="code">sig</code> <a href="Bootstrapper.Event.html">..</a> <code class="code">end</code></pre><hr width="100%">
+<br>
+Easy access for Event API<br>
+
+<pre><span class="keyword">include</span> Lwt_js_events</pre>
+<div class="info ">
+Include Lwt_js_events<br>
+<b>See also</b> <a href="http://ocsigen.org/js_of_ocaml/api/Lwt_js_events">Official doc</a><br>
+</div>
+
+<pre><span id="VAL(>-)"><span class="keyword">val</span> (&gt;-)</span> : <code class="type">'a -> (?use_capture:bool -> 'a -> 'b Lwt.t) * ('b -> unit Lwt.t -> 'c) -> 'a</code></pre><div class="info ">
+link an element to an event and a callback.
+      <code class="code">Event.(element &gt;- (click, fun _ _ -&gt; alert "TT")</code> for example, 
+      when this code is called, at each click on the event, the alert
+      "TT" will be launched<br>
+</div>
+
+<pre><span id="VALdelayed_loop"><span class="keyword">val</span> delayed_loop</span> : <code class="type">?delay:float -> (unit -> 'a) -> 'b Lwt.t</code></pre><div class="info ">
+<code class="code">Event.delayed_loop ~delay:2.0 f</code> execute <code class="code">f</code> each 2 second<br>
+</div>
+</body></html>

@@ -9,7 +9,7 @@ PACKAGES  = -package js_of_ocaml -package js_of_ocaml.syntax
 SYNTAX    = -syntax camlp4o
 COMPILER  = $(OCAMLFIND) $(PACKAGES) $(SYNTAX) -linkpkg -I $(SRC)
 
-.PHONY: clean lib
+.PHONY: clean lib doc
 
 init_bytes:
 	mkdir -p $(BYTES)
@@ -19,7 +19,9 @@ init_js:
 
 
 lib:
+	$(COMPILER) -c $(SRC)/bootstrapper.mli
 	$(COMPILER) -c $(SRC)/bootstrapper.ml
+	$(COMPILER) -c bootstrapper.cmo $(SRC)/color.mli
 	$(COMPILER) -c bootstrapper.cmo $(SRC)/color.ml
 	$(COMPILER) -c bootstrapper.cmo color.cmo $(SRC)/canvas.ml
 	$(COMPILER) -c $(SRC)/storage.ml
@@ -49,3 +51,6 @@ clean_emacs:
 	rm -rf */*~
 	rm -rf \#*
 	rm -rf */\#*
+
+doc:
+		eliomdoc -client -html -d doc -I src src/*.mli
