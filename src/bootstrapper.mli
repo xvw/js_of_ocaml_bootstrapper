@@ -165,9 +165,35 @@ sig
   module Data :
   sig
 
-    (** Shortcut for Data Attributes (data-attr) *)
+    (** Shortcut for Data Attributes (data-attr).
+        for example in [<div data-truc="test">], [data-truc]
+        is a Data Attribute (and accessible via [get elt "truc"])
+    *)
+
+    
+    (** Try to get a data-argument of an element : 
+        [Attribute.Data.get div "id"] (returns Some (data-id value))
+    *)
+    val get : Dom_html.element Js.t -> string -> string option
+
+    (** 
+       set a value to a data-argument 
+       (an creates the attribute if it doesn't exists).
+       [Attribute.Data.set div "id" "new_id"] change the data-id of [div]
+    *)
+    val set : Dom_html.element Js.t -> string -> string -> unit 
     
   end
   
+end
 
+module Class :
+sig
+
+  (** Easy access for using class as a String list *)
+
+  val add_one : Dom_html.element Js.t -> string -> unit
+  val add : Dom_html.element Js.t -> string list -> unit
+  
+  
 end

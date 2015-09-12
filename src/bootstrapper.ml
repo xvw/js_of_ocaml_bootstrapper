@@ -145,7 +145,7 @@ module Class =
 struct
 
   let add_one elt klass = elt ## classList ## add (_s klass)
-  let add elt classes = List.iter (add_one elt)
+  let add elt classes = List.iter (add_one elt) classes
   
 end
 
