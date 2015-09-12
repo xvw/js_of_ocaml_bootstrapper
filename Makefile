@@ -1,3 +1,4 @@
+DOC       = doc
 SRC       = src
 EXO       = examples
 BYTES     = bytes
@@ -9,7 +10,7 @@ PACKAGES  = -package js_of_ocaml -package js_of_ocaml.syntax
 SYNTAX    = -syntax camlp4o
 COMPILER  = $(OCAMLFIND) $(PACKAGES) $(SYNTAX) -linkpkg -I $(SRC)
 
-.PHONY: clean lib
+.PHONY: clean lib doc
 
 init_bytes:
 	mkdir -p $(BYTES)
@@ -19,10 +20,13 @@ init_js:
 
 
 lib:
+	$(COMPILER) -c $(SRC)/bootstrapper.mli
 	$(COMPILER) -c $(SRC)/bootstrapper.ml
+	$(COMPILER) -c bootstrapper.cmo $(SRC)/color.mli
 	$(COMPILER) -c bootstrapper.cmo $(SRC)/color.ml
 	$(COMPILER) -c bootstrapper.cmo color.cmo $(SRC)/canvas.ml
-	$(COMPILER) -c $(SRC)/storage.ml
+	$(COMPILER) -c bootstrapper.cmo $(SRC)/storage.mli	
+	$(COMPILER) -c bootstrapper.cmo $(SRC)/storage.ml
 
 %.byte: $(SRC)/%.ml init_bytes lib
 	$(COMPILER) -o $(BYTES)/$(@) $(LIB) $(<)
@@ -41,6 +45,7 @@ clean_bytes:
 
 clean_js:
 	rm -rf $(JSOUT)
+	rm -rf $(DOC)
 
 distclean: clean_bytes clean_js
 clean: clean_bytes clean_emacs
@@ -49,3 +54,7 @@ clean_emacs:
 	rm -rf */*~
 	rm -rf \#*
 	rm -rf */\#*
+
+doc:
+		mkdir -p $(DOC)
+		eliomdoc -client -html -d $(DOC) -I src src/*.mli

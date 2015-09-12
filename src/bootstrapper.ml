@@ -12,16 +12,35 @@ let log x     = Firebug.console ## log(x)
 module Option =
 struct
   
-  let safe x = try Some x with _ -> None
+  let safe f x = try Some (f x) with _ -> None
     
   let unit_map f = function
     | Some e -> f e
     | None -> ()
-
+      
+  let some x = Some x
+  let none = None
+  
+  let default value = function
+    | None -> value
+    | Some x -> x
+      
   let map f = function
-    | Some x -> Some (f x)
     | None -> None
-
+    | Some x -> Some (f x)
+                  
+  let apply = function
+    | None -> (fun x -> x)
+    | Some f -> f
+      
+  let is_some = function
+    | Some _ -> true
+    | _ -> false
+      
+  let is_none = function
+    | None -> true
+    | _ -> false
+      
 end
 
 module Promise =
@@ -55,7 +74,7 @@ struct
   let rec delayed_loop ?(delay=1.0) f =
     let _ = f () in
     Lwt_js.sleep delay
-    >>= (fun _ -> continous ~delay f)
+    >>= (fun _ -> delayed_loop ~delay f)
         
 end
 
@@ -77,9 +96,9 @@ struct
     container ## querySelectorAll (_s selector)
     |> Dom.list_of_nodeList
 
-  let byId_opt id = Option.safe (byId id)
+  let byId_opt id = Option.safe byId id
   let find_opt container selector =
-    Option.safe (find container selector)
+    Option.safe (fun x -> find x selector) container
 
   let all () =
     Dom_html.document ## getElementsByTagName (_s "*")
@@ -126,7 +145,9 @@ module Class =
 struct
 
   let add_one elt klass = elt ## classList ## add (_s klass)
-  let add elt classes = List.iter (add_one elt)
+  let add elt classes = List.iter (add_one elt) classes
+  let remove_one elt klass =  elt ## classList ## remove (_s klass)
+  let remove elt classes = List.iter (remove_one elt) classes
   
 end
 
@@ -181,7 +202,7 @@ end
 
 module Ajax = struct
 
-  let page file =
+  let load file =
     let open XmlHttpRequest in
     get file >>= (fun frame ->
         let code = frame.code
@@ -197,22 +218,47 @@ module EHtml = struct
 
   (* Extension of HTML *)
 
+  let mouse_trigger_of_string = function
+    | "click" -> Event.click
+    | "dblclick" -> Event.dblclick
+    | "mousedown" -> Event.mousedown
+    | "mouseup" -> Event.mouseup
+    | "mouseover" -> Event.mouseover
+    | "mousemove" -> Event.mousemove
+    | "mouseout" -> Event.mouseout
+    | _ -> Event.click
+
   let dataInclude elt =
     match Attribute.Data.get elt "include" with
     | None -> Lwt.return_unit
     | Some file ->
-      Ajax.page file >>= (
+      Ajax.load file >>= (
         function 
         | None -> Lwt.return_unit
         | Some textNode ->
           let _ = elt ## innerHTML <- _s textNode in
           Lwt.return_unit
-        )
-  
-  let refresh_dom () =
+      )
+
+  let mouse_event_bind h elt =
+    match Attribute.Data.(get elt "callback", get elt "trigger") with
+    | Some cb, Some tr ->
+      let open Event in
+      let _ =
+        try
+          let cl = List.assoc cb h in
+          elt >- (mouse_trigger_of_string tr, fun e _ -> cl (e##target))
+          |> ignore
+        with _ -> ()
+      in 
+      Lwt.return_unit
+    | _ -> Lwt.return_unit
+             
+  let refresh_dom h =
     List.iter begin
       fun elt ->
         let _ = dataInclude elt in
+        let _ = mouse_event_bind h elt in 
         ()
     end (Get.all ())
     |> Lwt.return
@@ -224,14 +270,20 @@ module type APPLICATION = sig
   val initialize : unit -> unit
 end
 
+
+module type EHTML_APPLICATION = sig
+  val registered_callback : (string * ('a -> unit)) list
+  val initialize : unit -> unit
+end
+
 module Application(F : APPLICATION) = struct
   let _ = Promise.(run onload F.initialize)
 end
 
-module EHtml_Application(F : APPLICATION) = struct
+module EHtml_Application(F : EHTML_APPLICATION) = struct
   include EHtml
   let initialize () =
-    let _ = refresh_dom () in
+    let _ = refresh_dom F.registered_callback in
     let _ = F.initialize () in Lwt.wakeup
   let _ = Promise.(run onload initialize)
 end
