@@ -206,3 +206,22 @@ sig
  
   
 end
+
+
+module Create :
+sig
+
+  (** Easy access for elt creation *)
+
+  (** Create an HTML element using Dom_html function*)
+  val element :
+    ?id:string option ->
+    ?classes:string list ->
+    ?into:((Dom_html.element Js.t) option) ->
+    (Dom_html.document Js.t -> Dom_html.element Js.t) ->
+    Dom_html.element Js.t
+
+  (** Create a simple text node (maybe into another element *)
+  val text : ?into:((Dom_html.element Js.t) option) -> string -> Dom.text Js.t
+
+end
