@@ -1,3 +1,4 @@
+DOC       = doc
 SRC       = src
 EXO       = examples
 BYTES     = bytes
@@ -43,6 +44,7 @@ clean_bytes:
 
 clean_js:
 	rm -rf $(JSOUT)
+	rm -rf $(DOC)
 
 distclean: clean_bytes clean_js
 clean: clean_bytes clean_emacs
@@ -53,4 +55,4 @@ clean_emacs:
 	rm -rf */\#*
 
 doc:
-		eliomdoc -client -html -d doc -I src src/*.mli
+		eliomdoc -client -html -d $(DOC) -I src src/*.mli
