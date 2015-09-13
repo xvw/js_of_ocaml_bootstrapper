@@ -14,6 +14,19 @@
 exception Already_created
 exception Not_created
 
+(** {2 Types } *)
+type image = Dom_html.imageElement Js.t
+type point = (float * float)
+type rect = (float * float * float * float)
+
+(** {2 Rect and pointutils} *)
+
+(** [Canvas.point x y] create an abstract point *)
+val point : int -> int -> point
+
+(** [Canvas.rect x y width height] create an abstract rect *)
+val rect : int -> int -> int -> int -> rect
+
 (** {2 Canvas creation } *)
 
 (** 
@@ -47,76 +60,66 @@ val line_join : [< `Bevel | `Square | `Mitter ] -> unit
 val draw : Color.t option -> Color.t option -> (unit -> unit) list -> unit
 
 (** [shape points] draw point on the canvas*)
-val shape : ?closed:bool -> (float * float) list -> unit
+val shape : ?closed:bool -> point list -> unit
 
 (** [arc ~clockwise:true x y radius start_angle end_angle] draw an arc *)
 val arc :
   ?clockwise:bool ->
-  float -> float ->
+  point ->
   float -> float -> float ->
   unit
 
 
 (** 
-   [Canvas.quadratic_curve x1 y1 x2 y2]
-   Draw a quatratic curve from [(x1, y1)] to [(x2, y2)]
+   [Canvas.quadratic_curve p1 p2]
+   Draw a quatratic curve from [p1] to [p2]
 *)
-val quadratic_curve :
-  float -> float ->
-  float -> float ->
-  unit
+val quadratic_curve : point -> point -> unit
 
 (** 
-   [Canvas.bezier_curve x1 y1 x2 y2 x3 y3]
-   Draw a bezier curve from [(x1, y1)] to [(x3, y3)] using [(x2, y2)] as 
+   [Canvas.bezier_curve p1 p2 p3]
+   Draw a bezier curve from [p1] to [p3] using [p2] as 
    curve high.
 *)
-val bezier_curve :
-  float -> float ->
-  float -> float ->
-  float -> float ->
-  unit
+val bezier_curve : point -> point -> point -> unit
 
 (** 
-   [Canvas.rounded_rect x y width height radius] draw a rounded rect
+   [Canvas.rounded_rect rect radius] draw a rounded rect
 *)
-val rounded_rect :
-  float -> float ->
-  float -> float ->
-  float -> unit
+val rounded_rect : rect -> float -> unit
 
 
 (** {2 Canvas shape} *)
 
-(** [Canvas.clear_rect x y width h] clear the defined rect *)
-val clear_rect : float -> float -> float -> float -> unit
+(** [Canvas.clear_rect x y width height] clear the defined rect *)
+val clear_rect : rect-> unit
 
 (** Clear all surface of the canvas *)
 val clear_all : unit -> unit
 
-(** [Canvas.clear_rect fill_color stroke_color x y width h] colorized the
+(** [Canvas.clear_rect fill_color stroke_color rect] colorized the
     defined rect filled with [fill_color] and stoked with [stroke_color] 
 *)
 val fill_rect :
   Color.t option ->
   Color.t option ->
-  float -> float -> float -> float -> unit
+  rect -> unit
 
-(** [Canvas.fill_square fill_color stroke_color x y size] draw a square 
+(** [Canvas.fill_square fill_color stroke_color point size] draw a square 
     on the canvas
 *)
 val fill_square : 
   Color.t option ->
   Color.t option ->
-  float -> float -> float -> unit
+  point -> int -> unit
 
-(** [Canvas.fill_triangle fill_color stroke_color (x,y) (x2,y2) (x3,y3)]
+(** [Canvas.fill_triangle fill_color stroke_color p1 p2 p3]
     draw a rectangle
 *)
 val fill_triangle :
   Color.t option ->
   Color.t option ->
-  (float * float) -> (float * float) -> (float * float) ->
+  point -> point -> point ->
   unit
 
 (** [Canvas.fill_all color] fill all the surface with [color]*)
@@ -130,7 +133,7 @@ val fill_shape :
   ?closed:bool ->
   Color.t option ->
   Color.t option ->
-  (float * float) list
+  point list
   -> unit
 
 (** [Canvas.closed_shape fill_color stroke_color points_list]
@@ -139,15 +142,15 @@ val fill_shape :
 val fill_closed_shape :
   Color.t option ->
   Color.t option ->
-  (float * float) list ->
+  point list ->
   unit
 
-(** [Canvas.fill_circle fill_color stroke_color x y radius] Draw 
+(** [Canvas.fill_circle fill_color stroke_color point radius] Draw 
     a circle on the canvas *)
 val fill_circle :
   Color.t option ->
   Color.t option ->
-  float -> float -> float -> unit
+  point -> float -> unit
 
 
 (** 
@@ -157,43 +160,58 @@ val fill_circle :
 val fill_rounded_rect :
   Color.t option ->
   Color.t option ->
-  float -> float ->
-  float -> float ->
-  float -> unit
+  rect -> float -> unit
 
 
 (** 
    [Canvas.fill_arc ~clockwise:true 
-   fill_color stroke_color x y radius, start_angle end_angle]
+   fill_color stroke_color point radius, start_angle end_angle]
    Draw an arc on the canvas
 *)
 val fill_arc :
   ?clockwise:bool ->
   Color.t option ->
   Color.t option ->
-  float -> float -> float -> float -> float ->
+  point -> float -> float -> float ->
   unit
 
 (** 
-   [Canvas.fill_quadratic_curve fill_color stroke_color x1 y1 x2 y2]
-   Draw a quatratic curve from [(x1, y1)] to [(x2, y2)]
+   [Canvas.fill_quadratic_curve fill_color stroke_color p1 p2]
+   Draw a quatratic curve from [p1] to [p2]
 *)
 val fill_quadratic_curve :
   Color.t option ->
   Color.t option ->
-  float -> float ->
-  float -> float ->
-  unit
+  point -> point -> unit
 
 (** 
-   [Canvas.fill_bezier_curve fill_color stroke_color x1 y1 x2 y2 x3 y3]
-   Draw a bezier curve from [(x1, y1)] to [(x3, y3)] using [(x2, y2)] as 
+   [Canvas.fill_bezier_curve fill_color stroke_color p1 p2 p3]
+   Draw a bezier curve from [p1] to [p2] using [p3] as 
    curve high.
 *)
 val fill_bezier_curve :
   Color.t option ->
   Color.t option ->
-  float -> float ->
-  float -> float ->
-  float -> float ->
-  unit
+  point -> point -> point -> unit
+
+(** {2 Image } *)
+
+(** Create an usable image for Canvas *)
+val image :
+  ?id:string option ->
+  ?path:string option ->
+  unit -> image
+
+
+(* (\** [Canvas.draw_image image x y] Draw image on the canvas *\) *)
+(* val draw_image : image -> float -> float -> unit *)
+
+(* (\** [Canvas.draw_image_with_size image x y width height] *)
+(*     Draw an resize image on canvas *\) *)
+(* val draw_image_with_size : image -> float -> float -> float -> float -> unit *)
+
+(* (\** [Canvas.draw_image_slice image ] *)
+(*     Draw an resize image on canvas *\) *)
+(* val draw_image_slice : *)
+(*   image -> float -> float -> float -> float -> *)
+(*   flaot -> float -> float -> float -> unit *)

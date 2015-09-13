@@ -6,6 +6,22 @@ open Bootstrapper
 exception Already_created
 exception Not_created
 
+type image = Dom_html.imageElement Js.t
+type point = (float * float)
+type rect = (float * float * float * float)
+
+let point x y = (
+  float_of_int x,
+  float_of_int y
+)
+let rect x y w h = (
+  float_of_int x,
+  float_of_int y,
+  float_of_int w,
+  float_of_int h
+)
+
+let alpha_rect x y w h = (x, y, w, h)
 
 (* Canvas reference *)
 let get = ref None
@@ -94,12 +110,12 @@ let line_cap style =
     )
 
 
-let clear_rect x y width height =
+let clear_rect (x, y, width, height) =
   wrap_2d (fun canvas ctx ->
       ctx ## clearRect(x, y, width, height)
     )
       
-let fill_rect fill_color stroke_color x y width height =
+let fill_rect fill_color stroke_color (x, y, width, height) =
   wrap_2d (fun canvas ctx ->
       let _ = match fill_color with
         | Some color ->
@@ -114,20 +130,21 @@ let fill_rect fill_color stroke_color x y width height =
       | None -> ()
     )
 
-let fill_square fc sc x y w = fill_rect fc sc x y w w 
+let fill_square fc sc (x,y) w =
+  fill_rect fc sc (rect (int_of_float x) (int_of_float y) w w) 
 
 let clear_all () =
   wrap (fun canvas ->
       let w = float_of_int (canvas ## width)
       and h = float_of_int (canvas ## height)
-      in clear_rect 0. 0. w h
+      in clear_rect (0., 0., w, h)
     )
 
 let fill_all color_str =
   wrap (fun canvas ->
       let w = float_of_int (canvas ## width)
       and h = float_of_int (canvas ## height)
-      in fill_rect (Some color_str) None  0. 0. w h
+      in fill_rect (Some color_str) None  (0., 0., w, h)
     )
 
 
@@ -150,35 +167,35 @@ let fill_triangle fc sc pa pb pc =
   fill_shape ~closed:true fc sc [pa; pb; pc] 
 
 
-let arc ?(clockwise=true)  x y radius sa ea =
+let arc ?(clockwise=true) (x, y) radius sa ea =
   wrap_2d (fun canvas ctx ->
       let anticlockwise = if clockwise then Js._false else Js._true in
       ctx ## arc (x, y, radius, sa, ea, anticlockwise)
     )
 
-let fill_arc ?(clockwise=true) fc sc x y radius sa ea =
-  draw fc sc [fun () -> arc x y radius sa ea]
+let fill_arc ?(clockwise=true) fc sc p radius sa ea =
+  draw fc sc [fun () -> arc p radius sa ea]
   
-let fill_circle fc sc x y radius =
-  fill_arc fc sc x y radius 0. (Internal.pi *. 2.)
+let fill_circle fc sc p radius =
+  fill_arc fc sc p radius 0. (Internal.pi *. 2.)
 
 
-let quadratic_curve x y x2 y2 =
+let quadratic_curve (x, y) (x2, y2) =
   wrap_2d (fun canvas ctx -> ctx ## quadraticCurveTo(x, y, x2, y2))
 
 
-let fill_quadratic_curve fc sc x y x2 y2 =
-  draw fc sc [fun () -> quadratic_curve x y x2 y2]
+let fill_quadratic_curve fc sc pa pb =
+  draw fc sc [fun () -> quadratic_curve pa pb]
 
 
-let bezier_curve x y x2 y2 x3 y3 =
+let bezier_curve (x, y) (x2, y2) (x3, y3) =
   wrap_2d (fun canvas ctx -> ctx ## bezierCurveTo(x, y, x2, y2, x3, y3))
 
 
-let fill_bezier_curve fc sc x y x2 y2 x3 y3 =
-  draw fc sc [fun () -> bezier_curve x y x2 y2 x3 y3]
+let fill_bezier_curve fc sc (x, y) (x2, y2) (x3, y3) =
+  draw fc sc [fun () -> bezier_curve (x, y) (x2, y2) (x3, y3)]
 
-let rounded_rect x y width height radius =
+let rounded_rect (x, y, width, height) radius =
   wrap_2d (fun canvas ctx ->
       let _ = ctx ## moveTo(x, y +. radius) in
       let _ = ctx ## lineTo(x, y +. height -. radius) in
@@ -194,5 +211,16 @@ let rounded_rect x y width height radius =
       ctx ## quadraticCurveTo(x,y,x,y+.radius)
     )
 
-let fill_rounded_rect fc sc x y w h r =
-  draw fc sc [fun () -> rounded_rect x y w h r]
+let fill_rounded_rect fc sc rect r =
+  draw fc sc [fun () -> rounded_rect rect r]
+
+
+let image ?(id=None) ?(path=None) () =
+  let img =
+    Dom_html.createImg Dom_html.document
+    |> Dom_html.CoerceTo.img
+    |> Get.unopt
+  in 
+  let _ = Option.unit_map (fun x -> img ## id <- (_s x)) id in
+  let _ = Option.unit_map (fun x -> img ## src <- (_s x)) path
+  in img
