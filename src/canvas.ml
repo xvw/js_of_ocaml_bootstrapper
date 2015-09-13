@@ -61,11 +61,11 @@ struct
     in _s style
 
   let stroke ctx c =
-    let _ = ctx ## strokeStyle <- (Color.make c) in
+    let _ = ctx ## strokeStyle <- (Color.to_js c) in
     ctx ## stroke ()
       
   let fill ctx c =
-    let _ = ctx ## fillStyle <- (Color.make c) in
+    let _ = ctx ## fillStyle <- (Color.to_js c) in
     ctx ## fill ()
 
   let wrap_option f ctx = function
@@ -95,13 +95,13 @@ let fill_rect fill_color stroke_color x y width height =
   wrap_2d (fun canvas ctx ->
       let _ = match fill_color with
         | Some color ->
-          let _ = ctx ## fillStyle <- (Color.make color) in
+          let _ = ctx ## fillStyle <- (Color.to_js color) in
           ctx ## fillRect(x, y, width, height)
         | None -> ()
       in
       match stroke_color with
       | Some color ->
-        let _ = ctx ## strokeStyle <- (Color.make color) in
+        let _ = ctx ## strokeStyle <- (Color.to_js color) in
         ctx ## strokeRect(x, y, width, height)
       | None -> ()
     )
@@ -151,3 +151,4 @@ let fill_arc ?(clockwise=true) fc sc x y radius sa ea =
 
 let fill_circle fc sc x y radius =
   fill_arc fc sc x y radius 0. (Internal.pi *. 2.)
+

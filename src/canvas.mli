@@ -6,8 +6,7 @@
     (and raise an exception : [Not_created] if the canvas isn't 
     initialized. 
 
-    You could'nt use [Color] for building color as a String, colors 
-    are already wrapped into a Js context.
+    You could use [Color] for building colors.
 *)
 
 (** {2 Exceptions } *)
@@ -55,29 +54,29 @@ val clear_all : unit -> unit
     defined rect filled with [fill_color] and stoked with [stroke_color] 
 *)
 val fill_rect :
-  string option ->
-  string option ->
+  Color.t option ->
+  Color.t option ->
   float -> float -> float -> float -> unit
 
 (** [Canvas.fill_square fill_color stroke_color x y size] draw a square 
     on the canvas
 *)
 val fill_square : 
-  string option ->
-  string option ->
+  Color.t option ->
+  Color.t option ->
   float -> float -> float -> unit
 
 (** [Canvas.fill_triangle fill_color stroke_color (x,y) (x2,y2) (x3,y3)]
     draw a rectangle
 *)
 val fill_triangle :
-  string option ->
-  string option ->
+  Color.t option ->
+  Color.t option ->
   (float * float) -> (float * float) -> (float * float) ->
   unit
 
 (** [Canvas.fill_all color] fill all the surface with [color]*)
-val fill_all : string -> unit
+val fill_all : Color.t -> unit
 
 (** [Canvas.shape ~closed:false fill_color stroke_color points_list] 
     will draw a shape on the Canvas (if ~closed:true, the shape will 
@@ -85,8 +84,8 @@ val fill_all : string -> unit
 *)
 val fill_shape :
   ?closed:bool ->
-  string option ->
-  string option ->
+  Color.t option ->
+  Color.t option ->
   (float * float) list
   -> unit
 
@@ -94,16 +93,16 @@ val fill_shape :
     will be created a closed shape on the canvas
 *)
 val fill_closed_shape :
-  string option ->
-  string option ->
+  Color.t option ->
+  Color.t option ->
   (float * float) list ->
   unit
 
 (** [Canvas.fill_circle fill_color stroke_color x y radius] Draw 
     a circle on the canvas *)
 val fill_circle :
-  string option ->
-  string option ->
+  Color.t option ->
+  Color.t option ->
   float -> float -> float -> unit
 
 (** 
@@ -113,7 +112,7 @@ val fill_circle :
 *)
 val fill_arc :
   ?clockwise:bool ->
-  string option ->
-  string option ->
+  Color.t option ->
+  Color.t option ->
   float -> float -> float -> float -> float ->
   unit

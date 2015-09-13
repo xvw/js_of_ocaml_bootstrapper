@@ -2,10 +2,46 @@
 
 open Bootstrapper
 
-let make hexa = _s hexa
+type t = {
+  red : int
+; green : int
+; blue : int 
+}
 
-let red = make "#FF0000"
-let green = make "#00FF00"
-let blue = make "#0000FF"
-let white = make "#FFFFFF"
-let black = make "#000000"
+let bound v =
+  if v > 255 then 255
+  else if v < 0 then 0
+  else v
+
+let make r g b = {
+  red = bound r
+; green = bound g
+; blue = bound b
+}
+
+let of_rgb_string s =
+  Scanf.sscanf s "rgb(%d,%d,%d)" make
+
+let of_hexa_string s =
+  Scanf.sscanf "#FFAABB" "#%2x%2x%2x" make
+
+let of_string s =
+  try of_hexa_string s
+  with _ -> try of_rgb_string s
+    with _ -> try Scanf.sscanf s "rgb(%d, %d, %d)" make
+      with _ -> make 255 255 255
+             
+
+let to_string c =
+  Printf.sprintf "rgb(%d, %d, %d)"
+    c.red
+    c.green
+    c.blue
+
+let to_js c = c |> to_string |> _s
+
+let red = make 255 0 0
+let green = make 0 255 0 
+let blue = make 0 0 255
+let white = make 255 255 255
+let black = make 0 0 0
