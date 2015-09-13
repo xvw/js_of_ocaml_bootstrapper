@@ -4,8 +4,8 @@ module App =
 
     open Bootstrapper
 
-    let width, height = 250, 250
-    let s_width, s_height = 10, 10
+    let width, height = 180, 300
+    let s_width, s_height = 5, 5
 
     (* Sad boilerplate for array *)
     let array_rev arr =
@@ -28,7 +28,7 @@ module App =
            let arr =
              Array.init (coeff_x/2)
                (fun j ->
-                  (Random.int 10 >= 6),
+                  (Random.int 10 >= 6 (* && j > (coeff_x/5) *)),
                   (float_of_int (j*s_width)),
                   (float_of_int (i*s_height))
                ) in

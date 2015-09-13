@@ -17,6 +17,13 @@ exception Not_created
 
 (** {2 Canvas creation } *)
 
+(** 
+   This library provide a unified way to make stroked or filled 
+   shape. The stroking/filling parameter depend on the fill/stroke_color 
+   option.
+*)
+
+
 (** [Canvas.create width height] creates a canvas *)
 val create : int -> int -> unit
 
@@ -26,21 +33,48 @@ val append : Dom_html.element Js.t -> unit
 (** Create and append a Canvas (junction between [create] and [append] *)
 val create_in : Dom_html.element Js.t -> int -> int -> unit
 
-(** {2 Canvas drawing} *)
+(** {2 Canvas drawing style } *)
 
-(** [Canvas.clearRect x y width h] clear the defined rect *)
+
+(** [Canvas.line_cap style] define the cap style of the strokes *)
+val line_cap : [< `Round | `Square | `Butt ] -> unit 
+
+(** [Canvas.line_join style] define the join style of the strokes *)
+val line_join : [< `Bevel | `Square | `Mitter ] -> unit 
+
+
+(** {2 Canvas shape} *)
+
+(** [Canvas.clear_rect x y width h] clear the defined rect *)
 val clear_rect : float -> float -> float -> float -> unit
 
 (** Clear all surface of the canvas *)
 val clear_all : unit -> unit
 
-(** [Canvas.clearRect fill_color stroke_color x y width h] colorized the defined
-    rect filled with [fill_color] and stoked with [stroke_color] 
+(** [Canvas.clear_rect fill_color stroke_color x y width h] colorized the
+    defined rect filled with [fill_color] and stoked with [stroke_color] 
 *)
 val fill_rect :
   string option ->
   string option ->
   float -> float -> float -> float -> unit
+
+(** [Canvas.fill_square fill_color stroke_color x y size] draw a square 
+    on the canvas
+*)
+val fill_square : 
+  string option ->
+  string option ->
+  float -> float -> float -> unit
+
+(** [Canvas.fill_triangle fill_color stroke_color (x,y) (x2,y2) (x3,y3)]
+    draw a rectangle
+*)
+val fill_triangle :
+  string option ->
+  string option ->
+  (float * float) -> (float * float) -> (float * float) ->
+  unit
 
 (** [Canvas.fill_all color] fill all the surface with [color]*)
 val fill_all : string -> unit
@@ -49,7 +83,7 @@ val fill_all : string -> unit
     will draw a shape on the Canvas (if ~closed:true, the shape will 
     be closed)
 *)
-val shape :
+val fill_shape :
   ?closed:bool ->
   string option ->
   string option ->
@@ -59,14 +93,27 @@ val shape :
 (** [Canvas.closed_shape fill_color stroke_color points_list]
     will be created a closed shape on the canvas
 *)
-val closed_shape :
+val fill_closed_shape :
   string option ->
   string option ->
   (float * float) list ->
   unit
 
-(** [Canvas.line_cap style] define the cap style of the strokes *)
-val line_cap : [< `Round | `Square | `Butt ] -> unit 
+(** [Canvas.fill_circle fill_color stroke_color x y radius] Draw 
+    a circle on the canvas *)
+val fill_circle :
+  string option ->
+  string option ->
+  float -> float -> float -> unit
 
-(** [Canvas.line_join style] define the join style of the strokes *)
-val line_join : [< `Bevel | `Square | `Mitter ] -> unit 
+(** 
+   [Canvas.fill_arc ~clockwise:true 
+   fill_color stroke_color x y radius, start_angle end_angle]
+   Draw an arc on the canvas
+*)
+val fill_arc :
+  ?clockwise:bool ->
+  string option ->
+  string option ->
+  float -> float -> float -> float -> float ->
+  unit

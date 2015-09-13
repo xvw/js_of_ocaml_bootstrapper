@@ -44,6 +44,8 @@ let wrap_2d f =
 module Internal =
 struct
 
+  let pi = 3.14159265358979323846
+
   let cap_style s =
     let style = match s with 
       | `Round -> "round"
@@ -72,6 +74,18 @@ struct
       
 end
 
+
+let line_join style =
+  wrap_2d (fun canvas ctx ->
+      ctx ## lineJoin <- (Internal.join_style style)
+    )
+
+let line_cap style =
+  wrap_2d (fun canvas ctx ->
+      ctx ## lineCap <- (Internal.cap_style style)
+    )
+
+
 let clear_rect x y width height =
   wrap_2d (fun canvas ctx ->
       ctx ## clearRect(x, y, width, height)
@@ -92,6 +106,8 @@ let fill_rect fill_color stroke_color x y width height =
       | None -> ()
     )
 
+let fill_square fc sc x y w = fill_rect fc sc x y w w 
+
 let clear_all () =
   wrap (fun canvas ->
       let w = float_of_int (canvas ## width)
@@ -106,7 +122,7 @@ let fill_all color_str =
       in fill_rect (Some color_str) None  0. 0. w h
     )
 
-let shape ?(closed=false) fill_color stroke_color points  =
+let fill_shape ?(closed=false) fill_color stroke_color points  =
   wrap_2d (fun canvas ctx ->
       match points with
       | (x,y) :: point_list -> 
@@ -119,16 +135,19 @@ let shape ?(closed=false) fill_color stroke_color points  =
       | _ -> ()
     )
 
-let closed_shape = shape ~closed:true
+let fill_closed_shape = fill_shape ~closed:true
 
-let line_join style =
+let fill_triangle fc sc pa pb pc =
+  fill_shape ~closed:true fc sc [pa; pb; pc] 
+
+let fill_arc ?(clockwise=true) fc sc x y radius sa ea =
   wrap_2d (fun canvas ctx ->
-      ctx ## lineJoin <- (Internal.join_style style)
+      let anticlockwise = if clockwise then Js._false else Js._true in
+      let _ = ctx ## beginPath () in
+      let _ = ctx ## arc (x, y, radius, sa, ea, anticlockwise) in
+      let _ = Internal.(wrap_option fill ctx fc) in
+      Internal.(wrap_option stroke ctx sc)
     )
 
-
-let line_cap style =
-  wrap_2d (fun canvas ctx ->
-      ctx ## lineCap <- (Internal.cap_style style)
-    )
-
+let fill_circle fc sc x y radius =
+  fill_arc fc sc x y radius 0. (Internal.pi *. 2.)
