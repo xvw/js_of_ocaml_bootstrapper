@@ -21,7 +21,7 @@ val black : t
 (** {2 Color's function} *)
 
 val make : ?alpha:int -> int -> int -> int -> t
-(** [Color.make r g b] create a color *)
+(** [Color.make ~alpha:a r g b] create a color *)
 
 val to_string : t -> string
 (** [Color.to_string color] transform [color] into an HTML's string *)

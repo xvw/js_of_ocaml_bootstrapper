@@ -22,7 +22,7 @@ let make ?(alpha = 0) r g b = {
 }
 
 let of_rgb_string str =
-  let s = Str.(global_replace (regexp " ") "" str) in 
+  let s = Regexp.(global_replace (regexp " ") "" str) in 
   try  Scanf.sscanf s "rgb(%d,%d,%d)" (fun a b c -> make a b c)
   with _ ->
     try Scanf.sscanf s "rgba(%d,%d,%d,%d)"
