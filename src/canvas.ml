@@ -224,3 +224,18 @@ let image ?(id=None) ?(path=None) () =
   let _ = Option.unit_map (fun x -> img ## id <- (_s x)) id in
   let _ = Option.unit_map (fun x -> img ## src <- (_s x)) path
   in img
+
+let draw_image img (x, y) =
+  wrap_2d (fun canvas ctx ->
+      ctx ## drawImage(img, x, y)
+    )
+
+let draw_image_with_size img (x, y, w, h) =
+  wrap_2d (fun canvas ctx ->
+      ctx ## drawImage_withSize(img, x, y, w, h)
+    )
+
+let draw_image_slice img (x, y, w, h) (x2, y2, w2, h2) =
+  wrap_2d (fun canvas ctx ->
+      ctx ## drawImage_full(img,x,y,w,h,w2,y2,w2,h2)
+    )  

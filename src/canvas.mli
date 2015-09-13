@@ -15,6 +15,7 @@ exception Already_created
 exception Not_created
 
 (** {2 Types } *)
+
 type image = Dom_html.imageElement Js.t
 type point = (float * float)
 type rect = (float * float * float * float)
@@ -203,15 +204,13 @@ val image :
   unit -> image
 
 
-(* (\** [Canvas.draw_image image x y] Draw image on the canvas *\) *)
-(* val draw_image : image -> float -> float -> unit *)
+(** [Canvas.draw_image image x y] Draw image on the canvas *)
+val draw_image : image -> point -> unit
 
-(* (\** [Canvas.draw_image_with_size image x y width height] *)
-(*     Draw an resize image on canvas *\) *)
-(* val draw_image_with_size : image -> float -> float -> float -> float -> unit *)
+(** [Canvas.draw_image_with_size image x y width height]
+    Draw an resize image on canvas *)
+val draw_image_with_size : image -> rect -> unit
 
-(* (\** [Canvas.draw_image_slice image ] *)
-(*     Draw an resize image on canvas *\) *)
-(* val draw_image_slice : *)
-(*   image -> float -> float -> float -> float -> *)
-(*   flaot -> float -> float -> float -> unit *)
+(** [Canvas.draw_image_slice image src_rect dest_rect ]
+    Draw a slice (reffered by src_rect) into a dest_rect of the canvas*)
+val draw_image_slice : image -> rect -> rect -> unit 

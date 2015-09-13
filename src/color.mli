@@ -5,7 +5,8 @@
 type t = {
   red : int
 ; green : int
-; blue : int 
+; blue : int
+; alpha: int
 }
 
 
@@ -19,7 +20,7 @@ val black : t
 
 (** {2 Color's function} *)
 
-val make : int -> int -> int -> t
+val make : ?alpha:int -> int -> int -> int -> t
 (** [Color.make r g b] create a color *)
 
 val to_string : t -> string

@@ -5,7 +5,8 @@ open Bootstrapper
 type t = {
   red : int
 ; green : int
-; blue : int 
+; blue : int
+; alpha : int
 }
 
 let bound v =
@@ -13,22 +14,27 @@ let bound v =
   else if v < 0 then 0
   else v
 
-let make r g b = {
+let make ?(alpha = 0) r g b = {
   red = bound r
 ; green = bound g
 ; blue = bound b
+; alpha = alpha
 }
 
-let of_rgb_string s =
-  Scanf.sscanf s "rgb(%d,%d,%d)" make
+let of_rgb_string str =
+  let s = Str.(global_replace (regexp " ") "" str) in 
+  try  Scanf.sscanf s "rgb(%d,%d,%d)" (fun a b c -> make a b c)
+  with _ ->
+    try Scanf.sscanf s "rgba(%d,%d,%d,%d)"
+          (fun a b c d -> make ~alpha:d a b c)
+    with _ -> make 255 255 255
 
 let of_hexa_string s =
-  Scanf.sscanf "#FFAABB" "#%2x%2x%2x" make
+  Scanf.sscanf "#FFAABB" "#%2x%2x%2x" (fun a b c -> make a b c)
 
 let of_string s =
   try of_hexa_string s
   with _ -> try of_rgb_string s
-    with _ -> try Scanf.sscanf s "rgb(%d, %d, %d)" make
       with _ -> make 255 255 255
              
 
