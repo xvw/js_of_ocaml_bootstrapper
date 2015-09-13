@@ -41,6 +41,42 @@ val line_cap : [< `Round | `Square | `Butt ] -> unit
 (** [Canvas.line_join style] define the join style of the strokes *)
 val line_join : [< `Bevel | `Square | `Mitter ] -> unit 
 
+(** {2 Canvas Drawing} *)
+
+(** Draw a sequence *)
+val draw : Color.t option -> Color.t option -> (unit -> unit) list -> unit
+
+(** [shape points] draw point on the canvas*)
+val shape : ?closed:bool -> (float * float) list -> unit
+
+(** [arc ~clockwise:true x y radius start_angle end_angle] draw an arc *)
+val arc :
+  ?clockwise:bool ->
+  float -> float ->
+  float -> float -> float ->
+  unit
+
+
+(** 
+   [Canvas.quadratic_curve x1 y1 x2 y2]
+   Draw a quatratic curve from [(x1, y1)] to [(x2, y2)]
+*)
+val quadratic_curve :
+  float -> float ->
+  float -> float ->
+  unit
+
+(** 
+   [Canvas.bezier_curve x1 y1 x2 y2 x3 y3]
+   Draw a bezier curve from [(x1, y1)] to [(x3, y3)] using [(x2, y2)] as 
+   curve high.
+*)
+val bezier_curve :
+  float -> float ->
+  float -> float ->
+  float -> float ->
+  unit
+
 
 (** {2 Canvas shape} *)
 
@@ -115,4 +151,28 @@ val fill_arc :
   Color.t option ->
   Color.t option ->
   float -> float -> float -> float -> float ->
+  unit
+
+(** 
+   [Canvas.fill_quadratic_curve fill_color stroke_color x1 y1 x2 y2]
+   Draw a quatratic curve from [(x1, y1)] to [(x2, y2)]
+*)
+val fill_quadratic_curve :
+  Color.t option ->
+  Color.t option ->
+  float -> float ->
+  float -> float ->
+  unit
+
+(** 
+   [Canvas.fill_bezier_curve fill_color stroke_color x1 y1 x2 y2 x3 y3]
+   Draw a bezier curve from [(x1, y1)] to [(x3, y3)] using [(x2, y2)] as 
+   curve high.
+*)
+val fill_bezier_curve :
+  Color.t option ->
+  Color.t option ->
+  float -> float ->
+  float -> float ->
+  float -> float ->
   unit

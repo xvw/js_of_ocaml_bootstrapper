@@ -74,6 +74,14 @@ struct
       
 end
 
+let draw fc sc fs =
+  wrap_2d (fun canvas ctx ->
+      let _ = ctx ## beginPath () in
+      let _ = List.iter (fun f -> f ()) fs in
+      let _ = Internal.(wrap_option fill ctx fc) in
+      Internal.(wrap_option stroke ctx sc)
+    )
+
 
 let line_join style =
   wrap_2d (fun canvas ctx ->
@@ -122,33 +130,50 @@ let fill_all color_str =
       in fill_rect (Some color_str) None  0. 0. w h
     )
 
-let fill_shape ?(closed=false) fill_color stroke_color points  =
+
+let shape ?(closed=false) points  =
   wrap_2d (fun canvas ctx ->
       match points with
       | (x,y) :: point_list -> 
-        let _ = ctx ## beginPath () in
         let _ = ctx ## moveTo (x,y) in
         let _ = List.iter (fun (x,y) -> ctx ## lineTo (x,y)) point_list in
-        let _ = if closed then ctx ## closePath () in
-        let _ = Internal.(wrap_option fill ctx fill_color)
-        in Internal.(wrap_option stroke ctx stroke_color)
+        if closed then ctx ## closePath () 
       | _ -> ()
     )
+
+let fill_shape ?(closed=false) fill_color stroke_color points  =
+  draw fill_color stroke_color [fun () -> shape ~closed points]
 
 let fill_closed_shape = fill_shape ~closed:true
 
 let fill_triangle fc sc pa pb pc =
   fill_shape ~closed:true fc sc [pa; pb; pc] 
 
-let fill_arc ?(clockwise=true) fc sc x y radius sa ea =
+
+let arc ?(clockwise=true)  x y radius sa ea =
   wrap_2d (fun canvas ctx ->
       let anticlockwise = if clockwise then Js._false else Js._true in
-      let _ = ctx ## beginPath () in
-      let _ = ctx ## arc (x, y, radius, sa, ea, anticlockwise) in
-      let _ = Internal.(wrap_option fill ctx fc) in
-      Internal.(wrap_option stroke ctx sc)
+      ctx ## arc (x, y, radius, sa, ea, anticlockwise)
     )
 
+let fill_arc ?(clockwise=true) fc sc x y radius sa ea =
+  draw fc sc [fun () -> arc x y radius sa ea]
+  
 let fill_circle fc sc x y radius =
   fill_arc fc sc x y radius 0. (Internal.pi *. 2.)
 
+
+let quadratic_curve x y x2 y2 =
+  wrap_2d (fun canvas ctx -> ctx ## quadraticCurveTo(x, y, x2, y2))
+
+
+let fill_quadratic_curve fc sc x y x2 y2 =
+  draw fc sc [fun () -> quadratic_curve x y x2 y2]
+
+
+let bezier_curve x y x2 y2 x3 y3 =
+  wrap_2d (fun canvas ctx -> ctx ## bezierCurveTo(x, y, x2, y2, x3, y3))
+
+
+let fill_bezier_curve fc sc x y x2 y2 x3 y3 =
+  draw fc sc [fun () -> bezier_curve x y x2 y2 x3 y3]
