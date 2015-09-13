@@ -177,3 +177,22 @@ let bezier_curve x y x2 y2 x3 y3 =
 
 let fill_bezier_curve fc sc x y x2 y2 x3 y3 =
   draw fc sc [fun () -> bezier_curve x y x2 y2 x3 y3]
+
+let rounded_rect x y width height radius =
+  wrap_2d (fun canvas ctx ->
+      let _ = ctx ## moveTo(x, y +. radius) in
+      let _ = ctx ## lineTo(x, y +. height -. radius) in
+      let _ = ctx ## quadraticCurveTo (x,y+.height,x+.radius,y+.height) in
+      let _ = ctx ## lineTo(x+.width-.radius,y+.height) in
+      let _ =
+        ctx ## quadraticCurveTo (
+          x+. width,y+. height,x+. width,y+.height-.radius)
+      in 
+      let _ = ctx ## lineTo(x+.width,y+.radius) in 
+      let _ = ctx ## quadraticCurveTo(x+.width,y,x+.width-.radius,y) in 
+      let _ = ctx ## lineTo(x+.radius,y) in
+      ctx ## quadraticCurveTo(x,y,x,y+.radius)
+    )
+
+let fill_rounded_rect fc sc x y w h r =
+  draw fc sc [fun () -> rounded_rect x y w h r]

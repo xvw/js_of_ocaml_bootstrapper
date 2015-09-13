@@ -77,6 +77,14 @@ val bezier_curve :
   float -> float ->
   unit
 
+(** 
+   [Canvas.rounded_rect x y width height radius] draw a rounded rect
+*)
+val rounded_rect :
+  float -> float ->
+  float -> float ->
+  float -> unit
+
 
 (** {2 Canvas shape} *)
 
@@ -140,6 +148,19 @@ val fill_circle :
   Color.t option ->
   Color.t option ->
   float -> float -> float -> unit
+
+
+(** 
+   [Canvas.rounded_rect stroke_color fill_color x y width height radius] 
+   draw a rounded rect 
+*)
+val fill_rounded_rect :
+  Color.t option ->
+  Color.t option ->
+  float -> float ->
+  float -> float ->
+  float -> unit
+
 
 (** 
    [Canvas.fill_arc ~clockwise:true 
