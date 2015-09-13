@@ -10,6 +10,14 @@ type image = Dom_html.imageElement Js.t
 type point = (float * float)
 type rect = (float * float * float * float)
 
+type fill_param =
+  | Color of Color.t
+  | LinearGradian of point * point * (float * Color.t) list
+  | RadialGradian of point * point * float * (float * Color.t) list
+  | Pattern of image * [`Repeat | `Repeat_x | `Repeat_y | `No_repeat]
+
+type filler = (fill_param option * fill_param option)
+
 let point x y = (
   float_of_int x,
   float_of_int y
@@ -57,6 +65,25 @@ let wrap_2d f =
       f canvas (canvas ## getContext(Dom_html._2d_))
     )
 
+let set_global_alpha x =
+  wrap_2d (fun canvas ctx ->
+      ctx ## globalAlpha <- x
+    )
+
+let get_global_alpha x =
+  wrap_2d (fun canvas ctx ->
+      ctx ## globalAlpha
+    )
+
+let empty = None
+let plain_color c = Some (Color c)
+let linear_gradian p p step = Some (LinearGradian (p, p, step))
+let radial_gradian p p rad step = Some (RadialGradian (p, p, rad, step))
+let pattern img repeat = Some (Pattern (img, repeat))
+
+let filler ?(background=None) ?(strokes=None) () =
+  (background, strokes)
+
 module Internal =
 struct
 
@@ -73,7 +100,7 @@ struct
     let style = match s with
       | `Bevel -> "bevel"
       | `Square -> "square"
-      | `Mitter -> "mitter"
+      | `Miter -> "miter"
     in _s style
 
   let stroke ctx c =
@@ -89,6 +116,12 @@ struct
     | None   -> ()
       
 end
+
+
+let miter_limit x =
+  wrap_2d (fun _ ctx ->
+      ctx ## miterLimit <- x
+    )
 
 let draw fc sc fs =
   wrap_2d (fun canvas ctx ->
