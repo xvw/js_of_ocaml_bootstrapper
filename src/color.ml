@@ -30,7 +30,7 @@ let of_rgb_string str =
     with _ -> make 255 255 255
 
 let of_hexa_string s =
-  Scanf.sscanf "#FFAABB" "#%2x%2x%2x" (fun a b c -> make a b c)
+  Scanf.sscanf s "#%2x%2x%2x" (fun a b c -> make a b c)
 
 let of_string s =
   try of_hexa_string s
