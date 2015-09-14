@@ -138,9 +138,10 @@ struct
           let grad = ctx ## createLinearGradient(x, y, x2, y2) in
           let _ =
             List.iter
-              (fun (i, s) -> grad ## addColorStop(i, Color.to_js s))
+              (fun (i, s) ->
+                 grad ## addColorStop(i, Color.to_js s))
               steps
-          in 
+          in
           let _ = ctx ## fillStyle_gradient <- grad in
           ctx ## fill ()
         | RadialGradient ((x, y), (x2, y2), r, r2, steps) ->
