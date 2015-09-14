@@ -129,7 +129,7 @@ struct
         match x with
         | Color c ->
           let _ = ctx ## fillStyle <- (Color.to_js c) in
-          ctx ## fill ()
+          ctx ## fill()
         | Pattern (img, rep) ->
           let pattern = ctx ## createPattern(img, repeat rep) in
           let _ = ctx ## fillStyle_pattern <- pattern in
@@ -198,11 +198,21 @@ let miter_limit x =
       ctx ## miterLimit <- x
     )
 
+
 let draw fc sc fs =
   wrap_2d (fun canvas ctx ->
-      let _ = ctx ## beginPath () in
-      let _ = List.iter (fun f -> f ()) fs in
-      Internal.fill_stroke ctx fc sc
+      List.iter (fun f ->
+          let _ = ctx ## beginPath () in
+          let _ = f () in Internal.fill_stroke ctx fc sc
+        ) fs
+    )
+
+
+let draw_shape fc sc fs =
+  wrap_2d (fun canvas ctx ->
+      List.iter (fun f ->
+          let _ = f () in Internal.fill_stroke ctx fc sc
+        ) fs
     )
 
 
@@ -224,7 +234,7 @@ let clear_rect (x, y, width, height) =
 
 let rect (x, y, w, h)  =
   wrap_2d (fun canvas ctx ->
-      ctx ## clearRect(x, y, w, h)
+      ctx ## rect(x, y, w, h)
     )
 
       
@@ -245,7 +255,7 @@ let fill_all color_str =
   wrap (fun canvas ->
       let w = float_of_int (canvas ## width)
       and h = float_of_int (canvas ## height)
-      in fill_rect (Some color_str) None  (0., 0., w, h)
+      in fill_rect color_str None  (0., 0., w, h)
     )
 
 

@@ -104,6 +104,11 @@ val miter_limit : float -> unit
 (** Draw a sequence *)
 val draw : fill_param option -> fill_param option -> (unit -> unit) list -> unit
 
+(** Draw a shape *)
+val draw_shape :
+  fill_param option -> fill_param option -> (unit -> unit) list -> unit
+
+
 (** [shape points] draw point on the canvas*)
 val shape : ?closed:bool -> point list -> unit
 
@@ -171,7 +176,7 @@ val fill_triangle :
   unit
 
 (** [Canvas.fill_all color] fill all the surface with [color]*)
-val fill_all : fill_param -> unit
+val fill_all : fill_param option -> unit
 
 (** [Canvas.shape ~closed:false fill_color stroke_color points_list] 
     will draw a shape on the Canvas (if ~closed:true, the shape will 
