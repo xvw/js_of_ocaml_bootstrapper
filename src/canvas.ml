@@ -12,8 +12,8 @@ type rect = (float * float * float * float)
 
 type fill_param =
   | Color of Color.t
-  | LinearGradian of point * point * (float * Color.t) list
-  | RadialGradian of point * point * float * (float * Color.t) list
+  | LinearGradient of point * point * (float * Color.t) list
+  | RadialGradient of point * point * float * float * (float * Color.t) list
   | Pattern of image * [`Repeat | `Repeat_x | `Repeat_y | `No_repeat]
 
 type filler = (fill_param option * fill_param option)
@@ -22,7 +22,7 @@ let point x y = (
   float_of_int x,
   float_of_int y
 )
-let rect x y w h = (
+let _rect x y w h = (
   float_of_int x,
   float_of_int y,
   float_of_int w,
@@ -77,8 +77,9 @@ let get_global_alpha x =
 
 let empty = None
 let plain_color c = Some (Color c)
-let linear_gradian p p step = Some (LinearGradian (p, p, step))
-let radial_gradian p p rad step = Some (RadialGradian (p, p, rad, step))
+let linear_gradient p p step = Some (LinearGradient (p, p, step))
+let radial_gradient p p rad rad2 step =
+  Some (RadialGradient (p, p, rad, rad2, step))
 let pattern img repeat = Some (Pattern (img, repeat))
 
 let filler ?(background=None) ?(strokes=None) () =
@@ -114,9 +115,83 @@ struct
   let wrap_option f ctx = function
     | Some x -> f ctx x
     | None   -> ()
+
+  let repeat s =
+    let rep = match s with
+      | `Repeat -> "repeat"
+      | `Repeat_x -> "repeat-x"
+      | `Repeat_y -> "repeat-y"
+      | `No_repeat -> "no-repeat"
+    in _s rep
+
+  let apply_filler_for_fill ctx = function
+    | Some x -> begin
+        match x with
+        | Color c ->
+          let _ = ctx ## fillStyle <- (Color.to_js c) in
+          ctx ## fill ()
+        | Pattern (img, rep) ->
+          let pattern = ctx ## createPattern(img, repeat rep) in
+          let _ = ctx ## fillStyle_pattern <- pattern in
+          ctx ## fill ()
+        | LinearGradient ((x, y), (x2, y2), steps) ->
+          let grad = ctx ## createLinearGradient(x, y, x2, y2) in
+          let _ =
+            List.iter
+              (fun (i, s) -> grad ## addColorStop(i, Color.to_js s))
+              steps
+          in 
+          let _ = ctx ## fillStyle_gradient <- grad in
+          ctx ## fill ()
+        | RadialGradient ((x, y), (x2, y2), r, r2, steps) ->
+          let grad = ctx ## createRadialGradient(x, y, x2, y2, r, r2) in
+          let _ =
+            List.iter
+              (fun (i, s) -> grad ## addColorStop(i, Color.to_js s))
+              steps
+          in 
+          let _ = ctx ## fillStyle_gradient <- grad in
+          ctx ## fill ()
+      end
+    | None -> ()
+
+  let apply_filler_for_stroke ctx = function
+    | Some x -> begin
+        match x with
+        | Color c ->
+          let _ = ctx ## strokeStyle <- (Color.to_js c) in
+          ctx ## stroke ()
+        | Pattern (img, rep) ->
+          let pattern = ctx ## createPattern(img, repeat rep) in
+          let _ = ctx ## strokeStyle_pattern <- pattern in
+          ctx ## stroke ()
+        | LinearGradient ((x, y), (x2, y2), steps) ->
+          let grad = ctx ## createLinearGradient(x, y, x2, y2) in
+          let _ =
+            List.iter
+              (fun (i, s) -> grad ## addColorStop(i, Color.to_js s))
+              steps
+          in 
+          let _ = ctx ## strokeStyle_gradient <- grad in
+          ctx ## stroke ()
+        | RadialGradient ((x, y), (x2, y2), r, r2, steps) ->
+          let grad = ctx ## createRadialGradient(x, y, x2, y2, r, r2) in
+          let _ =
+            List.iter
+              (fun (i, s) -> grad ## addColorStop(i, Color.to_js s))
+              steps
+          in 
+          let _ = ctx ## strokeStyle_gradient <- grad in
+          ctx ## stroke ()
+      end
+    | None -> ()
+
+  let fill_stroke ctx f s =
+    let _ = apply_filler_for_fill ctx f in
+    apply_filler_for_stroke ctx s
+  
       
 end
-
 
 let miter_limit x =
   wrap_2d (fun _ ctx ->
@@ -127,8 +202,7 @@ let draw fc sc fs =
   wrap_2d (fun canvas ctx ->
       let _ = ctx ## beginPath () in
       let _ = List.iter (fun f -> f ()) fs in
-      let _ = Internal.(wrap_option fill ctx fc) in
-      Internal.(wrap_option stroke ctx sc)
+      Internal.fill_stroke ctx fc sc
     )
 
 
@@ -147,24 +221,18 @@ let clear_rect (x, y, width, height) =
   wrap_2d (fun canvas ctx ->
       ctx ## clearRect(x, y, width, height)
     )
-      
-let fill_rect fill_color stroke_color (x, y, width, height) =
+
+let rect (x, y, w, h)  =
   wrap_2d (fun canvas ctx ->
-      let _ = match fill_color with
-        | Some color ->
-          let _ = ctx ## fillStyle <- (Color.to_js color) in
-          ctx ## fillRect(x, y, width, height)
-        | None -> ()
-      in
-      match stroke_color with
-      | Some color ->
-        let _ = ctx ## strokeStyle <- (Color.to_js color) in
-        ctx ## strokeRect(x, y, width, height)
-      | None -> ()
+      ctx ## clearRect(x, y, w, h)
     )
 
+      
+let fill_rect fc sc r =
+  draw fc sc [(fun () -> rect r)]
+
 let fill_square fc sc (x,y) w =
-  fill_rect fc sc (rect (int_of_float x) (int_of_float y) w w) 
+  fill_rect fc sc (_rect (int_of_float x) (int_of_float y) w w) 
 
 let clear_all () =
   wrap (fun canvas ->
