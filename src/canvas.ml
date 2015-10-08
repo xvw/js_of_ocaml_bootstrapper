@@ -10,11 +10,19 @@ type image = Dom_html.imageElement Js.t
 type point = (float * float)
 type rect = (float * float * float * float)
 
+type fill_param =
+  | Color of Color.t
+  | LinearGradient of point * point * (float * Color.t) list
+  | RadialGradient of point * point * float * float * (float * Color.t) list
+  | Pattern of image * [`Repeat | `Repeat_x | `Repeat_y | `No_repeat]
+
+type filler = (fill_param option * fill_param option)
+
 let point x y = (
   float_of_int x,
   float_of_int y
 )
-let rect x y w h = (
+let _rect x y w h = (
   float_of_int x,
   float_of_int y,
   float_of_int w,
@@ -57,6 +65,26 @@ let wrap_2d f =
       f canvas (canvas ## getContext(Dom_html._2d_))
     )
 
+let set_global_alpha x =
+  wrap_2d (fun canvas ctx ->
+      ctx ## globalAlpha <- x
+    )
+
+let get_global_alpha x =
+  wrap_2d (fun canvas ctx ->
+      ctx ## globalAlpha
+    )
+
+let empty = None
+let plain_color c = Some (Color c)
+let linear_gradient p pa step = Some (LinearGradient (p, pa, step))
+let radial_gradient p pb rad rad2 step =
+  Some (RadialGradient (p, pb, rad, rad2, step))
+let pattern img repeat = Some (Pattern (img, repeat))
+
+let filler ?(background=None) ?(strokes=None) () =
+  (background, strokes)
+
 module Internal =
 struct
 
@@ -73,7 +101,7 @@ struct
     let style = match s with
       | `Bevel -> "bevel"
       | `Square -> "square"
-      | `Mitter -> "mitter"
+      | `Miter -> "miter"
     in _s style
 
   let stroke ctx c =
@@ -87,15 +115,104 @@ struct
   let wrap_option f ctx = function
     | Some x -> f ctx x
     | None   -> ()
+
+  let repeat s =
+    let rep = match s with
+      | `Repeat -> "repeat"
+      | `Repeat_x -> "repeat-x"
+      | `Repeat_y -> "repeat-y"
+      | `No_repeat -> "no-repeat"
+    in _s rep
+
+  let apply_filler_for_fill ctx = function
+    | Some x -> begin
+        match x with
+        | Color c ->
+          let _ = ctx ## fillStyle <- (Color.to_js c) in
+          ctx ## fill()
+        | Pattern (img, rep) ->
+          let pattern = ctx ## createPattern(img, repeat rep) in
+          let _ = ctx ## fillStyle_pattern <- pattern in
+          ctx ## fill ()
+        | LinearGradient ((x, y), (x2, y2), steps) ->
+          let grad = ctx ## createLinearGradient(x, y, x2, y2) in
+          let _ =
+            List.iter
+              (fun (i, s) -> grad ## addColorStop(i, Color.to_js s))
+              steps
+          in
+          let _ = ctx ## fillStyle_gradient <- grad in
+          ctx ## fill ()
+        | RadialGradient ((x, y), (x2, y2), r, r2, steps) ->
+          let grad = ctx ## createRadialGradient(x, y, r, x2, y2, r2) in
+          let _ =
+            List.iter
+              (fun (i, s) -> grad ## addColorStop(i, Color.to_js s))
+              steps
+          in 
+          let _ = ctx ## fillStyle_gradient <- grad in
+          ctx ## fill ()
+      end
+    | None -> ()
+
+  let apply_filler_for_stroke ctx = function
+    | Some x -> begin
+        match x with
+        | Color c ->
+          let _ = ctx ## strokeStyle <- (Color.to_js c) in
+          ctx ## stroke ()
+        | Pattern (img, rep) ->
+          let pattern = ctx ## createPattern(img, repeat rep) in
+          let _ = ctx ## strokeStyle_pattern <- pattern in
+          ctx ## stroke ()
+        | LinearGradient ((x, y), (x2, y2), steps) ->
+          let grad = ctx ## createLinearGradient(x, y, x2, y2) in
+          let _ =
+            List.iter
+              (fun (i, s) -> grad ## addColorStop(i, Color.to_js s))
+              steps
+          in 
+          let _ = ctx ## strokeStyle_gradient <- grad in
+          ctx ## stroke ()
+        | RadialGradient ((x, y), (x2, y2), r, r2, steps) ->
+          let grad = ctx ## createRadialGradient(x, y, r, x2, y2, r2) in
+          let _ =
+            List.iter
+              (fun (i, s) -> grad ## addColorStop(i, Color.to_js s))
+              steps
+          in 
+          let _ = ctx ## strokeStyle_gradient <- grad in
+          ctx ## stroke ()
+      end
+    | None -> ()
+
+  let fill_stroke ctx f s =
+    let _ = apply_filler_for_fill ctx f in
+    apply_filler_for_stroke ctx s
+  
       
 end
 
+let miter_limit x =
+  wrap_2d (fun _ ctx ->
+      ctx ## miterLimit <- x
+    )
+
+
 let draw fc sc fs =
   wrap_2d (fun canvas ctx ->
-      let _ = ctx ## beginPath () in
-      let _ = List.iter (fun f -> f ()) fs in
-      let _ = Internal.(wrap_option fill ctx fc) in
-      Internal.(wrap_option stroke ctx sc)
+      List.iter (fun f ->
+          let _ = ctx ## beginPath () in
+          let _ = f () in Internal.fill_stroke ctx fc sc
+        ) fs
+    )
+
+
+let draw_shape fc sc fs =
+  wrap_2d (fun canvas ctx ->
+      List.iter (fun f ->
+          let _ = f () in Internal.fill_stroke ctx fc sc
+        ) fs
     )
 
 
@@ -114,24 +231,18 @@ let clear_rect (x, y, width, height) =
   wrap_2d (fun canvas ctx ->
       ctx ## clearRect(x, y, width, height)
     )
-      
-let fill_rect fill_color stroke_color (x, y, width, height) =
+
+let rect (x, y, w, h)  =
   wrap_2d (fun canvas ctx ->
-      let _ = match fill_color with
-        | Some color ->
-          let _ = ctx ## fillStyle <- (Color.to_js color) in
-          ctx ## fillRect(x, y, width, height)
-        | None -> ()
-      in
-      match stroke_color with
-      | Some color ->
-        let _ = ctx ## strokeStyle <- (Color.to_js color) in
-        ctx ## strokeRect(x, y, width, height)
-      | None -> ()
+      ctx ## rect(x, y, w, h)
     )
 
+      
+let fill_rect fc sc r =
+  draw fc sc [(fun () -> rect r)]
+
 let fill_square fc sc (x,y) w =
-  fill_rect fc sc (rect (int_of_float x) (int_of_float y) w w) 
+  fill_rect fc sc (_rect (int_of_float x) (int_of_float y) w w) 
 
 let clear_all () =
   wrap (fun canvas ->
@@ -144,7 +255,7 @@ let fill_all color_str =
   wrap (fun canvas ->
       let w = float_of_int (canvas ## width)
       and h = float_of_int (canvas ## height)
-      in fill_rect (Some color_str) None  (0., 0., w, h)
+      in fill_rect color_str None  (0., 0., w, h)
     )
 
 
@@ -215,15 +326,21 @@ let fill_rounded_rect fc sc rect r =
   draw fc sc [fun () -> rounded_rect rect r]
 
 
-let image ?(id=None) ?(path=None) () =
+let image ?(id=None) ?(path=None) ~onload () =
   let img =
     Dom_html.createImg Dom_html.document
     |> Dom_html.CoerceTo.img
     |> Get.unopt
-  in 
+  in
   let _ = Option.unit_map (fun x -> img ## id <- (_s x)) id in
-  let _ = Option.unit_map (fun x -> img ## src <- (_s x)) path
+  let _ = Option.unit_map (fun x -> img ## src <- (_s x)) path in
+  let _ =
+    if Js.to_bool (img ## complete)
+    then onload(img)  
+    else img ## onload <- Dom_html.handler (fun _ -> onload(img); Js._false)
   in img
+        
+      
 
 let draw_image img (x, y) =
   wrap_2d (fun canvas ctx ->

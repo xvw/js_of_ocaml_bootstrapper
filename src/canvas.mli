@@ -20,13 +20,22 @@ type image = Dom_html.imageElement Js.t
 type point = (float * float)
 type rect = (float * float * float * float)
 
+
+type fill_param =
+  | Color of Color.t
+  | LinearGradient of point * point * (float * Color.t) list
+  | RadialGradient of point * point * float * float * (float * Color.t) list
+  | Pattern of image * [`Repeat | `Repeat_x | `Repeat_y | `No_repeat]
+
+type filler = (fill_param option * fill_param option)
+
 (** {2 Rect and pointutils} *)
 
 (** [Canvas.point x y] create an abstract point *)
 val point : int -> int -> point
 
-(** [Canvas.rect x y width height] create an abstract rect *)
-val rect : int -> int -> int -> int -> rect
+(** [Canvas._rect x y width height] create an abstract rect *)
+val _rect : int -> int -> int -> int -> rect
 
 (** {2 Canvas creation } *)
 
@@ -46,19 +55,59 @@ val append : Dom_html.element Js.t -> unit
 (** Create and append a Canvas (junction between [create] and [append] *)
 val create_in : Dom_html.element Js.t -> int -> int -> unit
 
-(** {2 Canvas drawing style } *)
+(** {2 Filler utils} *)
 
+(** Empty filler *)
+val empty : fill_param option
+
+(** Create a color usable as a filler data *)
+val plain_color : Color.t -> fill_param option
+
+(** Create a linear gradient usable as a filler data *)
+val linear_gradient :
+  point -> point -> (float * Color.t) list -> fill_param option
+
+(** Create a radial gradient usable as a filler data *)
+val radial_gradient :
+  point -> point -> float -> float ->
+  (float * Color.t) list -> fill_param option
+
+(** Create a pattern usable as a filler data *)
+val pattern : image -> [`Repeat | `Repeat_x | `Repeat_y | `No_repeat] ->
+  fill_param option
+
+(** Create a filler for the background and the strokes *)
+val filler :
+  ?background:fill_param option ->
+  ?strokes:fill_param option -> unit -> filler
+
+(** {2 Canvas drawing style and properties} *)
+
+(** Set the global alpha for drawing element *)
+val set_global_alpha : float -> unit
+
+(** Set the global alpha for drawing element *)
+val get_global_alpha : unit -> float
 
 (** [Canvas.line_cap style] define the cap style of the strokes *)
 val line_cap : [< `Round | `Square | `Butt ] -> unit 
 
 (** [Canvas.line_join style] define the join style of the strokes *)
-val line_join : [< `Bevel | `Square | `Mitter ] -> unit 
+val line_join : [< `Bevel | `Square | `Miter ] -> unit
+
+(** Establishes a limit on the miter when two lines join at a sharp angle, 
+    to let you control how thick the junction becomes.*)
+val miter_limit : float -> unit
 
 (** {2 Canvas Drawing} *)
 
 (** Draw a sequence *)
-val draw : Color.t option -> Color.t option -> (unit -> unit) list -> unit
+val draw : fill_param option -> fill_param option -> (unit -> unit) list -> unit
+
+(** Draw a shape *)
+val draw_shape :
+  fill_param option -> fill_param option -> (unit -> unit) list -> unit
+
 
 (** [shape points] draw point on the canvas*)
 val shape : ?closed:bool -> point list -> unit
@@ -69,6 +118,9 @@ val arc :
   point ->
   float -> float -> float ->
   unit
+
+(** [Canvas.rect r] create a rect on the canvas *)
+val rect : rect -> unit
 
 
 (** 
@@ -102,29 +154,29 @@ val clear_all : unit -> unit
     defined rect filled with [fill_color] and stoked with [stroke_color] 
 *)
 val fill_rect :
-  Color.t option ->
-  Color.t option ->
+  fill_param option ->
+  fill_param option ->
   rect -> unit
 
 (** [Canvas.fill_square fill_color stroke_color point size] draw a square 
     on the canvas
 *)
 val fill_square : 
-  Color.t option ->
-  Color.t option ->
+  fill_param option ->
+  fill_param option ->
   point -> int -> unit
 
 (** [Canvas.fill_triangle fill_color stroke_color p1 p2 p3]
     draw a rectangle
 *)
 val fill_triangle :
-  Color.t option ->
-  Color.t option ->
+  fill_param option ->
+  fill_param option ->
   point -> point -> point ->
   unit
 
 (** [Canvas.fill_all color] fill all the surface with [color]*)
-val fill_all : Color.t -> unit
+val fill_all : fill_param option -> unit
 
 (** [Canvas.shape ~closed:false fill_color stroke_color points_list] 
     will draw a shape on the Canvas (if ~closed:true, the shape will 
@@ -132,8 +184,8 @@ val fill_all : Color.t -> unit
 *)
 val fill_shape :
   ?closed:bool ->
-  Color.t option ->
-  Color.t option ->
+  fill_param option ->
+  fill_param option ->
   point list
   -> unit
 
@@ -141,16 +193,16 @@ val fill_shape :
     will be created a closed shape on the canvas
 *)
 val fill_closed_shape :
-  Color.t option ->
-  Color.t option ->
+  fill_param option->
+  fill_param option ->
   point list ->
   unit
 
 (** [Canvas.fill_circle fill_color stroke_color point radius] Draw 
     a circle on the canvas *)
 val fill_circle :
-  Color.t option ->
-  Color.t option ->
+  fill_param option ->
+  fill_param option ->
   point -> float -> unit
 
 
@@ -159,8 +211,8 @@ val fill_circle :
    draw a rounded rect 
 *)
 val fill_rounded_rect :
-  Color.t option ->
-  Color.t option ->
+  fill_param option ->
+  fill_param option ->
   rect -> float -> unit
 
 
@@ -171,8 +223,8 @@ val fill_rounded_rect :
 *)
 val fill_arc :
   ?clockwise:bool ->
-  Color.t option ->
-  Color.t option ->
+  fill_param option ->
+  fill_param option ->
   point -> float -> float -> float ->
   unit
 
@@ -181,8 +233,8 @@ val fill_arc :
    Draw a quatratic curve from [p1] to [p2]
 *)
 val fill_quadratic_curve :
-  Color.t option ->
-  Color.t option ->
+  fill_param option ->
+  fill_param option ->
   point -> point -> unit
 
 (** 
@@ -191,8 +243,8 @@ val fill_quadratic_curve :
    curve high.
 *)
 val fill_bezier_curve :
-  Color.t option ->
-  Color.t option ->
+  fill_param option ->
+  fill_param option ->
   point -> point -> point -> unit
 
 (** {2 Image } *)
@@ -201,7 +253,7 @@ val fill_bezier_curve :
 val image :
   ?id:string option ->
   ?path:string option ->
-  unit -> image
+  onload:(image -> unit) -> unit -> image
 
 
 (** [Canvas.draw_image image x y] Draw image on the canvas *)

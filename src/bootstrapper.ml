@@ -47,15 +47,18 @@ module Promise =
 struct
 
   let wakeup w x _ = let _ = Lwt.wakeup w () in x
-  let wrap f = (fun () -> Lwt.return (f ()))
-  let run promise f = promise () >>= (wrap f)
+  let wrap f = (fun x -> Lwt.return (f x))
+  let run promise f elt = promise elt >>= (wrap f)
 
-  let onload () =
+  let raw_onload elt () =
     let thread, wakener = Lwt.wait () in
-    let _ = Dom_html.window ## onload <-
+    let _ = elt ## onload <-
         Dom.handler (wakeup wakener Js._true)
     in thread
-    
+
+  let dom_onload () = raw_onload (Dom_html.window) ()
+  let img_onload i  = raw_onload i ()
+     
 end
 
 module Event =
@@ -277,7 +280,7 @@ module type EHTML_APPLICATION = sig
 end
 
 module Application(F : APPLICATION) = struct
-  let _ = Promise.(run onload F.initialize)
+  let _ = Promise.(run dom_onload F.initialize ())
 end
 
 module EHtml_Application(F : EHTML_APPLICATION) = struct
@@ -285,6 +288,6 @@ module EHtml_Application(F : EHTML_APPLICATION) = struct
   let initialize () =
     let _ = refresh_dom F.registered_callback in
     let _ = F.initialize () in Lwt.wakeup
-  let _ = Promise.(run onload initialize)
+  let _ = Promise.(run dom_onload initialize ())
 end
 
