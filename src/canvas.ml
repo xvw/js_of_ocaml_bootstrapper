@@ -77,9 +77,9 @@ let get_global_alpha x =
 
 let empty = None
 let plain_color c = Some (Color c)
-let linear_gradient p p step = Some (LinearGradient (p, p, step))
-let radial_gradient p p rad rad2 step =
-  Some (RadialGradient (p, p, rad, rad2, step))
+let linear_gradient p pa step = Some (LinearGradient (p, pa, step))
+let radial_gradient p pb rad rad2 step =
+  Some (RadialGradient (p, pb, rad, rad2, step))
 let pattern img repeat = Some (Pattern (img, repeat))
 
 let filler ?(background=None) ?(strokes=None) () =
@@ -138,14 +138,13 @@ struct
           let grad = ctx ## createLinearGradient(x, y, x2, y2) in
           let _ =
             List.iter
-              (fun (i, s) ->
-                 grad ## addColorStop(i, Color.to_js s))
+              (fun (i, s) -> grad ## addColorStop(i, Color.to_js s))
               steps
           in
           let _ = ctx ## fillStyle_gradient <- grad in
           ctx ## fill ()
         | RadialGradient ((x, y), (x2, y2), r, r2, steps) ->
-          let grad = ctx ## createRadialGradient(x, y, x2, y2, r, r2) in
+          let grad = ctx ## createRadialGradient(x, y, r, x2, y2, r2) in
           let _ =
             List.iter
               (fun (i, s) -> grad ## addColorStop(i, Color.to_js s))
@@ -176,7 +175,7 @@ struct
           let _ = ctx ## strokeStyle_gradient <- grad in
           ctx ## stroke ()
         | RadialGradient ((x, y), (x2, y2), r, r2, steps) ->
-          let grad = ctx ## createRadialGradient(x, y, x2, y2, r, r2) in
+          let grad = ctx ## createRadialGradient(x, y, r, x2, y2, r2) in
           let _ =
             List.iter
               (fun (i, s) -> grad ## addColorStop(i, Color.to_js s))
