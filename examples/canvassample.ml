@@ -7,9 +7,15 @@ module App =
         
     let initialize () =
       let app = Get.byId "application" in
-      let img = Canvas.image ~path:(Some "https://avatars2.githubusercontent.com/u/6772534?v=3&s=460") () in
       let _ = Canvas.create_in app 600 400 in
-      let _ = Canvas.draw_image img (Canvas.point 10 10)
+      let img =
+        Canvas.image
+          ~path:(Some
+                   "http://cdn.codesamplez.com/wp-content/uploads/2013/04/Lambda.png")
+          ~onload:(fun i ->
+              Canvas.(draw_image_with_size i (_rect 10 10 200 100))
+            ) ()
+
       in ()
                   
   end

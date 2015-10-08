@@ -327,15 +327,21 @@ let fill_rounded_rect fc sc rect r =
   draw fc sc [fun () -> rounded_rect rect r]
 
 
-let image ?(id=None) ?(path=None) () =
+let image ?(id=None) ?(path=None) ~onload () =
   let img =
     Dom_html.createImg Dom_html.document
     |> Dom_html.CoerceTo.img
     |> Get.unopt
-  in 
+  in
   let _ = Option.unit_map (fun x -> img ## id <- (_s x)) id in
-  let _ = Option.unit_map (fun x -> img ## src <- (_s x)) path
+  let _ = Option.unit_map (fun x -> img ## src <- (_s x)) path in
+  let _ =
+    if Js.to_bool (img ## complete)
+    then onload(img)  
+    else img ## onload <- Dom_html.handler (fun _ -> onload(img); Js._false)
   in img
+        
+      
 
 let draw_image img (x, y) =
   wrap_2d (fun canvas ctx ->

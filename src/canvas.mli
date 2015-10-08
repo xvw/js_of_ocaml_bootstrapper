@@ -253,7 +253,7 @@ val fill_bezier_curve :
 val image :
   ?id:string option ->
   ?path:string option ->
-  unit -> image
+  onload:(image -> unit) -> unit -> image
 
 
 (** [Canvas.draw_image image x y] Draw image on the canvas *)
