@@ -4,8 +4,8 @@ module App =
   Bootstrapper.Application(
   struct
 
-    let width = 100
-    let height = 80 
+    let width = 200
+    let height = 150 
 
     open Dom_html
     open Bootstrapper
@@ -18,7 +18,7 @@ module App =
 
     let line_style =
       "display:flex;"
-      ^ "width:100%";
+      ^ "width:100%;"
       ^ "flex-direction:row;"
       ^ "flex: 1;"
 
