@@ -9,6 +9,7 @@ exception Not_created
 type image = Dom_html.imageElement Js.t
 type point = (float * float)
 type rect = (float * float * float * float)
+type font = int * string
 
 type fill_param =
   | Color of Color.t
@@ -83,7 +84,7 @@ let radial_gradient p pb rad rad2 step =
 let pattern img repeat = Some (Pattern (img, repeat))
 
 let filler ?(background=None) ?(strokes=None) () =
-  (background, strokes)
+  (background, strokes)  
 
 module Internal =
 struct
@@ -356,3 +357,33 @@ let draw_image_slice img (x, y, w, h) (x2, y2, w2, h2) =
   wrap_2d (fun canvas ctx ->
       ctx ## drawImage_full(img,x,y,w,h,w2,y2,w2,h2)
     )  
+
+let font size fontname = Some (size, fontname)
+let font_to_s (size, fontname) =
+  (Printf.sprintf "%dpx %s" size fontname)
+  |> Js.string
+
+let fill_text ?(font = None) ?(max_width = None) str (x, y) =
+  wrap_2d (fun canvas ctx ->
+      let _ = Option.unit_map (fun f -> ctx ## font <- font_to_s f) font in
+      match max_width with
+      | Some mw -> ctx ## fillText_withWidth(_s str, x, y, mw)
+      | _ -> ctx ## fillText(_s str, x, y) 
+    )
+
+let stroke_text ?(font = None) ?(max_width = None) str (x, y) =
+  wrap_2d (fun canvas ctx ->
+      let _ = Option.unit_map (fun f -> ctx ## font <- font_to_s f) font in
+      match max_width with
+      | Some mw -> ctx ## strokeText_withWidth(_s str, x, y, mw)
+      | _ -> ctx ## strokeText(_s str, x, y) 
+    )
+
+
+let draw_text ?(font = None) ?(max_width = None) fc sc str (x, y) =
+  wrap_2d (fun canvas ctx ->
+      let _ = Internal.fill_stroke ctx fc sc in
+      let _ =
+        Option.unit_map (fun _ -> fill_text ~font ~max_width str (x, y)) fc
+      in Option.unit_map (fun _ -> stroke_text ~font ~max_width str (x, y)) sc
+    )
