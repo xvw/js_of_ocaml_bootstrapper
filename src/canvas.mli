@@ -19,7 +19,7 @@ exception Not_created
 type image = Dom_html.imageElement Js.t
 type point = (float * float)
 type rect = (float * float * float * float)
-
+type font = (int * string)
 
 type fill_param =
   | Color of Color.t
@@ -266,3 +266,30 @@ val draw_image_with_size : image -> rect -> unit
 (** [Canvas.draw_image_slice image src_rect dest_rect ]
     Draw a slice (reffered by src_rect) into a dest_rect of the canvas*)
 val draw_image_slice : image -> rect -> rect -> unit 
+
+
+(** {2 Text } *)
+
+(** [Canvas.font size font_name] create an available font *)
+val font : int -> string -> font option
+
+(** [Canvas.fill_text text point] prepare a text drawing *)
+val fill_text :
+  ?font:font option ->
+  ?max_width:float option ->
+  string -> point -> unit
+
+(** [Canvas.stroke_text text point] prepare a text drawing *)
+val stroke_text :
+  ?font:font option ->
+  ?max_width:float option ->
+  string -> point -> unit
+
+(** [Canvas.draw_text fill_style stroke_style text point] prepare a text
+    drawing *)
+val draw_text:
+  ?font:font option ->
+  ?max_width:float option ->
+  fill_param option ->
+  fill_param option ->
+  string -> point -> unit
