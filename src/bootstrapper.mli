@@ -305,6 +305,17 @@ module type APPLICATION = sig
   val initialize : unit -> unit
 end
 
+(** The interface for an application using external composants *)
+module type APPLICATION_CONTEXT = sig
+
+  (** List of external assets *)
+  val context : [> `Css of string | `Js of string] list
+  
+  (** initialize is the entry point of an application *)
+  val initialize : unit -> unit
+    
+end
+
 
 (** The interface for application building using EHTML*)
 module type EHTML_APPLICATION = sig
@@ -340,3 +351,7 @@ module Application :
 (** Make an application using EHtml*)
 module EHtml_Application :
   functor (F : EHTML_APPLICATION) -> sig end 
+
+(** Make an application using an external context *)
+module Application_with :
+  functor (F : APPLICATION_CONTEXT) -> sig end
