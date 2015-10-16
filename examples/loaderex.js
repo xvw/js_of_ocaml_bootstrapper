@@ -1,0 +1,1 @@
+alert("fichier bien chargé");
