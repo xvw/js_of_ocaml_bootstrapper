@@ -20,6 +20,7 @@ sig
   val clear : unit -> unit
   val key : int -> string option
   val length : unit -> int
+  val to_hashtbl : unit -> (string, string) Hashtbl.t
 
 end
 
@@ -47,6 +48,20 @@ struct
       
   let remove key = handler ## removeItem (_s key)
   let clear () = handler ## clear()
+
+  let to_hashtbl () =
+    let len = length () in
+    let h = Hashtbl.create len in
+    for i = 0 to (len - 1) do
+      let k = match key i with
+        | Some r -> r
+        | _ -> raise Not_allowed
+      in
+      match get k with
+      | Some e -> Hashtbl.add h k e
+      | _ -> raise Not_allowed
+    done;
+    h
 
 end
 

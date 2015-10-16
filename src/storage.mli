@@ -33,6 +33,9 @@ sig
   (** [Session.length ()] give the total of stored object *) 
   val length : unit -> int
 
+  (** [Session.to_hashtbl ()] retreive all stored data as an Hashtbl *) 
+  val to_hashtbl : unit -> (string, string) Hashtbl.t
+
 end
 
 
@@ -57,5 +60,8 @@ sig
 
   (** [Local.length ()] give the total of stored object *) 
   val length : unit -> int
+
+  (** [Session.to_hashtbl ()] retreive all stored data as an Hashtbl *) 
+  val to_hashtbl : unit -> (string, string) Hashtbl.t
 
 end
