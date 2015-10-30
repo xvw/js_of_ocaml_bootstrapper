@@ -120,7 +120,7 @@ module App =
     let initialize () =
       let app  = Get.byId "application" in
       let grid = make_grid app in
-      let _ = Event.delayed_loop (fun () -> next_state grid)
+      let _ = Event.delayed_loop ~delay:0.3 (fun () -> next_state grid)
       in () 
                   
   end
