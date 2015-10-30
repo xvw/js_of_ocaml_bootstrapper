@@ -1,7 +1,9 @@
 Name: Js_of_ocaml_bootstrapper
 Version: 0.1
 Synopsis: A small js_of_ocaml library for bootstrapping MVP
-Authors: Xavier Van de Woestyne <xaviervdw@gmail.com>
+Authors:
+  Xavier Van de Woestyne <xaviervdw@gmail.com>,
+  Pierre Ruyter <grimfw@gmail.com>
 License: MIT
 
 Description: Js_of_ocaml_bootstrapper is a small library with some helpers for bootstrapping JavaScript application using OCaml.
@@ -22,3 +24,4 @@ Library "js_of_ocaml_bootstrapper"
     camlp4,
     js_of_ocaml,
     js_of_ocaml.syntax
+
