@@ -1,61 +1,41 @@
-DOC       = doc
-SRC       = src
-EXO       = examples
-BYTES     = bytes
-JSOUT     = js
-LIB       = bootstrapper.cmo color.cmo canvas.cmo storage.cmo
+# OASIS_START
+# DO NOT EDIT (digest: a3c674b4239234cbbe53afe090018954)
 
-OCAMLFIND = ocamlfind ocamlc
-PACKAGES  = -package js_of_ocaml -package js_of_ocaml.syntax
-SYNTAX    = -syntax camlp4o
-COMPILER  = $(OCAMLFIND) $(PACKAGES) $(SYNTAX) -linkpkg -I $(SRC)
+SETUP = ocaml setup.ml
 
-.PHONY: clean lib doc
+build: setup.data
+	$(SETUP) -build $(BUILDFLAGS)
 
-init_bytes:
-	mkdir -p $(BYTES)
+doc: setup.data build
+	$(SETUP) -doc $(DOCFLAGS)
 
-init_js:
-	mkdir -p $(JSOUT)
+test: setup.data build
+	$(SETUP) -test $(TESTFLAGS)
 
+all:
+	$(SETUP) -all $(ALLFLAGS)
 
-lib:
-	$(COMPILER) -c $(SRC)/bootstrapper.mli
-	$(COMPILER) -c $(SRC)/bootstrapper.ml
-	$(COMPILER) -c bootstrapper.cmo $(SRC)/color.mli
-	$(COMPILER) -c bootstrapper.cmo $(SRC)/color.ml
-	$(COMPILER) -c bootstrapper.cmo color.cmo $(SRC)/canvas.mli
-	$(COMPILER) -c bootstrapper.cmo color.cmo $(SRC)/canvas.ml
-	$(COMPILER) -c bootstrapper.cmo $(SRC)/storage.mli	
-	$(COMPILER) -c bootstrapper.cmo $(SRC)/storage.ml
+install: setup.data
+	$(SETUP) -install $(INSTALLFLAGS)
 
-%.byte: $(SRC)/%.ml init_bytes lib
-	$(COMPILER) -o $(BYTES)/$(@) $(LIB) $(<)
+uninstall: setup.data
+	$(SETUP) -uninstall $(UNINSTALLFLAGS)
 
-%.byte: $(EXO)/%.ml init_bytes lib
-	$(COMPILER) -o $(BYTES)/$(@) $(LIB) $(<)
+reinstall: setup.data
+	$(SETUP) -reinstall $(REINSTALLFLAGS)
 
-%.js: %.byte init_js lib
-	js_of_ocaml -o $(JSOUT)/$(@) $(BYTES)/$(<)
+clean:
+	$(SETUP) -clean $(CLEANFLAGS)
 
+distclean:
+	$(SETUP) -distclean $(DISTCLEANFLAGS)
 
-clean_bytes:
-	rm -rf $(BYTES)
-	rm -rf $(SRC)/*.cm*
-	rm -rf $(EXO)/*.cm*
+setup.data:
+	$(SETUP) -configure $(CONFIGUREFLAGS)
 
-clean_js:
-	rm -rf $(JSOUT)
-	rm -rf $(DOC)
+configure:
+	$(SETUP) -configure $(CONFIGUREFLAGS)
 
-distclean: clean_bytes clean_js
-clean: clean_bytes clean_emacs
-clean_emacs:
-	rm -rf *~
-	rm -rf */*~
-	rm -rf \#*
-	rm -rf */\#*
+.PHONY: build doc test all install uninstall reinstall clean distclean configure
 
-doc:
-		mkdir -p $(DOC)
-		eliomdoc -client -html -d $(DOC) -I src src/*.mli
+# OASIS_STOP
