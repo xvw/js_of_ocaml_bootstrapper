@@ -1,7 +1,7 @@
 (* Canvas Helper 
    work in progress
 *)
-open Bootstrapper
+open BootPervasives
 
 exception Already_created
 exception Not_created
@@ -12,9 +12,9 @@ type rect = (float * float * float * float)
 type font = int * string
 
 type fill_param =
-  | Color of Color.t
-  | LinearGradient of point * point * (float * Color.t) list
-  | RadialGradient of point * point * float * float * (float * Color.t) list
+  | Color of BootColor.t
+  | LinearGradient of point * point * (float * BootColor.t) list
+  | RadialGradient of point * point * float * float * (float * BootColor.t) list
   | Pattern of image * [`Repeat | `Repeat_x | `Repeat_y | `No_repeat]
 
 type filler = (fill_param option * fill_param option)
@@ -106,11 +106,11 @@ struct
     in _s style
 
   let stroke ctx c =
-    let _ = ctx ## strokeStyle <- (Color.to_js c) in
+    let _ = ctx ## strokeStyle <- (BootColor.to_js c) in
     ctx ## stroke ()
       
   let fill ctx c =
-    let _ = ctx ## fillStyle <- (Color.to_js c) in
+    let _ = ctx ## fillStyle <- (BootColor.to_js c) in
     ctx ## fill ()
 
   let wrap_option f ctx = function
@@ -129,7 +129,7 @@ struct
     | Some x -> begin
         match x with
         | Color c ->
-          let _ = ctx ## fillStyle <- (Color.to_js c) in
+          let _ = ctx ## fillStyle <- (BootColor.to_js c) in
           ctx ## fill()
         | Pattern (img, rep) ->
           let pattern = ctx ## createPattern(img, repeat rep) in
@@ -139,7 +139,7 @@ struct
           let grad = ctx ## createLinearGradient(x, y, x2, y2) in
           let _ =
             List.iter
-              (fun (i, s) -> grad ## addColorStop(i, Color.to_js s))
+              (fun (i, s) -> grad ## addColorStop(i, BootColor.to_js s))
               steps
           in
           let _ = ctx ## fillStyle_gradient <- grad in
@@ -148,7 +148,7 @@ struct
           let grad = ctx ## createRadialGradient(x, y, r, x2, y2, r2) in
           let _ =
             List.iter
-              (fun (i, s) -> grad ## addColorStop(i, Color.to_js s))
+              (fun (i, s) -> grad ## addColorStop(i, BootColor.to_js s))
               steps
           in 
           let _ = ctx ## fillStyle_gradient <- grad in
@@ -160,7 +160,7 @@ struct
     | Some x -> begin
         match x with
         | Color c ->
-          let _ = ctx ## strokeStyle <- (Color.to_js c) in
+          let _ = ctx ## strokeStyle <- (BootColor.to_js c) in
           ctx ## stroke ()
         | Pattern (img, rep) ->
           let pattern = ctx ## createPattern(img, repeat rep) in
@@ -170,7 +170,7 @@ struct
           let grad = ctx ## createLinearGradient(x, y, x2, y2) in
           let _ =
             List.iter
-              (fun (i, s) -> grad ## addColorStop(i, Color.to_js s))
+              (fun (i, s) -> grad ## addColorStop(i, BootColor.to_js s))
               steps
           in 
           let _ = ctx ## strokeStyle_gradient <- grad in
@@ -179,7 +179,7 @@ struct
           let grad = ctx ## createRadialGradient(x, y, r, x2, y2, r2) in
           let _ =
             List.iter
-              (fun (i, s) -> grad ## addColorStop(i, Color.to_js s))
+              (fun (i, s) -> grad ## addColorStop(i, BootColor.to_js s))
               steps
           in 
           let _ = ctx ## strokeStyle_gradient <- grad in
@@ -331,10 +331,10 @@ let image ?(id=None) ?(path=None) ~onload () =
   let img =
     Dom_html.createImg Dom_html.document
     |> Dom_html.CoerceTo.img
-    |> Get.unopt
+    |> BootHtml.unopt
   in
-  let _ = Option.unit_map (fun x -> img ## id <- (_s x)) id in
-  let _ = Option.unit_map (fun x -> img ## src <- (_s x)) path in
+  let _ = BootOption.unit_map (fun x -> img ## id <- (_s x)) id in
+  let _ = BootOption.unit_map (fun x -> img ## src <- (_s x)) path in
   let _ =
     if Js.to_bool (img ## complete)
     then onload(img)  
@@ -365,7 +365,7 @@ let font_to_s (size, fontname) =
 
 let fill_text ?(font = None) ?(max_width = None) str (x, y) =
   wrap_2d (fun canvas ctx ->
-      let _ = Option.unit_map (fun f -> ctx ## font <- font_to_s f) font in
+      let _ = BootOption.unit_map (fun f -> ctx ## font <- font_to_s f) font in
       match max_width with
       | Some mw -> ctx ## fillText_withWidth(_s str, x, y, mw)
       | _ -> ctx ## fillText(_s str, x, y) 
@@ -373,7 +373,7 @@ let fill_text ?(font = None) ?(max_width = None) str (x, y) =
 
 let stroke_text ?(font = None) ?(max_width = None) str (x, y) =
   wrap_2d (fun canvas ctx ->
-      let _ = Option.unit_map (fun f -> ctx ## font <- font_to_s f) font in
+      let _ = BootOption.unit_map (fun f -> ctx ## font <- font_to_s f) font in
       match max_width with
       | Some mw -> ctx ## strokeText_withWidth(_s str, x, y, mw)
       | _ -> ctx ## strokeText(_s str, x, y) 
@@ -384,6 +384,6 @@ let draw_text ?(font = None) ?(max_width = None) fc sc str (x, y) =
   wrap_2d (fun canvas ctx ->
       let _ = Internal.fill_stroke ctx fc sc in
       let _ =
-        Option.unit_map (fun _ -> fill_text ~font ~max_width str (x, y)) fc
-      in Option.unit_map (fun _ -> stroke_text ~font ~max_width str (x, y)) sc
+        BootOption.unit_map (fun _ -> fill_text ~font ~max_width str (x, y)) fc
+      in BootOption.unit_map (fun _ -> stroke_text ~font ~max_width str (x, y)) sc
     )

@@ -1,6 +1,6 @@
 (* Color API *)
 
-open Bootstrapper
+open BootPervasives
 
 type t = {
   red : int

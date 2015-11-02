@@ -1,6 +1,6 @@
 (* Provide a convinient API for Webstorage *)
 
-open Bootstrapper
+open BootPervasives
 
 (* Exception if Webstorage not allowed *)
 exception Not_allowed
@@ -38,9 +38,9 @@ struct
 
   let wrap f k =
     let r =
-      try Some (Get.unopt(f k))
+      try Some (BootHtml.unopt(f k))
       with _ -> None
-    in Option.map s_ r
+    in BootOption.map s_ r
 
   let get key = wrap (fun x -> handler ## getItem(_s x)) key
   let key index = wrap (fun x -> handler ## key(x)) index
