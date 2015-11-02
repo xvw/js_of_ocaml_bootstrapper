@@ -1,0 +1,159 @@
+"src/bootFunctor.ml" 14 255 278 "src/bootFunctor.ml" 14 255 281
+type(
+  (unit -> unit Lwt.t) -> (unit -> unit) -> unit -> unit Lwt.t
+)
+ident(
+  ext_ref BootPromise.run
+)
+"src/bootFunctor.ml" 14 255 282 "src/bootFunctor.ml" 14 255 292
+type(
+  unit -> unit Lwt.t
+)
+ident(
+  ext_ref BootPromise.dom_onload
+)
+"src/bootFunctor.ml" 14 255 293 "src/bootFunctor.ml" 14 255 305
+type(
+  unit -> unit
+)
+ident(
+  int_ref F.initialize "src/bootFunctor.ml" 4 51 53 "src/bootFunctor.ml" 4 51 82
+)
+"src/bootFunctor.ml" 14 255 306 "src/bootFunctor.ml" 14 255 308
+type(
+  unit
+)
+"src/bootFunctor.ml" 14 255 278 "src/bootFunctor.ml" 14 255 308
+call(
+  stack
+)
+type(
+  unit Lwt.t
+)
+"src/bootFunctor.ml" 18 373 379 "src/bootFunctor.ml" 18 373 380
+type(
+  unit -> unit
+)
+ident(
+  def f "src/bootFunctor.ml" 21 483 485 "src/bootFunctor.ml" 22 527 530
+)
+"src/bootFunctor.ml" 18 373 387 "src/bootFunctor.ml" 18 373 389
+type(
+  unit
+)
+"src/bootFunctor.ml" 19 393 401 "src/bootFunctor.ml" 19 393 402
+type(
+  unit
+)
+"src/bootFunctor.ml" 19 393 405 "src/bootFunctor.ml" 19 393 414
+type(
+  ([ `Css of string | `Js of string ] -> unit) ->
+  [ `Css of string | `Js of string ] list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"src/bootFunctor.ml" 19 393 420 "src/bootFunctor.ml" 19 393 421
+type(
+  [ `Css of string | `Js of string ]
+)
+ident(
+  def l "src/bootFunctor.ml" 19 393 425 "src/bootFunctor.ml" 19 393 448
+)
+"src/bootFunctor.ml" 19 393 425 "src/bootFunctor.ml" 19 393 446
+type(
+  [ `Css of string | `Js of string ] -> unit
+)
+ident(
+  ext_ref BootHtml.load_library
+)
+"src/bootFunctor.ml" 19 393 447 "src/bootFunctor.ml" 19 393 448
+type(
+  [ `Css of string | `Js of string ]
+)
+ident(
+  int_ref l "src/bootFunctor.ml" 19 393 420 "src/bootFunctor.ml" 19 393 421
+)
+"src/bootFunctor.ml" 19 393 425 "src/bootFunctor.ml" 19 393 448
+call(
+  tail
+)
+type(
+  unit
+)
+"src/bootFunctor.ml" 19 393 420 "src/bootFunctor.ml" 19 393 448
+type(
+  [ `Css of string | `Js of string ] -> unit
+)
+"src/bootFunctor.ml" 19 393 450 "src/bootFunctor.ml" 19 393 459
+type(
+  [ `Css of string | `Js of string ] list
+)
+ident(
+  int_ref F.context "src/bootFunctor.ml" 8 126 128 "src/bootFunctor.ml" 8 126 181
+)
+"src/bootFunctor.ml" 19 393 405 "src/bootFunctor.ml" 19 393 459
+call(
+  stack
+)
+type(
+  unit
+)
+"src/bootFunctor.ml" 20 463 467 "src/bootFunctor.ml" 20 463 479
+type(
+  unit -> unit
+)
+ident(
+  int_ref F.initialize "src/bootFunctor.ml" 4 51 53 "src/bootFunctor.ml" 4 51 82
+)
+"src/bootFunctor.ml" 20 463 480 "src/bootFunctor.ml" 20 463 482
+type(
+  unit
+)
+"src/bootFunctor.ml" 20 463 467 "src/bootFunctor.ml" 20 463 482
+call(
+  tail
+)
+type(
+  unit
+)
+"src/bootFunctor.ml" 19 393 397 "src/bootFunctor.ml" 20 463 482
+type(
+  unit
+)
+"src/bootFunctor.ml" 18 373 387 "src/bootFunctor.ml" 20 463 482
+type(
+  unit -> unit
+)
+"src/bootFunctor.ml" 21 483 506 "src/bootFunctor.ml" 21 483 509
+type(
+  (unit -> unit Lwt.t) -> (unit -> unit) -> unit -> unit Lwt.t
+)
+ident(
+  ext_ref BootPromise.run
+)
+"src/bootFunctor.ml" 21 483 510 "src/bootFunctor.ml" 21 483 520
+type(
+  unit -> unit Lwt.t
+)
+ident(
+  ext_ref BootPromise.dom_onload
+)
+"src/bootFunctor.ml" 21 483 521 "src/bootFunctor.ml" 21 483 522
+type(
+  unit -> unit
+)
+ident(
+  int_ref f "src/bootFunctor.ml" 18 373 379 "src/bootFunctor.ml" 18 373 380
+)
+"src/bootFunctor.ml" 21 483 523 "src/bootFunctor.ml" 21 483 525
+type(
+  unit
+)
+"src/bootFunctor.ml" 21 483 506 "src/bootFunctor.ml" 21 483 525
+call(
+  stack
+)
+type(
+  unit Lwt.t
+)

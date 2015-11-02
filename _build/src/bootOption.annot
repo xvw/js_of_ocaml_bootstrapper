@@ -1,0 +1,638 @@
+"src/bootOption.ml" 3 21 25 "src/bootOption.ml" 3 21 29
+type(
+  ('a -> 'b) -> 'a -> 'b option
+)
+ident(
+  def safe "src/bootOption.ml" 5 71 71 "src/bootOption.ml" 1 0 -1
+)
+"src/bootOption.ml" 3 21 30 "src/bootOption.ml" 3 21 31
+type(
+  'a -> 'b
+)
+ident(
+  def f "src/bootOption.ml" 3 21 32 "src/bootOption.ml" 3 21 65
+)
+"src/bootOption.ml" 3 21 32 "src/bootOption.ml" 3 21 33
+type(
+  'a
+)
+ident(
+  def x "src/bootOption.ml" 3 21 36 "src/bootOption.ml" 3 21 65
+)
+"src/bootOption.ml" 3 21 46 "src/bootOption.ml" 3 21 47
+type(
+  'a -> 'b
+)
+ident(
+  int_ref f "src/bootOption.ml" 3 21 30 "src/bootOption.ml" 3 21 31
+)
+"src/bootOption.ml" 3 21 48 "src/bootOption.ml" 3 21 49
+type(
+  'a
+)
+ident(
+  int_ref x "src/bootOption.ml" 3 21 32 "src/bootOption.ml" 3 21 33
+)
+"src/bootOption.ml" 3 21 46 "src/bootOption.ml" 3 21 49
+call(
+  stack
+)
+type(
+  'b
+)
+"src/bootOption.ml" 3 21 40 "src/bootOption.ml" 3 21 50
+type(
+  'b option
+)
+"src/bootOption.ml" 3 21 56 "src/bootOption.ml" 3 21 57
+type(
+  exn
+)
+"src/bootOption.ml" 3 21 61 "src/bootOption.ml" 3 21 65
+type(
+  'b option
+)
+"src/bootOption.ml" 3 21 36 "src/bootOption.ml" 3 21 65
+type(
+  'b option
+)
+"src/bootOption.ml" 3 21 32 "src/bootOption.ml" 3 21 65
+type(
+  'a -> 'b option
+)
+"src/bootOption.ml" 3 21 30 "src/bootOption.ml" 3 21 65
+type(
+  ('a -> 'b) -> 'a -> 'b option
+)
+"src/bootOption.ml" 5 71 75 "src/bootOption.ml" 5 71 83
+type(
+  ('a -> unit) -> 'a option -> unit
+)
+ident(
+  def unit_map "src/bootOption.ml" 9 145 145 "src/bootOption.ml" 1 0 -1
+)
+"src/bootOption.ml" 5 71 84 "src/bootOption.ml" 5 71 85
+type(
+  'a -> unit
+)
+ident(
+  def f "src/bootOption.ml" 5 71 88 "src/bootOption.ml" 7 115 129
+)
+"src/bootOption.ml" 6 97 106 "src/bootOption.ml" 6 97 107
+type(
+  'a
+)
+ident(
+  def e "src/bootOption.ml" 6 97 111 "src/bootOption.ml" 6 97 114
+)
+"src/bootOption.ml" 6 97 101 "src/bootOption.ml" 6 97 107
+type(
+  'a option
+)
+"src/bootOption.ml" 6 97 111 "src/bootOption.ml" 6 97 112
+type(
+  'a -> unit
+)
+ident(
+  int_ref f "src/bootOption.ml" 5 71 84 "src/bootOption.ml" 5 71 85
+)
+"src/bootOption.ml" 6 97 113 "src/bootOption.ml" 6 97 114
+type(
+  'a
+)
+ident(
+  int_ref e "src/bootOption.ml" 6 97 106 "src/bootOption.ml" 6 97 107
+)
+"src/bootOption.ml" 6 97 111 "src/bootOption.ml" 6 97 114
+call(
+  tail
+)
+type(
+  unit
+)
+"src/bootOption.ml" 7 115 119 "src/bootOption.ml" 7 115 123
+type(
+  'a option
+)
+"src/bootOption.ml" 7 115 127 "src/bootOption.ml" 7 115 129
+type(
+  unit
+)
+"src/bootOption.ml" 5 71 88 "src/bootOption.ml" 7 115 129
+type(
+  'a option -> unit
+)
+"src/bootOption.ml" 5 71 84 "src/bootOption.ml" 7 115 129
+type(
+  ('a -> unit) -> 'a option -> unit
+)
+"src/bootOption.ml" 9 145 149 "src/bootOption.ml" 9 145 153
+type(
+  'a -> 'a option
+)
+ident(
+  def some "src/bootOption.ml" 10 165 165 "src/bootOption.ml" 1 0 -1
+)
+"src/bootOption.ml" 9 145 154 "src/bootOption.ml" 9 145 155
+type(
+  'a
+)
+ident(
+  def x "src/bootOption.ml" 9 145 158 "src/bootOption.ml" 9 145 164
+)
+"src/bootOption.ml" 9 145 163 "src/bootOption.ml" 9 145 164
+type(
+  'a
+)
+ident(
+  int_ref x "src/bootOption.ml" 9 145 154 "src/bootOption.ml" 9 145 155
+)
+"src/bootOption.ml" 9 145 158 "src/bootOption.ml" 9 145 164
+type(
+  'a option
+)
+"src/bootOption.ml" 9 145 154 "src/bootOption.ml" 9 145 164
+type(
+  'a -> 'a option
+)
+"src/bootOption.ml" 10 165 169 "src/bootOption.ml" 10 165 173
+type(
+  'a option
+)
+ident(
+  def none "src/bootOption.ml" 12 184 184 "src/bootOption.ml" 1 0 -1
+)
+"src/bootOption.ml" 10 165 176 "src/bootOption.ml" 10 165 180
+type(
+  'a option
+)
+"src/bootOption.ml" 12 184 188 "src/bootOption.ml" 12 184 195
+type(
+  'a -> 'a option -> 'a
+)
+ident(
+  def default "src/bootOption.ml" 16 248 248 "src/bootOption.ml" 1 0 -1
+)
+"src/bootOption.ml" 12 184 196 "src/bootOption.ml" 12 184 201
+type(
+  'a
+)
+ident(
+  def value "src/bootOption.ml" 12 184 204 "src/bootOption.ml" 14 231 246
+)
+"src/bootOption.ml" 13 213 217 "src/bootOption.ml" 13 213 221
+type(
+  'a option
+)
+"src/bootOption.ml" 13 213 225 "src/bootOption.ml" 13 213 230
+type(
+  'a
+)
+ident(
+  int_ref value "src/bootOption.ml" 12 184 196 "src/bootOption.ml" 12 184 201
+)
+"src/bootOption.ml" 14 231 240 "src/bootOption.ml" 14 231 241
+type(
+  'a
+)
+ident(
+  def x "src/bootOption.ml" 14 231 245 "src/bootOption.ml" 14 231 246
+)
+"src/bootOption.ml" 14 231 235 "src/bootOption.ml" 14 231 241
+type(
+  'a option
+)
+"src/bootOption.ml" 14 231 245 "src/bootOption.ml" 14 231 246
+type(
+  'a
+)
+ident(
+  int_ref x "src/bootOption.ml" 14 231 240 "src/bootOption.ml" 14 231 241
+)
+"src/bootOption.ml" 12 184 204 "src/bootOption.ml" 14 231 246
+type(
+  'a option -> 'a
+)
+"src/bootOption.ml" 12 184 196 "src/bootOption.ml" 14 231 246
+type(
+  'a -> 'a option -> 'a
+)
+"src/bootOption.ml" 16 248 252 "src/bootOption.ml" 16 248 255
+type(
+  ('a -> 'b) -> 'a option -> 'b option
+)
+ident(
+  def map "src/bootOption.ml" 20 312 312 "src/bootOption.ml" 1 0 -1
+)
+"src/bootOption.ml" 16 248 256 "src/bootOption.ml" 16 248 257
+type(
+  'a -> 'b
+)
+ident(
+  def f "src/bootOption.ml" 16 248 260 "src/bootOption.ml" 18 286 310
+)
+"src/bootOption.ml" 17 269 273 "src/bootOption.ml" 17 269 277
+type(
+  'a option
+)
+"src/bootOption.ml" 17 269 281 "src/bootOption.ml" 17 269 285
+type(
+  'b option
+)
+"src/bootOption.ml" 18 286 295 "src/bootOption.ml" 18 286 296
+type(
+  'a
+)
+ident(
+  def x "src/bootOption.ml" 18 286 300 "src/bootOption.ml" 18 286 310
+)
+"src/bootOption.ml" 18 286 290 "src/bootOption.ml" 18 286 296
+type(
+  'a option
+)
+"src/bootOption.ml" 18 286 306 "src/bootOption.ml" 18 286 307
+type(
+  'a -> 'b
+)
+ident(
+  int_ref f "src/bootOption.ml" 16 248 256 "src/bootOption.ml" 16 248 257
+)
+"src/bootOption.ml" 18 286 308 "src/bootOption.ml" 18 286 309
+type(
+  'a
+)
+ident(
+  int_ref x "src/bootOption.ml" 18 286 295 "src/bootOption.ml" 18 286 296
+)
+"src/bootOption.ml" 18 286 306 "src/bootOption.ml" 18 286 309
+call(
+  stack
+)
+type(
+  'b
+)
+"src/bootOption.ml" 18 286 300 "src/bootOption.ml" 18 286 310
+type(
+  'b option
+)
+"src/bootOption.ml" 16 248 260 "src/bootOption.ml" 18 286 310
+type(
+  'a option -> 'b option
+)
+"src/bootOption.ml" 16 248 256 "src/bootOption.ml" 18 286 310
+type(
+  ('a -> 'b) -> 'a option -> 'b option
+)
+"src/bootOption.ml" 20 312 316 "src/bootOption.ml" 20 312 321
+type(
+  ('a -> 'a) option -> 'a -> 'a
+)
+ident(
+  def apply "src/bootOption.ml" 24 365 365 "src/bootOption.ml" 1 0 -1
+)
+"src/bootOption.ml" 21 333 337 "src/bootOption.ml" 21 333 341
+type(
+  ('a -> 'a) option
+)
+"src/bootOption.ml" 21 333 345 "src/bootOption.ml" 21 333 347
+type(
+  'a -> 'a
+)
+ident(
+  ext_ref BootPervasives.id
+)
+"src/bootOption.ml" 22 348 357 "src/bootOption.ml" 22 348 358
+type(
+  'a -> 'a
+)
+ident(
+  def f "src/bootOption.ml" 22 348 362 "src/bootOption.ml" 22 348 363
+)
+"src/bootOption.ml" 22 348 352 "src/bootOption.ml" 22 348 358
+type(
+  ('a -> 'a) option
+)
+"src/bootOption.ml" 22 348 362 "src/bootOption.ml" 22 348 363
+type(
+  'a -> 'a
+)
+ident(
+  int_ref f "src/bootOption.ml" 22 348 357 "src/bootOption.ml" 22 348 358
+)
+"src/bootOption.ml" 20 312 324 "src/bootOption.ml" 22 348 363
+type(
+  ('a -> 'a) option -> 'a -> 'a
+)
+"src/bootOption.ml" 24 365 369 "src/bootOption.ml" 24 365 376
+type(
+  'a option -> bool
+)
+ident(
+  def is_some "src/bootOption.ml" 28 423 423 "src/bootOption.ml" 1 0 -1
+)
+"src/bootOption.ml" 25 388 397 "src/bootOption.ml" 25 388 398
+type(
+  'a
+)
+"src/bootOption.ml" 25 388 392 "src/bootOption.ml" 25 388 398
+type(
+  'a option
+)
+"src/bootOption.ml" 25 388 402 "src/bootOption.ml" 25 388 406
+type(
+  bool
+)
+"src/bootOption.ml" 26 407 411 "src/bootOption.ml" 26 407 412
+type(
+  'a option
+)
+"src/bootOption.ml" 26 407 416 "src/bootOption.ml" 26 407 421
+type(
+  bool
+)
+"src/bootOption.ml" 24 365 379 "src/bootOption.ml" 26 407 421
+type(
+  'a option -> bool
+)
+"src/bootOption.ml" 28 423 427 "src/bootOption.ml" 28 423 434
+type(
+  'a option -> bool
+)
+ident(
+  def is_none "src/bootOption.ml" 34 481 481 "src/bootOption.ml" 1 0 -1
+)
+"src/bootOption.ml" 29 446 450 "src/bootOption.ml" 29 446 454
+type(
+  'a option
+)
+"src/bootOption.ml" 29 446 458 "src/bootOption.ml" 29 446 462
+type(
+  bool
+)
+"src/bootOption.ml" 30 463 467 "src/bootOption.ml" 30 463 468
+type(
+  'a option
+)
+"src/bootOption.ml" 30 463 472 "src/bootOption.ml" 30 463 477
+type(
+  bool
+)
+"src/bootOption.ml" 28 423 437 "src/bootOption.ml" 30 463 477
+type(
+  'a option -> bool
+)
+"src/bootOption.ml" 37 581 587 "src/bootOption.ml" 37 581 593
+type(
+  'a -> 'a option
+)
+ident(
+  def return "src/bootOption.ml" 38 605 607 "src/bootOption.ml" 41 674 677
+)
+"src/bootOption.ml" 37 581 594 "src/bootOption.ml" 37 581 595
+type(
+  'a
+)
+ident(
+  def x "src/bootOption.ml" 37 581 598 "src/bootOption.ml" 37 581 604
+)
+"src/bootOption.ml" 37 581 598 "src/bootOption.ml" 37 581 602
+type(
+  'a -> 'a option
+)
+ident(
+  int_ref some "src/bootOption.ml" 9 145 149 "src/bootOption.ml" 9 145 153
+)
+"src/bootOption.ml" 37 581 603 "src/bootOption.ml" 37 581 604
+type(
+  'a
+)
+ident(
+  int_ref x "src/bootOption.ml" 37 581 594 "src/bootOption.ml" 37 581 595
+)
+"src/bootOption.ml" 37 581 598 "src/bootOption.ml" 37 581 604
+call(
+  tail
+)
+type(
+  'a option
+)
+"src/bootOption.ml" 37 581 594 "src/bootOption.ml" 37 581 604
+type(
+  'a -> 'a option
+)
+"src/bootOption.ml" 38 605 611 "src/bootOption.ml" 38 605 615
+type(
+  'b option -> ('b -> 'c option) -> 'c option
+)
+ident(
+  def bind "src/bootOption.ml" 40 655 673 "src/bootOption.ml" 41 674 677
+)
+"src/bootOption.ml" 38 605 616 "src/bootOption.ml" 38 605 617
+type(
+  'b option
+)
+ident(
+  def m "src/bootOption.ml" 38 605 618 "src/bootOption.ml" 40 655 673
+)
+"src/bootOption.ml" 38 605 618 "src/bootOption.ml" 38 605 619
+type(
+  'b -> 'c option
+)
+ident(
+  def f "src/bootOption.ml" 38 605 622 "src/bootOption.ml" 40 655 673
+)
+"src/bootOption.ml" 38 605 628 "src/bootOption.ml" 38 605 629
+type(
+  'b option
+)
+ident(
+  int_ref m "src/bootOption.ml" 38 605 616 "src/bootOption.ml" 38 605 617
+)
+"src/bootOption.ml" 39 635 646 "src/bootOption.ml" 39 635 647
+type(
+  'b
+)
+ident(
+  def x "src/bootOption.ml" 39 635 651 "src/bootOption.ml" 39 635 654
+)
+"src/bootOption.ml" 39 635 641 "src/bootOption.ml" 39 635 647
+type(
+  'b option
+)
+"src/bootOption.ml" 39 635 651 "src/bootOption.ml" 39 635 652
+type(
+  'b -> 'c option
+)
+ident(
+  int_ref f "src/bootOption.ml" 38 605 618 "src/bootOption.ml" 38 605 619
+)
+"src/bootOption.ml" 39 635 653 "src/bootOption.ml" 39 635 654
+type(
+  'b
+)
+ident(
+  int_ref x "src/bootOption.ml" 39 635 646 "src/bootOption.ml" 39 635 647
+)
+"src/bootOption.ml" 39 635 651 "src/bootOption.ml" 39 635 654
+call(
+  tail
+)
+type(
+  'c option
+)
+"src/bootOption.ml" 40 655 661 "src/bootOption.ml" 40 655 665
+type(
+  'b option
+)
+"src/bootOption.ml" 40 655 669 "src/bootOption.ml" 40 655 673
+type(
+  'c option
+)
+"src/bootOption.ml" 38 605 622 "src/bootOption.ml" 40 655 673
+type(
+  'c option
+)
+"src/bootOption.ml" 38 605 618 "src/bootOption.ml" 40 655 673
+type(
+  ('b -> 'c option) -> 'c option
+)
+"src/bootOption.ml" 38 605 616 "src/bootOption.ml" 40 655 673
+type(
+  'b option -> ('b -> 'c option) -> 'c option
+)
+"src/bootOption.ml" 46 779 785 "src/bootOption.ml" 46 779 791
+type(
+  'a option
+)
+ident(
+  def mempty "src/bootOption.ml" 47 799 801 "src/bootOption.ml" 52 893 896
+)
+"src/bootOption.ml" 46 779 794 "src/bootOption.ml" 46 779 798
+type(
+  'a option
+)
+"src/bootOption.ml" 47 799 805 "src/bootOption.ml" 47 799 810
+type(
+  'b option -> 'b option -> 'b option
+)
+ident(
+  def mplus "src/bootOption.ml" 51 877 892 "src/bootOption.ml" 52 893 896
+)
+"src/bootOption.ml" 47 799 811 "src/bootOption.ml" 47 799 812
+type(
+  'b option
+)
+ident(
+  def a "src/bootOption.ml" 47 799 813 "src/bootOption.ml" 51 877 892
+)
+"src/bootOption.ml" 47 799 813 "src/bootOption.ml" 47 799 814
+type(
+  'b option
+)
+ident(
+  def b "src/bootOption.ml" 48 817 821 "src/bootOption.ml" 51 877 892
+)
+"src/bootOption.ml" 48 817 828 "src/bootOption.ml" 48 817 829
+type(
+  'b option
+)
+ident(
+  int_ref a "src/bootOption.ml" 47 799 811 "src/bootOption.ml" 47 799 812
+)
+"src/bootOption.ml" 48 817 831 "src/bootOption.ml" 48 817 832
+type(
+  'b option
+)
+ident(
+  int_ref b "src/bootOption.ml" 47 799 813 "src/bootOption.ml" 47 799 814
+)
+"src/bootOption.ml" 48 817 828 "src/bootOption.ml" 48 817 832
+type(
+  'b option * 'b option
+)
+"src/bootOption.ml" 49 839 845 "src/bootOption.ml" 49 839 849
+type(
+  'b option
+)
+"src/bootOption.ml" 49 839 851 "src/bootOption.ml" 49 839 852
+type(
+  'b option
+)
+ident(
+  def x "src/bootOption.ml" 49 839 856 "src/bootOption.ml" 49 839 857
+)
+"src/bootOption.ml" 49 839 845 "src/bootOption.ml" 49 839 852
+type(
+  'b option * 'b option
+)
+"src/bootOption.ml" 49 839 856 "src/bootOption.ml" 49 839 857
+type(
+  'b option
+)
+ident(
+  int_ref x "src/bootOption.ml" 49 839 851 "src/bootOption.ml" 49 839 852
+)
+"src/bootOption.ml" 50 858 864 "src/bootOption.ml" 50 858 865
+type(
+  'b option
+)
+ident(
+  def x "src/bootOption.ml" 50 858 875 "src/bootOption.ml" 50 858 876
+)
+"src/bootOption.ml" 50 858 867 "src/bootOption.ml" 50 858 871
+type(
+  'b option
+)
+"src/bootOption.ml" 50 858 864 "src/bootOption.ml" 50 858 871
+type(
+  'b option * 'b option
+)
+"src/bootOption.ml" 50 858 875 "src/bootOption.ml" 50 858 876
+type(
+  'b option
+)
+ident(
+  int_ref x "src/bootOption.ml" 50 858 864 "src/bootOption.ml" 50 858 865
+)
+"src/bootOption.ml" 51 877 883 "src/bootOption.ml" 51 877 884
+type(
+  'b option
+)
+ident(
+  def x "src/bootOption.ml" 51 877 891 "src/bootOption.ml" 51 877 892
+)
+"src/bootOption.ml" 51 877 886 "src/bootOption.ml" 51 877 887
+type(
+  'b option
+)
+"src/bootOption.ml" 51 877 883 "src/bootOption.ml" 51 877 887
+type(
+  'b option * 'b option
+)
+"src/bootOption.ml" 51 877 891 "src/bootOption.ml" 51 877 892
+type(
+  'b option
+)
+ident(
+  int_ref x "src/bootOption.ml" 51 877 883 "src/bootOption.ml" 51 877 884
+)
+"src/bootOption.ml" 48 817 821 "src/bootOption.ml" 51 877 892
+type(
+  'b option
+)
+"src/bootOption.ml" 47 799 813 "src/bootOption.ml" 51 877 892
+type(
+  'b option -> 'b option
+)
+"src/bootOption.ml" 47 799 811 "src/bootOption.ml" 51 877 892
+type(
+  'b option -> 'b option -> 'b option
+)
+"src/bootOption.ml" 54 898 919 "src/bootOption.ml" 54 898 948
+call(
+  stack
+)
+"src/bootOption.ml" 55 949 957 "src/bootOption.ml" 55 949 997
+call(
+  stack
+)

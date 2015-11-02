@@ -1,0 +1,502 @@
+"src/bootInterval.ml" 3 21 25 "src/bootInterval.ml" 3 21 28
+type(
+  ?delay:float -> (unit -> 'a) -> 'b Lwt.t
+)
+ident(
+  def set "src/bootInterval.ml" 6 85 85 "src/bootInterval.ml" 1 0 -1
+)
+"src/bootInterval.ml" 3 21 37 "src/bootInterval.ml" 3 21 40
+type(
+  float
+)
+type(
+  float
+)
+ident(
+  int_ref *sth* "src/bootInterval.ml" 3 21 37 "src/bootInterval.ml" 3 21 40
+)
+type(
+  float option
+)
+type(
+  float option
+)
+type(
+  float
+)
+"src/bootInterval.ml" 3 21 29 "src/bootInterval.ml" 3 21 41
+type(
+  float
+)
+"src/bootInterval.ml" 3 21 42 "src/bootInterval.ml" 3 21 43
+type(
+  unit -> 'a
+)
+ident(
+  def f "src/bootInterval.ml" 4 46 48 "src/bootInterval.ml" 4 46 79
+)
+"src/bootInterval.ml" 4 46 48 "src/bootInterval.ml" 4 46 70
+type(
+  ?delay:float -> (unit -> 'a) -> 'b Lwt.t
+)
+ident(
+  ext_ref BootEvent.delayed_loop
+)
+"src/bootInterval.ml" 4 46 71 "src/bootInterval.ml" 4 46 77
+type(
+  float
+)
+ident(
+  int_ref delay "src/bootInterval.ml" 3 21 29 "src/bootInterval.ml" 3 21 41
+)
+"src/bootInterval.ml" 4 46 78 "src/bootInterval.ml" 4 46 79
+type(
+  unit -> 'a
+)
+ident(
+  int_ref f "src/bootInterval.ml" 3 21 42 "src/bootInterval.ml" 3 21 43
+)
+"src/bootInterval.ml" 4 46 48 "src/bootInterval.ml" 4 46 79
+call(
+  tail
+)
+type(
+  'b Lwt.t
+)
+"src/bootInterval.ml" 3 21 42 "src/bootInterval.ml" 4 46 79
+type(
+  (unit -> 'a) -> 'b Lwt.t
+)
+"src/bootInterval.ml" 3 21 29 "src/bootInterval.ml" 4 46 79
+type(
+  ?delay:float -> (unit -> 'a) -> 'b Lwt.t
+)
+type(
+  (unit -> 'a) -> 'b Lwt.t
+)
+type(
+  float
+)
+type(
+  float option
+)
+ident(
+  int_ref *opt* "src/bootInterval.ml" 3 21 29 "src/bootInterval.ml" 4 46 79
+)
+type(
+  float option
+)
+"src/bootInterval.ml" 6 85 89 "src/bootInterval.ml" 6 85 98
+type(
+  ?delay:float -> (int -> bool) -> (unit -> 'a) -> unit Lwt.t
+)
+ident(
+  def set_until "src/bootInterval.ml" 14 301 301 "src/bootInterval.ml" 1 0 -1
+)
+"src/bootInterval.ml" 6 85 107 "src/bootInterval.ml" 6 85 110
+type(
+  float
+)
+type(
+  float
+)
+ident(
+  int_ref *sth* "src/bootInterval.ml" 6 85 107 "src/bootInterval.ml" 6 85 110
+)
+type(
+  float option
+)
+type(
+  float option
+)
+type(
+  float
+)
+"src/bootInterval.ml" 6 85 99 "src/bootInterval.ml" 6 85 111
+type(
+  float
+)
+"src/bootInterval.ml" 6 85 112 "src/bootInterval.ml" 6 85 116
+type(
+  int -> bool
+)
+ident(
+  def pred "src/bootInterval.ml" 6 85 117 "src/bootInterval.ml" 12 272 292
+)
+"src/bootInterval.ml" 6 85 117 "src/bootInterval.ml" 6 85 118
+type(
+  unit -> 'a
+)
+ident(
+  def f "src/bootInterval.ml" 7 121 123 "src/bootInterval.ml" 12 272 292
+)
+"src/bootInterval.ml" 7 121 127 "src/bootInterval.ml" 7 121 130
+type(
+  int ref
+)
+ident(
+  def cpt "src/bootInterval.ml" 8 142 144 "src/bootInterval.ml" 12 272 292
+)
+"src/bootInterval.ml" 7 121 133 "src/bootInterval.ml" 7 121 136
+type(
+  int -> int ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"src/bootInterval.ml" 7 121 137 "src/bootInterval.ml" 7 121 138
+type(
+  int
+)
+"src/bootInterval.ml" 7 121 133 "src/bootInterval.ml" 7 121 138
+type(
+  int ref
+)
+"src/bootInterval.ml" 8 142 148 "src/bootInterval.ml" 8 142 149
+type(
+  unit
+)
+"src/bootInterval.ml" 8 142 158 "src/bootInterval.ml" 8 142 162
+type(
+  int -> bool
+)
+ident(
+  int_ref pred "src/bootInterval.ml" 6 85 112 "src/bootInterval.ml" 6 85 116
+)
+"src/bootInterval.ml" 8 142 164 "src/bootInterval.ml" 8 142 167
+type(
+  int ref
+)
+ident(
+  int_ref cpt "src/bootInterval.ml" 7 121 127 "src/bootInterval.ml" 7 121 130
+)
+"src/bootInterval.ml" 8 142 163 "src/bootInterval.ml" 8 142 167
+type(
+  int
+)
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"src/bootInterval.ml" 8 142 158 "src/bootInterval.ml" 8 142 168
+call(
+  stack
+)
+type(
+  bool
+)
+"src/bootInterval.ml" 9 172 182 "src/bootInterval.ml" 9 172 183
+type(
+  'a Lwt.t
+)
+"src/bootInterval.ml" 9 172 186 "src/bootInterval.ml" 9 172 198
+type(
+  float -> unit Lwt.t
+)
+ident(
+  ext_ref Lwt_js.sleep
+)
+"src/bootInterval.ml" 9 172 199 "src/bootInterval.ml" 9 172 204
+type(
+  float
+)
+ident(
+  int_ref delay "src/bootInterval.ml" 6 85 99 "src/bootInterval.ml" 6 85 111
+)
+"src/bootInterval.ml" 9 172 186 "src/bootInterval.ml" 9 172 204
+call(
+  stack
+)
+type(
+  unit Lwt.t
+)
+"src/bootInterval.ml" 9 172 205 "src/bootInterval.ml" 9 172 208
+type(
+  unit Lwt.t -> (unit -> 'a Lwt.t) -> 'a Lwt.t
+)
+ident(
+  ext_ref BootPervasives.( >>= )
+)
+"src/bootInterval.ml" 9 172 214 "src/bootInterval.ml" 9 172 215
+type(
+  unit
+)
+"src/bootInterval.ml" 9 172 219 "src/bootInterval.ml" 9 172 229
+type(
+  'a -> 'a Lwt.t
+)
+ident(
+  ext_ref Lwt.return
+)
+"src/bootInterval.ml" 9 172 231 "src/bootInterval.ml" 9 172 232
+type(
+  unit -> 'a
+)
+ident(
+  int_ref f "src/bootInterval.ml" 6 85 117 "src/bootInterval.ml" 6 85 118
+)
+"src/bootInterval.ml" 9 172 233 "src/bootInterval.ml" 9 172 235
+type(
+  unit
+)
+"src/bootInterval.ml" 9 172 231 "src/bootInterval.ml" 9 172 235
+call(
+  stack
+)
+type(
+  'a
+)
+"src/bootInterval.ml" 9 172 219 "src/bootInterval.ml" 9 172 236
+call(
+  tail
+)
+type(
+  'a Lwt.t
+)
+"src/bootInterval.ml" 9 172 214 "src/bootInterval.ml" 9 172 236
+type(
+  unit -> 'a Lwt.t
+)
+"src/bootInterval.ml" 9 172 186 "src/bootInterval.ml" 9 172 237
+call(
+  stack
+)
+type(
+  'a Lwt.t
+)
+"src/bootInterval.ml" 10 241 247 "src/bootInterval.ml" 10 241 250
+type(
+  int ref
+)
+ident(
+  int_ref cpt "src/bootInterval.ml" 7 121 127 "src/bootInterval.ml" 7 121 130
+)
+"src/bootInterval.ml" 10 241 255 "src/bootInterval.ml" 10 241 258
+type(
+  int ref
+)
+ident(
+  int_ref cpt "src/bootInterval.ml" 7 121 127 "src/bootInterval.ml" 7 121 130
+)
+"src/bootInterval.ml" 10 241 254 "src/bootInterval.ml" 10 241 258
+type(
+  int
+)
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"src/bootInterval.ml" 10 241 259 "src/bootInterval.ml" 10 241 260
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"src/bootInterval.ml" 10 241 261 "src/bootInterval.ml" 10 241 262
+type(
+  int
+)
+"src/bootInterval.ml" 10 241 254 "src/bootInterval.ml" 10 241 262
+type(
+  int
+)
+"src/bootInterval.ml" 10 241 247 "src/bootInterval.ml" 10 241 262
+type(
+  unit
+)
+type(
+  int ref -> int -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"src/bootInterval.ml" 9 172 178 "src/bootInterval.ml" 10 241 262
+type(
+  unit
+)
+"src/bootInterval.ml" 8 142 152 "src/bootInterval.ml" 11 263 271
+type(
+  unit
+)
+"src/bootInterval.ml" 12 272 277 "src/bootInterval.ml" 12 272 292
+type(
+  unit Lwt.t
+)
+ident(
+  ext_ref Lwt.return_unit
+)
+"src/bootInterval.ml" 8 142 144 "src/bootInterval.ml" 12 272 292
+type(
+  unit Lwt.t
+)
+"src/bootInterval.ml" 7 121 123 "src/bootInterval.ml" 12 272 292
+type(
+  unit Lwt.t
+)
+"src/bootInterval.ml" 6 85 117 "src/bootInterval.ml" 12 272 292
+type(
+  (unit -> 'a) -> unit Lwt.t
+)
+"src/bootInterval.ml" 6 85 112 "src/bootInterval.ml" 12 272 292
+type(
+  (int -> bool) -> (unit -> 'a) -> unit Lwt.t
+)
+"src/bootInterval.ml" 6 85 99 "src/bootInterval.ml" 12 272 292
+type(
+  ?delay:float -> (int -> bool) -> (unit -> 'a) -> unit Lwt.t
+)
+type(
+  (int -> bool) -> (unit -> 'a) -> unit Lwt.t
+)
+type(
+  float
+)
+type(
+  float option
+)
+ident(
+  int_ref *opt* "src/bootInterval.ml" 6 85 99 "src/bootInterval.ml" 12 272 292
+)
+type(
+  float option
+)
+"src/bootInterval.ml" 14 301 305 "src/bootInterval.ml" 14 301 312
+type(
+  ?delay:float -> int -> (unit -> 'a) -> unit Lwt.t
+)
+ident(
+  def set_for "src/bootInterval.ml" 15 332 369 "src/bootInterval.ml" 1 0 -1
+)
+"src/bootInterval.ml" 14 301 321 "src/bootInterval.ml" 14 301 324
+type(
+  float
+)
+type(
+  float
+)
+ident(
+  int_ref *sth* "src/bootInterval.ml" 14 301 321 "src/bootInterval.ml" 14 301 324
+)
+type(
+  float option
+)
+type(
+  float option
+)
+type(
+  float
+)
+"src/bootInterval.ml" 14 301 313 "src/bootInterval.ml" 14 301 325
+type(
+  float
+)
+"src/bootInterval.ml" 14 301 326 "src/bootInterval.ml" 14 301 327
+type(
+  int
+)
+ident(
+  def x "src/bootInterval.ml" 14 301 328 "src/bootInterval.ml" 15 332 369
+)
+"src/bootInterval.ml" 14 301 328 "src/bootInterval.ml" 14 301 329
+type(
+  unit -> 'a
+)
+ident(
+  def f "src/bootInterval.ml" 15 332 334 "src/bootInterval.ml" 15 332 369
+)
+"src/bootInterval.ml" 15 332 334 "src/bootInterval.ml" 15 332 343
+type(
+  ?delay:float -> (int -> bool) -> (unit -> 'a) -> unit Lwt.t
+)
+ident(
+  int_ref set_until "src/bootInterval.ml" 6 85 89 "src/bootInterval.ml" 6 85 98
+)
+"src/bootInterval.ml" 15 332 344 "src/bootInterval.ml" 15 332 350
+type(
+  float
+)
+ident(
+  int_ref delay "src/bootInterval.ml" 14 301 313 "src/bootInterval.ml" 14 301 325
+)
+"src/bootInterval.ml" 15 332 356 "src/bootInterval.ml" 15 332 357
+type(
+  int
+)
+ident(
+  def i "src/bootInterval.ml" 15 332 361 "src/bootInterval.ml" 15 332 366
+)
+"src/bootInterval.ml" 15 332 361 "src/bootInterval.ml" 15 332 362
+type(
+  int
+)
+ident(
+  int_ref i "src/bootInterval.ml" 15 332 356 "src/bootInterval.ml" 15 332 357
+)
+"src/bootInterval.ml" 15 332 363 "src/bootInterval.ml" 15 332 364
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( < )
+)
+"src/bootInterval.ml" 15 332 365 "src/bootInterval.ml" 15 332 366
+type(
+  int
+)
+ident(
+  int_ref x "src/bootInterval.ml" 14 301 326 "src/bootInterval.ml" 14 301 327
+)
+"src/bootInterval.ml" 15 332 361 "src/bootInterval.ml" 15 332 366
+type(
+  bool
+)
+"src/bootInterval.ml" 15 332 356 "src/bootInterval.ml" 15 332 366
+type(
+  int -> bool
+)
+"src/bootInterval.ml" 15 332 368 "src/bootInterval.ml" 15 332 369
+type(
+  unit -> 'a
+)
+ident(
+  int_ref f "src/bootInterval.ml" 14 301 328 "src/bootInterval.ml" 14 301 329
+)
+"src/bootInterval.ml" 15 332 334 "src/bootInterval.ml" 15 332 369
+call(
+  tail
+)
+type(
+  unit Lwt.t
+)
+"src/bootInterval.ml" 14 301 328 "src/bootInterval.ml" 15 332 369
+type(
+  (unit -> 'a) -> unit Lwt.t
+)
+"src/bootInterval.ml" 14 301 326 "src/bootInterval.ml" 15 332 369
+type(
+  int -> (unit -> 'a) -> unit Lwt.t
+)
+"src/bootInterval.ml" 14 301 313 "src/bootInterval.ml" 15 332 369
+type(
+  ?delay:float -> int -> (unit -> 'a) -> unit Lwt.t
+)
+type(
+  int -> (unit -> 'a) -> unit Lwt.t
+)
+type(
+  float
+)
+type(
+  float option
+)
+ident(
+  int_ref *opt* "src/bootInterval.ml" 14 301 313 "src/bootInterval.ml" 15 332 369
+)
+type(
+  float option
+)

@@ -1,0 +1,207 @@
+"src/bootAjax.ml" 4 22 26 "src/bootAjax.ml" 4 22 30
+type(
+  string -> string option Lwt.t
+)
+ident(
+  def load "src/bootAjax.ml" 12 258 263 "src/bootAjax.ml" 1 0 -1
+)
+"src/bootAjax.ml" 4 22 31 "src/bootAjax.ml" 4 22 35
+type(
+  string
+)
+ident(
+  def file "src/bootAjax.ml" 5 38 40 "src/bootAjax.ml" 12 258 263
+)
+"src/bootAjax.ml" 6 67 69 "src/bootAjax.ml" 6 67 72
+type(
+  string -> XmlHttpRequest.http_frame Lwt.t
+)
+ident(
+  ext_ref XmlHttpRequest.get
+)
+"src/bootAjax.ml" 6 67 73 "src/bootAjax.ml" 6 67 77
+type(
+  string
+)
+ident(
+  int_ref file "src/bootAjax.ml" 4 22 31 "src/bootAjax.ml" 4 22 35
+)
+"src/bootAjax.ml" 6 67 69 "src/bootAjax.ml" 6 67 77
+call(
+  stack
+)
+type(
+  XmlHttpRequest.http_frame Lwt.t
+)
+"src/bootAjax.ml" 6 67 78 "src/bootAjax.ml" 6 67 81
+type(
+  XmlHttpRequest.http_frame Lwt.t ->
+  (XmlHttpRequest.http_frame -> string option Lwt.t) -> string option Lwt.t
+)
+ident(
+  ext_ref BootPervasives.( >>= )
+)
+"src/bootAjax.ml" 6 67 87 "src/bootAjax.ml" 6 67 92
+type(
+  XmlHttpRequest.http_frame
+)
+ident(
+  def frame "src/bootAjax.ml" 7 96 102 "src/bootAjax.ml" 11 231 257
+)
+"src/bootAjax.ml" 7 96 106 "src/bootAjax.ml" 7 96 110
+type(
+  int
+)
+ident(
+  def code "src/bootAjax.ml" 9 162 168 "src/bootAjax.ml" 11 231 257
+)
+"src/bootAjax.ml" 7 96 113 "src/bootAjax.ml" 7 96 118
+type(
+  XmlHttpRequest.http_frame
+)
+ident(
+  int_ref frame "src/bootAjax.ml" 6 67 87 "src/bootAjax.ml" 6 67 92
+)
+"src/bootAjax.ml" 7 96 113 "src/bootAjax.ml" 7 96 123
+type(
+  int
+)
+"src/bootAjax.ml" 8 124 134 "src/bootAjax.ml" 8 124 141
+type(
+  string
+)
+ident(
+  def message "src/bootAjax.ml" 9 162 168 "src/bootAjax.ml" 11 231 257
+)
+"src/bootAjax.ml" 8 124 144 "src/bootAjax.ml" 8 124 149
+type(
+  XmlHttpRequest.http_frame
+)
+ident(
+  int_ref frame "src/bootAjax.ml" 6 67 87 "src/bootAjax.ml" 6 67 92
+)
+"src/bootAjax.ml" 8 124 144 "src/bootAjax.ml" 8 124 157
+type(
+  string
+)
+"src/bootAjax.ml" 9 162 171 "src/bootAjax.ml" 9 162 175
+type(
+  int
+)
+ident(
+  int_ref code "src/bootAjax.ml" 7 96 106 "src/bootAjax.ml" 7 96 110
+)
+"src/bootAjax.ml" 9 162 176 "src/bootAjax.ml" 9 162 177
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"src/bootAjax.ml" 9 162 178 "src/bootAjax.ml" 9 162 179
+type(
+  int
+)
+"src/bootAjax.ml" 9 162 171 "src/bootAjax.ml" 9 162 179
+type(
+  bool
+)
+"src/bootAjax.ml" 9 162 180 "src/bootAjax.ml" 9 162 182
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"src/bootAjax.ml" 9 162 183 "src/bootAjax.ml" 9 162 187
+type(
+  int
+)
+ident(
+  int_ref code "src/bootAjax.ml" 7 96 106 "src/bootAjax.ml" 7 96 110
+)
+"src/bootAjax.ml" 9 162 188 "src/bootAjax.ml" 9 162 189
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"src/bootAjax.ml" 9 162 190 "src/bootAjax.ml" 9 162 193
+type(
+  int
+)
+"src/bootAjax.ml" 9 162 183 "src/bootAjax.ml" 9 162 193
+type(
+  bool
+)
+"src/bootAjax.ml" 9 162 171 "src/bootAjax.ml" 9 162 193
+type(
+  bool
+)
+"src/bootAjax.ml" 10 194 205 "src/bootAjax.ml" 10 194 215
+type(
+  string option -> string option Lwt.t
+)
+ident(
+  ext_ref Lwt.return
+)
+"src/bootAjax.ml" 10 194 222 "src/bootAjax.ml" 10 194 229
+type(
+  string
+)
+ident(
+  int_ref message "src/bootAjax.ml" 8 124 134 "src/bootAjax.ml" 8 124 141
+)
+"src/bootAjax.ml" 10 194 217 "src/bootAjax.ml" 10 194 229
+type(
+  string option
+)
+"src/bootAjax.ml" 10 194 205 "src/bootAjax.ml" 10 194 230
+call(
+  tail
+)
+type(
+  string option Lwt.t
+)
+"src/bootAjax.ml" 11 231 242 "src/bootAjax.ml" 11 231 252
+type(
+  string option -> string option Lwt.t
+)
+ident(
+  ext_ref Lwt.return
+)
+"src/bootAjax.ml" 11 231 253 "src/bootAjax.ml" 11 231 257
+type(
+  string option
+)
+"src/bootAjax.ml" 11 231 242 "src/bootAjax.ml" 11 231 257
+call(
+  tail
+)
+type(
+  string option Lwt.t
+)
+"src/bootAjax.ml" 9 162 168 "src/bootAjax.ml" 11 231 257
+type(
+  string option Lwt.t
+)
+"src/bootAjax.ml" 7 96 102 "src/bootAjax.ml" 11 231 257
+type(
+  string option Lwt.t
+)
+"src/bootAjax.ml" 6 67 87 "src/bootAjax.ml" 11 231 257
+type(
+  XmlHttpRequest.http_frame -> string option Lwt.t
+)
+"src/bootAjax.ml" 6 67 69 "src/bootAjax.ml" 12 258 263
+call(
+  tail
+)
+type(
+  string option Lwt.t
+)
+"src/bootAjax.ml" 4 22 31 "src/bootAjax.ml" 12 258 263
+type(
+  string -> string option Lwt.t
+)

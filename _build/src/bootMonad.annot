@@ -1,0 +1,1306 @@
+"src/bootMonad.ml" 13 261 269 "src/bootMonad.ml" 13 261 273
+type(
+  'a t -> ('a -> 'b t) -> 'b t
+)
+ident(
+  def bind "src/bootMonad.ml" 13 261 295 "src/bootMonad.ml" 14 296 301
+)
+"src/bootMonad.ml" 13 261 274 "src/bootMonad.ml" 13 261 275
+type(
+  'a t
+)
+ident(
+  def m "src/bootMonad.ml" 13 261 276 "src/bootMonad.ml" 13 261 295
+)
+"src/bootMonad.ml" 13 261 276 "src/bootMonad.ml" 13 261 277
+type(
+  'a -> 'b t
+)
+ident(
+  def f "src/bootMonad.ml" 13 261 280 "src/bootMonad.ml" 13 261 295
+)
+"src/bootMonad.ml" 13 261 280 "src/bootMonad.ml" 13 261 284
+type(
+  'b t t -> 'b t
+)
+ident(
+  ext_ref join
+)
+"src/bootMonad.ml" 13 261 286 "src/bootMonad.ml" 13 261 290
+type(
+  ('a -> 'b t) -> 'a t -> 'b t t
+)
+ident(
+  ext_ref fmap
+)
+"src/bootMonad.ml" 13 261 291 "src/bootMonad.ml" 13 261 292
+type(
+  'a -> 'b t
+)
+ident(
+  int_ref f "src/bootMonad.ml" 13 261 276 "src/bootMonad.ml" 13 261 277
+)
+"src/bootMonad.ml" 13 261 293 "src/bootMonad.ml" 13 261 294
+type(
+  'a t
+)
+ident(
+  int_ref m "src/bootMonad.ml" 13 261 274 "src/bootMonad.ml" 13 261 275
+)
+"src/bootMonad.ml" 13 261 286 "src/bootMonad.ml" 13 261 294
+call(
+  stack
+)
+type(
+  'b t t
+)
+"src/bootMonad.ml" 13 261 280 "src/bootMonad.ml" 13 261 295
+call(
+  tail
+)
+type(
+  'b t
+)
+"src/bootMonad.ml" 13 261 276 "src/bootMonad.ml" 13 261 295
+type(
+  ('a -> 'b t) -> 'b t
+)
+"src/bootMonad.ml" 13 261 274 "src/bootMonad.ml" 13 261 295
+type(
+  'a t -> ('a -> 'b t) -> 'b t
+)
+"src/bootMonad.ml" 21 473 481 "src/bootMonad.ml" 21 473 485
+type(
+  'c t t -> 'c t
+)
+ident(
+  def join "src/bootMonad.ml" 22 500 504 "src/bootMonad.ml" 23 551 556
+)
+"src/bootMonad.ml" 21 473 486 "src/bootMonad.ml" 21 473 487
+type(
+  'c t t
+)
+ident(
+  def m "src/bootMonad.ml" 21 473 490 "src/bootMonad.ml" 21 473 499
+)
+"src/bootMonad.ml" 21 473 490 "src/bootMonad.ml" 21 473 494
+type(
+  'c t t -> ('c t -> 'c t) -> 'c t
+)
+ident(
+  ext_ref bind
+)
+"src/bootMonad.ml" 21 473 495 "src/bootMonad.ml" 21 473 496
+type(
+  'c t t
+)
+ident(
+  int_ref m "src/bootMonad.ml" 21 473 486 "src/bootMonad.ml" 21 473 487
+)
+"src/bootMonad.ml" 21 473 497 "src/bootMonad.ml" 21 473 499
+type(
+  'c t -> 'c t
+)
+ident(
+  ext_ref BootPervasives.id
+)
+"src/bootMonad.ml" 21 473 490 "src/bootMonad.ml" 21 473 499
+call(
+  tail
+)
+type(
+  'c t
+)
+"src/bootMonad.ml" 21 473 486 "src/bootMonad.ml" 21 473 499
+type(
+  'c t t -> 'c t
+)
+"src/bootMonad.ml" 22 500 508 "src/bootMonad.ml" 22 500 512
+type(
+  ('d -> 'e) -> 'd t -> 'e t
+)
+ident(
+  def fmap "src/bootMonad.ml" 22 500 549 "src/bootMonad.ml" 23 551 556
+)
+"src/bootMonad.ml" 22 500 513 "src/bootMonad.ml" 22 500 514
+type(
+  'd -> 'e
+)
+ident(
+  def f "src/bootMonad.ml" 22 500 515 "src/bootMonad.ml" 22 500 549
+)
+"src/bootMonad.ml" 22 500 515 "src/bootMonad.ml" 22 500 516
+type(
+  'd t
+)
+ident(
+  def m "src/bootMonad.ml" 22 500 519 "src/bootMonad.ml" 22 500 549
+)
+"src/bootMonad.ml" 22 500 519 "src/bootMonad.ml" 22 500 523
+type(
+  'd t -> ('d -> 'e t) -> 'e t
+)
+ident(
+  ext_ref bind
+)
+"src/bootMonad.ml" 22 500 524 "src/bootMonad.ml" 22 500 525
+type(
+  'd t
+)
+ident(
+  int_ref m "src/bootMonad.ml" 22 500 515 "src/bootMonad.ml" 22 500 516
+)
+"src/bootMonad.ml" 22 500 531 "src/bootMonad.ml" 22 500 532
+type(
+  'd
+)
+ident(
+  def x "src/bootMonad.ml" 22 500 536 "src/bootMonad.ml" 22 500 548
+)
+"src/bootMonad.ml" 22 500 536 "src/bootMonad.ml" 22 500 542
+type(
+  'e -> 'e t
+)
+ident(
+  ext_ref return
+)
+"src/bootMonad.ml" 22 500 544 "src/bootMonad.ml" 22 500 545
+type(
+  'd -> 'e
+)
+ident(
+  int_ref f "src/bootMonad.ml" 22 500 513 "src/bootMonad.ml" 22 500 514
+)
+"src/bootMonad.ml" 22 500 546 "src/bootMonad.ml" 22 500 547
+type(
+  'd
+)
+ident(
+  int_ref x "src/bootMonad.ml" 22 500 531 "src/bootMonad.ml" 22 500 532
+)
+"src/bootMonad.ml" 22 500 544 "src/bootMonad.ml" 22 500 547
+call(
+  stack
+)
+type(
+  'e
+)
+"src/bootMonad.ml" 22 500 536 "src/bootMonad.ml" 22 500 548
+call(
+  tail
+)
+type(
+  'e t
+)
+"src/bootMonad.ml" 22 500 531 "src/bootMonad.ml" 22 500 548
+type(
+  'd -> 'e t
+)
+"src/bootMonad.ml" 22 500 519 "src/bootMonad.ml" 22 500 549
+call(
+  tail
+)
+type(
+  'e t
+)
+"src/bootMonad.ml" 22 500 515 "src/bootMonad.ml" 22 500 549
+type(
+  'd t -> 'e t
+)
+"src/bootMonad.ml" 22 500 513 "src/bootMonad.ml" 22 500 549
+type(
+  ('d -> 'e) -> 'd t -> 'e t
+)
+"src/bootMonad.ml" 30 727 735 "src/bootMonad.ml" 30 727 739
+type(
+  'f -> unit t
+)
+ident(
+  def void "src/bootMonad.ml" 31 755 759 "src/bootMonad.ml" 47 1325 1330
+)
+"src/bootMonad.ml" 30 727 740 "src/bootMonad.ml" 30 727 741
+type(
+  'f
+)
+"src/bootMonad.ml" 30 727 744 "src/bootMonad.ml" 30 727 750
+type(
+  unit -> unit t
+)
+ident(
+  ext_ref return
+)
+"src/bootMonad.ml" 30 727 751 "src/bootMonad.ml" 30 727 753
+type(
+  unit
+)
+"src/bootMonad.ml" 30 727 744 "src/bootMonad.ml" 30 727 753
+call(
+  tail
+)
+type(
+  unit t
+)
+"src/bootMonad.ml" 30 727 740 "src/bootMonad.ml" 30 727 753
+type(
+  'f -> unit t
+)
+"src/bootMonad.ml" 31 755 763 "src/bootMonad.ml" 31 755 770
+type(
+  'g t -> ('g -> 'h t) -> 'h t
+)
+ident(
+  def >>= "src/bootMonad.ml" 32 786 790 "src/bootMonad.ml" 47 1325 1330
+)
+"src/bootMonad.ml" 31 755 771 "src/bootMonad.ml" 31 755 772
+type(
+  'g t
+)
+ident(
+  def f "src/bootMonad.ml" 31 755 773 "src/bootMonad.ml" 31 755 785
+)
+"src/bootMonad.ml" 31 755 773 "src/bootMonad.ml" 31 755 774
+type(
+  'g -> 'h t
+)
+ident(
+  def x "src/bootMonad.ml" 31 755 777 "src/bootMonad.ml" 31 755 785
+)
+"src/bootMonad.ml" 31 755 777 "src/bootMonad.ml" 31 755 781
+type(
+  'g t -> ('g -> 'h t) -> 'h t
+)
+ident(
+  ext_ref bind
+)
+"src/bootMonad.ml" 31 755 782 "src/bootMonad.ml" 31 755 783
+type(
+  'g t
+)
+ident(
+  int_ref f "src/bootMonad.ml" 31 755 771 "src/bootMonad.ml" 31 755 772
+)
+"src/bootMonad.ml" 31 755 784 "src/bootMonad.ml" 31 755 785
+type(
+  'g -> 'h t
+)
+ident(
+  int_ref x "src/bootMonad.ml" 31 755 773 "src/bootMonad.ml" 31 755 774
+)
+"src/bootMonad.ml" 31 755 777 "src/bootMonad.ml" 31 755 785
+call(
+  tail
+)
+type(
+  'h t
+)
+"src/bootMonad.ml" 31 755 773 "src/bootMonad.ml" 31 755 785
+type(
+  ('g -> 'h t) -> 'h t
+)
+"src/bootMonad.ml" 31 755 771 "src/bootMonad.ml" 31 755 785
+type(
+  'g t -> ('g -> 'h t) -> 'h t
+)
+"src/bootMonad.ml" 32 786 794 "src/bootMonad.ml" 32 786 801
+type(
+  ('i -> 'j) t -> 'i t -> 'j t
+)
+ident(
+  def <*> "src/bootMonad.ml" 35 867 871 "src/bootMonad.ml" 47 1325 1330
+)
+"src/bootMonad.ml" 32 786 802 "src/bootMonad.ml" 32 786 804
+type(
+  ('i -> 'j) t
+)
+ident(
+  def fs "src/bootMonad.ml" 32 786 805 "src/bootMonad.ml" 34 832 866
+)
+"src/bootMonad.ml" 32 786 805 "src/bootMonad.ml" 32 786 807
+type(
+  'i t
+)
+ident(
+  def ms "src/bootMonad.ml" 33 810 816 "src/bootMonad.ml" 34 832 866
+)
+"src/bootMonad.ml" 33 810 816 "src/bootMonad.ml" 33 810 818
+type(
+  ('i -> 'j) t
+)
+ident(
+  int_ref fs "src/bootMonad.ml" 32 786 802 "src/bootMonad.ml" 32 786 804
+)
+"src/bootMonad.ml" 33 810 819 "src/bootMonad.ml" 33 810 822
+type(
+  ('i -> 'j) t -> (('i -> 'j) -> 'j t) -> 'j t
+)
+ident(
+  int_ref >>= "src/bootMonad.ml" 31 755 763 "src/bootMonad.ml" 31 755 770
+)
+"src/bootMonad.ml" 33 810 827 "src/bootMonad.ml" 33 810 828
+type(
+  'i -> 'j
+)
+ident(
+  def f "src/bootMonad.ml" 34 832 838 "src/bootMonad.ml" 34 832 866
+)
+"src/bootMonad.ml" 34 832 838 "src/bootMonad.ml" 34 832 840
+type(
+  'i t
+)
+ident(
+  int_ref ms "src/bootMonad.ml" 32 786 805 "src/bootMonad.ml" 32 786 807
+)
+"src/bootMonad.ml" 34 832 841 "src/bootMonad.ml" 34 832 844
+type(
+  'i t -> ('i -> 'j t) -> 'j t
+)
+ident(
+  int_ref >>= "src/bootMonad.ml" 31 755 763 "src/bootMonad.ml" 31 755 770
+)
+"src/bootMonad.ml" 34 832 849 "src/bootMonad.ml" 34 832 850
+type(
+  'i
+)
+ident(
+  def x "src/bootMonad.ml" 34 832 854 "src/bootMonad.ml" 34 832 866
+)
+"src/bootMonad.ml" 34 832 854 "src/bootMonad.ml" 34 832 860
+type(
+  'j -> 'j t
+)
+ident(
+  ext_ref return
+)
+"src/bootMonad.ml" 34 832 861 "src/bootMonad.ml" 34 832 862
+type(
+  ('j -> 'j t) -> 'j -> 'j t
+)
+ident(
+  ext_ref BootPervasives.( $ )
+)
+"src/bootMonad.ml" 34 832 863 "src/bootMonad.ml" 34 832 864
+type(
+  'i -> 'j
+)
+ident(
+  int_ref f "src/bootMonad.ml" 33 810 827 "src/bootMonad.ml" 33 810 828
+)
+"src/bootMonad.ml" 34 832 865 "src/bootMonad.ml" 34 832 866
+type(
+  'i
+)
+ident(
+  int_ref x "src/bootMonad.ml" 34 832 849 "src/bootMonad.ml" 34 832 850
+)
+"src/bootMonad.ml" 34 832 863 "src/bootMonad.ml" 34 832 866
+call(
+  stack
+)
+type(
+  'j
+)
+"src/bootMonad.ml" 34 832 854 "src/bootMonad.ml" 34 832 866
+call(
+  tail
+)
+type(
+  'j t
+)
+"src/bootMonad.ml" 34 832 849 "src/bootMonad.ml" 34 832 866
+type(
+  'i -> 'j t
+)
+"src/bootMonad.ml" 34 832 838 "src/bootMonad.ml" 34 832 866
+call(
+  tail
+)
+type(
+  'j t
+)
+"src/bootMonad.ml" 33 810 827 "src/bootMonad.ml" 34 832 866
+type(
+  ('i -> 'j) -> 'j t
+)
+"src/bootMonad.ml" 33 810 816 "src/bootMonad.ml" 34 832 866
+call(
+  tail
+)
+type(
+  'j t
+)
+"src/bootMonad.ml" 32 786 805 "src/bootMonad.ml" 34 832 866
+type(
+  'i t -> 'j t
+)
+"src/bootMonad.ml" 32 786 802 "src/bootMonad.ml" 34 832 866
+type(
+  ('i -> 'j) t -> 'i t -> 'j t
+)
+"src/bootMonad.ml" 35 867 875 "src/bootMonad.ml" 35 867 882
+type(
+  ('k -> 'l) -> 'k t -> 'l t
+)
+ident(
+  def <$> "src/bootMonad.ml" 36 890 894 "src/bootMonad.ml" 47 1325 1330
+)
+"src/bootMonad.ml" 35 867 885 "src/bootMonad.ml" 35 867 889
+type(
+  ('k -> 'l) -> 'k t -> 'l t
+)
+ident(
+  ext_ref fmap
+)
+"src/bootMonad.ml" 36 890 898 "src/bootMonad.ml" 36 890 905
+type(
+  'm -> 'n t -> 'm t
+)
+ident(
+  def <$ "src/bootMonad.ml" 37 928 932 "src/bootMonad.ml" 47 1325 1330
+)
+"src/bootMonad.ml" 36 890 906 "src/bootMonad.ml" 36 890 907
+type(
+  'm
+)
+ident(
+  def v "src/bootMonad.ml" 36 890 910 "src/bootMonad.ml" 36 890 927
+)
+"src/bootMonad.ml" 36 890 910 "src/bootMonad.ml" 36 890 914
+type(
+  ('n -> 'm) -> 'n t -> 'm t
+)
+ident(
+  ext_ref fmap
+)
+"src/bootMonad.ml" 36 890 920 "src/bootMonad.ml" 36 890 921
+type(
+  'n
+)
+"src/bootMonad.ml" 36 890 925 "src/bootMonad.ml" 36 890 926
+type(
+  'm
+)
+ident(
+  int_ref v "src/bootMonad.ml" 36 890 906 "src/bootMonad.ml" 36 890 907
+)
+"src/bootMonad.ml" 36 890 920 "src/bootMonad.ml" 36 890 926
+type(
+  'n -> 'm
+)
+"src/bootMonad.ml" 36 890 910 "src/bootMonad.ml" 36 890 927
+call(
+  tail
+)
+type(
+  'n t -> 'm t
+)
+"src/bootMonad.ml" 36 890 906 "src/bootMonad.ml" 36 890 927
+type(
+  'm -> 'n t -> 'm t
+)
+"src/bootMonad.ml" 37 928 936 "src/bootMonad.ml" 37 928 942
+type(
+  'o t -> 'p t -> 'p t
+)
+ident(
+  def *> "src/bootMonad.ml" 38 981 984 "src/bootMonad.ml" 47 1325 1330
+)
+"src/bootMonad.ml" 37 928 943 "src/bootMonad.ml" 37 928 944
+type(
+  'o t
+)
+ident(
+  def x "src/bootMonad.ml" 37 928 950 "src/bootMonad.ml" 37 928 980
+)
+"src/bootMonad.ml" 37 928 950 "src/bootMonad.ml" 37 928 957
+type(
+  ('p -> 'p) t -> 'p t -> 'p t
+)
+ident(
+  int_ref <*> "src/bootMonad.ml" 32 786 794 "src/bootMonad.ml" 32 786 801
+)
+"src/bootMonad.ml" 37 928 959 "src/bootMonad.ml" 37 928 963
+type(
+  ('o -> 'p -> 'p) -> 'o t -> ('p -> 'p) t
+)
+ident(
+  ext_ref fmap
+)
+"src/bootMonad.ml" 37 928 969 "src/bootMonad.ml" 37 928 970
+type(
+  'o
+)
+"src/bootMonad.ml" 37 928 974 "src/bootMonad.ml" 37 928 976
+type(
+  'p -> 'p
+)
+ident(
+  ext_ref BootPervasives.id
+)
+"src/bootMonad.ml" 37 928 969 "src/bootMonad.ml" 37 928 976
+type(
+  'o -> 'p -> 'p
+)
+"src/bootMonad.ml" 37 928 978 "src/bootMonad.ml" 37 928 979
+type(
+  'o t
+)
+ident(
+  int_ref x "src/bootMonad.ml" 37 928 943 "src/bootMonad.ml" 37 928 944
+)
+"src/bootMonad.ml" 37 928 959 "src/bootMonad.ml" 37 928 979
+call(
+  stack
+)
+type(
+  ('p -> 'p) t
+)
+"src/bootMonad.ml" 37 928 950 "src/bootMonad.ml" 37 928 980
+call(
+  tail
+)
+type(
+  'p t -> 'p t
+)
+"src/bootMonad.ml" 37 928 943 "src/bootMonad.ml" 37 928 980
+type(
+  'o t -> 'p t -> 'p t
+)
+"src/bootMonad.ml" 38 981 988 "src/bootMonad.ml" 38 981 994
+type(
+  'q t -> 'r -> 'q t
+)
+ident(
+  def <* "src/bootMonad.ml" 39 1024 1028 "src/bootMonad.ml" 47 1325 1330
+)
+"src/bootMonad.ml" 38 981 995 "src/bootMonad.ml" 38 981 996
+type(
+  'q t
+)
+ident(
+  def x "src/bootMonad.ml" 38 981 997 "src/bootMonad.ml" 38 981 1023
+)
+"src/bootMonad.ml" 38 981 997 "src/bootMonad.ml" 38 981 998
+type(
+  'r
+)
+"src/bootMonad.ml" 38 981 1002 "src/bootMonad.ml" 38 981 1009
+type(
+  ('q -> 'q) t -> 'q t -> 'q t
+)
+ident(
+  int_ref <*> "src/bootMonad.ml" 32 786 794 "src/bootMonad.ml" 32 786 801
+)
+"src/bootMonad.ml" 38 981 1011 "src/bootMonad.ml" 38 981 1017
+type(
+  ('q -> 'q) -> ('q -> 'q) t
+)
+ident(
+  ext_ref return
+)
+"src/bootMonad.ml" 38 981 1018 "src/bootMonad.ml" 38 981 1020
+type(
+  'q -> 'q
+)
+ident(
+  ext_ref BootPervasives.id
+)
+"src/bootMonad.ml" 38 981 1011 "src/bootMonad.ml" 38 981 1020
+call(
+  stack
+)
+type(
+  ('q -> 'q) t
+)
+"src/bootMonad.ml" 38 981 1022 "src/bootMonad.ml" 38 981 1023
+type(
+  'q t
+)
+ident(
+  int_ref x "src/bootMonad.ml" 38 981 995 "src/bootMonad.ml" 38 981 996
+)
+"src/bootMonad.ml" 38 981 1002 "src/bootMonad.ml" 38 981 1023
+call(
+  tail
+)
+type(
+  'q t
+)
+"src/bootMonad.ml" 38 981 997 "src/bootMonad.ml" 38 981 1023
+type(
+  'r -> 'q t
+)
+"src/bootMonad.ml" 38 981 995 "src/bootMonad.ml" 38 981 1023
+type(
+  'q t -> 'r -> 'q t
+)
+"src/bootMonad.ml" 39 1024 1032 "src/bootMonad.ml" 39 1024 1040
+type(
+  's t -> ('s -> 't) t -> 't t
+)
+ident(
+  def <**> "src/bootMonad.ml" 40 1062 1066 "src/bootMonad.ml" 47 1325 1330
+)
+"src/bootMonad.ml" 39 1024 1041 "src/bootMonad.ml" 39 1024 1042
+type(
+  's t
+)
+ident(
+  def f "src/bootMonad.ml" 39 1024 1043 "src/bootMonad.ml" 39 1024 1061
+)
+"src/bootMonad.ml" 39 1024 1043 "src/bootMonad.ml" 39 1024 1044
+type(
+  ('s -> 't) t
+)
+ident(
+  def x "src/bootMonad.ml" 39 1024 1047 "src/bootMonad.ml" 39 1024 1061
+)
+"src/bootMonad.ml" 39 1024 1047 "src/bootMonad.ml" 39 1024 1051
+type(
+  (('s -> 't) t -> 's t -> 't t) -> 's t -> ('s -> 't) t -> 't t
+)
+ident(
+  ext_ref BootPervasives.flip
+)
+"src/bootMonad.ml" 39 1024 1052 "src/bootMonad.ml" 39 1024 1057
+type(
+  ('s -> 't) t -> 's t -> 't t
+)
+ident(
+  int_ref <*> "src/bootMonad.ml" 32 786 794 "src/bootMonad.ml" 32 786 801
+)
+"src/bootMonad.ml" 39 1024 1058 "src/bootMonad.ml" 39 1024 1059
+type(
+  's t
+)
+ident(
+  int_ref f "src/bootMonad.ml" 39 1024 1041 "src/bootMonad.ml" 39 1024 1042
+)
+"src/bootMonad.ml" 39 1024 1060 "src/bootMonad.ml" 39 1024 1061
+type(
+  ('s -> 't) t
+)
+ident(
+  int_ref x "src/bootMonad.ml" 39 1024 1043 "src/bootMonad.ml" 39 1024 1044
+)
+"src/bootMonad.ml" 39 1024 1047 "src/bootMonad.ml" 39 1024 1061
+call(
+  tail
+)
+type(
+  't t
+)
+"src/bootMonad.ml" 39 1024 1043 "src/bootMonad.ml" 39 1024 1061
+type(
+  ('s -> 't) t -> 't t
+)
+"src/bootMonad.ml" 39 1024 1041 "src/bootMonad.ml" 39 1024 1061
+type(
+  's t -> ('s -> 't) t -> 't t
+)
+"src/bootMonad.ml" 40 1062 1070 "src/bootMonad.ml" 40 1062 1076
+type(
+  'u t -> 'v t -> 'v t
+)
+ident(
+  def >> "src/bootMonad.ml" 41 1113 1117 "src/bootMonad.ml" 47 1325 1330
+)
+"src/bootMonad.ml" 40 1062 1077 "src/bootMonad.ml" 40 1062 1078
+type(
+  'u t
+)
+ident(
+  def m "src/bootMonad.ml" 40 1062 1079 "src/bootMonad.ml" 40 1062 1103
+)
+"src/bootMonad.ml" 40 1062 1079 "src/bootMonad.ml" 40 1062 1080
+type(
+  'v t
+)
+ident(
+  def n "src/bootMonad.ml" 40 1062 1085 "src/bootMonad.ml" 40 1062 1103
+)
+"src/bootMonad.ml" 40 1062 1085 "src/bootMonad.ml" 40 1062 1086
+type(
+  'u t
+)
+ident(
+  int_ref m "src/bootMonad.ml" 40 1062 1077 "src/bootMonad.ml" 40 1062 1078
+)
+"src/bootMonad.ml" 40 1062 1087 "src/bootMonad.ml" 40 1062 1090
+type(
+  'u t -> ('u -> 'v t) -> 'v t
+)
+ident(
+  int_ref >>= "src/bootMonad.ml" 31 755 763 "src/bootMonad.ml" 31 755 770
+)
+"src/bootMonad.ml" 40 1062 1096 "src/bootMonad.ml" 40 1062 1097
+type(
+  'u
+)
+"src/bootMonad.ml" 40 1062 1101 "src/bootMonad.ml" 40 1062 1102
+type(
+  'v t
+)
+ident(
+  int_ref n "src/bootMonad.ml" 40 1062 1079 "src/bootMonad.ml" 40 1062 1080
+)
+"src/bootMonad.ml" 40 1062 1096 "src/bootMonad.ml" 40 1062 1102
+type(
+  'u -> 'v t
+)
+"src/bootMonad.ml" 40 1062 1085 "src/bootMonad.ml" 40 1062 1103
+call(
+  tail
+)
+type(
+  'v t
+)
+"src/bootMonad.ml" 40 1062 1079 "src/bootMonad.ml" 40 1062 1103
+type(
+  'v t -> 'v t
+)
+"src/bootMonad.ml" 40 1062 1077 "src/bootMonad.ml" 40 1062 1103
+type(
+  'u t -> 'v t -> 'v t
+)
+"src/bootMonad.ml" 41 1113 1121 "src/bootMonad.ml" 41 1113 1126
+type(
+  ('w -> 'x) -> 'w t -> 'x t
+)
+ident(
+  def liftM "src/bootMonad.ml" 42 1134 1138 "src/bootMonad.ml" 47 1325 1330
+)
+"src/bootMonad.ml" 41 1113 1129 "src/bootMonad.ml" 41 1113 1133
+type(
+  ('w -> 'x) -> 'w t -> 'x t
+)
+ident(
+  ext_ref fmap
+)
+"src/bootMonad.ml" 42 1134 1142 "src/bootMonad.ml" 42 1134 1148
+type(
+  ('y -> 'z -> 'a1) -> 'y t -> 'z t -> 'a1 t
+)
+ident(
+  def liftM2 "src/bootMonad.ml" 43 1171 1175 "src/bootMonad.ml" 47 1325 1330
+)
+"src/bootMonad.ml" 42 1134 1149 "src/bootMonad.ml" 42 1134 1150
+type(
+  'y -> 'z -> 'a1
+)
+ident(
+  def f "src/bootMonad.ml" 42 1134 1151 "src/bootMonad.ml" 42 1134 1170
+)
+"src/bootMonad.ml" 42 1134 1151 "src/bootMonad.ml" 42 1134 1152
+type(
+  'y t
+)
+ident(
+  def x "src/bootMonad.ml" 42 1134 1153 "src/bootMonad.ml" 42 1134 1170
+)
+"src/bootMonad.ml" 42 1134 1153 "src/bootMonad.ml" 42 1134 1154
+type(
+  'z t
+)
+ident(
+  def y "src/bootMonad.ml" 42 1134 1157 "src/bootMonad.ml" 42 1134 1170
+)
+"src/bootMonad.ml" 42 1134 1157 "src/bootMonad.ml" 42 1134 1158
+type(
+  'y -> 'z -> 'a1
+)
+ident(
+  int_ref f "src/bootMonad.ml" 42 1134 1149 "src/bootMonad.ml" 42 1134 1150
+)
+"src/bootMonad.ml" 42 1134 1159 "src/bootMonad.ml" 42 1134 1162
+type(
+  ('y -> 'z -> 'a1) -> 'y t -> ('z -> 'a1) t
+)
+ident(
+  int_ref <$> "src/bootMonad.ml" 35 867 875 "src/bootMonad.ml" 35 867 882
+)
+"src/bootMonad.ml" 42 1134 1163 "src/bootMonad.ml" 42 1134 1164
+type(
+  'y t
+)
+ident(
+  int_ref x "src/bootMonad.ml" 42 1134 1151 "src/bootMonad.ml" 42 1134 1152
+)
+"src/bootMonad.ml" 42 1134 1157 "src/bootMonad.ml" 42 1134 1164
+call(
+  stack
+)
+type(
+  ('z -> 'a1) t
+)
+"src/bootMonad.ml" 42 1134 1165 "src/bootMonad.ml" 42 1134 1168
+type(
+  ('z -> 'a1) t -> 'z t -> 'a1 t
+)
+ident(
+  int_ref <*> "src/bootMonad.ml" 32 786 794 "src/bootMonad.ml" 32 786 801
+)
+"src/bootMonad.ml" 42 1134 1169 "src/bootMonad.ml" 42 1134 1170
+type(
+  'z t
+)
+ident(
+  int_ref y "src/bootMonad.ml" 42 1134 1153 "src/bootMonad.ml" 42 1134 1154
+)
+"src/bootMonad.ml" 42 1134 1157 "src/bootMonad.ml" 42 1134 1170
+call(
+  tail
+)
+type(
+  'a1 t
+)
+"src/bootMonad.ml" 42 1134 1153 "src/bootMonad.ml" 42 1134 1170
+type(
+  'z t -> 'a1 t
+)
+"src/bootMonad.ml" 42 1134 1151 "src/bootMonad.ml" 42 1134 1170
+type(
+  'y t -> 'z t -> 'a1 t
+)
+"src/bootMonad.ml" 42 1134 1149 "src/bootMonad.ml" 42 1134 1170
+type(
+  ('y -> 'z -> 'a1) -> 'y t -> 'z t -> 'a1 t
+)
+"src/bootMonad.ml" 43 1171 1179 "src/bootMonad.ml" 43 1171 1186
+type(
+  'b1 t -> ('b1 -> 'c1) -> 'c1 t
+)
+ident(
+  def >|= "src/bootMonad.ml" 44 1202 1206 "src/bootMonad.ml" 47 1325 1330
+)
+"src/bootMonad.ml" 43 1171 1187 "src/bootMonad.ml" 43 1171 1188
+type(
+  'b1 t
+)
+ident(
+  def x "src/bootMonad.ml" 43 1171 1189 "src/bootMonad.ml" 43 1171 1201
+)
+"src/bootMonad.ml" 43 1171 1189 "src/bootMonad.ml" 43 1171 1190
+type(
+  'b1 -> 'c1
+)
+ident(
+  def f "src/bootMonad.ml" 43 1171 1193 "src/bootMonad.ml" 43 1171 1201
+)
+"src/bootMonad.ml" 43 1171 1193 "src/bootMonad.ml" 43 1171 1197
+type(
+  ('b1 -> 'c1) -> 'b1 t -> 'c1 t
+)
+ident(
+  ext_ref fmap
+)
+"src/bootMonad.ml" 43 1171 1198 "src/bootMonad.ml" 43 1171 1199
+type(
+  'b1 -> 'c1
+)
+ident(
+  int_ref f "src/bootMonad.ml" 43 1171 1189 "src/bootMonad.ml" 43 1171 1190
+)
+"src/bootMonad.ml" 43 1171 1200 "src/bootMonad.ml" 43 1171 1201
+type(
+  'b1 t
+)
+ident(
+  int_ref x "src/bootMonad.ml" 43 1171 1187 "src/bootMonad.ml" 43 1171 1188
+)
+"src/bootMonad.ml" 43 1171 1193 "src/bootMonad.ml" 43 1171 1201
+call(
+  tail
+)
+type(
+  'c1 t
+)
+"src/bootMonad.ml" 43 1171 1189 "src/bootMonad.ml" 43 1171 1201
+type(
+  ('b1 -> 'c1) -> 'c1 t
+)
+"src/bootMonad.ml" 43 1171 1187 "src/bootMonad.ml" 43 1171 1201
+type(
+  'b1 t -> ('b1 -> 'c1) -> 'c1 t
+)
+"src/bootMonad.ml" 44 1202 1210 "src/bootMonad.ml" 44 1202 1217
+type(
+  ('d1 -> 'e1 t) -> ('f1 -> 'd1 t) -> 'f1 -> 'e1 t
+)
+ident(
+  def <=< "src/bootMonad.ml" 45 1244 1247 "src/bootMonad.ml" 47 1325 1330
+)
+"src/bootMonad.ml" 44 1202 1218 "src/bootMonad.ml" 44 1202 1219
+type(
+  'd1 -> 'e1 t
+)
+ident(
+  def f "src/bootMonad.ml" 44 1202 1220 "src/bootMonad.ml" 44 1202 1243
+)
+"src/bootMonad.ml" 44 1202 1220 "src/bootMonad.ml" 44 1202 1221
+type(
+  'f1 -> 'd1 t
+)
+ident(
+  def g "src/bootMonad.ml" 44 1202 1229 "src/bootMonad.ml" 44 1202 1243
+)
+"src/bootMonad.ml" 44 1202 1229 "src/bootMonad.ml" 44 1202 1230
+type(
+  'f1
+)
+ident(
+  def x "src/bootMonad.ml" 44 1202 1234 "src/bootMonad.ml" 44 1202 1243
+)
+"src/bootMonad.ml" 44 1202 1234 "src/bootMonad.ml" 44 1202 1235
+type(
+  'f1 -> 'd1 t
+)
+ident(
+  int_ref g "src/bootMonad.ml" 44 1202 1220 "src/bootMonad.ml" 44 1202 1221
+)
+"src/bootMonad.ml" 44 1202 1236 "src/bootMonad.ml" 44 1202 1237
+type(
+  'f1
+)
+ident(
+  int_ref x "src/bootMonad.ml" 44 1202 1229 "src/bootMonad.ml" 44 1202 1230
+)
+"src/bootMonad.ml" 44 1202 1234 "src/bootMonad.ml" 44 1202 1237
+call(
+  stack
+)
+type(
+  'd1 t
+)
+"src/bootMonad.ml" 44 1202 1238 "src/bootMonad.ml" 44 1202 1241
+type(
+  'd1 t -> ('d1 -> 'e1 t) -> 'e1 t
+)
+ident(
+  int_ref >>= "src/bootMonad.ml" 31 755 763 "src/bootMonad.ml" 31 755 770
+)
+"src/bootMonad.ml" 44 1202 1242 "src/bootMonad.ml" 44 1202 1243
+type(
+  'd1 -> 'e1 t
+)
+ident(
+  int_ref f "src/bootMonad.ml" 44 1202 1218 "src/bootMonad.ml" 44 1202 1219
+)
+"src/bootMonad.ml" 44 1202 1234 "src/bootMonad.ml" 44 1202 1243
+call(
+  tail
+)
+type(
+  'e1 t
+)
+"src/bootMonad.ml" 44 1202 1229 "src/bootMonad.ml" 44 1202 1243
+type(
+  'f1 -> 'e1 t
+)
+"src/bootMonad.ml" 44 1202 1220 "src/bootMonad.ml" 44 1202 1243
+type(
+  ('f1 -> 'd1 t) -> 'f1 -> 'e1 t
+)
+"src/bootMonad.ml" 44 1202 1218 "src/bootMonad.ml" 44 1202 1243
+type(
+  ('d1 -> 'e1 t) -> ('f1 -> 'd1 t) -> 'f1 -> 'e1 t
+)
+"src/bootMonad.ml" 45 1244 1251 "src/bootMonad.ml" 45 1244 1258
+type(
+  ('g1 -> 'h1 t) -> ('h1 -> 'i1 t) -> 'g1 -> 'i1 t
+)
+ident(
+  def >=> "src/bootMonad.ml" 46 1284 1287 "src/bootMonad.ml" 47 1325 1330
+)
+"src/bootMonad.ml" 45 1244 1259 "src/bootMonad.ml" 45 1244 1260
+type(
+  'g1 -> 'h1 t
+)
+ident(
+  def f "src/bootMonad.ml" 45 1244 1261 "src/bootMonad.ml" 45 1244 1282
+)
+"src/bootMonad.ml" 45 1244 1261 "src/bootMonad.ml" 45 1244 1262
+type(
+  'h1 -> 'i1 t
+)
+ident(
+  def g "src/bootMonad.ml" 45 1244 1266 "src/bootMonad.ml" 45 1244 1282
+)
+"src/bootMonad.ml" 45 1244 1266 "src/bootMonad.ml" 45 1244 1270
+type(
+  (('h1 -> 'i1 t) -> ('g1 -> 'h1 t) -> 'g1 -> 'i1 t) ->
+  ('g1 -> 'h1 t) -> ('h1 -> 'i1 t) -> 'g1 -> 'i1 t
+)
+ident(
+  ext_ref BootPervasives.flip
+)
+"src/bootMonad.ml" 45 1244 1271 "src/bootMonad.ml" 45 1244 1278
+type(
+  ('h1 -> 'i1 t) -> ('g1 -> 'h1 t) -> 'g1 -> 'i1 t
+)
+ident(
+  int_ref <=< "src/bootMonad.ml" 44 1202 1210 "src/bootMonad.ml" 44 1202 1217
+)
+"src/bootMonad.ml" 45 1244 1279 "src/bootMonad.ml" 45 1244 1280
+type(
+  'g1 -> 'h1 t
+)
+ident(
+  int_ref f "src/bootMonad.ml" 45 1244 1259 "src/bootMonad.ml" 45 1244 1260
+)
+"src/bootMonad.ml" 45 1244 1281 "src/bootMonad.ml" 45 1244 1282
+type(
+  'h1 -> 'i1 t
+)
+ident(
+  int_ref g "src/bootMonad.ml" 45 1244 1261 "src/bootMonad.ml" 45 1244 1262
+)
+"src/bootMonad.ml" 45 1244 1266 "src/bootMonad.ml" 45 1244 1282
+call(
+  tail
+)
+type(
+  'g1 -> 'i1 t
+)
+"src/bootMonad.ml" 45 1244 1261 "src/bootMonad.ml" 45 1244 1282
+type(
+  ('h1 -> 'i1 t) -> 'g1 -> 'i1 t
+)
+"src/bootMonad.ml" 45 1244 1259 "src/bootMonad.ml" 45 1244 1282
+type(
+  ('g1 -> 'h1 t) -> ('h1 -> 'i1 t) -> 'g1 -> 'i1 t
+)
+"src/bootMonad.ml" 46 1284 1291 "src/bootMonad.ml" 46 1284 1298
+type(
+  ('j1 -> 'k1 t) -> 'j1 t -> 'k1 t
+)
+ident(
+  def =<< "src/bootMonad.ml" 46 1284 1322 "src/bootMonad.ml" 47 1325 1330
+)
+"src/bootMonad.ml" 46 1284 1299 "src/bootMonad.ml" 46 1284 1300
+type(
+  'j1 -> 'k1 t
+)
+ident(
+  def f "src/bootMonad.ml" 46 1284 1301 "src/bootMonad.ml" 46 1284 1322
+)
+"src/bootMonad.ml" 46 1284 1301 "src/bootMonad.ml" 46 1284 1302
+type(
+  'j1 t
+)
+ident(
+  def x "src/bootMonad.ml" 46 1284 1306 "src/bootMonad.ml" 46 1284 1322
+)
+"src/bootMonad.ml" 46 1284 1306 "src/bootMonad.ml" 46 1284 1310
+type(
+  ('j1 t -> ('j1 -> 'k1 t) -> 'k1 t) -> ('j1 -> 'k1 t) -> 'j1 t -> 'k1 t
+)
+ident(
+  ext_ref BootPervasives.flip
+)
+"src/bootMonad.ml" 46 1284 1311 "src/bootMonad.ml" 46 1284 1318
+type(
+  'j1 t -> ('j1 -> 'k1 t) -> 'k1 t
+)
+ident(
+  int_ref >>= "src/bootMonad.ml" 31 755 763 "src/bootMonad.ml" 31 755 770
+)
+"src/bootMonad.ml" 46 1284 1319 "src/bootMonad.ml" 46 1284 1320
+type(
+  'j1 -> 'k1 t
+)
+ident(
+  int_ref f "src/bootMonad.ml" 46 1284 1299 "src/bootMonad.ml" 46 1284 1300
+)
+"src/bootMonad.ml" 46 1284 1321 "src/bootMonad.ml" 46 1284 1322
+type(
+  'j1 t
+)
+ident(
+  int_ref x "src/bootMonad.ml" 46 1284 1301 "src/bootMonad.ml" 46 1284 1302
+)
+"src/bootMonad.ml" 46 1284 1306 "src/bootMonad.ml" 46 1284 1322
+call(
+  tail
+)
+type(
+  'k1 t
+)
+"src/bootMonad.ml" 46 1284 1301 "src/bootMonad.ml" 46 1284 1322
+type(
+  'j1 t -> 'k1 t
+)
+"src/bootMonad.ml" 46 1284 1299 "src/bootMonad.ml" 46 1284 1322
+type(
+  ('j1 -> 'k1 t) -> 'j1 t -> 'k1 t
+)
+"src/bootMonad.ml" 54 1534 1546 "src/bootMonad.ml" 54 1534 1553
+call(
+  stack
+)
+"src/bootMonad.ml" 55 1554 1562 "src/bootMonad.ml" 55 1554 1568
+type(
+  'l1 P.t
+)
+ident(
+  def mempty "src/bootMonad.ml" 56 1580 1584 "src/bootMonad.ml" 62 1704 1709
+)
+"src/bootMonad.ml" 55 1554 1571 "src/bootMonad.ml" 55 1554 1579
+type(
+  'l1 P.t
+)
+ident(
+  ext_ref P.mempty
+)
+"src/bootMonad.ml" 56 1580 1588 "src/bootMonad.ml" 56 1580 1593
+type(
+  'm1 P.t -> 'm1 P.t -> 'm1 P.t
+)
+ident(
+  def mplus "src/bootMonad.ml" 57 1612 1616 "src/bootMonad.ml" 62 1704 1709
+)
+"src/bootMonad.ml" 56 1580 1594 "src/bootMonad.ml" 56 1580 1595
+type(
+  'm1 P.t
+)
+ident(
+  def a "src/bootMonad.ml" 56 1580 1596 "src/bootMonad.ml" 56 1580 1611
+)
+"src/bootMonad.ml" 56 1580 1596 "src/bootMonad.ml" 56 1580 1597
+type(
+  'm1 P.t
+)
+ident(
+  def b "src/bootMonad.ml" 56 1580 1600 "src/bootMonad.ml" 56 1580 1611
+)
+"src/bootMonad.ml" 56 1580 1600 "src/bootMonad.ml" 56 1580 1607
+type(
+  'm1 P.t -> 'm1 P.t -> 'm1 P.t
+)
+ident(
+  ext_ref P.mplus
+)
+"src/bootMonad.ml" 56 1580 1608 "src/bootMonad.ml" 56 1580 1609
+type(
+  'm1 P.t
+)
+ident(
+  int_ref a "src/bootMonad.ml" 56 1580 1594 "src/bootMonad.ml" 56 1580 1595
+)
+"src/bootMonad.ml" 56 1580 1610 "src/bootMonad.ml" 56 1580 1611
+type(
+  'm1 P.t
+)
+ident(
+  int_ref b "src/bootMonad.ml" 56 1580 1596 "src/bootMonad.ml" 56 1580 1597
+)
+"src/bootMonad.ml" 56 1580 1600 "src/bootMonad.ml" 56 1580 1611
+call(
+  tail
+)
+type(
+  'm1 P.t
+)
+"src/bootMonad.ml" 56 1580 1596 "src/bootMonad.ml" 56 1580 1611
+type(
+  'm1 P.t -> 'm1 P.t
+)
+"src/bootMonad.ml" 56 1580 1594 "src/bootMonad.ml" 56 1580 1611
+type(
+  'm1 P.t -> 'm1 P.t -> 'm1 P.t
+)
+"src/bootMonad.ml" 57 1612 1620 "src/bootMonad.ml" 57 1612 1627
+type(
+  'n1 P.t -> 'n1 P.t -> 'n1 P.t
+)
+ident(
+  def <+> "src/bootMonad.ml" 58 1636 1640 "src/bootMonad.ml" 62 1704 1709
+)
+"src/bootMonad.ml" 57 1612 1630 "src/bootMonad.ml" 57 1612 1635
+type(
+  'n1 P.t -> 'n1 P.t -> 'n1 P.t
+)
+ident(
+  int_ref mplus "src/bootMonad.ml" 56 1580 1588 "src/bootMonad.ml" 56 1580 1593
+)
+"src/bootMonad.ml" 58 1636 1644 "src/bootMonad.ml" 58 1636 1651
+type(
+  ('o1 -> bool) -> 'o1 -> 'o1 t
+)
+ident(
+  def keep_if "src/bootMonad.ml" 60 1685 1702 "src/bootMonad.ml" 62 1704 1709
+)
+"src/bootMonad.ml" 58 1636 1652 "src/bootMonad.ml" 58 1636 1653
+type(
+  'o1 -> bool
+)
+ident(
+  def f "src/bootMonad.ml" 58 1636 1654 "src/bootMonad.ml" 60 1685 1702
+)
+"src/bootMonad.ml" 58 1636 1654 "src/bootMonad.ml" 58 1636 1655
+type(
+  'o1
+)
+ident(
+  def x "src/bootMonad.ml" 59 1658 1664 "src/bootMonad.ml" 60 1685 1702
+)
+"src/bootMonad.ml" 59 1658 1667 "src/bootMonad.ml" 59 1658 1668
+type(
+  'o1 -> bool
+)
+ident(
+  int_ref f "src/bootMonad.ml" 58 1636 1652 "src/bootMonad.ml" 58 1636 1653
+)
+"src/bootMonad.ml" 59 1658 1669 "src/bootMonad.ml" 59 1658 1670
+type(
+  'o1
+)
+ident(
+  int_ref x "src/bootMonad.ml" 58 1636 1654 "src/bootMonad.ml" 58 1636 1655
+)
+"src/bootMonad.ml" 59 1658 1667 "src/bootMonad.ml" 59 1658 1670
+call(
+  stack
+)
+type(
+  bool
+)
+"src/bootMonad.ml" 59 1658 1676 "src/bootMonad.ml" 59 1658 1682
+type(
+  'o1 -> 'o1 t
+)
+ident(
+  ext_ref return
+)
+"src/bootMonad.ml" 59 1658 1683 "src/bootMonad.ml" 59 1658 1684
+type(
+  'o1
+)
+ident(
+  int_ref x "src/bootMonad.ml" 58 1636 1654 "src/bootMonad.ml" 58 1636 1655
+)
+"src/bootMonad.ml" 59 1658 1676 "src/bootMonad.ml" 59 1658 1684
+call(
+  tail
+)
+type(
+  'o1 t
+)
+"src/bootMonad.ml" 60 1685 1696 "src/bootMonad.ml" 60 1685 1702
+type(
+  'o1 P.t
+)
+ident(
+  int_ref mempty "src/bootMonad.ml" 55 1554 1562 "src/bootMonad.ml" 55 1554 1568
+)
+"src/bootMonad.ml" 59 1658 1664 "src/bootMonad.ml" 60 1685 1702
+type(
+  'o1 t
+)
+"src/bootMonad.ml" 58 1636 1654 "src/bootMonad.ml" 60 1685 1702
+type(
+  'o1 -> 'o1 t
+)
+"src/bootMonad.ml" 58 1636 1652 "src/bootMonad.ml" 60 1685 1702
+type(
+  ('o1 -> bool) -> 'o1 -> 'o1 t
+)

@@ -1,0 +1,17 @@
+# OASIS_START
+# DO NOT EDIT (digest: 7b6e9ccb5b13af8209bcbcef40b79896)
+Bootstrapper
+BootPervasives
+BootInterfaces
+BootMonad
+BootOption
+BootPromise
+BootEvent
+BootInterval
+BootHtml
+BootAjax
+BootColor
+BootCanvas
+BootStorage
+BootFunctor
+# OASIS_STOP

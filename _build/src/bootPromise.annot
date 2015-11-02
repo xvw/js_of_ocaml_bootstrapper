@@ -1,0 +1,589 @@
+"src/bootPromise.ml" 3 21 25 "src/bootPromise.ml" 3 21 31
+type(
+  unit Lwt.u -> 'a -> 'b -> 'a
+)
+ident(
+  def wakeup "src/bootPromise.ml" 4 69 69 "src/bootPromise.ml" 1 0 -1
+)
+"src/bootPromise.ml" 3 21 32 "src/bootPromise.ml" 3 21 33
+type(
+  unit Lwt.u
+)
+ident(
+  def w "src/bootPromise.ml" 3 21 34 "src/bootPromise.ml" 3 21 68
+)
+"src/bootPromise.ml" 3 21 34 "src/bootPromise.ml" 3 21 35
+type(
+  'a
+)
+ident(
+  def x "src/bootPromise.ml" 3 21 36 "src/bootPromise.ml" 3 21 68
+)
+"src/bootPromise.ml" 3 21 36 "src/bootPromise.ml" 3 21 37
+type(
+  'b
+)
+"src/bootPromise.ml" 3 21 44 "src/bootPromise.ml" 3 21 45
+type(
+  unit
+)
+"src/bootPromise.ml" 3 21 48 "src/bootPromise.ml" 3 21 58
+type(
+  unit Lwt.u -> unit -> unit
+)
+ident(
+  ext_ref Lwt.wakeup
+)
+"src/bootPromise.ml" 3 21 59 "src/bootPromise.ml" 3 21 60
+type(
+  unit Lwt.u
+)
+ident(
+  int_ref w "src/bootPromise.ml" 3 21 32 "src/bootPromise.ml" 3 21 33
+)
+"src/bootPromise.ml" 3 21 61 "src/bootPromise.ml" 3 21 63
+type(
+  unit
+)
+"src/bootPromise.ml" 3 21 48 "src/bootPromise.ml" 3 21 63
+call(
+  stack
+)
+type(
+  unit
+)
+"src/bootPromise.ml" 3 21 67 "src/bootPromise.ml" 3 21 68
+type(
+  'a
+)
+ident(
+  int_ref x "src/bootPromise.ml" 3 21 34 "src/bootPromise.ml" 3 21 35
+)
+"src/bootPromise.ml" 3 21 40 "src/bootPromise.ml" 3 21 68
+type(
+  'a
+)
+"src/bootPromise.ml" 3 21 36 "src/bootPromise.ml" 3 21 68
+type(
+  'b -> 'a
+)
+"src/bootPromise.ml" 3 21 34 "src/bootPromise.ml" 3 21 68
+type(
+  'a -> 'b -> 'a
+)
+"src/bootPromise.ml" 3 21 32 "src/bootPromise.ml" 3 21 68
+type(
+  unit Lwt.u -> 'a -> 'b -> 'a
+)
+"src/bootPromise.ml" 4 69 73 "src/bootPromise.ml" 4 69 77
+type(
+  ('a -> 'b) -> 'a -> 'b Lwt.t
+)
+ident(
+  def wrap "src/bootPromise.ml" 5 110 110 "src/bootPromise.ml" 1 0 -1
+)
+"src/bootPromise.ml" 4 69 78 "src/bootPromise.ml" 4 69 79
+type(
+  'a -> 'b
+)
+ident(
+  def f "src/bootPromise.ml" 4 69 87 "src/bootPromise.ml" 4 69 108
+)
+"src/bootPromise.ml" 4 69 87 "src/bootPromise.ml" 4 69 88
+type(
+  'a
+)
+ident(
+  def x "src/bootPromise.ml" 4 69 92 "src/bootPromise.ml" 4 69 108
+)
+"src/bootPromise.ml" 4 69 92 "src/bootPromise.ml" 4 69 102
+type(
+  'b -> 'b Lwt.t
+)
+ident(
+  ext_ref Lwt.return
+)
+"src/bootPromise.ml" 4 69 104 "src/bootPromise.ml" 4 69 105
+type(
+  'a -> 'b
+)
+ident(
+  int_ref f "src/bootPromise.ml" 4 69 78 "src/bootPromise.ml" 4 69 79
+)
+"src/bootPromise.ml" 4 69 106 "src/bootPromise.ml" 4 69 107
+type(
+  'a
+)
+ident(
+  int_ref x "src/bootPromise.ml" 4 69 87 "src/bootPromise.ml" 4 69 88
+)
+"src/bootPromise.ml" 4 69 104 "src/bootPromise.ml" 4 69 107
+call(
+  stack
+)
+type(
+  'b
+)
+"src/bootPromise.ml" 4 69 92 "src/bootPromise.ml" 4 69 108
+call(
+  tail
+)
+type(
+  'b Lwt.t
+)
+"src/bootPromise.ml" 4 69 87 "src/bootPromise.ml" 4 69 108
+type(
+  'a -> 'b Lwt.t
+)
+"src/bootPromise.ml" 4 69 78 "src/bootPromise.ml" 4 69 109
+type(
+  ('a -> 'b) -> 'a -> 'b Lwt.t
+)
+"src/bootPromise.ml" 5 110 114 "src/bootPromise.ml" 5 110 117
+type(
+  ('a -> 'b Lwt.t) -> ('b -> 'c) -> 'a -> 'c Lwt.t
+)
+ident(
+  def run "src/bootPromise.ml" 7 200 200 "src/bootPromise.ml" 1 0 -1
+)
+"src/bootPromise.ml" 5 110 118 "src/bootPromise.ml" 5 110 125
+type(
+  'a -> 'b Lwt.t
+)
+ident(
+  def promise "src/bootPromise.ml" 5 110 126 "src/bootPromise.ml" 5 110 158
+)
+"src/bootPromise.ml" 5 110 126 "src/bootPromise.ml" 5 110 127
+type(
+  'b -> 'c
+)
+ident(
+  def f "src/bootPromise.ml" 5 110 128 "src/bootPromise.ml" 5 110 158
+)
+"src/bootPromise.ml" 5 110 128 "src/bootPromise.ml" 5 110 131
+type(
+  'a
+)
+ident(
+  def elt "src/bootPromise.ml" 5 110 134 "src/bootPromise.ml" 5 110 158
+)
+"src/bootPromise.ml" 5 110 134 "src/bootPromise.ml" 5 110 141
+type(
+  'a -> 'b Lwt.t
+)
+ident(
+  int_ref promise "src/bootPromise.ml" 5 110 118 "src/bootPromise.ml" 5 110 125
+)
+"src/bootPromise.ml" 5 110 142 "src/bootPromise.ml" 5 110 145
+type(
+  'a
+)
+ident(
+  int_ref elt "src/bootPromise.ml" 5 110 128 "src/bootPromise.ml" 5 110 131
+)
+"src/bootPromise.ml" 5 110 134 "src/bootPromise.ml" 5 110 145
+call(
+  stack
+)
+type(
+  'b Lwt.t
+)
+"src/bootPromise.ml" 5 110 146 "src/bootPromise.ml" 5 110 149
+type(
+  'b Lwt.t -> ('b -> 'c Lwt.t) -> 'c Lwt.t
+)
+ident(
+  ext_ref BootPervasives.( >>= )
+)
+"src/bootPromise.ml" 5 110 151 "src/bootPromise.ml" 5 110 155
+type(
+  ('b -> 'c) -> 'b -> 'c Lwt.t
+)
+ident(
+  int_ref wrap "src/bootPromise.ml" 4 69 73 "src/bootPromise.ml" 4 69 77
+)
+"src/bootPromise.ml" 5 110 156 "src/bootPromise.ml" 5 110 157
+type(
+  'b -> 'c
+)
+ident(
+  int_ref f "src/bootPromise.ml" 5 110 126 "src/bootPromise.ml" 5 110 127
+)
+"src/bootPromise.ml" 5 110 151 "src/bootPromise.ml" 5 110 157
+call(
+  stack
+)
+type(
+  'b -> 'c Lwt.t
+)
+"src/bootPromise.ml" 5 110 134 "src/bootPromise.ml" 5 110 158
+call(
+  tail
+)
+type(
+  'c Lwt.t
+)
+"src/bootPromise.ml" 5 110 128 "src/bootPromise.ml" 5 110 158
+type(
+  'a -> 'c Lwt.t
+)
+"src/bootPromise.ml" 5 110 126 "src/bootPromise.ml" 5 110 158
+type(
+  ('b -> 'c) -> 'a -> 'c Lwt.t
+)
+"src/bootPromise.ml" 5 110 118 "src/bootPromise.ml" 5 110 158
+type(
+  ('a -> 'b Lwt.t) -> ('b -> 'c) -> 'a -> 'c Lwt.t
+)
+"src/bootPromise.ml" 7 200 204 "src/bootPromise.ml" 7 200 214
+type(
+  < onload : < set : ('a, 'b #Dom.event Js.t) Dom.event_listener -> unit;
+               .. >
+             Js.gen_prop;
+    .. >
+  Js.t -> unit -> unit Lwt.t
+)
+ident(
+  def raw_onload "src/bootPromise.ml" 13 351 351 "src/bootPromise.ml" 1 0 -1
+)
+"src/bootPromise.ml" 7 200 215 "src/bootPromise.ml" 7 200 218
+type(
+  (< onload : < set : ('a, 'b #Dom.event Js.t) Dom.event_listener -> unit;
+                .. >
+              Js.gen_prop;
+     .. >
+   as 'c)
+  Js.t
+)
+ident(
+  def elt "src/bootPromise.ml" 7 200 219 "src/bootPromise.ml" 11 334 345
+)
+"src/bootPromise.ml" 7 200 219 "src/bootPromise.ml" 7 200 221
+type(
+  unit
+)
+"src/bootPromise.ml" 8 224 230 "src/bootPromise.ml" 8 224 236
+type(
+  unit Lwt.t
+)
+ident(
+  def thread "src/bootPromise.ml" 9 263 265 "src/bootPromise.ml" 11 334 345
+)
+"src/bootPromise.ml" 8 224 238 "src/bootPromise.ml" 8 224 245
+type(
+  unit Lwt.u
+)
+ident(
+  def wakener "src/bootPromise.ml" 9 263 265 "src/bootPromise.ml" 11 334 345
+)
+"src/bootPromise.ml" 8 224 230 "src/bootPromise.ml" 8 224 245
+type(
+  unit Lwt.t * unit Lwt.u
+)
+"src/bootPromise.ml" 8 224 248 "src/bootPromise.ml" 8 224 256
+type(
+  unit -> unit Lwt.t * unit Lwt.u
+)
+ident(
+  ext_ref Lwt.wait
+)
+"src/bootPromise.ml" 8 224 257 "src/bootPromise.ml" 8 224 259
+type(
+  unit
+)
+"src/bootPromise.ml" 8 224 248 "src/bootPromise.ml" 8 224 259
+call(
+  stack
+)
+type(
+  unit Lwt.t * unit Lwt.u
+)
+"src/bootPromise.ml" 9 263 269 "src/bootPromise.ml" 9 263 270
+type(
+  unit
+)
+"src/bootPromise.ml" 9 263 273 "src/bootPromise.ml" 9 263 276
+type(
+  'c
+)
+ident(
+  int_ref x "src/bootPromise.ml" 9 263 273 "src/bootPromise.ml" 10 290 333
+)
+type(
+  'c Js.t
+)
+type(
+  'c Js.t
+)
+type(
+  'c Js.t
+)
+ident(
+  int_ref jsoo_obj "src/bootPromise.ml" 9 263 273 "src/bootPromise.ml" 10 290 333
+)
+type(
+  'c Js.t
+)
+ident(
+  int_ref elt "src/bootPromise.ml" 7 200 215 "src/bootPromise.ml" 7 200 218
+)
+"src/bootPromise.ml" 9 263 273 "src/bootPromise.ml" 9 263 286
+call(
+  tail
+)
+type(
+  (< set : ('a, 'b #Dom.event Js.t) Dom.event_listener -> unit; .. > as 'd)
+  Js.gen_prop
+)
+type(
+  'd Js.gen_prop
+)
+"src/bootPromise.ml" 10 290 296 "src/bootPromise.ml" 10 290 307
+type(
+  (('b #Dom.event as 'e) Js.t -> bool Js.t) ->
+  ('a, 'e Js.t) Dom.event_listener
+)
+ident(
+  ext_ref Dom.handler
+)
+"src/bootPromise.ml" 10 290 309 "src/bootPromise.ml" 10 290 315
+type(
+  unit Lwt.u -> bool Js.t -> 'e Js.t -> bool Js.t
+)
+ident(
+  int_ref wakeup "src/bootPromise.ml" 3 21 25 "src/bootPromise.ml" 3 21 31
+)
+"src/bootPromise.ml" 10 290 316 "src/bootPromise.ml" 10 290 323
+type(
+  unit Lwt.u
+)
+ident(
+  int_ref wakener "src/bootPromise.ml" 8 224 238 "src/bootPromise.ml" 8 224 245
+)
+"src/bootPromise.ml" 10 290 324 "src/bootPromise.ml" 10 290 332
+type(
+  bool Js.t
+)
+ident(
+  ext_ref Js._true
+)
+"src/bootPromise.ml" 10 290 309 "src/bootPromise.ml" 10 290 332
+call(
+  stack
+)
+type(
+  'e Js.t -> bool Js.t
+)
+"src/bootPromise.ml" 10 290 296 "src/bootPromise.ml" 10 290 333
+call(
+  stack
+)
+type(
+  ('a, 'e Js.t) Dom.event_listener
+)
+type(
+  ('a, 'e Js.t) Dom.event_listener
+)
+ident(
+  int_ref jsoo_arg "src/bootPromise.ml" 9 263 273 "src/bootPromise.ml" 10 290 333
+)
+type(
+  ('a, 'e Js.t) Dom.event_listener
+)
+"src/bootPromise.ml" 9 263 273 "src/bootPromise.ml" 10 290 333
+type(
+  unit
+)
+type(
+  unit
+)
+type(
+  unit
+)
+type(
+  ('a, 'e Js.t) Dom.event_listener
+)
+ident(
+  int_ref jsoo_arg "src/bootPromise.ml" 9 263 273 "src/bootPromise.ml" 10 290 333
+)
+type(
+  string
+)
+type(
+  'c Js.t
+)
+ident(
+  int_ref jsoo_obj "src/bootPromise.ml" 9 263 273 "src/bootPromise.ml" 10 290 333
+)
+type(
+  'c Js.t -> string -> ('a, 'e Js.t) Dom.event_listener -> unit
+)
+ident(
+  ext_ref Js.Unsafe.set
+)
+type(
+  ('a, 'e Js.t) Dom.event_listener
+)
+type(
+  ('a, 'e Js.t) Dom.event_listener
+)
+ident(
+  int_ref M.res "src/bootPromise.ml" 9 263 273 "src/bootPromise.ml" 10 290 333
+)
+type(
+  ('a, 'e Js.t) Dom.event_listener
+)
+type(
+  ('a, 'e Js.t) Dom.event_listener
+)
+type(
+  'c -> 'd Js.gen_prop
+)
+type(
+  'c
+)
+ident(
+  def x "src/bootPromise.ml" 9 263 273 "src/bootPromise.ml" 9 263 286
+)
+type(
+  'c -> 'd Js.gen_prop
+)
+type(
+  'c Js.t
+)
+type(
+  ('a, 'e Js.t) Dom.event_listener
+)
+ident(
+  def res "src/bootPromise.ml" 10 290 333 "src/bootPromise.ml" 10 290 333
+)
+type(
+  ('a, 'e Js.t) Dom.event_listener
+)
+type(
+  ('a, 'e Js.t) Dom.event_listener
+)
+ident(
+  def jsoo_arg "src/bootPromise.ml" 9 263 273 "src/bootPromise.ml" 10 290 333
+)
+type(
+  'c Js.t
+)
+ident(
+  def jsoo_obj "src/bootPromise.ml" 9 263 273 "src/bootPromise.ml" 10 290 333
+)
+"src/bootPromise.ml" 11 334 339 "src/bootPromise.ml" 11 334 345
+type(
+  unit Lwt.t
+)
+ident(
+  int_ref thread "src/bootPromise.ml" 8 224 230 "src/bootPromise.ml" 8 224 236
+)
+"src/bootPromise.ml" 9 263 265 "src/bootPromise.ml" 11 334 345
+type(
+  unit Lwt.t
+)
+"src/bootPromise.ml" 8 224 226 "src/bootPromise.ml" 11 334 345
+type(
+  unit Lwt.t
+)
+"src/bootPromise.ml" 7 200 219 "src/bootPromise.ml" 11 334 345
+type(
+  unit -> unit Lwt.t
+)
+"src/bootPromise.ml" 7 200 215 "src/bootPromise.ml" 11 334 345
+type(
+  'c Js.t -> unit -> unit Lwt.t
+)
+"src/bootPromise.ml" 13 351 355 "src/bootPromise.ml" 13 351 365
+type(
+  unit -> unit Lwt.t
+)
+ident(
+  def dom_onload "src/bootPromise.ml" 14 403 403 "src/bootPromise.ml" 1 0 -1
+)
+"src/bootPromise.ml" 13 351 366 "src/bootPromise.ml" 13 351 368
+type(
+  unit
+)
+"src/bootPromise.ml" 13 351 371 "src/bootPromise.ml" 13 351 381
+type(
+  Dom_html.window Js.t -> unit -> unit Lwt.t
+)
+ident(
+  int_ref raw_onload "src/bootPromise.ml" 7 200 204 "src/bootPromise.ml" 7 200 214
+)
+"src/bootPromise.ml" 13 351 383 "src/bootPromise.ml" 13 351 398
+type(
+  Dom_html.window Js.t
+)
+ident(
+  ext_ref Dom_html.window
+)
+"src/bootPromise.ml" 13 351 400 "src/bootPromise.ml" 13 351 402
+type(
+  unit
+)
+"src/bootPromise.ml" 13 351 371 "src/bootPromise.ml" 13 351 402
+call(
+  tail
+)
+type(
+  unit Lwt.t
+)
+"src/bootPromise.ml" 13 351 366 "src/bootPromise.ml" 13 351 402
+type(
+  unit -> unit Lwt.t
+)
+"src/bootPromise.ml" 14 403 407 "src/bootPromise.ml" 14 403 417
+type(
+  < onload : < set : ('a, 'b #Dom.event Js.t) Dom.event_listener -> unit;
+               .. >
+             Js.gen_prop;
+    .. >
+  Js.t -> unit Lwt.t
+)
+ident(
+  def img_onload "src/bootPromise.ml" 14 403 438 "src/bootPromise.ml" 1 0 -1
+)
+"src/bootPromise.ml" 14 403 418 "src/bootPromise.ml" 14 403 419
+type(
+  (< onload : < set : ('a, 'b #Dom.event Js.t) Dom.event_listener -> unit;
+                .. >
+              Js.gen_prop;
+     .. >
+   as 'c)
+  Js.t
+)
+ident(
+  def i "src/bootPromise.ml" 14 403 423 "src/bootPromise.ml" 14 403 438
+)
+"src/bootPromise.ml" 14 403 423 "src/bootPromise.ml" 14 403 433
+type(
+  'c Js.t -> unit -> unit Lwt.t
+)
+ident(
+  int_ref raw_onload "src/bootPromise.ml" 7 200 204 "src/bootPromise.ml" 7 200 214
+)
+"src/bootPromise.ml" 14 403 434 "src/bootPromise.ml" 14 403 435
+type(
+  'c Js.t
+)
+ident(
+  int_ref i "src/bootPromise.ml" 14 403 418 "src/bootPromise.ml" 14 403 419
+)
+"src/bootPromise.ml" 14 403 436 "src/bootPromise.ml" 14 403 438
+type(
+  unit
+)
+"src/bootPromise.ml" 14 403 423 "src/bootPromise.ml" 14 403 438
+call(
+  tail
+)
+type(
+  unit Lwt.t
+)
+"src/bootPromise.ml" 14 403 418 "src/bootPromise.ml" 14 403 438
+type(
+  'c Js.t -> unit Lwt.t
+)

@@ -1,0 +1,1088 @@
+"src/bootColor.ml" 12 105 109 "src/bootColor.ml" 12 105 114
+type(
+  int -> int
+)
+ident(
+  def bound "src/bootColor.ml" 17 174 174 "src/bootColor.ml" 1 0 -1
+)
+"src/bootColor.ml" 12 105 115 "src/bootColor.ml" 12 105 116
+type(
+  int
+)
+ident(
+  def v "src/bootColor.ml" 13 119 121 "src/bootColor.ml" 15 164 172
+)
+"src/bootColor.ml" 13 119 124 "src/bootColor.ml" 13 119 125
+type(
+  int
+)
+ident(
+  int_ref v "src/bootColor.ml" 12 105 115 "src/bootColor.ml" 12 105 116
+)
+"src/bootColor.ml" 13 119 126 "src/bootColor.ml" 13 119 127
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"src/bootColor.ml" 13 119 128 "src/bootColor.ml" 13 119 131
+type(
+  int
+)
+"src/bootColor.ml" 13 119 124 "src/bootColor.ml" 13 119 131
+type(
+  bool
+)
+"src/bootColor.ml" 13 119 137 "src/bootColor.ml" 13 119 140
+type(
+  int
+)
+"src/bootColor.ml" 14 141 151 "src/bootColor.ml" 14 141 152
+type(
+  int
+)
+ident(
+  int_ref v "src/bootColor.ml" 12 105 115 "src/bootColor.ml" 12 105 116
+)
+"src/bootColor.ml" 14 141 153 "src/bootColor.ml" 14 141 154
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( < )
+)
+"src/bootColor.ml" 14 141 155 "src/bootColor.ml" 14 141 156
+type(
+  int
+)
+"src/bootColor.ml" 14 141 151 "src/bootColor.ml" 14 141 156
+type(
+  bool
+)
+"src/bootColor.ml" 14 141 162 "src/bootColor.ml" 14 141 163
+type(
+  int
+)
+"src/bootColor.ml" 15 164 171 "src/bootColor.ml" 15 164 172
+type(
+  int
+)
+ident(
+  int_ref v "src/bootColor.ml" 12 105 115 "src/bootColor.ml" 12 105 116
+)
+"src/bootColor.ml" 14 141 148 "src/bootColor.ml" 15 164 172
+type(
+  int
+)
+"src/bootColor.ml" 13 119 121 "src/bootColor.ml" 15 164 172
+type(
+  int
+)
+"src/bootColor.ml" 12 105 115 "src/bootColor.ml" 15 164 172
+type(
+  int -> int
+)
+"src/bootColor.ml" 17 174 178 "src/bootColor.ml" 17 174 182
+type(
+  ?alpha:int -> int -> int -> int -> t
+)
+ident(
+  def make "src/bootColor.ml" 24 276 276 "src/bootColor.ml" 1 0 -1
+)
+"src/bootColor.ml" 17 174 193 "src/bootColor.ml" 17 174 194
+type(
+  int
+)
+type(
+  int
+)
+ident(
+  int_ref *sth* "src/bootColor.ml" 17 174 193 "src/bootColor.ml" 17 174 194
+)
+type(
+  int option
+)
+type(
+  int option
+)
+type(
+  int
+)
+"src/bootColor.ml" 17 174 183 "src/bootColor.ml" 17 174 195
+type(
+  int
+)
+"src/bootColor.ml" 17 174 196 "src/bootColor.ml" 17 174 197
+type(
+  int
+)
+ident(
+  def r "src/bootColor.ml" 17 174 198 "src/bootColor.ml" 22 273 274
+)
+"src/bootColor.ml" 17 174 198 "src/bootColor.ml" 17 174 199
+type(
+  int
+)
+ident(
+  def g "src/bootColor.ml" 17 174 200 "src/bootColor.ml" 22 273 274
+)
+"src/bootColor.ml" 17 174 200 "src/bootColor.ml" 17 174 201
+type(
+  int
+)
+ident(
+  def b "src/bootColor.ml" 17 174 204 "src/bootColor.ml" 22 273 274
+)
+"src/bootColor.ml" 18 206 214 "src/bootColor.ml" 18 206 219
+type(
+  int -> int
+)
+ident(
+  int_ref bound "src/bootColor.ml" 12 105 109 "src/bootColor.ml" 12 105 114
+)
+"src/bootColor.ml" 18 206 220 "src/bootColor.ml" 18 206 221
+type(
+  int
+)
+ident(
+  int_ref r "src/bootColor.ml" 17 174 196 "src/bootColor.ml" 17 174 197
+)
+"src/bootColor.ml" 18 206 214 "src/bootColor.ml" 18 206 221
+call(
+  stack
+)
+type(
+  int
+)
+"src/bootColor.ml" 19 222 232 "src/bootColor.ml" 19 222 237
+type(
+  int -> int
+)
+ident(
+  int_ref bound "src/bootColor.ml" 12 105 109 "src/bootColor.ml" 12 105 114
+)
+"src/bootColor.ml" 19 222 238 "src/bootColor.ml" 19 222 239
+type(
+  int
+)
+ident(
+  int_ref g "src/bootColor.ml" 17 174 198 "src/bootColor.ml" 17 174 199
+)
+"src/bootColor.ml" 19 222 232 "src/bootColor.ml" 19 222 239
+call(
+  stack
+)
+type(
+  int
+)
+"src/bootColor.ml" 20 240 249 "src/bootColor.ml" 20 240 254
+type(
+  int -> int
+)
+ident(
+  int_ref bound "src/bootColor.ml" 12 105 109 "src/bootColor.ml" 12 105 114
+)
+"src/bootColor.ml" 20 240 255 "src/bootColor.ml" 20 240 256
+type(
+  int
+)
+ident(
+  int_ref b "src/bootColor.ml" 17 174 200 "src/bootColor.ml" 17 174 201
+)
+"src/bootColor.ml" 20 240 249 "src/bootColor.ml" 20 240 256
+call(
+  stack
+)
+type(
+  int
+)
+"src/bootColor.ml" 21 257 267 "src/bootColor.ml" 21 257 272
+type(
+  int
+)
+ident(
+  int_ref alpha "src/bootColor.ml" 17 174 183 "src/bootColor.ml" 17 174 195
+)
+"src/bootColor.ml" 17 174 204 "src/bootColor.ml" 22 273 274
+type(
+  t
+)
+"src/bootColor.ml" 17 174 200 "src/bootColor.ml" 22 273 274
+type(
+  int -> t
+)
+"src/bootColor.ml" 17 174 198 "src/bootColor.ml" 22 273 274
+type(
+  int -> int -> t
+)
+"src/bootColor.ml" 17 174 196 "src/bootColor.ml" 22 273 274
+type(
+  int -> int -> int -> t
+)
+"src/bootColor.ml" 17 174 183 "src/bootColor.ml" 22 273 274
+type(
+  ?alpha:int -> int -> int -> int -> t
+)
+type(
+  int -> int -> int -> t
+)
+type(
+  int
+)
+type(
+  int option
+)
+ident(
+  int_ref *opt* "src/bootColor.ml" 17 174 183 "src/bootColor.ml" 22 273 274
+)
+type(
+  int option
+)
+"src/bootColor.ml" 24 276 280 "src/bootColor.ml" 24 276 293
+type(
+  string -> t
+)
+ident(
+  def of_rgb_string "src/bootColor.ml" 32 556 556 "src/bootColor.ml" 1 0 -1
+)
+"src/bootColor.ml" 24 276 294 "src/bootColor.ml" 24 276 297
+type(
+  string
+)
+ident(
+  def str "src/bootColor.ml" 25 300 302 "src/bootColor.ml" 30 524 554
+)
+"src/bootColor.ml" 25 300 306 "src/bootColor.ml" 25 300 307
+type(
+  string
+)
+ident(
+  def s "src/bootColor.ml" 26 358 360 "src/bootColor.ml" 30 524 554
+)
+"src/bootColor.ml" 25 300 318 "src/bootColor.ml" 25 300 332
+type(
+  Regexp.regexp -> string -> string -> string
+)
+ident(
+  ext_ref Regexp.global_replace
+)
+"src/bootColor.ml" 25 300 334 "src/bootColor.ml" 25 300 340
+type(
+  string -> Regexp.regexp
+)
+ident(
+  ext_ref Regexp.regexp
+)
+"src/bootColor.ml" 25 300 341 "src/bootColor.ml" 25 300 344
+type(
+  string
+)
+"src/bootColor.ml" 25 300 334 "src/bootColor.ml" 25 300 344
+call(
+  stack
+)
+type(
+  Regexp.regexp
+)
+"src/bootColor.ml" 25 300 346 "src/bootColor.ml" 25 300 348
+type(
+  string
+)
+"src/bootColor.ml" 25 300 349 "src/bootColor.ml" 25 300 352
+type(
+  string
+)
+ident(
+  int_ref str "src/bootColor.ml" 24 276 294 "src/bootColor.ml" 24 276 297
+)
+"src/bootColor.ml" 25 300 318 "src/bootColor.ml" 25 300 352
+call(
+  stack
+)
+type(
+  string
+)
+"src/bootColor.ml" 26 358 365 "src/bootColor.ml" 26 358 377
+type(
+  string ->
+  (int -> int -> int -> t, '_a, (int -> int -> int -> t) -> t, t)
+  Scanf.scanner
+)
+ident(
+  ext_ref Scanf.sscanf
+)
+"src/bootColor.ml" 26 358 378 "src/bootColor.ml" 26 358 379
+type(
+  string
+)
+ident(
+  int_ref s "src/bootColor.ml" 25 300 306 "src/bootColor.ml" 25 300 307
+)
+"src/bootColor.ml" 26 358 380 "src/bootColor.ml" 26 358 395
+type(
+  (int -> int -> int -> t, Scanf.Scanning.in_channel, '_a,
+   (int -> int -> int -> t) -> t, (int -> int -> int -> t) -> t, t)
+  format6
+)
+"src/bootColor.ml" 26 358 401 "src/bootColor.ml" 26 358 402
+type(
+  int
+)
+ident(
+  def a "src/bootColor.ml" 26 358 403 "src/bootColor.ml" 26 358 420
+)
+"src/bootColor.ml" 26 358 403 "src/bootColor.ml" 26 358 404
+type(
+  int
+)
+ident(
+  def b "src/bootColor.ml" 26 358 405 "src/bootColor.ml" 26 358 420
+)
+"src/bootColor.ml" 26 358 405 "src/bootColor.ml" 26 358 406
+type(
+  int
+)
+ident(
+  def c "src/bootColor.ml" 26 358 410 "src/bootColor.ml" 26 358 420
+)
+"src/bootColor.ml" 26 358 410 "src/bootColor.ml" 26 358 414
+type(
+  ?alpha:int -> int -> int -> int -> t
+)
+ident(
+  int_ref make "src/bootColor.ml" 17 174 178 "src/bootColor.ml" 17 174 182
+)
+"src/bootColor.ml" 26 358 415 "src/bootColor.ml" 26 358 416
+type(
+  int
+)
+ident(
+  int_ref a "src/bootColor.ml" 26 358 401 "src/bootColor.ml" 26 358 402
+)
+"src/bootColor.ml" 26 358 417 "src/bootColor.ml" 26 358 418
+type(
+  int
+)
+ident(
+  int_ref b "src/bootColor.ml" 26 358 403 "src/bootColor.ml" 26 358 404
+)
+"src/bootColor.ml" 26 358 419 "src/bootColor.ml" 26 358 420
+type(
+  int
+)
+ident(
+  int_ref c "src/bootColor.ml" 26 358 405 "src/bootColor.ml" 26 358 406
+)
+"src/bootColor.ml" 26 358 410 "src/bootColor.ml" 26 358 420
+call(
+  tail
+)
+type(
+  t
+)
+"src/bootColor.ml" 26 358 405 "src/bootColor.ml" 26 358 420
+type(
+  int -> t
+)
+"src/bootColor.ml" 26 358 403 "src/bootColor.ml" 26 358 420
+type(
+  int -> int -> t
+)
+"src/bootColor.ml" 26 358 401 "src/bootColor.ml" 26 358 420
+type(
+  int -> int -> int -> t
+)
+"src/bootColor.ml" 26 358 365 "src/bootColor.ml" 26 358 421
+call(
+  stack
+)
+type(
+  t
+)
+"src/bootColor.ml" 27 422 429 "src/bootColor.ml" 27 422 430
+type(
+  exn
+)
+"src/bootColor.ml" 28 434 442 "src/bootColor.ml" 28 434 454
+type(
+  string ->
+  (int -> int -> int -> int -> t, '_b, (int -> int -> int -> int -> t) -> t,
+   t)
+  Scanf.scanner
+)
+ident(
+  ext_ref Scanf.sscanf
+)
+"src/bootColor.ml" 28 434 455 "src/bootColor.ml" 28 434 456
+type(
+  string
+)
+ident(
+  int_ref s "src/bootColor.ml" 25 300 306 "src/bootColor.ml" 25 300 307
+)
+"src/bootColor.ml" 28 434 457 "src/bootColor.ml" 28 434 476
+type(
+  (int -> int -> int -> int -> t, Scanf.Scanning.in_channel, '_b,
+   (int -> int -> int -> int -> t) -> t,
+   (int -> int -> int -> int -> t) -> t, t)
+  format6
+)
+"src/bootColor.ml" 29 477 492 "src/bootColor.ml" 29 477 493
+type(
+  int
+)
+ident(
+  def a "src/bootColor.ml" 29 477 494 "src/bootColor.ml" 29 477 522
+)
+"src/bootColor.ml" 29 477 494 "src/bootColor.ml" 29 477 495
+type(
+  int
+)
+ident(
+  def b "src/bootColor.ml" 29 477 496 "src/bootColor.ml" 29 477 522
+)
+"src/bootColor.ml" 29 477 496 "src/bootColor.ml" 29 477 497
+type(
+  int
+)
+ident(
+  def c "src/bootColor.ml" 29 477 498 "src/bootColor.ml" 29 477 522
+)
+"src/bootColor.ml" 29 477 498 "src/bootColor.ml" 29 477 499
+type(
+  int
+)
+ident(
+  def d "src/bootColor.ml" 29 477 503 "src/bootColor.ml" 29 477 522
+)
+"src/bootColor.ml" 29 477 503 "src/bootColor.ml" 29 477 507
+type(
+  ?alpha:int -> int -> int -> int -> t
+)
+ident(
+  int_ref make "src/bootColor.ml" 17 174 178 "src/bootColor.ml" 17 174 182
+)
+"src/bootColor.ml" 29 477 515 "src/bootColor.ml" 29 477 516
+type(
+  int
+)
+ident(
+  int_ref d "src/bootColor.ml" 29 477 498 "src/bootColor.ml" 29 477 499
+)
+"src/bootColor.ml" 29 477 517 "src/bootColor.ml" 29 477 518
+type(
+  int
+)
+ident(
+  int_ref a "src/bootColor.ml" 29 477 492 "src/bootColor.ml" 29 477 493
+)
+"src/bootColor.ml" 29 477 519 "src/bootColor.ml" 29 477 520
+type(
+  int
+)
+ident(
+  int_ref b "src/bootColor.ml" 29 477 494 "src/bootColor.ml" 29 477 495
+)
+"src/bootColor.ml" 29 477 521 "src/bootColor.ml" 29 477 522
+type(
+  int
+)
+ident(
+  int_ref c "src/bootColor.ml" 29 477 496 "src/bootColor.ml" 29 477 497
+)
+"src/bootColor.ml" 29 477 503 "src/bootColor.ml" 29 477 522
+call(
+  tail
+)
+type(
+  t
+)
+"src/bootColor.ml" 29 477 498 "src/bootColor.ml" 29 477 522
+type(
+  int -> t
+)
+"src/bootColor.ml" 29 477 496 "src/bootColor.ml" 29 477 522
+type(
+  int -> int -> t
+)
+"src/bootColor.ml" 29 477 494 "src/bootColor.ml" 29 477 522
+type(
+  int -> int -> int -> t
+)
+"src/bootColor.ml" 29 477 492 "src/bootColor.ml" 29 477 522
+type(
+  int -> int -> int -> int -> t
+)
+"src/bootColor.ml" 28 434 442 "src/bootColor.ml" 29 477 523
+call(
+  stack
+)
+type(
+  t
+)
+"src/bootColor.ml" 30 524 533 "src/bootColor.ml" 30 524 534
+type(
+  exn
+)
+"src/bootColor.ml" 30 524 538 "src/bootColor.ml" 30 524 542
+type(
+  ?alpha:int -> int -> int -> int -> t
+)
+ident(
+  int_ref make "src/bootColor.ml" 17 174 178 "src/bootColor.ml" 17 174 182
+)
+"src/bootColor.ml" 30 524 543 "src/bootColor.ml" 30 524 546
+type(
+  int
+)
+"src/bootColor.ml" 30 524 547 "src/bootColor.ml" 30 524 550
+type(
+  int
+)
+"src/bootColor.ml" 30 524 551 "src/bootColor.ml" 30 524 554
+type(
+  int
+)
+"src/bootColor.ml" 30 524 538 "src/bootColor.ml" 30 524 554
+call(
+  tail
+)
+type(
+  t
+)
+"src/bootColor.ml" 28 434 438 "src/bootColor.ml" 30 524 554
+type(
+  t
+)
+"src/bootColor.ml" 26 358 360 "src/bootColor.ml" 30 524 554
+type(
+  t
+)
+"src/bootColor.ml" 25 300 302 "src/bootColor.ml" 30 524 554
+type(
+  t
+)
+"src/bootColor.ml" 24 276 294 "src/bootColor.ml" 30 524 554
+type(
+  string -> t
+)
+"src/bootColor.ml" 32 556 560 "src/bootColor.ml" 32 556 574
+type(
+  string -> t
+)
+ident(
+  def of_hexa_string "src/bootColor.ml" 35 636 636 "src/bootColor.ml" 1 0 -1
+)
+"src/bootColor.ml" 32 556 575 "src/bootColor.ml" 32 556 576
+type(
+  string
+)
+ident(
+  def s "src/bootColor.ml" 33 579 581 "src/bootColor.ml" 33 579 634
+)
+"src/bootColor.ml" 33 579 581 "src/bootColor.ml" 33 579 593
+type(
+  string ->
+  (int -> int -> int -> t, '_a, (int -> int -> int -> t) -> t, t)
+  Scanf.scanner
+)
+ident(
+  ext_ref Scanf.sscanf
+)
+"src/bootColor.ml" 33 579 594 "src/bootColor.ml" 33 579 595
+type(
+  string
+)
+ident(
+  int_ref s "src/bootColor.ml" 32 556 575 "src/bootColor.ml" 32 556 576
+)
+"src/bootColor.ml" 33 579 596 "src/bootColor.ml" 33 579 608
+type(
+  (int -> int -> int -> t, Scanf.Scanning.in_channel, '_a,
+   (int -> int -> int -> t) -> t, (int -> int -> int -> t) -> t, t)
+  format6
+)
+"src/bootColor.ml" 33 579 614 "src/bootColor.ml" 33 579 615
+type(
+  int
+)
+ident(
+  def a "src/bootColor.ml" 33 579 616 "src/bootColor.ml" 33 579 633
+)
+"src/bootColor.ml" 33 579 616 "src/bootColor.ml" 33 579 617
+type(
+  int
+)
+ident(
+  def b "src/bootColor.ml" 33 579 618 "src/bootColor.ml" 33 579 633
+)
+"src/bootColor.ml" 33 579 618 "src/bootColor.ml" 33 579 619
+type(
+  int
+)
+ident(
+  def c "src/bootColor.ml" 33 579 623 "src/bootColor.ml" 33 579 633
+)
+"src/bootColor.ml" 33 579 623 "src/bootColor.ml" 33 579 627
+type(
+  ?alpha:int -> int -> int -> int -> t
+)
+ident(
+  int_ref make "src/bootColor.ml" 17 174 178 "src/bootColor.ml" 17 174 182
+)
+"src/bootColor.ml" 33 579 628 "src/bootColor.ml" 33 579 629
+type(
+  int
+)
+ident(
+  int_ref a "src/bootColor.ml" 33 579 614 "src/bootColor.ml" 33 579 615
+)
+"src/bootColor.ml" 33 579 630 "src/bootColor.ml" 33 579 631
+type(
+  int
+)
+ident(
+  int_ref b "src/bootColor.ml" 33 579 616 "src/bootColor.ml" 33 579 617
+)
+"src/bootColor.ml" 33 579 632 "src/bootColor.ml" 33 579 633
+type(
+  int
+)
+ident(
+  int_ref c "src/bootColor.ml" 33 579 618 "src/bootColor.ml" 33 579 619
+)
+"src/bootColor.ml" 33 579 623 "src/bootColor.ml" 33 579 633
+call(
+  tail
+)
+type(
+  t
+)
+"src/bootColor.ml" 33 579 618 "src/bootColor.ml" 33 579 633
+type(
+  int -> t
+)
+"src/bootColor.ml" 33 579 616 "src/bootColor.ml" 33 579 633
+type(
+  int -> int -> t
+)
+"src/bootColor.ml" 33 579 614 "src/bootColor.ml" 33 579 633
+type(
+  int -> int -> int -> t
+)
+"src/bootColor.ml" 33 579 581 "src/bootColor.ml" 33 579 634
+call(
+  tail
+)
+type(
+  t
+)
+"src/bootColor.ml" 32 556 575 "src/bootColor.ml" 33 579 634
+type(
+  string -> t
+)
+"src/bootColor.ml" 35 636 640 "src/bootColor.ml" 35 636 649
+type(
+  string -> t
+)
+ident(
+  def of_string "src/bootColor.ml" 41 757 757 "src/bootColor.ml" 1 0 -1
+)
+"src/bootColor.ml" 35 636 650 "src/bootColor.ml" 35 636 651
+type(
+  string
+)
+ident(
+  def s "src/bootColor.ml" 36 654 656 "src/bootColor.ml" 38 709 741
+)
+"src/bootColor.ml" 36 654 660 "src/bootColor.ml" 36 654 674
+type(
+  string -> t
+)
+ident(
+  int_ref of_hexa_string "src/bootColor.ml" 32 556 560 "src/bootColor.ml" 32 556 574
+)
+"src/bootColor.ml" 36 654 675 "src/bootColor.ml" 36 654 676
+type(
+  string
+)
+ident(
+  int_ref s "src/bootColor.ml" 35 636 650 "src/bootColor.ml" 35 636 651
+)
+"src/bootColor.ml" 36 654 660 "src/bootColor.ml" 36 654 676
+call(
+  stack
+)
+type(
+  t
+)
+"src/bootColor.ml" 37 677 684 "src/bootColor.ml" 37 677 685
+type(
+  exn
+)
+"src/bootColor.ml" 37 677 693 "src/bootColor.ml" 37 677 706
+type(
+  string -> t
+)
+ident(
+  int_ref of_rgb_string "src/bootColor.ml" 24 276 280 "src/bootColor.ml" 24 276 293
+)
+"src/bootColor.ml" 37 677 707 "src/bootColor.ml" 37 677 708
+type(
+  string
+)
+ident(
+  int_ref s "src/bootColor.ml" 35 636 650 "src/bootColor.ml" 35 636 651
+)
+"src/bootColor.ml" 37 677 693 "src/bootColor.ml" 37 677 708
+call(
+  stack
+)
+type(
+  t
+)
+"src/bootColor.ml" 38 709 720 "src/bootColor.ml" 38 709 721
+type(
+  exn
+)
+"src/bootColor.ml" 38 709 725 "src/bootColor.ml" 38 709 729
+type(
+  ?alpha:int -> int -> int -> int -> t
+)
+ident(
+  int_ref make "src/bootColor.ml" 17 174 178 "src/bootColor.ml" 17 174 182
+)
+"src/bootColor.ml" 38 709 730 "src/bootColor.ml" 38 709 733
+type(
+  int
+)
+"src/bootColor.ml" 38 709 734 "src/bootColor.ml" 38 709 737
+type(
+  int
+)
+"src/bootColor.ml" 38 709 738 "src/bootColor.ml" 38 709 741
+type(
+  int
+)
+"src/bootColor.ml" 38 709 725 "src/bootColor.ml" 38 709 741
+call(
+  tail
+)
+type(
+  t
+)
+"src/bootColor.ml" 37 677 689 "src/bootColor.ml" 38 709 741
+type(
+  t
+)
+"src/bootColor.ml" 36 654 656 "src/bootColor.ml" 38 709 741
+type(
+  t
+)
+"src/bootColor.ml" 35 636 650 "src/bootColor.ml" 38 709 741
+type(
+  string -> t
+)
+"src/bootColor.ml" 41 757 761 "src/bootColor.ml" 41 757 770
+type(
+  t -> string
+)
+ident(
+  def to_string "src/bootColor.ml" 47 844 844 "src/bootColor.ml" 1 0 -1
+)
+"src/bootColor.ml" 41 757 771 "src/bootColor.ml" 41 757 772
+type(
+  t
+)
+ident(
+  def c "src/bootColor.ml" 42 775 777 "src/bootColor.ml" 45 832 842
+)
+"src/bootColor.ml" 42 775 777 "src/bootColor.ml" 42 775 791
+type(
+  (int -> int -> int -> string, unit, string) format ->
+  int -> int -> int -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"src/bootColor.ml" 42 775 792 "src/bootColor.ml" 42 775 809
+type(
+  (int -> int -> int -> string, unit, string) format
+)
+"src/bootColor.ml" 43 810 814 "src/bootColor.ml" 43 810 815
+type(
+  t
+)
+ident(
+  int_ref c "src/bootColor.ml" 41 757 771 "src/bootColor.ml" 41 757 772
+)
+"src/bootColor.ml" 43 810 814 "src/bootColor.ml" 43 810 819
+type(
+  int
+)
+"src/bootColor.ml" 44 820 824 "src/bootColor.ml" 44 820 825
+type(
+  t
+)
+ident(
+  int_ref c "src/bootColor.ml" 41 757 771 "src/bootColor.ml" 41 757 772
+)
+"src/bootColor.ml" 44 820 824 "src/bootColor.ml" 44 820 831
+type(
+  int
+)
+"src/bootColor.ml" 45 832 836 "src/bootColor.ml" 45 832 837
+type(
+  t
+)
+ident(
+  int_ref c "src/bootColor.ml" 41 757 771 "src/bootColor.ml" 41 757 772
+)
+"src/bootColor.ml" 45 832 836 "src/bootColor.ml" 45 832 842
+type(
+  int
+)
+"src/bootColor.ml" 42 775 777 "src/bootColor.ml" 45 832 842
+call(
+  tail
+)
+type(
+  string
+)
+"src/bootColor.ml" 41 757 771 "src/bootColor.ml" 45 832 842
+type(
+  t -> string
+)
+"src/bootColor.ml" 47 844 848 "src/bootColor.ml" 47 844 853
+type(
+  t -> Js.js_string Js.t
+)
+ident(
+  def to_js "src/bootColor.ml" 49 880 880 "src/bootColor.ml" 1 0 -1
+)
+"src/bootColor.ml" 47 844 854 "src/bootColor.ml" 47 844 855
+type(
+  t
+)
+ident(
+  def c "src/bootColor.ml" 47 844 858 "src/bootColor.ml" 47 844 878
+)
+"src/bootColor.ml" 47 844 858 "src/bootColor.ml" 47 844 859
+type(
+  t
+)
+ident(
+  int_ref c "src/bootColor.ml" 47 844 854 "src/bootColor.ml" 47 844 855
+)
+"src/bootColor.ml" 47 844 860 "src/bootColor.ml" 47 844 862
+type(
+  t -> (t -> string) -> string
+)
+ident(
+  ext_ref Pervasives.( |> )
+)
+"src/bootColor.ml" 47 844 863 "src/bootColor.ml" 47 844 872
+type(
+  t -> string
+)
+ident(
+  int_ref to_string "src/bootColor.ml" 41 757 761 "src/bootColor.ml" 41 757 770
+)
+"src/bootColor.ml" 47 844 858 "src/bootColor.ml" 47 844 872
+call(
+  stack
+)
+type(
+  string
+)
+"src/bootColor.ml" 47 844 873 "src/bootColor.ml" 47 844 875
+type(
+  string -> (string -> Js.js_string Js.t) -> Js.js_string Js.t
+)
+ident(
+  ext_ref Pervasives.( |> )
+)
+"src/bootColor.ml" 47 844 876 "src/bootColor.ml" 47 844 878
+type(
+  string -> Js.js_string Js.t
+)
+ident(
+  ext_ref BootPervasives._s
+)
+"src/bootColor.ml" 47 844 858 "src/bootColor.ml" 47 844 878
+call(
+  tail
+)
+type(
+  Js.js_string Js.t
+)
+"src/bootColor.ml" 47 844 854 "src/bootColor.ml" 47 844 878
+type(
+  t -> Js.js_string Js.t
+)
+"src/bootColor.ml" 49 880 884 "src/bootColor.ml" 49 880 887
+type(
+  t
+)
+ident(
+  def red "src/bootColor.ml" 50 903 903 "src/bootColor.ml" 1 0 -1
+)
+"src/bootColor.ml" 49 880 890 "src/bootColor.ml" 49 880 894
+type(
+  ?alpha:int -> int -> int -> int -> t
+)
+ident(
+  int_ref make "src/bootColor.ml" 17 174 178 "src/bootColor.ml" 17 174 182
+)
+"src/bootColor.ml" 49 880 895 "src/bootColor.ml" 49 880 898
+type(
+  int
+)
+"src/bootColor.ml" 49 880 899 "src/bootColor.ml" 49 880 900
+type(
+  int
+)
+"src/bootColor.ml" 49 880 901 "src/bootColor.ml" 49 880 902
+type(
+  int
+)
+"src/bootColor.ml" 49 880 890 "src/bootColor.ml" 49 880 902
+call(
+  stack
+)
+type(
+  t
+)
+"src/bootColor.ml" 50 903 907 "src/bootColor.ml" 50 903 912
+type(
+  t
+)
+ident(
+  def green "src/bootColor.ml" 51 929 929 "src/bootColor.ml" 1 0 -1
+)
+"src/bootColor.ml" 50 903 915 "src/bootColor.ml" 50 903 919
+type(
+  ?alpha:int -> int -> int -> int -> t
+)
+ident(
+  int_ref make "src/bootColor.ml" 17 174 178 "src/bootColor.ml" 17 174 182
+)
+"src/bootColor.ml" 50 903 920 "src/bootColor.ml" 50 903 921
+type(
+  int
+)
+"src/bootColor.ml" 50 903 922 "src/bootColor.ml" 50 903 925
+type(
+  int
+)
+"src/bootColor.ml" 50 903 926 "src/bootColor.ml" 50 903 927
+type(
+  int
+)
+"src/bootColor.ml" 50 903 915 "src/bootColor.ml" 50 903 927
+call(
+  stack
+)
+type(
+  t
+)
+"src/bootColor.ml" 51 929 933 "src/bootColor.ml" 51 929 937
+type(
+  t
+)
+ident(
+  def blue "src/bootColor.ml" 52 953 953 "src/bootColor.ml" 1 0 -1
+)
+"src/bootColor.ml" 51 929 940 "src/bootColor.ml" 51 929 944
+type(
+  ?alpha:int -> int -> int -> int -> t
+)
+ident(
+  int_ref make "src/bootColor.ml" 17 174 178 "src/bootColor.ml" 17 174 182
+)
+"src/bootColor.ml" 51 929 945 "src/bootColor.ml" 51 929 946
+type(
+  int
+)
+"src/bootColor.ml" 51 929 947 "src/bootColor.ml" 51 929 948
+type(
+  int
+)
+"src/bootColor.ml" 51 929 949 "src/bootColor.ml" 51 929 952
+type(
+  int
+)
+"src/bootColor.ml" 51 929 940 "src/bootColor.ml" 51 929 952
+call(
+  stack
+)
+type(
+  t
+)
+"src/bootColor.ml" 52 953 957 "src/bootColor.ml" 52 953 962
+type(
+  t
+)
+ident(
+  def white "src/bootColor.ml" 53 982 982 "src/bootColor.ml" 1 0 -1
+)
+"src/bootColor.ml" 52 953 965 "src/bootColor.ml" 52 953 969
+type(
+  ?alpha:int -> int -> int -> int -> t
+)
+ident(
+  int_ref make "src/bootColor.ml" 17 174 178 "src/bootColor.ml" 17 174 182
+)
+"src/bootColor.ml" 52 953 970 "src/bootColor.ml" 52 953 973
+type(
+  int
+)
+"src/bootColor.ml" 52 953 974 "src/bootColor.ml" 52 953 977
+type(
+  int
+)
+"src/bootColor.ml" 52 953 978 "src/bootColor.ml" 52 953 981
+type(
+  int
+)
+"src/bootColor.ml" 52 953 965 "src/bootColor.ml" 52 953 981
+call(
+  stack
+)
+type(
+  t
+)
+"src/bootColor.ml" 53 982 986 "src/bootColor.ml" 53 982 991
+type(
+  t
+)
+ident(
+  def black "src/bootColor.ml" 53 982 1004 "src/bootColor.ml" 1 0 -1
+)
+"src/bootColor.ml" 53 982 994 "src/bootColor.ml" 53 982 998
+type(
+  ?alpha:int -> int -> int -> int -> t
+)
+ident(
+  int_ref make "src/bootColor.ml" 17 174 178 "src/bootColor.ml" 17 174 182
+)
+"src/bootColor.ml" 53 982 999 "src/bootColor.ml" 53 982 1000
+type(
+  int
+)
+"src/bootColor.ml" 53 982 1001 "src/bootColor.ml" 53 982 1002
+type(
+  int
+)
+"src/bootColor.ml" 53 982 1003 "src/bootColor.ml" 53 982 1004
+type(
+  int
+)
+"src/bootColor.ml" 53 982 994 "src/bootColor.ml" 53 982 1004
+call(
+  stack
+)
+type(
+  t
+)
