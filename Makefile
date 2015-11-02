@@ -12,3 +12,11 @@ custom.js:
 	mkdir -p $(JS)
 	$(COMPILER) -o $(BYTES)/custom.byte $(SRC)/custom.ml
 	js_of_ocaml -o $(JS)/$(@) $(BYTES)/custom.byte
+
+.PHONY: clean
+clean:
+	rm -rf *~
+	rm -rf */*~
+	rm -rf $(SRC)/*.cm*
+	rm -rf $(BYTES)
+	rm -rf $(JS)

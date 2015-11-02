@@ -1,8 +1,11 @@
-module Sample =
-  Bootstrapper.Application (
-  struct
-    open Bootstrapper
+open Bootstrapper
 
-    let initialize () = alert "test"
+module Sample =
+  Application (
+  struct
+    
+    let initialize () =
+      alert "test"
+        
   end
   )
