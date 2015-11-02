@@ -1,3 +1,8 @@
+(** {2 Dynamic loading} *)
+
+(** Dynamic library loader *)
+val load_library : [< `Css of string | `Js of string] -> unit
+
 (** {2 Retreive nodes of the Dom} *)
 
 (** All function for retreiving element from the DOM *)

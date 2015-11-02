@@ -28,7 +28,8 @@ Library "js_of_ocaml_bootstrapper"
     BootAjax,
     BootColor,
     BootCanvas,
-    BootStorage
+    BootStorage,
+    BootFunctor
   BuildDepends:
     camlp4,
     js_of_ocaml,

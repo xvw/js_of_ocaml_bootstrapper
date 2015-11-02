@@ -95,3 +95,18 @@ let input_create ?(id = None) ?(classes = []) ?(into = None) _type value =
   let elt = element ~id ~classes ~into f in
   let _   = elt ## value <- (_s value)
   in elt
+
+
+let load_library lnk = 
+  let h = Get.find Dom_html.document "head" in
+  match lnk with 
+  | `Css link ->
+    let l = Create.element ~into:(Some h) Dom_html.createLink in
+    let _ = Attribute.set l "rel" "stylesheet" in
+    let _ = Attribute.set l "type" "text/css" in
+    Attribute.set l "href" link 
+  | `Js link ->
+    let l = Create.element ~into:(Some h) Dom_html.createScript in
+    let _ = Attribute.set l "type" "text/javascript" in
+    Attribute.set l "src" link
+

@@ -22,6 +22,4 @@ val alert : string -> unit
 (** Print data int the console *)
 val log : 'a -> unit
 
-(** Dynamic library loader *)
-val load_library : [< `Css of string | `Js of string] -> unit
 
