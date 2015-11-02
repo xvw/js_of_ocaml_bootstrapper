@@ -1,0 +1,1 @@
+src/bootstrapper.ml: BootCanvas BootColor BootPervasives BootStorage Dom Dom_html Js List Lwt Lwt_js Lwt_js_events XmlHttpRequest

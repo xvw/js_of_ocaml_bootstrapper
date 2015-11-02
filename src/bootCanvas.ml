@@ -1,7 +1,7 @@
 (* Canvas Helper 
    work in progress
 *)
-open Bootstrapper
+open BootPervasives
 
 exception Already_created
 exception Not_created
@@ -12,9 +12,9 @@ type rect = (float * float * float * float)
 type font = int * string
 
 type fill_param =
-  | Color of Color.t
-  | LinearGradient of point * point * (float * Color.t) list
-  | RadialGradient of point * point * float * float * (float * Color.t) list
+  | Color of BootColor.t
+  | LinearGradient of point * point * (float * BootColor.t) list
+  | RadialGradient of point * point * float * float * (float * BootColor.t) list
   | Pattern of image * [`Repeat | `Repeat_x | `Repeat_y | `No_repeat]
 
 type filler = (fill_param option * fill_param option)
@@ -106,11 +106,11 @@ struct
     in _s style
 
   let stroke ctx c =
-    let _ = ctx ## strokeStyle <- (Color.to_js c) in
+    let _ = ctx ## strokeStyle <- (BootColor.to_js c) in
     ctx ## stroke ()
       
   let fill ctx c =
-    let _ = ctx ## fillStyle <- (Color.to_js c) in
+    let _ = ctx ## fillStyle <- (BootColor.to_js c) in
     ctx ## fill ()
 
   let wrap_option f ctx = function
@@ -129,7 +129,7 @@ struct
     | Some x -> begin
         match x with
         | Color c ->
-          let _ = ctx ## fillStyle <- (Color.to_js c) in
+          let _ = ctx ## fillStyle <- (BootColor.to_js c) in
           ctx ## fill()
         | Pattern (img, rep) ->
           let pattern = ctx ## createPattern(img, repeat rep) in
@@ -139,7 +139,7 @@ struct
           let grad = ctx ## createLinearGradient(x, y, x2, y2) in
           let _ =
             List.iter
-              (fun (i, s) -> grad ## addColorStop(i, Color.to_js s))
+              (fun (i, s) -> grad ## addColorStop(i, BootColor.to_js s))
               steps
           in
           let _ = ctx ## fillStyle_gradient <- grad in
@@ -148,7 +148,7 @@ struct
           let grad = ctx ## createRadialGradient(x, y, r, x2, y2, r2) in
           let _ =
             List.iter
-              (fun (i, s) -> grad ## addColorStop(i, Color.to_js s))
+              (fun (i, s) -> grad ## addColorStop(i, BootColor.to_js s))
               steps
           in 
           let _ = ctx ## fillStyle_gradient <- grad in
@@ -160,7 +160,7 @@ struct
     | Some x -> begin
         match x with
         | Color c ->
-          let _ = ctx ## strokeStyle <- (Color.to_js c) in
+          let _ = ctx ## strokeStyle <- (BootColor.to_js c) in
           ctx ## stroke ()
         | Pattern (img, rep) ->
           let pattern = ctx ## createPattern(img, repeat rep) in
@@ -170,7 +170,7 @@ struct
           let grad = ctx ## createLinearGradient(x, y, x2, y2) in
           let _ =
             List.iter
-              (fun (i, s) -> grad ## addColorStop(i, Color.to_js s))
+              (fun (i, s) -> grad ## addColorStop(i, BootColor.to_js s))
               steps
           in 
           let _ = ctx ## strokeStyle_gradient <- grad in
@@ -179,7 +179,7 @@ struct
           let grad = ctx ## createRadialGradient(x, y, r, x2, y2, r2) in
           let _ =
             List.iter
-              (fun (i, s) -> grad ## addColorStop(i, Color.to_js s))
+              (fun (i, s) -> grad ## addColorStop(i, BootColor.to_js s))
               steps
           in 
           let _ = ctx ## strokeStyle_gradient <- grad in

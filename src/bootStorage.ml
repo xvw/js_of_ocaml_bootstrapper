@@ -1,6 +1,6 @@
 (* Provide a convinient API for Webstorage *)
 
-open Bootstrapper
+open BootPervasives
 
 (* Exception if Webstorage not allowed *)
 exception Not_allowed

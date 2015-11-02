@@ -22,9 +22,9 @@ type rect = (float * float * float * float)
 type font = (int * string)
 
 type fill_param =
-  | Color of Color.t
-  | LinearGradient of point * point * (float * Color.t) list
-  | RadialGradient of point * point * float * float * (float * Color.t) list
+  | Color of BootColor.t
+  | LinearGradient of point * point * (float * BootColor.t) list
+  | RadialGradient of point * point * float * float * (float * BootColor.t) list
   | Pattern of image * [`Repeat | `Repeat_x | `Repeat_y | `No_repeat]
 
 type filler = (fill_param option * fill_param option)
@@ -61,16 +61,16 @@ val create_in : Dom_html.element Js.t -> int -> int -> unit
 val empty : fill_param option
 
 (** Create a color usable as a filler data *)
-val plain_color : Color.t -> fill_param option
+val plain_color : BootColor.t -> fill_param option
 
 (** Create a linear gradient usable as a filler data *)
 val linear_gradient :
-  point -> point -> (float * Color.t) list -> fill_param option
+  point -> point -> (float * BootColor.t) list -> fill_param option
 
 (** Create a radial gradient usable as a filler data *)
 val radial_gradient :
   point -> point -> float -> float ->
-  (float * Color.t) list -> fill_param option
+  (float * BootColor.t) list -> fill_param option
 
 (** Create a pattern usable as a filler data *)
 val pattern : image -> [`Repeat | `Repeat_x | `Repeat_y | `No_repeat] ->

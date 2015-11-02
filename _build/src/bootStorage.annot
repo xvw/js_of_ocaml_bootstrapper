@@ -1,0 +1,3480 @@
+"src/bootStorage.ml" 31 645 651 "src/bootStorage.ml" 31 645 658
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  def handler "src/bootStorage.ml" 37 758 760 "src/bootStorage.ml" 66 1488 1491
+)
+"src/bootStorage.ml" 32 661 665 "src/bootStorage.ml" 32 661 679
+type(
+  Dom_html.storage Js.t Js.Optdef.t ->
+  (unit -> Dom_html.storage Js.t) ->
+  (Dom_html.storage Js.t -> Dom_html.storage Js.t) -> Dom_html.storage Js.t
+)
+ident(
+  ext_ref Js.Optdef.case
+)
+"src/bootStorage.ml" 33 680 686 "src/bootStorage.ml" 33 680 695
+type(
+  Dom_html.storage Js.t Js.Optdef.t
+)
+ident(
+  int_ref F.handler "src/bootStorage.ml" 11 214 216 "src/bootStorage.ml" 11 214 261
+)
+"src/bootStorage.ml" 34 696 707 "src/bootStorage.ml" 34 696 709
+type(
+  unit
+)
+"src/bootStorage.ml" 34 696 713 "src/bootStorage.ml" 34 696 718
+type(
+  exn -> Dom_html.storage Js.t
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"src/bootStorage.ml" 34 696 719 "src/bootStorage.ml" 34 696 730
+type(
+  exn
+)
+"src/bootStorage.ml" 34 696 713 "src/bootStorage.ml" 34 696 730
+type(
+  Dom_html.storage Js.t
+)
+"src/bootStorage.ml" 34 696 707 "src/bootStorage.ml" 34 696 730
+type(
+  unit -> Dom_html.storage Js.t
+)
+"src/bootStorage.ml" 35 732 743 "src/bootStorage.ml" 35 732 744
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  def x "src/bootStorage.ml" 35 732 748 "src/bootStorage.ml" 35 732 749
+)
+"src/bootStorage.ml" 35 732 748 "src/bootStorage.ml" 35 732 749
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  int_ref x "src/bootStorage.ml" 35 732 743 "src/bootStorage.ml" 35 732 744
+)
+"src/bootStorage.ml" 35 732 743 "src/bootStorage.ml" 35 732 749
+type(
+  Dom_html.storage Js.t -> Dom_html.storage Js.t
+)
+"src/bootStorage.ml" 32 661 665 "src/bootStorage.ml" 35 732 750
+call(
+  stack
+)
+type(
+  Dom_html.storage Js.t
+)
+"src/bootStorage.ml" 37 758 764 "src/bootStorage.ml" 37 758 770
+type(
+  unit -> int
+)
+ident(
+  def length "src/bootStorage.ml" 39 795 797 "src/bootStorage.ml" 66 1488 1491
+)
+"src/bootStorage.ml" 37 758 771 "src/bootStorage.ml" 37 758 773
+type(
+  unit
+)
+"src/bootStorage.ml" 37 758 776 "src/bootStorage.ml" 37 758 783
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+)
+ident(
+  int_ref x "src/bootStorage.ml" 37 758 776 "src/bootStorage.ml" 37 758 793
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+  Js.t
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+  Js.t
+)
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  int_ref jsoo_obj "src/bootStorage.ml" 37 758 776 "src/bootStorage.ml" 37 758 793
+)
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  int_ref handler "src/bootStorage.ml" 31 645 651 "src/bootStorage.ml" 31 645 658
+)
+"src/bootStorage.ml" 37 758 776 "src/bootStorage.ml" 37 758 793
+call(
+  tail
+)
+type(
+  int
+)
+type(
+  int
+)
+type(
+  int
+)
+type(
+  int
+)
+ident(
+  int_ref M.res "src/bootStorage.ml" 37 758 776 "src/bootStorage.ml" 37 758 793
+)
+type(
+  int
+)
+type(
+  int
+)
+type(
+  int
+)
+type(
+  int
+)
+ident(
+  int_ref jsoo_res "src/bootStorage.ml" 37 758 776 "src/bootStorage.ml" 37 758 793
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth > ->
+  < get : int > Js.gen_prop
+)
+type(
+  < get : int > Js.gen_prop
+)
+type(
+  int Js.readonly_prop
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+)
+ident(
+  def x "src/bootStorage.ml" 37 758 776 "src/bootStorage.ml" 37 758 793
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth > ->
+  < get : int > Js.gen_prop
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+  Js.t
+)
+type(
+  int
+)
+ident(
+  def res "src/bootStorage.ml" 37 758 793 "src/bootStorage.ml" 37 758 793
+)
+type(
+  'a
+)
+type(
+  string
+)
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  int_ref jsoo_obj "src/bootStorage.ml" 37 758 776 "src/bootStorage.ml" 37 758 793
+)
+type(
+  Dom_html.storage Js.t -> string -> 'a
+)
+ident(
+  ext_ref Js.Unsafe.get
+)
+type(
+  'a
+)
+ident(
+  def jsoo_res "src/bootStorage.ml" 37 758 776 "src/bootStorage.ml" 37 758 793
+)
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  def jsoo_obj "src/bootStorage.ml" 37 758 776 "src/bootStorage.ml" 37 758 793
+)
+"src/bootStorage.ml" 37 758 771 "src/bootStorage.ml" 37 758 793
+type(
+  unit -> int
+)
+"src/bootStorage.ml" 39 795 801 "src/bootStorage.ml" 39 795 805
+type(
+  ('b -> Js.js_string Js.t Js.Opt.t) -> 'b -> string option
+)
+ident(
+  def wrap "src/bootStorage.ml" 45 901 903 "src/bootStorage.ml" 66 1488 1491
+)
+"src/bootStorage.ml" 39 795 806 "src/bootStorage.ml" 39 795 807
+type(
+  'b -> Js.js_string Js.t Js.Opt.t
+)
+ident(
+  def f "src/bootStorage.ml" 39 795 808 "src/bootStorage.ml" 43 877 899
+)
+"src/bootStorage.ml" 39 795 808 "src/bootStorage.ml" 39 795 809
+type(
+  'b
+)
+ident(
+  def k "src/bootStorage.ml" 40 812 816 "src/bootStorage.ml" 43 877 899
+)
+"src/bootStorage.ml" 40 812 820 "src/bootStorage.ml" 40 812 821
+type(
+  Js.js_string Js.t option
+)
+ident(
+  def r "src/bootStorage.ml" 43 877 884 "src/bootStorage.ml" 43 877 899
+)
+"src/bootStorage.ml" 41 824 840 "src/bootStorage.ml" 41 824 849
+type(
+  Js.js_string Js.t Js.Opt.t -> Js.js_string Js.t
+)
+ident(
+  ext_ref Bootstrapper.Get.unopt
+)
+"src/bootStorage.ml" 41 824 850 "src/bootStorage.ml" 41 824 851
+type(
+  'b -> Js.js_string Js.t Js.Opt.t
+)
+ident(
+  int_ref f "src/bootStorage.ml" 39 795 806 "src/bootStorage.ml" 39 795 807
+)
+"src/bootStorage.ml" 41 824 852 "src/bootStorage.ml" 41 824 853
+type(
+  'b
+)
+ident(
+  int_ref k "src/bootStorage.ml" 39 795 808 "src/bootStorage.ml" 39 795 809
+)
+"src/bootStorage.ml" 41 824 850 "src/bootStorage.ml" 41 824 853
+call(
+  stack
+)
+type(
+  Js.js_string Js.t Js.Opt.t
+)
+"src/bootStorage.ml" 41 824 840 "src/bootStorage.ml" 41 824 854
+call(
+  stack
+)
+type(
+  Js.js_string Js.t
+)
+"src/bootStorage.ml" 41 824 834 "src/bootStorage.ml" 41 824 855
+type(
+  Js.js_string Js.t option
+)
+"src/bootStorage.ml" 42 856 867 "src/bootStorage.ml" 42 856 868
+type(
+  exn
+)
+"src/bootStorage.ml" 42 856 872 "src/bootStorage.ml" 42 856 876
+type(
+  Js.js_string Js.t option
+)
+"src/bootStorage.ml" 41 824 830 "src/bootStorage.ml" 42 856 876
+type(
+  Js.js_string Js.t option
+)
+"src/bootStorage.ml" 43 877 884 "src/bootStorage.ml" 43 877 894
+type(
+  (Js.js_string Js.t -> string) -> Js.js_string Js.t option -> string option
+)
+ident(
+  ext_ref Bootstrapper.Option.map
+)
+"src/bootStorage.ml" 43 877 895 "src/bootStorage.ml" 43 877 897
+type(
+  Js.js_string Js.t -> string
+)
+ident(
+  ext_ref Bootstrapper.s_
+)
+"src/bootStorage.ml" 43 877 898 "src/bootStorage.ml" 43 877 899
+type(
+  Js.js_string Js.t option
+)
+ident(
+  int_ref r "src/bootStorage.ml" 40 812 820 "src/bootStorage.ml" 40 812 821
+)
+"src/bootStorage.ml" 43 877 884 "src/bootStorage.ml" 43 877 899
+call(
+  tail
+)
+type(
+  string option
+)
+"src/bootStorage.ml" 40 812 816 "src/bootStorage.ml" 43 877 899
+type(
+  string option
+)
+"src/bootStorage.ml" 39 795 808 "src/bootStorage.ml" 43 877 899
+type(
+  'b -> string option
+)
+"src/bootStorage.ml" 39 795 806 "src/bootStorage.ml" 43 877 899
+type(
+  ('b -> Js.js_string Js.t Js.Opt.t) -> 'b -> string option
+)
+"src/bootStorage.ml" 45 901 907 "src/bootStorage.ml" 45 901 910
+type(
+  string -> string option
+)
+ident(
+  def get "src/bootStorage.ml" 46 962 964 "src/bootStorage.ml" 66 1488 1491
+)
+"src/bootStorage.ml" 45 901 911 "src/bootStorage.ml" 45 901 914
+type(
+  string
+)
+ident(
+  def key "src/bootStorage.ml" 45 901 917 "src/bootStorage.ml" 45 901 961
+)
+"src/bootStorage.ml" 45 901 917 "src/bootStorage.ml" 45 901 921
+type(
+  (string -> Js.js_string Js.t Js.Opt.t) -> string -> string option
+)
+ident(
+  int_ref wrap "src/bootStorage.ml" 39 795 801 "src/bootStorage.ml" 39 795 805
+)
+"src/bootStorage.ml" 45 901 927 "src/bootStorage.ml" 45 901 928
+type(
+  string
+)
+ident(
+  def x "src/bootStorage.ml" 45 901 932 "src/bootStorage.ml" 45 901 956
+)
+"src/bootStorage.ml" 45 901 932 "src/bootStorage.ml" 45 901 939
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+)
+ident(
+  int_ref x "src/bootStorage.ml" 45 901 932 "src/bootStorage.ml" 45 901 956
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+  Js.t
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+  Js.t
+)
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  int_ref jsoo_self "src/bootStorage.ml" 45 901 932 "src/bootStorage.ml" 45 901 956
+)
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  int_ref handler "src/bootStorage.ml" 31 645 651 "src/bootStorage.ml" 31 645 658
+)
+"src/bootStorage.ml" 45 901 932 "src/bootStorage.ml" 45 901 950
+call(
+  tail
+)
+type(
+  Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth
+)
+type(
+  Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth
+)
+"src/bootStorage.ml" 45 901 951 "src/bootStorage.ml" 45 901 953
+type(
+  string -> Js.js_string Js.t
+)
+ident(
+  ext_ref Bootstrapper._s
+)
+"src/bootStorage.ml" 45 901 954 "src/bootStorage.ml" 45 901 955
+type(
+  string
+)
+ident(
+  int_ref x "src/bootStorage.ml" 45 901 927 "src/bootStorage.ml" 45 901 928
+)
+"src/bootStorage.ml" 45 901 951 "src/bootStorage.ml" 45 901 955
+call(
+  stack
+)
+type(
+  Js.js_string Js.t Js.opt
+)
+type(
+  Js.js_string Js.t
+)
+type(
+  Js.js_string Js.t
+)
+ident(
+  int_ref jsoo_173316d7 "src/bootStorage.ml" 45 901 932 "src/bootStorage.ml" 45 901 956
+)
+type(
+  Js.js_string Js.t
+)
+type(
+  Js.js_string Js.t
+)
+"src/bootStorage.ml" 45 901 932 "src/bootStorage.ml" 45 901 956
+type(
+  Js.js_string Js.t Js.Opt.t
+)
+type(
+  Js.js_string Js.t Js.Opt.t
+)
+type(
+  Js.js_string Js.t Js.Opt.t
+)
+type(
+  Js.js_string Js.t Js.Opt.t
+)
+type(
+  Js.js_string Js.t Js.Opt.t
+)
+ident(
+  int_ref M.res "src/bootStorage.ml" 45 901 932 "src/bootStorage.ml" 45 901 956
+)
+type(
+  Js.js_string Js.t Js.opt
+)
+type(
+  Js.js_string Js.t Js.opt
+)
+type(
+  Js.js_string Js.t Js.opt
+)
+type(
+  Js.js_string Js.t Js.opt
+)
+ident(
+  int_ref jsoo_res "src/bootStorage.ml" 45 901 932 "src/bootStorage.ml" 45 901 956
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth > ->
+  Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+)
+ident(
+  def x "src/bootStorage.ml" 45 901 932 "src/bootStorage.ml" 45 901 950
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth > ->
+  Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+  Js.t
+)
+type(
+  Js.js_string Js.t Js.opt
+)
+ident(
+  def res "src/bootStorage.ml" 45 901 956 "src/bootStorage.ml" 45 901 956
+)
+type(
+  'c
+)
+type(
+  Js.Unsafe.any array
+)
+type(
+  Js.Unsafe.any
+)
+type(
+  Js.js_string Js.t
+)
+ident(
+  int_ref jsoo_173316d7 "src/bootStorage.ml" 45 901 932 "src/bootStorage.ml" 45 901 956
+)
+type(
+  Js.js_string Js.t -> Js.Unsafe.any
+)
+ident(
+  ext_ref Js.Unsafe.inject
+)
+type(
+  string
+)
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  int_ref jsoo_self "src/bootStorage.ml" 45 901 932 "src/bootStorage.ml" 45 901 956
+)
+type(
+  Dom_html.storage Js.t -> string -> Js.Unsafe.any array -> 'c
+)
+ident(
+  ext_ref Js.Unsafe.meth_call
+)
+type(
+  'c
+)
+ident(
+  def jsoo_res "src/bootStorage.ml" 45 901 932 "src/bootStorage.ml" 45 901 956
+)
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  def jsoo_self "src/bootStorage.ml" 45 901 932 "src/bootStorage.ml" 45 901 956
+)
+type(
+  Js.js_string Js.t
+)
+ident(
+  def jsoo_173316d7 "src/bootStorage.ml" 45 901 932 "src/bootStorage.ml" 45 901 956
+)
+"src/bootStorage.ml" 45 901 927 "src/bootStorage.ml" 45 901 956
+type(
+  string -> Js.js_string Js.t Js.Opt.t
+)
+"src/bootStorage.ml" 45 901 958 "src/bootStorage.ml" 45 901 961
+type(
+  string
+)
+ident(
+  int_ref key "src/bootStorage.ml" 45 901 911 "src/bootStorage.ml" 45 901 914
+)
+"src/bootStorage.ml" 45 901 917 "src/bootStorage.ml" 45 901 961
+call(
+  tail
+)
+type(
+  string option
+)
+"src/bootStorage.ml" 45 901 911 "src/bootStorage.ml" 45 901 961
+type(
+  string -> string option
+)
+"src/bootStorage.ml" 46 962 968 "src/bootStorage.ml" 46 962 971
+type(
+  int -> string option
+)
+ident(
+  def key "src/bootStorage.ml" 47 1020 1022 "src/bootStorage.ml" 66 1488 1491
+)
+"src/bootStorage.ml" 46 962 972 "src/bootStorage.ml" 46 962 977
+type(
+  int
+)
+ident(
+  def index "src/bootStorage.ml" 46 962 980 "src/bootStorage.ml" 46 962 1019
+)
+"src/bootStorage.ml" 46 962 980 "src/bootStorage.ml" 46 962 984
+type(
+  (int -> Js.js_string Js.t Js.Opt.t) -> int -> string option
+)
+ident(
+  int_ref wrap "src/bootStorage.ml" 39 795 801 "src/bootStorage.ml" 39 795 805
+)
+"src/bootStorage.ml" 46 962 990 "src/bootStorage.ml" 46 962 991
+type(
+  int
+)
+ident(
+  def x "src/bootStorage.ml" 46 962 995 "src/bootStorage.ml" 46 962 1012
+)
+"src/bootStorage.ml" 46 962 995 "src/bootStorage.ml" 46 962 1002
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+)
+ident(
+  int_ref x "src/bootStorage.ml" 46 962 995 "src/bootStorage.ml" 46 962 1012
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+  Js.t
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+  Js.t
+)
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  int_ref jsoo_self "src/bootStorage.ml" 46 962 995 "src/bootStorage.ml" 46 962 1012
+)
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  int_ref handler "src/bootStorage.ml" 31 645 651 "src/bootStorage.ml" 31 645 658
+)
+"src/bootStorage.ml" 46 962 995 "src/bootStorage.ml" 46 962 1009
+call(
+  tail
+)
+type(
+  int -> Js.js_string Js.t Js.opt Js.meth
+)
+type(
+  int -> Js.js_string Js.t Js.opt Js.meth
+)
+"src/bootStorage.ml" 46 962 1010 "src/bootStorage.ml" 46 962 1011
+type(
+  Js.js_string Js.t Js.opt
+)
+type(
+  int
+)
+type(
+  int
+)
+ident(
+  int_ref jsoo_ad7fbbdd "src/bootStorage.ml" 46 962 995 "src/bootStorage.ml" 46 962 1012
+)
+type(
+  int
+)
+type(
+  int
+)
+ident(
+  int_ref x "src/bootStorage.ml" 46 962 990 "src/bootStorage.ml" 46 962 991
+)
+"src/bootStorage.ml" 46 962 995 "src/bootStorage.ml" 46 962 1012
+type(
+  Js.js_string Js.t Js.Opt.t
+)
+type(
+  Js.js_string Js.t Js.Opt.t
+)
+type(
+  Js.js_string Js.t Js.Opt.t
+)
+type(
+  Js.js_string Js.t Js.Opt.t
+)
+type(
+  Js.js_string Js.t Js.Opt.t
+)
+ident(
+  int_ref M.res "src/bootStorage.ml" 46 962 995 "src/bootStorage.ml" 46 962 1012
+)
+type(
+  Js.js_string Js.t Js.opt
+)
+type(
+  Js.js_string Js.t Js.opt
+)
+type(
+  Js.js_string Js.t Js.opt
+)
+type(
+  Js.js_string Js.t Js.opt
+)
+ident(
+  int_ref jsoo_res "src/bootStorage.ml" 46 962 995 "src/bootStorage.ml" 46 962 1012
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth > ->
+  int -> Js.js_string Js.t Js.opt Js.meth
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+)
+ident(
+  def x "src/bootStorage.ml" 46 962 995 "src/bootStorage.ml" 46 962 1009
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth > ->
+  int -> Js.js_string Js.t Js.opt Js.meth
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+  Js.t
+)
+type(
+  Js.js_string Js.t Js.opt
+)
+ident(
+  def res "src/bootStorage.ml" 46 962 1012 "src/bootStorage.ml" 46 962 1012
+)
+type(
+  'd
+)
+type(
+  Js.Unsafe.any array
+)
+type(
+  Js.Unsafe.any
+)
+type(
+  int
+)
+ident(
+  int_ref jsoo_ad7fbbdd "src/bootStorage.ml" 46 962 995 "src/bootStorage.ml" 46 962 1012
+)
+type(
+  int -> Js.Unsafe.any
+)
+ident(
+  ext_ref Js.Unsafe.inject
+)
+type(
+  string
+)
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  int_ref jsoo_self "src/bootStorage.ml" 46 962 995 "src/bootStorage.ml" 46 962 1012
+)
+type(
+  Dom_html.storage Js.t -> string -> Js.Unsafe.any array -> 'd
+)
+ident(
+  ext_ref Js.Unsafe.meth_call
+)
+type(
+  'd
+)
+ident(
+  def jsoo_res "src/bootStorage.ml" 46 962 995 "src/bootStorage.ml" 46 962 1012
+)
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  def jsoo_self "src/bootStorage.ml" 46 962 995 "src/bootStorage.ml" 46 962 1012
+)
+type(
+  int
+)
+ident(
+  def jsoo_ad7fbbdd "src/bootStorage.ml" 46 962 995 "src/bootStorage.ml" 46 962 1012
+)
+"src/bootStorage.ml" 46 962 990 "src/bootStorage.ml" 46 962 1012
+type(
+  int -> Js.js_string Js.t Js.Opt.t
+)
+"src/bootStorage.ml" 46 962 1014 "src/bootStorage.ml" 46 962 1019
+type(
+  int
+)
+ident(
+  int_ref index "src/bootStorage.ml" 46 962 972 "src/bootStorage.ml" 46 962 977
+)
+"src/bootStorage.ml" 46 962 980 "src/bootStorage.ml" 46 962 1019
+call(
+  tail
+)
+type(
+  string option
+)
+"src/bootStorage.ml" 46 962 972 "src/bootStorage.ml" 46 962 1019
+type(
+  int -> string option
+)
+"src/bootStorage.ml" 47 1020 1026 "src/bootStorage.ml" 47 1020 1029
+type(
+  string -> string -> unit
+)
+ident(
+  def set "src/bootStorage.ml" 49 1086 1088 "src/bootStorage.ml" 66 1488 1491
+)
+"src/bootStorage.ml" 47 1020 1030 "src/bootStorage.ml" 47 1020 1033
+type(
+  string
+)
+ident(
+  def key "src/bootStorage.ml" 47 1020 1034 "src/bootStorage.ml" 47 1020 1078
+)
+"src/bootStorage.ml" 47 1020 1034 "src/bootStorage.ml" 47 1020 1039
+type(
+  string
+)
+ident(
+  def value "src/bootStorage.ml" 47 1020 1042 "src/bootStorage.ml" 47 1020 1078
+)
+"src/bootStorage.ml" 47 1020 1042 "src/bootStorage.ml" 47 1020 1049
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+)
+ident(
+  int_ref x "src/bootStorage.ml" 47 1020 1042 "src/bootStorage.ml" 47 1020 1078
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+  Js.t
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+  Js.t
+)
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  int_ref jsoo_self "src/bootStorage.ml" 47 1020 1042 "src/bootStorage.ml" 47 1020 1078
+)
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  int_ref handler "src/bootStorage.ml" 31 645 651 "src/bootStorage.ml" 31 645 658
+)
+"src/bootStorage.ml" 47 1020 1042 "src/bootStorage.ml" 47 1020 1060
+call(
+  tail
+)
+type(
+  Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth
+)
+type(
+  Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth
+)
+"src/bootStorage.ml" 47 1020 1061 "src/bootStorage.ml" 47 1020 1063
+type(
+  string -> Js.js_string Js.t
+)
+ident(
+  ext_ref Bootstrapper._s
+)
+"src/bootStorage.ml" 47 1020 1064 "src/bootStorage.ml" 47 1020 1067
+type(
+  string
+)
+ident(
+  int_ref key "src/bootStorage.ml" 47 1020 1030 "src/bootStorage.ml" 47 1020 1033
+)
+"src/bootStorage.ml" 47 1020 1061 "src/bootStorage.ml" 47 1020 1067
+call(
+  stack
+)
+type(
+  unit
+)
+type(
+  Js.js_string Js.t
+)
+type(
+  Js.js_string Js.t
+)
+ident(
+  int_ref jsoo_1df5757a "src/bootStorage.ml" 47 1020 1042 "src/bootStorage.ml" 47 1020 1078
+)
+type(
+  Js.js_string Js.t
+)
+type(
+  Js.js_string Js.t
+)
+"src/bootStorage.ml" 47 1020 1069 "src/bootStorage.ml" 47 1020 1071
+type(
+  string -> Js.js_string Js.t
+)
+ident(
+  ext_ref Bootstrapper._s
+)
+"src/bootStorage.ml" 47 1020 1072 "src/bootStorage.ml" 47 1020 1077
+type(
+  string
+)
+ident(
+  int_ref value "src/bootStorage.ml" 47 1020 1034 "src/bootStorage.ml" 47 1020 1039
+)
+"src/bootStorage.ml" 47 1020 1069 "src/bootStorage.ml" 47 1020 1077
+call(
+  stack
+)
+type(
+  unit
+)
+type(
+  Js.js_string Js.t
+)
+type(
+  Js.js_string Js.t
+)
+ident(
+  int_ref jsoo_776737d4 "src/bootStorage.ml" 47 1020 1042 "src/bootStorage.ml" 47 1020 1078
+)
+type(
+  Js.js_string Js.t
+)
+type(
+  Js.js_string Js.t
+)
+"src/bootStorage.ml" 47 1020 1042 "src/bootStorage.ml" 47 1020 1078
+type(
+  unit
+)
+type(
+  unit
+)
+type(
+  unit
+)
+type(
+  unit
+)
+type(
+  unit
+)
+ident(
+  int_ref M.res "src/bootStorage.ml" 47 1020 1042 "src/bootStorage.ml" 47 1020 1078
+)
+type(
+  unit
+)
+type(
+  unit
+)
+type(
+  unit
+)
+type(
+  unit
+)
+ident(
+  int_ref jsoo_res "src/bootStorage.ml" 47 1020 1042 "src/bootStorage.ml" 47 1020 1078
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth > ->
+  Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+)
+ident(
+  def x "src/bootStorage.ml" 47 1020 1042 "src/bootStorage.ml" 47 1020 1060
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth > ->
+  Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+  Js.t
+)
+type(
+  unit
+)
+ident(
+  def res "src/bootStorage.ml" 47 1020 1078 "src/bootStorage.ml" 47 1020 1078
+)
+type(
+  'e
+)
+type(
+  Js.Unsafe.any array
+)
+type(
+  Js.Unsafe.any
+)
+type(
+  Js.js_string Js.t
+)
+ident(
+  int_ref jsoo_776737d4 "src/bootStorage.ml" 47 1020 1042 "src/bootStorage.ml" 47 1020 1078
+)
+type(
+  Js.js_string Js.t -> Js.Unsafe.any
+)
+ident(
+  ext_ref Js.Unsafe.inject
+)
+type(
+  Js.Unsafe.any
+)
+type(
+  Js.js_string Js.t
+)
+ident(
+  int_ref jsoo_1df5757a "src/bootStorage.ml" 47 1020 1042 "src/bootStorage.ml" 47 1020 1078
+)
+type(
+  Js.js_string Js.t -> Js.Unsafe.any
+)
+ident(
+  ext_ref Js.Unsafe.inject
+)
+type(
+  string
+)
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  int_ref jsoo_self "src/bootStorage.ml" 47 1020 1042 "src/bootStorage.ml" 47 1020 1078
+)
+type(
+  Dom_html.storage Js.t -> string -> Js.Unsafe.any array -> 'e
+)
+ident(
+  ext_ref Js.Unsafe.meth_call
+)
+type(
+  'e
+)
+ident(
+  def jsoo_res "src/bootStorage.ml" 47 1020 1042 "src/bootStorage.ml" 47 1020 1078
+)
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  def jsoo_self "src/bootStorage.ml" 47 1020 1042 "src/bootStorage.ml" 47 1020 1078
+)
+type(
+  Js.js_string Js.t
+)
+ident(
+  def jsoo_776737d4 "src/bootStorage.ml" 47 1020 1042 "src/bootStorage.ml" 47 1020 1078
+)
+type(
+  Js.js_string Js.t
+)
+ident(
+  def jsoo_1df5757a "src/bootStorage.ml" 47 1020 1042 "src/bootStorage.ml" 47 1020 1078
+)
+"src/bootStorage.ml" 47 1020 1034 "src/bootStorage.ml" 47 1020 1078
+type(
+  string -> unit
+)
+"src/bootStorage.ml" 47 1020 1030 "src/bootStorage.ml" 47 1020 1078
+type(
+  string -> string -> unit
+)
+"src/bootStorage.ml" 49 1086 1092 "src/bootStorage.ml" 49 1086 1098
+type(
+  string -> unit
+)
+ident(
+  def remove "src/bootStorage.ml" 50 1136 1138 "src/bootStorage.ml" 66 1488 1491
+)
+"src/bootStorage.ml" 49 1086 1099 "src/bootStorage.ml" 49 1086 1102
+type(
+  string
+)
+ident(
+  def key "src/bootStorage.ml" 49 1086 1105 "src/bootStorage.ml" 49 1086 1135
+)
+"src/bootStorage.ml" 49 1086 1105 "src/bootStorage.ml" 49 1086 1112
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+)
+ident(
+  int_ref x "src/bootStorage.ml" 49 1086 1105 "src/bootStorage.ml" 49 1086 1135
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+  Js.t
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+  Js.t
+)
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  int_ref jsoo_self "src/bootStorage.ml" 49 1086 1105 "src/bootStorage.ml" 49 1086 1135
+)
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  int_ref handler "src/bootStorage.ml" 31 645 651 "src/bootStorage.ml" 31 645 658
+)
+"src/bootStorage.ml" 49 1086 1105 "src/bootStorage.ml" 49 1086 1126
+call(
+  tail
+)
+type(
+  Js.js_string Js.t -> unit Js.meth
+)
+type(
+  Js.js_string Js.t -> unit Js.meth
+)
+"src/bootStorage.ml" 49 1086 1128 "src/bootStorage.ml" 49 1086 1130
+type(
+  string -> Js.js_string Js.t
+)
+ident(
+  ext_ref Bootstrapper._s
+)
+"src/bootStorage.ml" 49 1086 1131 "src/bootStorage.ml" 49 1086 1134
+type(
+  string
+)
+ident(
+  int_ref key "src/bootStorage.ml" 49 1086 1099 "src/bootStorage.ml" 49 1086 1102
+)
+"src/bootStorage.ml" 49 1086 1128 "src/bootStorage.ml" 49 1086 1134
+call(
+  stack
+)
+type(
+  unit
+)
+type(
+  Js.js_string Js.t
+)
+type(
+  Js.js_string Js.t
+)
+ident(
+  int_ref jsoo_96770fe7 "src/bootStorage.ml" 49 1086 1105 "src/bootStorage.ml" 49 1086 1135
+)
+type(
+  Js.js_string Js.t
+)
+type(
+  Js.js_string Js.t
+)
+"src/bootStorage.ml" 49 1086 1105 "src/bootStorage.ml" 49 1086 1135
+type(
+  unit
+)
+type(
+  unit
+)
+type(
+  unit
+)
+type(
+  unit
+)
+type(
+  unit
+)
+ident(
+  int_ref M.res "src/bootStorage.ml" 49 1086 1105 "src/bootStorage.ml" 49 1086 1135
+)
+type(
+  unit
+)
+type(
+  unit
+)
+type(
+  unit
+)
+type(
+  unit
+)
+ident(
+  int_ref jsoo_res "src/bootStorage.ml" 49 1086 1105 "src/bootStorage.ml" 49 1086 1135
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth > ->
+  Js.js_string Js.t -> unit Js.meth
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+)
+ident(
+  def x "src/bootStorage.ml" 49 1086 1105 "src/bootStorage.ml" 49 1086 1126
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth > ->
+  Js.js_string Js.t -> unit Js.meth
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+  Js.t
+)
+type(
+  unit
+)
+ident(
+  def res "src/bootStorage.ml" 49 1086 1135 "src/bootStorage.ml" 49 1086 1135
+)
+type(
+  'f
+)
+type(
+  Js.Unsafe.any array
+)
+type(
+  Js.Unsafe.any
+)
+type(
+  Js.js_string Js.t
+)
+ident(
+  int_ref jsoo_96770fe7 "src/bootStorage.ml" 49 1086 1105 "src/bootStorage.ml" 49 1086 1135
+)
+type(
+  Js.js_string Js.t -> Js.Unsafe.any
+)
+ident(
+  ext_ref Js.Unsafe.inject
+)
+type(
+  string
+)
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  int_ref jsoo_self "src/bootStorage.ml" 49 1086 1105 "src/bootStorage.ml" 49 1086 1135
+)
+type(
+  Dom_html.storage Js.t -> string -> Js.Unsafe.any array -> 'f
+)
+ident(
+  ext_ref Js.Unsafe.meth_call
+)
+type(
+  'f
+)
+ident(
+  def jsoo_res "src/bootStorage.ml" 49 1086 1105 "src/bootStorage.ml" 49 1086 1135
+)
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  def jsoo_self "src/bootStorage.ml" 49 1086 1105 "src/bootStorage.ml" 49 1086 1135
+)
+type(
+  Js.js_string Js.t
+)
+ident(
+  def jsoo_96770fe7 "src/bootStorage.ml" 49 1086 1105 "src/bootStorage.ml" 49 1086 1135
+)
+"src/bootStorage.ml" 49 1086 1099 "src/bootStorage.ml" 49 1086 1135
+type(
+  string -> unit
+)
+"src/bootStorage.ml" 50 1136 1142 "src/bootStorage.ml" 50 1136 1147
+type(
+  unit -> unit
+)
+ident(
+  def clear "src/bootStorage.ml" 52 1173 1175 "src/bootStorage.ml" 66 1488 1491
+)
+"src/bootStorage.ml" 50 1136 1148 "src/bootStorage.ml" 50 1136 1150
+type(
+  unit
+)
+"src/bootStorage.ml" 50 1136 1153 "src/bootStorage.ml" 50 1136 1160
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+)
+ident(
+  int_ref x "src/bootStorage.ml" 50 1136 1153 "src/bootStorage.ml" 50 1136 1171
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+  Js.t
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+  Js.t
+)
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  int_ref jsoo_self "src/bootStorage.ml" 50 1136 1153 "src/bootStorage.ml" 50 1136 1171
+)
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  int_ref handler "src/bootStorage.ml" 31 645 651 "src/bootStorage.ml" 31 645 658
+)
+"src/bootStorage.ml" 50 1136 1153 "src/bootStorage.ml" 50 1136 1169
+call(
+  tail
+)
+type(
+  unit Js.meth
+)
+type(
+  unit Js.meth
+)
+"src/bootStorage.ml" 50 1136 1153 "src/bootStorage.ml" 50 1136 1171
+type(
+  unit
+)
+type(
+  unit
+)
+type(
+  unit
+)
+type(
+  unit
+)
+ident(
+  int_ref M.res "src/bootStorage.ml" 50 1136 1153 "src/bootStorage.ml" 50 1136 1171
+)
+type(
+  unit
+)
+type(
+  unit
+)
+type(
+  unit
+)
+type(
+  unit
+)
+ident(
+  int_ref jsoo_res "src/bootStorage.ml" 50 1136 1153 "src/bootStorage.ml" 50 1136 1171
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth > ->
+  unit Js.meth
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+)
+ident(
+  def x "src/bootStorage.ml" 50 1136 1153 "src/bootStorage.ml" 50 1136 1169
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth > ->
+  unit Js.meth
+)
+type(
+  < clear : unit Js.meth;
+    getItem : Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    key : int -> Js.js_string Js.t Js.opt Js.meth;
+    length : int Js.readonly_prop;
+    removeItem : Js.js_string Js.t -> unit Js.meth;
+    setItem : Js.js_string Js.t -> Js.js_string Js.t -> unit Js.meth >
+  Js.t
+)
+type(
+  unit
+)
+ident(
+  def res "src/bootStorage.ml" 50 1136 1171 "src/bootStorage.ml" 50 1136 1171
+)
+type(
+  'g
+)
+type(
+  Js.Unsafe.any array
+)
+type(
+  string
+)
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  int_ref jsoo_self "src/bootStorage.ml" 50 1136 1153 "src/bootStorage.ml" 50 1136 1171
+)
+type(
+  Dom_html.storage Js.t -> string -> Js.Unsafe.any array -> 'g
+)
+ident(
+  ext_ref Js.Unsafe.meth_call
+)
+type(
+  'g
+)
+ident(
+  def jsoo_res "src/bootStorage.ml" 50 1136 1153 "src/bootStorage.ml" 50 1136 1171
+)
+type(
+  Dom_html.storage Js.t
+)
+ident(
+  def jsoo_self "src/bootStorage.ml" 50 1136 1153 "src/bootStorage.ml" 50 1136 1171
+)
+"src/bootStorage.ml" 50 1136 1148 "src/bootStorage.ml" 50 1136 1171
+type(
+  unit -> unit
+)
+"src/bootStorage.ml" 52 1173 1179 "src/bootStorage.ml" 52 1173 1189
+type(
+  unit -> (string, string) Hashtbl.t
+)
+ident(
+  def to_hashtbl "src/bootStorage.ml" 64 1481 1486 "src/bootStorage.ml" 66 1488 1491
+)
+"src/bootStorage.ml" 52 1173 1190 "src/bootStorage.ml" 52 1173 1192
+type(
+  unit
+)
+"src/bootStorage.ml" 53 1195 1203 "src/bootStorage.ml" 53 1195 1206
+type(
+  int
+)
+ident(
+  def len "src/bootStorage.ml" 54 1222 1226 "src/bootStorage.ml" 64 1481 1486
+)
+"src/bootStorage.ml" 53 1195 1209 "src/bootStorage.ml" 53 1195 1215
+type(
+  unit -> int
+)
+ident(
+  int_ref length "src/bootStorage.ml" 37 758 764 "src/bootStorage.ml" 37 758 770
+)
+"src/bootStorage.ml" 53 1195 1216 "src/bootStorage.ml" 53 1195 1218
+type(
+  unit
+)
+"src/bootStorage.ml" 53 1195 1209 "src/bootStorage.ml" 53 1195 1218
+call(
+  stack
+)
+type(
+  int
+)
+"src/bootStorage.ml" 54 1222 1230 "src/bootStorage.ml" 54 1222 1231
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  def h "src/bootStorage.ml" 55 1256 1260 "src/bootStorage.ml" 64 1481 1486
+)
+"src/bootStorage.ml" 54 1222 1234 "src/bootStorage.ml" 54 1222 1248
+type(
+  ?random:bool -> int -> (string, string) Hashtbl.t
+)
+ident(
+  ext_ref Hashtbl.create
+)
+"src/bootStorage.ml" 54 1222 1249 "src/bootStorage.ml" 54 1222 1252
+type(
+  int
+)
+ident(
+  int_ref len "src/bootStorage.ml" 53 1195 1203 "src/bootStorage.ml" 53 1195 1206
+)
+"src/bootStorage.ml" 54 1222 1234 "src/bootStorage.ml" 54 1222 1252
+call(
+  stack
+)
+type(
+  (string, string) Hashtbl.t
+)
+"src/bootStorage.ml" 55 1256 1268 "src/bootStorage.ml" 55 1256 1269
+type(
+  int
+)
+"src/bootStorage.ml" 55 1256 1274 "src/bootStorage.ml" 55 1256 1277
+type(
+  int
+)
+ident(
+  int_ref len "src/bootStorage.ml" 53 1195 1203 "src/bootStorage.ml" 53 1195 1206
+)
+"src/bootStorage.ml" 55 1256 1278 "src/bootStorage.ml" 55 1256 1279
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"src/bootStorage.ml" 55 1256 1280 "src/bootStorage.ml" 55 1256 1281
+type(
+  int
+)
+"src/bootStorage.ml" 55 1256 1274 "src/bootStorage.ml" 55 1256 1281
+type(
+  int
+)
+"src/bootStorage.ml" 56 1286 1296 "src/bootStorage.ml" 56 1286 1297
+type(
+  string
+)
+ident(
+  def k "src/bootStorage.ml" 60 1381 1387 "src/bootStorage.ml" 62 1440 1470
+)
+"src/bootStorage.ml" 56 1286 1306 "src/bootStorage.ml" 56 1286 1309
+type(
+  int -> string option
+)
+ident(
+  int_ref key "src/bootStorage.ml" 46 962 968 "src/bootStorage.ml" 46 962 971
+)
+"src/bootStorage.ml" 56 1286 1310 "src/bootStorage.ml" 56 1286 1311
+type(
+  int
+)
+ident(
+  int_ref i "src/bootStorage.ml" 55 1256 1260 "src/bootStorage.ml" 63 1471 1479
+)
+"src/bootStorage.ml" 56 1286 1306 "src/bootStorage.ml" 56 1286 1311
+call(
+  stack
+)
+type(
+  string option
+)
+"src/bootStorage.ml" 57 1317 1332 "src/bootStorage.ml" 57 1317 1333
+type(
+  string
+)
+ident(
+  def r "src/bootStorage.ml" 57 1317 1337 "src/bootStorage.ml" 57 1317 1338
+)
+"src/bootStorage.ml" 57 1317 1327 "src/bootStorage.ml" 57 1317 1333
+type(
+  string option
+)
+"src/bootStorage.ml" 57 1317 1337 "src/bootStorage.ml" 57 1317 1338
+type(
+  string
+)
+ident(
+  int_ref r "src/bootStorage.ml" 57 1317 1332 "src/bootStorage.ml" 57 1317 1333
+)
+"src/bootStorage.ml" 58 1339 1349 "src/bootStorage.ml" 58 1339 1350
+type(
+  string option
+)
+"src/bootStorage.ml" 58 1339 1354 "src/bootStorage.ml" 58 1339 1359
+type(
+  exn -> string
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"src/bootStorage.ml" 58 1339 1360 "src/bootStorage.ml" 58 1339 1371
+type(
+  exn
+)
+"src/bootStorage.ml" 58 1339 1354 "src/bootStorage.ml" 58 1339 1371
+type(
+  string
+)
+"src/bootStorage.ml" 56 1286 1300 "src/bootStorage.ml" 58 1339 1371
+type(
+  string
+)
+"src/bootStorage.ml" 60 1381 1393 "src/bootStorage.ml" 60 1381 1396
+type(
+  string -> string option
+)
+ident(
+  int_ref get "src/bootStorage.ml" 45 901 907 "src/bootStorage.ml" 45 901 910
+)
+"src/bootStorage.ml" 60 1381 1397 "src/bootStorage.ml" 60 1381 1398
+type(
+  string
+)
+ident(
+  int_ref k "src/bootStorage.ml" 56 1286 1296 "src/bootStorage.ml" 56 1286 1297
+)
+"src/bootStorage.ml" 60 1381 1393 "src/bootStorage.ml" 60 1381 1398
+call(
+  stack
+)
+type(
+  string option
+)
+"src/bootStorage.ml" 61 1404 1417 "src/bootStorage.ml" 61 1404 1418
+type(
+  string
+)
+ident(
+  def e "src/bootStorage.ml" 61 1404 1422 "src/bootStorage.ml" 61 1404 1439
+)
+"src/bootStorage.ml" 61 1404 1412 "src/bootStorage.ml" 61 1404 1418
+type(
+  string option
+)
+"src/bootStorage.ml" 61 1404 1422 "src/bootStorage.ml" 61 1404 1433
+type(
+  (string, string) Hashtbl.t -> string -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"src/bootStorage.ml" 61 1404 1434 "src/bootStorage.ml" 61 1404 1435
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref h "src/bootStorage.ml" 54 1222 1230 "src/bootStorage.ml" 54 1222 1231
+)
+"src/bootStorage.ml" 61 1404 1436 "src/bootStorage.ml" 61 1404 1437
+type(
+  string
+)
+ident(
+  int_ref k "src/bootStorage.ml" 56 1286 1296 "src/bootStorage.ml" 56 1286 1297
+)
+"src/bootStorage.ml" 61 1404 1438 "src/bootStorage.ml" 61 1404 1439
+type(
+  string
+)
+ident(
+  int_ref e "src/bootStorage.ml" 61 1404 1417 "src/bootStorage.ml" 61 1404 1418
+)
+"src/bootStorage.ml" 61 1404 1422 "src/bootStorage.ml" 61 1404 1439
+call(
+  stack
+)
+type(
+  unit
+)
+"src/bootStorage.ml" 62 1440 1448 "src/bootStorage.ml" 62 1440 1449
+type(
+  string option
+)
+"src/bootStorage.ml" 62 1440 1453 "src/bootStorage.ml" 62 1440 1458
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"src/bootStorage.ml" 62 1440 1459 "src/bootStorage.ml" 62 1440 1470
+type(
+  exn
+)
+"src/bootStorage.ml" 62 1440 1453 "src/bootStorage.ml" 62 1440 1470
+type(
+  unit
+)
+"src/bootStorage.ml" 60 1381 1387 "src/bootStorage.ml" 62 1440 1470
+type(
+  unit
+)
+"src/bootStorage.ml" 56 1286 1292 "src/bootStorage.ml" 62 1440 1470
+type(
+  unit
+)
+"src/bootStorage.ml" 55 1256 1260 "src/bootStorage.ml" 63 1471 1479
+type(
+  unit
+)
+"src/bootStorage.ml" 64 1481 1485 "src/bootStorage.ml" 64 1481 1486
+type(
+  (string, string) Hashtbl.t
+)
+ident(
+  int_ref h "src/bootStorage.ml" 54 1222 1230 "src/bootStorage.ml" 54 1222 1231
+)
+"src/bootStorage.ml" 55 1256 1260 "src/bootStorage.ml" 64 1481 1486
+type(
+  (string, string) Hashtbl.t
+)
+"src/bootStorage.ml" 54 1222 1226 "src/bootStorage.ml" 64 1481 1486
+type(
+  (string, string) Hashtbl.t
+)
+"src/bootStorage.ml" 53 1195 1199 "src/bootStorage.ml" 64 1481 1486
+type(
+  (string, string) Hashtbl.t
+)
+"src/bootStorage.ml" 52 1173 1190 "src/bootStorage.ml" 64 1481 1486
+type(
+  unit -> (string, string) Hashtbl.t
+)
+"src/bootStorage.ml" 71 1554 1562 "src/bootStorage.ml" 71 1554 1569
+type(
+  Dom_html.storage Js.t Js.optdef
+)
+ident(
+  def handler "src/bootStorage.ml" 71 1554 1605 "src/bootStorage.ml" 72 1606 1611
+)
+"src/bootStorage.ml" 71 1554 1572 "src/bootStorage.ml" 71 1554 1587
+type(
+  < alert : Js.js_string Js.t -> unit Js.meth;
+    applicationCache : Dom_html.applicationCache Js.t Js.readonly_prop;
+    blur : unit Js.meth;
+    cancelAnimationFrame : Dom_html.animation_frame_request_id ->
+                           unit Js.meth;
+    clearInterval : Dom_html.interval_id -> unit Js.meth;
+    clearTimeout : Dom_html.timeout_id -> unit Js.meth; close : unit Js.meth;
+    closed : bool Js.t Js.readonly_prop;
+    confirm : Js.js_string Js.t -> bool Js.t Js.meth;
+    document : Dom_html.document Js.t Js.readonly_prop; focus : unit Js.meth;
+    frameElement : Dom_html.element Js.t Js.opt Js.readonly_prop;
+    getSelection : Dom_html.selection Js.t Js.meth;
+    history : Dom_html.history Js.t Js.readonly_prop;
+    innerHeight : int Js.optdef Js.readonly_prop;
+    innerWidth : int Js.optdef Js.readonly_prop;
+    localStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    location : Dom_html.location Js.t Js.readonly_prop;
+    name : Js.js_string Js.t Js.prop;
+    navigator : Dom_html.navigator Js.t Js.readonly_prop;
+    onbeforeunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+                     Dom_html.event_listener Js.prop;
+    onblur : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    ondblclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondrag : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    ondragend : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ondragenter : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragleave : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragover : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondragstart : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondrop : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    onfocus : (Dom_html.window Js.t, Dom_html.event Js.t)
+              Dom_html.event_listener Js.prop;
+    onhashchange : (Dom_html.window Js.t, Dom_html.hashChangeEvent Js.t)
+                   Dom_html.event_listener Js.prop;
+    onkeydown : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onkeypress : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onkeyup : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    onload : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onmousedown : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmousemove : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseout : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onmouseover : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseup : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onoffline : (Dom_html.window Js.t, Dom_html.event Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ononline : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onorientationchange : (Dom_html.window Js.t, Dom_html.event Js.t)
+                          Dom_html.event_listener Js.prop;
+    onpopstate : (Dom_html.window Js.t, Dom_html.popStateEvent Js.t)
+                 Dom_html.event_listener Js.prop;
+    onresize : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    onscroll : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    open_ : Js.js_string Js.t ->
+            Js.js_string Js.t ->
+            Js.js_string Js.t Js.opt -> Dom_html.window Js.t Js.meth;
+    outerHeight : int Js.optdef Js.readonly_prop;
+    outerWidth : int Js.optdef Js.readonly_prop;
+    parent : Dom_html.window Js.t Js.readonly_prop; print : unit Js.meth;
+    prompt : Js.js_string Js.t ->
+             Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    requestAnimationFrame : (float -> unit) Js.callback ->
+                            Dom_html.animation_frame_request_id Js.meth;
+    screen : Dom_html.screen Js.t Js.readonly_prop;
+    scroll : int -> int -> unit Js.meth;
+    sessionStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    setInterval : (unit -> unit) Js.callback ->
+                  float -> Dom_html.interval_id Js.meth;
+    setTimeout : (unit -> unit) Js.callback ->
+                 float -> Dom_html.timeout_id Js.meth;
+    stop : unit Js.meth; top : Dom_html.window Js.t Js.readonly_prop;
+    undoManager : Dom_html.undoManager Js.t Js.readonly_prop >
+)
+ident(
+  int_ref x "src/bootStorage.ml" 71 1554 1572 "src/bootStorage.ml" 71 1554 1605
+)
+type(
+  < alert : Js.js_string Js.t -> unit Js.meth;
+    applicationCache : Dom_html.applicationCache Js.t Js.readonly_prop;
+    blur : unit Js.meth;
+    cancelAnimationFrame : Dom_html.animation_frame_request_id ->
+                           unit Js.meth;
+    clearInterval : Dom_html.interval_id -> unit Js.meth;
+    clearTimeout : Dom_html.timeout_id -> unit Js.meth; close : unit Js.meth;
+    closed : bool Js.t Js.readonly_prop;
+    confirm : Js.js_string Js.t -> bool Js.t Js.meth;
+    document : Dom_html.document Js.t Js.readonly_prop; focus : unit Js.meth;
+    frameElement : Dom_html.element Js.t Js.opt Js.readonly_prop;
+    getSelection : Dom_html.selection Js.t Js.meth;
+    history : Dom_html.history Js.t Js.readonly_prop;
+    innerHeight : int Js.optdef Js.readonly_prop;
+    innerWidth : int Js.optdef Js.readonly_prop;
+    localStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    location : Dom_html.location Js.t Js.readonly_prop;
+    name : Js.js_string Js.t Js.prop;
+    navigator : Dom_html.navigator Js.t Js.readonly_prop;
+    onbeforeunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+                     Dom_html.event_listener Js.prop;
+    onblur : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    ondblclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondrag : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    ondragend : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ondragenter : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragleave : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragover : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondragstart : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondrop : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    onfocus : (Dom_html.window Js.t, Dom_html.event Js.t)
+              Dom_html.event_listener Js.prop;
+    onhashchange : (Dom_html.window Js.t, Dom_html.hashChangeEvent Js.t)
+                   Dom_html.event_listener Js.prop;
+    onkeydown : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onkeypress : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onkeyup : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    onload : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onmousedown : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmousemove : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseout : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onmouseover : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseup : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onoffline : (Dom_html.window Js.t, Dom_html.event Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ononline : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onorientationchange : (Dom_html.window Js.t, Dom_html.event Js.t)
+                          Dom_html.event_listener Js.prop;
+    onpopstate : (Dom_html.window Js.t, Dom_html.popStateEvent Js.t)
+                 Dom_html.event_listener Js.prop;
+    onresize : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    onscroll : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    open_ : Js.js_string Js.t ->
+            Js.js_string Js.t ->
+            Js.js_string Js.t Js.opt -> Dom_html.window Js.t Js.meth;
+    outerHeight : int Js.optdef Js.readonly_prop;
+    outerWidth : int Js.optdef Js.readonly_prop;
+    parent : Dom_html.window Js.t Js.readonly_prop; print : unit Js.meth;
+    prompt : Js.js_string Js.t ->
+             Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    requestAnimationFrame : (float -> unit) Js.callback ->
+                            Dom_html.animation_frame_request_id Js.meth;
+    screen : Dom_html.screen Js.t Js.readonly_prop;
+    scroll : int -> int -> unit Js.meth;
+    sessionStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    setInterval : (unit -> unit) Js.callback ->
+                  float -> Dom_html.interval_id Js.meth;
+    setTimeout : (unit -> unit) Js.callback ->
+                 float -> Dom_html.timeout_id Js.meth;
+    stop : unit Js.meth; top : Dom_html.window Js.t Js.readonly_prop;
+    undoManager : Dom_html.undoManager Js.t Js.readonly_prop >
+  Js.t
+)
+type(
+  < alert : Js.js_string Js.t -> unit Js.meth;
+    applicationCache : Dom_html.applicationCache Js.t Js.readonly_prop;
+    blur : unit Js.meth;
+    cancelAnimationFrame : Dom_html.animation_frame_request_id ->
+                           unit Js.meth;
+    clearInterval : Dom_html.interval_id -> unit Js.meth;
+    clearTimeout : Dom_html.timeout_id -> unit Js.meth; close : unit Js.meth;
+    closed : bool Js.t Js.readonly_prop;
+    confirm : Js.js_string Js.t -> bool Js.t Js.meth;
+    document : Dom_html.document Js.t Js.readonly_prop; focus : unit Js.meth;
+    frameElement : Dom_html.element Js.t Js.opt Js.readonly_prop;
+    getSelection : Dom_html.selection Js.t Js.meth;
+    history : Dom_html.history Js.t Js.readonly_prop;
+    innerHeight : int Js.optdef Js.readonly_prop;
+    innerWidth : int Js.optdef Js.readonly_prop;
+    localStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    location : Dom_html.location Js.t Js.readonly_prop;
+    name : Js.js_string Js.t Js.prop;
+    navigator : Dom_html.navigator Js.t Js.readonly_prop;
+    onbeforeunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+                     Dom_html.event_listener Js.prop;
+    onblur : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    ondblclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondrag : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    ondragend : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ondragenter : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragleave : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragover : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondragstart : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondrop : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    onfocus : (Dom_html.window Js.t, Dom_html.event Js.t)
+              Dom_html.event_listener Js.prop;
+    onhashchange : (Dom_html.window Js.t, Dom_html.hashChangeEvent Js.t)
+                   Dom_html.event_listener Js.prop;
+    onkeydown : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onkeypress : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onkeyup : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    onload : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onmousedown : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmousemove : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseout : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onmouseover : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseup : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onoffline : (Dom_html.window Js.t, Dom_html.event Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ononline : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onorientationchange : (Dom_html.window Js.t, Dom_html.event Js.t)
+                          Dom_html.event_listener Js.prop;
+    onpopstate : (Dom_html.window Js.t, Dom_html.popStateEvent Js.t)
+                 Dom_html.event_listener Js.prop;
+    onresize : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    onscroll : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    open_ : Js.js_string Js.t ->
+            Js.js_string Js.t ->
+            Js.js_string Js.t Js.opt -> Dom_html.window Js.t Js.meth;
+    outerHeight : int Js.optdef Js.readonly_prop;
+    outerWidth : int Js.optdef Js.readonly_prop;
+    parent : Dom_html.window Js.t Js.readonly_prop; print : unit Js.meth;
+    prompt : Js.js_string Js.t ->
+             Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    requestAnimationFrame : (float -> unit) Js.callback ->
+                            Dom_html.animation_frame_request_id Js.meth;
+    screen : Dom_html.screen Js.t Js.readonly_prop;
+    scroll : int -> int -> unit Js.meth;
+    sessionStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    setInterval : (unit -> unit) Js.callback ->
+                  float -> Dom_html.interval_id Js.meth;
+    setTimeout : (unit -> unit) Js.callback ->
+                 float -> Dom_html.timeout_id Js.meth;
+    stop : unit Js.meth; top : Dom_html.window Js.t Js.readonly_prop;
+    undoManager : Dom_html.undoManager Js.t Js.readonly_prop >
+  Js.t
+)
+type(
+  Dom_html.window Js.t
+)
+ident(
+  int_ref jsoo_obj "src/bootStorage.ml" 71 1554 1572 "src/bootStorage.ml" 71 1554 1605
+)
+type(
+  Dom_html.window Js.t
+)
+ident(
+  ext_ref Dom_html.window
+)
+"src/bootStorage.ml" 71 1554 1572 "src/bootStorage.ml" 71 1554 1605
+call(
+  tail
+)
+type(
+  Dom_html.storage Js.t Js.optdef
+)
+type(
+  Dom_html.storage Js.t Js.optdef
+)
+type(
+  Dom_html.storage Js.t Js.optdef
+)
+type(
+  Dom_html.storage Js.t Js.optdef
+)
+ident(
+  int_ref M.res "src/bootStorage.ml" 71 1554 1572 "src/bootStorage.ml" 71 1554 1605
+)
+type(
+  Dom_html.storage Js.t Js.optdef
+)
+type(
+  Dom_html.storage Js.t Js.optdef
+)
+type(
+  Dom_html.storage Js.t Js.optdef
+)
+type(
+  Dom_html.storage Js.t Js.optdef
+)
+ident(
+  int_ref jsoo_res "src/bootStorage.ml" 71 1554 1572 "src/bootStorage.ml" 71 1554 1605
+)
+type(
+  < alert : Js.js_string Js.t -> unit Js.meth;
+    applicationCache : Dom_html.applicationCache Js.t Js.readonly_prop;
+    blur : unit Js.meth;
+    cancelAnimationFrame : Dom_html.animation_frame_request_id ->
+                           unit Js.meth;
+    clearInterval : Dom_html.interval_id -> unit Js.meth;
+    clearTimeout : Dom_html.timeout_id -> unit Js.meth; close : unit Js.meth;
+    closed : bool Js.t Js.readonly_prop;
+    confirm : Js.js_string Js.t -> bool Js.t Js.meth;
+    document : Dom_html.document Js.t Js.readonly_prop; focus : unit Js.meth;
+    frameElement : Dom_html.element Js.t Js.opt Js.readonly_prop;
+    getSelection : Dom_html.selection Js.t Js.meth;
+    history : Dom_html.history Js.t Js.readonly_prop;
+    innerHeight : int Js.optdef Js.readonly_prop;
+    innerWidth : int Js.optdef Js.readonly_prop;
+    localStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    location : Dom_html.location Js.t Js.readonly_prop;
+    name : Js.js_string Js.t Js.prop;
+    navigator : Dom_html.navigator Js.t Js.readonly_prop;
+    onbeforeunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+                     Dom_html.event_listener Js.prop;
+    onblur : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    ondblclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondrag : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    ondragend : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ondragenter : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragleave : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragover : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondragstart : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondrop : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    onfocus : (Dom_html.window Js.t, Dom_html.event Js.t)
+              Dom_html.event_listener Js.prop;
+    onhashchange : (Dom_html.window Js.t, Dom_html.hashChangeEvent Js.t)
+                   Dom_html.event_listener Js.prop;
+    onkeydown : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onkeypress : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onkeyup : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    onload : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onmousedown : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmousemove : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseout : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onmouseover : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseup : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onoffline : (Dom_html.window Js.t, Dom_html.event Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ononline : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onorientationchange : (Dom_html.window Js.t, Dom_html.event Js.t)
+                          Dom_html.event_listener Js.prop;
+    onpopstate : (Dom_html.window Js.t, Dom_html.popStateEvent Js.t)
+                 Dom_html.event_listener Js.prop;
+    onresize : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    onscroll : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    open_ : Js.js_string Js.t ->
+            Js.js_string Js.t ->
+            Js.js_string Js.t Js.opt -> Dom_html.window Js.t Js.meth;
+    outerHeight : int Js.optdef Js.readonly_prop;
+    outerWidth : int Js.optdef Js.readonly_prop;
+    parent : Dom_html.window Js.t Js.readonly_prop; print : unit Js.meth;
+    prompt : Js.js_string Js.t ->
+             Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    requestAnimationFrame : (float -> unit) Js.callback ->
+                            Dom_html.animation_frame_request_id Js.meth;
+    screen : Dom_html.screen Js.t Js.readonly_prop;
+    scroll : int -> int -> unit Js.meth;
+    sessionStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    setInterval : (unit -> unit) Js.callback ->
+                  float -> Dom_html.interval_id Js.meth;
+    setTimeout : (unit -> unit) Js.callback ->
+                 float -> Dom_html.timeout_id Js.meth;
+    stop : unit Js.meth; top : Dom_html.window Js.t Js.readonly_prop;
+    undoManager : Dom_html.undoManager Js.t Js.readonly_prop > ->
+  < get : Dom_html.storage Js.t Js.optdef > Js.gen_prop
+)
+type(
+  < get : Dom_html.storage Js.t Js.optdef > Js.gen_prop
+)
+type(
+  Dom_html.storage Js.t Js.optdef Js.readonly_prop
+)
+type(
+  < alert : Js.js_string Js.t -> unit Js.meth;
+    applicationCache : Dom_html.applicationCache Js.t Js.readonly_prop;
+    blur : unit Js.meth;
+    cancelAnimationFrame : Dom_html.animation_frame_request_id ->
+                           unit Js.meth;
+    clearInterval : Dom_html.interval_id -> unit Js.meth;
+    clearTimeout : Dom_html.timeout_id -> unit Js.meth; close : unit Js.meth;
+    closed : bool Js.t Js.readonly_prop;
+    confirm : Js.js_string Js.t -> bool Js.t Js.meth;
+    document : Dom_html.document Js.t Js.readonly_prop; focus : unit Js.meth;
+    frameElement : Dom_html.element Js.t Js.opt Js.readonly_prop;
+    getSelection : Dom_html.selection Js.t Js.meth;
+    history : Dom_html.history Js.t Js.readonly_prop;
+    innerHeight : int Js.optdef Js.readonly_prop;
+    innerWidth : int Js.optdef Js.readonly_prop;
+    localStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    location : Dom_html.location Js.t Js.readonly_prop;
+    name : Js.js_string Js.t Js.prop;
+    navigator : Dom_html.navigator Js.t Js.readonly_prop;
+    onbeforeunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+                     Dom_html.event_listener Js.prop;
+    onblur : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    ondblclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondrag : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    ondragend : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ondragenter : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragleave : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragover : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondragstart : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondrop : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    onfocus : (Dom_html.window Js.t, Dom_html.event Js.t)
+              Dom_html.event_listener Js.prop;
+    onhashchange : (Dom_html.window Js.t, Dom_html.hashChangeEvent Js.t)
+                   Dom_html.event_listener Js.prop;
+    onkeydown : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onkeypress : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onkeyup : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    onload : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onmousedown : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmousemove : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseout : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onmouseover : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseup : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onoffline : (Dom_html.window Js.t, Dom_html.event Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ononline : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onorientationchange : (Dom_html.window Js.t, Dom_html.event Js.t)
+                          Dom_html.event_listener Js.prop;
+    onpopstate : (Dom_html.window Js.t, Dom_html.popStateEvent Js.t)
+                 Dom_html.event_listener Js.prop;
+    onresize : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    onscroll : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    open_ : Js.js_string Js.t ->
+            Js.js_string Js.t ->
+            Js.js_string Js.t Js.opt -> Dom_html.window Js.t Js.meth;
+    outerHeight : int Js.optdef Js.readonly_prop;
+    outerWidth : int Js.optdef Js.readonly_prop;
+    parent : Dom_html.window Js.t Js.readonly_prop; print : unit Js.meth;
+    prompt : Js.js_string Js.t ->
+             Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    requestAnimationFrame : (float -> unit) Js.callback ->
+                            Dom_html.animation_frame_request_id Js.meth;
+    screen : Dom_html.screen Js.t Js.readonly_prop;
+    scroll : int -> int -> unit Js.meth;
+    sessionStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    setInterval : (unit -> unit) Js.callback ->
+                  float -> Dom_html.interval_id Js.meth;
+    setTimeout : (unit -> unit) Js.callback ->
+                 float -> Dom_html.timeout_id Js.meth;
+    stop : unit Js.meth; top : Dom_html.window Js.t Js.readonly_prop;
+    undoManager : Dom_html.undoManager Js.t Js.readonly_prop >
+)
+ident(
+  def x "src/bootStorage.ml" 71 1554 1572 "src/bootStorage.ml" 71 1554 1605
+)
+type(
+  < alert : Js.js_string Js.t -> unit Js.meth;
+    applicationCache : Dom_html.applicationCache Js.t Js.readonly_prop;
+    blur : unit Js.meth;
+    cancelAnimationFrame : Dom_html.animation_frame_request_id ->
+                           unit Js.meth;
+    clearInterval : Dom_html.interval_id -> unit Js.meth;
+    clearTimeout : Dom_html.timeout_id -> unit Js.meth; close : unit Js.meth;
+    closed : bool Js.t Js.readonly_prop;
+    confirm : Js.js_string Js.t -> bool Js.t Js.meth;
+    document : Dom_html.document Js.t Js.readonly_prop; focus : unit Js.meth;
+    frameElement : Dom_html.element Js.t Js.opt Js.readonly_prop;
+    getSelection : Dom_html.selection Js.t Js.meth;
+    history : Dom_html.history Js.t Js.readonly_prop;
+    innerHeight : int Js.optdef Js.readonly_prop;
+    innerWidth : int Js.optdef Js.readonly_prop;
+    localStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    location : Dom_html.location Js.t Js.readonly_prop;
+    name : Js.js_string Js.t Js.prop;
+    navigator : Dom_html.navigator Js.t Js.readonly_prop;
+    onbeforeunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+                     Dom_html.event_listener Js.prop;
+    onblur : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    ondblclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondrag : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    ondragend : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ondragenter : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragleave : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragover : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondragstart : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondrop : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    onfocus : (Dom_html.window Js.t, Dom_html.event Js.t)
+              Dom_html.event_listener Js.prop;
+    onhashchange : (Dom_html.window Js.t, Dom_html.hashChangeEvent Js.t)
+                   Dom_html.event_listener Js.prop;
+    onkeydown : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onkeypress : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onkeyup : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    onload : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onmousedown : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmousemove : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseout : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onmouseover : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseup : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onoffline : (Dom_html.window Js.t, Dom_html.event Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ononline : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onorientationchange : (Dom_html.window Js.t, Dom_html.event Js.t)
+                          Dom_html.event_listener Js.prop;
+    onpopstate : (Dom_html.window Js.t, Dom_html.popStateEvent Js.t)
+                 Dom_html.event_listener Js.prop;
+    onresize : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    onscroll : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    open_ : Js.js_string Js.t ->
+            Js.js_string Js.t ->
+            Js.js_string Js.t Js.opt -> Dom_html.window Js.t Js.meth;
+    outerHeight : int Js.optdef Js.readonly_prop;
+    outerWidth : int Js.optdef Js.readonly_prop;
+    parent : Dom_html.window Js.t Js.readonly_prop; print : unit Js.meth;
+    prompt : Js.js_string Js.t ->
+             Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    requestAnimationFrame : (float -> unit) Js.callback ->
+                            Dom_html.animation_frame_request_id Js.meth;
+    screen : Dom_html.screen Js.t Js.readonly_prop;
+    scroll : int -> int -> unit Js.meth;
+    sessionStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    setInterval : (unit -> unit) Js.callback ->
+                  float -> Dom_html.interval_id Js.meth;
+    setTimeout : (unit -> unit) Js.callback ->
+                 float -> Dom_html.timeout_id Js.meth;
+    stop : unit Js.meth; top : Dom_html.window Js.t Js.readonly_prop;
+    undoManager : Dom_html.undoManager Js.t Js.readonly_prop > ->
+  < get : Dom_html.storage Js.t Js.optdef > Js.gen_prop
+)
+type(
+  < alert : Js.js_string Js.t -> unit Js.meth;
+    applicationCache : Dom_html.applicationCache Js.t Js.readonly_prop;
+    blur : unit Js.meth;
+    cancelAnimationFrame : Dom_html.animation_frame_request_id ->
+                           unit Js.meth;
+    clearInterval : Dom_html.interval_id -> unit Js.meth;
+    clearTimeout : Dom_html.timeout_id -> unit Js.meth; close : unit Js.meth;
+    closed : bool Js.t Js.readonly_prop;
+    confirm : Js.js_string Js.t -> bool Js.t Js.meth;
+    document : Dom_html.document Js.t Js.readonly_prop; focus : unit Js.meth;
+    frameElement : Dom_html.element Js.t Js.opt Js.readonly_prop;
+    getSelection : Dom_html.selection Js.t Js.meth;
+    history : Dom_html.history Js.t Js.readonly_prop;
+    innerHeight : int Js.optdef Js.readonly_prop;
+    innerWidth : int Js.optdef Js.readonly_prop;
+    localStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    location : Dom_html.location Js.t Js.readonly_prop;
+    name : Js.js_string Js.t Js.prop;
+    navigator : Dom_html.navigator Js.t Js.readonly_prop;
+    onbeforeunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+                     Dom_html.event_listener Js.prop;
+    onblur : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    ondblclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondrag : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    ondragend : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ondragenter : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragleave : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragover : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondragstart : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondrop : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    onfocus : (Dom_html.window Js.t, Dom_html.event Js.t)
+              Dom_html.event_listener Js.prop;
+    onhashchange : (Dom_html.window Js.t, Dom_html.hashChangeEvent Js.t)
+                   Dom_html.event_listener Js.prop;
+    onkeydown : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onkeypress : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onkeyup : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    onload : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onmousedown : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmousemove : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseout : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onmouseover : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseup : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onoffline : (Dom_html.window Js.t, Dom_html.event Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ononline : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onorientationchange : (Dom_html.window Js.t, Dom_html.event Js.t)
+                          Dom_html.event_listener Js.prop;
+    onpopstate : (Dom_html.window Js.t, Dom_html.popStateEvent Js.t)
+                 Dom_html.event_listener Js.prop;
+    onresize : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    onscroll : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    open_ : Js.js_string Js.t ->
+            Js.js_string Js.t ->
+            Js.js_string Js.t Js.opt -> Dom_html.window Js.t Js.meth;
+    outerHeight : int Js.optdef Js.readonly_prop;
+    outerWidth : int Js.optdef Js.readonly_prop;
+    parent : Dom_html.window Js.t Js.readonly_prop; print : unit Js.meth;
+    prompt : Js.js_string Js.t ->
+             Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    requestAnimationFrame : (float -> unit) Js.callback ->
+                            Dom_html.animation_frame_request_id Js.meth;
+    screen : Dom_html.screen Js.t Js.readonly_prop;
+    scroll : int -> int -> unit Js.meth;
+    sessionStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    setInterval : (unit -> unit) Js.callback ->
+                  float -> Dom_html.interval_id Js.meth;
+    setTimeout : (unit -> unit) Js.callback ->
+                 float -> Dom_html.timeout_id Js.meth;
+    stop : unit Js.meth; top : Dom_html.window Js.t Js.readonly_prop;
+    undoManager : Dom_html.undoManager Js.t Js.readonly_prop >
+  Js.t
+)
+type(
+  Dom_html.storage Js.t Js.optdef
+)
+ident(
+  def res "src/bootStorage.ml" 71 1554 1605 "src/bootStorage.ml" 71 1554 1605
+)
+type(
+  'a
+)
+type(
+  string
+)
+type(
+  Dom_html.window Js.t
+)
+ident(
+  int_ref jsoo_obj "src/bootStorage.ml" 71 1554 1572 "src/bootStorage.ml" 71 1554 1605
+)
+type(
+  Dom_html.window Js.t -> string -> 'a
+)
+ident(
+  ext_ref Js.Unsafe.get
+)
+type(
+  'a
+)
+ident(
+  def jsoo_res "src/bootStorage.ml" 71 1554 1572 "src/bootStorage.ml" 71 1554 1605
+)
+type(
+  Dom_html.window Js.t
+)
+ident(
+  def jsoo_obj "src/bootStorage.ml" 71 1554 1572 "src/bootStorage.ml" 71 1554 1605
+)
+"src/bootStorage.ml" 70 1532 1534 "src/bootStorage.ml" 72 1606 1612
+call(
+  stack
+)
+"src/bootStorage.ml" 77 1671 1679 "src/bootStorage.ml" 77 1671 1686
+type(
+  Dom_html.storage Js.t Js.optdef
+)
+ident(
+  def handler "src/bootStorage.ml" 77 1671 1720 "src/bootStorage.ml" 78 1721 1726
+)
+"src/bootStorage.ml" 77 1671 1689 "src/bootStorage.ml" 77 1671 1704
+type(
+  < alert : Js.js_string Js.t -> unit Js.meth;
+    applicationCache : Dom_html.applicationCache Js.t Js.readonly_prop;
+    blur : unit Js.meth;
+    cancelAnimationFrame : Dom_html.animation_frame_request_id ->
+                           unit Js.meth;
+    clearInterval : Dom_html.interval_id -> unit Js.meth;
+    clearTimeout : Dom_html.timeout_id -> unit Js.meth; close : unit Js.meth;
+    closed : bool Js.t Js.readonly_prop;
+    confirm : Js.js_string Js.t -> bool Js.t Js.meth;
+    document : Dom_html.document Js.t Js.readonly_prop; focus : unit Js.meth;
+    frameElement : Dom_html.element Js.t Js.opt Js.readonly_prop;
+    getSelection : Dom_html.selection Js.t Js.meth;
+    history : Dom_html.history Js.t Js.readonly_prop;
+    innerHeight : int Js.optdef Js.readonly_prop;
+    innerWidth : int Js.optdef Js.readonly_prop;
+    localStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    location : Dom_html.location Js.t Js.readonly_prop;
+    name : Js.js_string Js.t Js.prop;
+    navigator : Dom_html.navigator Js.t Js.readonly_prop;
+    onbeforeunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+                     Dom_html.event_listener Js.prop;
+    onblur : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    ondblclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondrag : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    ondragend : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ondragenter : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragleave : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragover : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondragstart : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondrop : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    onfocus : (Dom_html.window Js.t, Dom_html.event Js.t)
+              Dom_html.event_listener Js.prop;
+    onhashchange : (Dom_html.window Js.t, Dom_html.hashChangeEvent Js.t)
+                   Dom_html.event_listener Js.prop;
+    onkeydown : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onkeypress : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onkeyup : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    onload : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onmousedown : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmousemove : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseout : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onmouseover : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseup : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onoffline : (Dom_html.window Js.t, Dom_html.event Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ononline : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onorientationchange : (Dom_html.window Js.t, Dom_html.event Js.t)
+                          Dom_html.event_listener Js.prop;
+    onpopstate : (Dom_html.window Js.t, Dom_html.popStateEvent Js.t)
+                 Dom_html.event_listener Js.prop;
+    onresize : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    onscroll : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    open_ : Js.js_string Js.t ->
+            Js.js_string Js.t ->
+            Js.js_string Js.t Js.opt -> Dom_html.window Js.t Js.meth;
+    outerHeight : int Js.optdef Js.readonly_prop;
+    outerWidth : int Js.optdef Js.readonly_prop;
+    parent : Dom_html.window Js.t Js.readonly_prop; print : unit Js.meth;
+    prompt : Js.js_string Js.t ->
+             Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    requestAnimationFrame : (float -> unit) Js.callback ->
+                            Dom_html.animation_frame_request_id Js.meth;
+    screen : Dom_html.screen Js.t Js.readonly_prop;
+    scroll : int -> int -> unit Js.meth;
+    sessionStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    setInterval : (unit -> unit) Js.callback ->
+                  float -> Dom_html.interval_id Js.meth;
+    setTimeout : (unit -> unit) Js.callback ->
+                 float -> Dom_html.timeout_id Js.meth;
+    stop : unit Js.meth; top : Dom_html.window Js.t Js.readonly_prop;
+    undoManager : Dom_html.undoManager Js.t Js.readonly_prop >
+)
+ident(
+  int_ref x "src/bootStorage.ml" 77 1671 1689 "src/bootStorage.ml" 77 1671 1720
+)
+type(
+  < alert : Js.js_string Js.t -> unit Js.meth;
+    applicationCache : Dom_html.applicationCache Js.t Js.readonly_prop;
+    blur : unit Js.meth;
+    cancelAnimationFrame : Dom_html.animation_frame_request_id ->
+                           unit Js.meth;
+    clearInterval : Dom_html.interval_id -> unit Js.meth;
+    clearTimeout : Dom_html.timeout_id -> unit Js.meth; close : unit Js.meth;
+    closed : bool Js.t Js.readonly_prop;
+    confirm : Js.js_string Js.t -> bool Js.t Js.meth;
+    document : Dom_html.document Js.t Js.readonly_prop; focus : unit Js.meth;
+    frameElement : Dom_html.element Js.t Js.opt Js.readonly_prop;
+    getSelection : Dom_html.selection Js.t Js.meth;
+    history : Dom_html.history Js.t Js.readonly_prop;
+    innerHeight : int Js.optdef Js.readonly_prop;
+    innerWidth : int Js.optdef Js.readonly_prop;
+    localStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    location : Dom_html.location Js.t Js.readonly_prop;
+    name : Js.js_string Js.t Js.prop;
+    navigator : Dom_html.navigator Js.t Js.readonly_prop;
+    onbeforeunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+                     Dom_html.event_listener Js.prop;
+    onblur : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    ondblclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondrag : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    ondragend : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ondragenter : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragleave : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragover : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondragstart : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondrop : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    onfocus : (Dom_html.window Js.t, Dom_html.event Js.t)
+              Dom_html.event_listener Js.prop;
+    onhashchange : (Dom_html.window Js.t, Dom_html.hashChangeEvent Js.t)
+                   Dom_html.event_listener Js.prop;
+    onkeydown : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onkeypress : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onkeyup : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    onload : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onmousedown : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmousemove : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseout : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onmouseover : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseup : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onoffline : (Dom_html.window Js.t, Dom_html.event Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ononline : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onorientationchange : (Dom_html.window Js.t, Dom_html.event Js.t)
+                          Dom_html.event_listener Js.prop;
+    onpopstate : (Dom_html.window Js.t, Dom_html.popStateEvent Js.t)
+                 Dom_html.event_listener Js.prop;
+    onresize : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    onscroll : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    open_ : Js.js_string Js.t ->
+            Js.js_string Js.t ->
+            Js.js_string Js.t Js.opt -> Dom_html.window Js.t Js.meth;
+    outerHeight : int Js.optdef Js.readonly_prop;
+    outerWidth : int Js.optdef Js.readonly_prop;
+    parent : Dom_html.window Js.t Js.readonly_prop; print : unit Js.meth;
+    prompt : Js.js_string Js.t ->
+             Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    requestAnimationFrame : (float -> unit) Js.callback ->
+                            Dom_html.animation_frame_request_id Js.meth;
+    screen : Dom_html.screen Js.t Js.readonly_prop;
+    scroll : int -> int -> unit Js.meth;
+    sessionStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    setInterval : (unit -> unit) Js.callback ->
+                  float -> Dom_html.interval_id Js.meth;
+    setTimeout : (unit -> unit) Js.callback ->
+                 float -> Dom_html.timeout_id Js.meth;
+    stop : unit Js.meth; top : Dom_html.window Js.t Js.readonly_prop;
+    undoManager : Dom_html.undoManager Js.t Js.readonly_prop >
+  Js.t
+)
+type(
+  < alert : Js.js_string Js.t -> unit Js.meth;
+    applicationCache : Dom_html.applicationCache Js.t Js.readonly_prop;
+    blur : unit Js.meth;
+    cancelAnimationFrame : Dom_html.animation_frame_request_id ->
+                           unit Js.meth;
+    clearInterval : Dom_html.interval_id -> unit Js.meth;
+    clearTimeout : Dom_html.timeout_id -> unit Js.meth; close : unit Js.meth;
+    closed : bool Js.t Js.readonly_prop;
+    confirm : Js.js_string Js.t -> bool Js.t Js.meth;
+    document : Dom_html.document Js.t Js.readonly_prop; focus : unit Js.meth;
+    frameElement : Dom_html.element Js.t Js.opt Js.readonly_prop;
+    getSelection : Dom_html.selection Js.t Js.meth;
+    history : Dom_html.history Js.t Js.readonly_prop;
+    innerHeight : int Js.optdef Js.readonly_prop;
+    innerWidth : int Js.optdef Js.readonly_prop;
+    localStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    location : Dom_html.location Js.t Js.readonly_prop;
+    name : Js.js_string Js.t Js.prop;
+    navigator : Dom_html.navigator Js.t Js.readonly_prop;
+    onbeforeunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+                     Dom_html.event_listener Js.prop;
+    onblur : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    ondblclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondrag : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    ondragend : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ondragenter : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragleave : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragover : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondragstart : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondrop : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    onfocus : (Dom_html.window Js.t, Dom_html.event Js.t)
+              Dom_html.event_listener Js.prop;
+    onhashchange : (Dom_html.window Js.t, Dom_html.hashChangeEvent Js.t)
+                   Dom_html.event_listener Js.prop;
+    onkeydown : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onkeypress : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onkeyup : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    onload : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onmousedown : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmousemove : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseout : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onmouseover : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseup : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onoffline : (Dom_html.window Js.t, Dom_html.event Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ononline : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onorientationchange : (Dom_html.window Js.t, Dom_html.event Js.t)
+                          Dom_html.event_listener Js.prop;
+    onpopstate : (Dom_html.window Js.t, Dom_html.popStateEvent Js.t)
+                 Dom_html.event_listener Js.prop;
+    onresize : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    onscroll : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    open_ : Js.js_string Js.t ->
+            Js.js_string Js.t ->
+            Js.js_string Js.t Js.opt -> Dom_html.window Js.t Js.meth;
+    outerHeight : int Js.optdef Js.readonly_prop;
+    outerWidth : int Js.optdef Js.readonly_prop;
+    parent : Dom_html.window Js.t Js.readonly_prop; print : unit Js.meth;
+    prompt : Js.js_string Js.t ->
+             Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    requestAnimationFrame : (float -> unit) Js.callback ->
+                            Dom_html.animation_frame_request_id Js.meth;
+    screen : Dom_html.screen Js.t Js.readonly_prop;
+    scroll : int -> int -> unit Js.meth;
+    sessionStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    setInterval : (unit -> unit) Js.callback ->
+                  float -> Dom_html.interval_id Js.meth;
+    setTimeout : (unit -> unit) Js.callback ->
+                 float -> Dom_html.timeout_id Js.meth;
+    stop : unit Js.meth; top : Dom_html.window Js.t Js.readonly_prop;
+    undoManager : Dom_html.undoManager Js.t Js.readonly_prop >
+  Js.t
+)
+type(
+  Dom_html.window Js.t
+)
+ident(
+  int_ref jsoo_obj "src/bootStorage.ml" 77 1671 1689 "src/bootStorage.ml" 77 1671 1720
+)
+type(
+  Dom_html.window Js.t
+)
+ident(
+  ext_ref Dom_html.window
+)
+"src/bootStorage.ml" 77 1671 1689 "src/bootStorage.ml" 77 1671 1720
+call(
+  tail
+)
+type(
+  Dom_html.storage Js.t Js.optdef
+)
+type(
+  Dom_html.storage Js.t Js.optdef
+)
+type(
+  Dom_html.storage Js.t Js.optdef
+)
+type(
+  Dom_html.storage Js.t Js.optdef
+)
+ident(
+  int_ref M.res "src/bootStorage.ml" 77 1671 1689 "src/bootStorage.ml" 77 1671 1720
+)
+type(
+  Dom_html.storage Js.t Js.optdef
+)
+type(
+  Dom_html.storage Js.t Js.optdef
+)
+type(
+  Dom_html.storage Js.t Js.optdef
+)
+type(
+  Dom_html.storage Js.t Js.optdef
+)
+ident(
+  int_ref jsoo_res "src/bootStorage.ml" 77 1671 1689 "src/bootStorage.ml" 77 1671 1720
+)
+type(
+  < alert : Js.js_string Js.t -> unit Js.meth;
+    applicationCache : Dom_html.applicationCache Js.t Js.readonly_prop;
+    blur : unit Js.meth;
+    cancelAnimationFrame : Dom_html.animation_frame_request_id ->
+                           unit Js.meth;
+    clearInterval : Dom_html.interval_id -> unit Js.meth;
+    clearTimeout : Dom_html.timeout_id -> unit Js.meth; close : unit Js.meth;
+    closed : bool Js.t Js.readonly_prop;
+    confirm : Js.js_string Js.t -> bool Js.t Js.meth;
+    document : Dom_html.document Js.t Js.readonly_prop; focus : unit Js.meth;
+    frameElement : Dom_html.element Js.t Js.opt Js.readonly_prop;
+    getSelection : Dom_html.selection Js.t Js.meth;
+    history : Dom_html.history Js.t Js.readonly_prop;
+    innerHeight : int Js.optdef Js.readonly_prop;
+    innerWidth : int Js.optdef Js.readonly_prop;
+    localStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    location : Dom_html.location Js.t Js.readonly_prop;
+    name : Js.js_string Js.t Js.prop;
+    navigator : Dom_html.navigator Js.t Js.readonly_prop;
+    onbeforeunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+                     Dom_html.event_listener Js.prop;
+    onblur : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    ondblclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondrag : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    ondragend : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ondragenter : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragleave : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragover : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondragstart : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondrop : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    onfocus : (Dom_html.window Js.t, Dom_html.event Js.t)
+              Dom_html.event_listener Js.prop;
+    onhashchange : (Dom_html.window Js.t, Dom_html.hashChangeEvent Js.t)
+                   Dom_html.event_listener Js.prop;
+    onkeydown : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onkeypress : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onkeyup : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    onload : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onmousedown : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmousemove : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseout : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onmouseover : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseup : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onoffline : (Dom_html.window Js.t, Dom_html.event Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ononline : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onorientationchange : (Dom_html.window Js.t, Dom_html.event Js.t)
+                          Dom_html.event_listener Js.prop;
+    onpopstate : (Dom_html.window Js.t, Dom_html.popStateEvent Js.t)
+                 Dom_html.event_listener Js.prop;
+    onresize : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    onscroll : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    open_ : Js.js_string Js.t ->
+            Js.js_string Js.t ->
+            Js.js_string Js.t Js.opt -> Dom_html.window Js.t Js.meth;
+    outerHeight : int Js.optdef Js.readonly_prop;
+    outerWidth : int Js.optdef Js.readonly_prop;
+    parent : Dom_html.window Js.t Js.readonly_prop; print : unit Js.meth;
+    prompt : Js.js_string Js.t ->
+             Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    requestAnimationFrame : (float -> unit) Js.callback ->
+                            Dom_html.animation_frame_request_id Js.meth;
+    screen : Dom_html.screen Js.t Js.readonly_prop;
+    scroll : int -> int -> unit Js.meth;
+    sessionStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    setInterval : (unit -> unit) Js.callback ->
+                  float -> Dom_html.interval_id Js.meth;
+    setTimeout : (unit -> unit) Js.callback ->
+                 float -> Dom_html.timeout_id Js.meth;
+    stop : unit Js.meth; top : Dom_html.window Js.t Js.readonly_prop;
+    undoManager : Dom_html.undoManager Js.t Js.readonly_prop > ->
+  < get : Dom_html.storage Js.t Js.optdef > Js.gen_prop
+)
+type(
+  < get : Dom_html.storage Js.t Js.optdef > Js.gen_prop
+)
+type(
+  Dom_html.storage Js.t Js.optdef Js.readonly_prop
+)
+type(
+  < alert : Js.js_string Js.t -> unit Js.meth;
+    applicationCache : Dom_html.applicationCache Js.t Js.readonly_prop;
+    blur : unit Js.meth;
+    cancelAnimationFrame : Dom_html.animation_frame_request_id ->
+                           unit Js.meth;
+    clearInterval : Dom_html.interval_id -> unit Js.meth;
+    clearTimeout : Dom_html.timeout_id -> unit Js.meth; close : unit Js.meth;
+    closed : bool Js.t Js.readonly_prop;
+    confirm : Js.js_string Js.t -> bool Js.t Js.meth;
+    document : Dom_html.document Js.t Js.readonly_prop; focus : unit Js.meth;
+    frameElement : Dom_html.element Js.t Js.opt Js.readonly_prop;
+    getSelection : Dom_html.selection Js.t Js.meth;
+    history : Dom_html.history Js.t Js.readonly_prop;
+    innerHeight : int Js.optdef Js.readonly_prop;
+    innerWidth : int Js.optdef Js.readonly_prop;
+    localStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    location : Dom_html.location Js.t Js.readonly_prop;
+    name : Js.js_string Js.t Js.prop;
+    navigator : Dom_html.navigator Js.t Js.readonly_prop;
+    onbeforeunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+                     Dom_html.event_listener Js.prop;
+    onblur : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    ondblclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondrag : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    ondragend : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ondragenter : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragleave : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragover : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondragstart : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondrop : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    onfocus : (Dom_html.window Js.t, Dom_html.event Js.t)
+              Dom_html.event_listener Js.prop;
+    onhashchange : (Dom_html.window Js.t, Dom_html.hashChangeEvent Js.t)
+                   Dom_html.event_listener Js.prop;
+    onkeydown : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onkeypress : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onkeyup : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    onload : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onmousedown : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmousemove : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseout : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onmouseover : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseup : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onoffline : (Dom_html.window Js.t, Dom_html.event Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ononline : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onorientationchange : (Dom_html.window Js.t, Dom_html.event Js.t)
+                          Dom_html.event_listener Js.prop;
+    onpopstate : (Dom_html.window Js.t, Dom_html.popStateEvent Js.t)
+                 Dom_html.event_listener Js.prop;
+    onresize : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    onscroll : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    open_ : Js.js_string Js.t ->
+            Js.js_string Js.t ->
+            Js.js_string Js.t Js.opt -> Dom_html.window Js.t Js.meth;
+    outerHeight : int Js.optdef Js.readonly_prop;
+    outerWidth : int Js.optdef Js.readonly_prop;
+    parent : Dom_html.window Js.t Js.readonly_prop; print : unit Js.meth;
+    prompt : Js.js_string Js.t ->
+             Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    requestAnimationFrame : (float -> unit) Js.callback ->
+                            Dom_html.animation_frame_request_id Js.meth;
+    screen : Dom_html.screen Js.t Js.readonly_prop;
+    scroll : int -> int -> unit Js.meth;
+    sessionStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    setInterval : (unit -> unit) Js.callback ->
+                  float -> Dom_html.interval_id Js.meth;
+    setTimeout : (unit -> unit) Js.callback ->
+                 float -> Dom_html.timeout_id Js.meth;
+    stop : unit Js.meth; top : Dom_html.window Js.t Js.readonly_prop;
+    undoManager : Dom_html.undoManager Js.t Js.readonly_prop >
+)
+ident(
+  def x "src/bootStorage.ml" 77 1671 1689 "src/bootStorage.ml" 77 1671 1720
+)
+type(
+  < alert : Js.js_string Js.t -> unit Js.meth;
+    applicationCache : Dom_html.applicationCache Js.t Js.readonly_prop;
+    blur : unit Js.meth;
+    cancelAnimationFrame : Dom_html.animation_frame_request_id ->
+                           unit Js.meth;
+    clearInterval : Dom_html.interval_id -> unit Js.meth;
+    clearTimeout : Dom_html.timeout_id -> unit Js.meth; close : unit Js.meth;
+    closed : bool Js.t Js.readonly_prop;
+    confirm : Js.js_string Js.t -> bool Js.t Js.meth;
+    document : Dom_html.document Js.t Js.readonly_prop; focus : unit Js.meth;
+    frameElement : Dom_html.element Js.t Js.opt Js.readonly_prop;
+    getSelection : Dom_html.selection Js.t Js.meth;
+    history : Dom_html.history Js.t Js.readonly_prop;
+    innerHeight : int Js.optdef Js.readonly_prop;
+    innerWidth : int Js.optdef Js.readonly_prop;
+    localStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    location : Dom_html.location Js.t Js.readonly_prop;
+    name : Js.js_string Js.t Js.prop;
+    navigator : Dom_html.navigator Js.t Js.readonly_prop;
+    onbeforeunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+                     Dom_html.event_listener Js.prop;
+    onblur : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    ondblclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondrag : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    ondragend : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ondragenter : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragleave : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragover : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondragstart : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondrop : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    onfocus : (Dom_html.window Js.t, Dom_html.event Js.t)
+              Dom_html.event_listener Js.prop;
+    onhashchange : (Dom_html.window Js.t, Dom_html.hashChangeEvent Js.t)
+                   Dom_html.event_listener Js.prop;
+    onkeydown : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onkeypress : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onkeyup : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    onload : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onmousedown : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmousemove : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseout : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onmouseover : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseup : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onoffline : (Dom_html.window Js.t, Dom_html.event Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ononline : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onorientationchange : (Dom_html.window Js.t, Dom_html.event Js.t)
+                          Dom_html.event_listener Js.prop;
+    onpopstate : (Dom_html.window Js.t, Dom_html.popStateEvent Js.t)
+                 Dom_html.event_listener Js.prop;
+    onresize : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    onscroll : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    open_ : Js.js_string Js.t ->
+            Js.js_string Js.t ->
+            Js.js_string Js.t Js.opt -> Dom_html.window Js.t Js.meth;
+    outerHeight : int Js.optdef Js.readonly_prop;
+    outerWidth : int Js.optdef Js.readonly_prop;
+    parent : Dom_html.window Js.t Js.readonly_prop; print : unit Js.meth;
+    prompt : Js.js_string Js.t ->
+             Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    requestAnimationFrame : (float -> unit) Js.callback ->
+                            Dom_html.animation_frame_request_id Js.meth;
+    screen : Dom_html.screen Js.t Js.readonly_prop;
+    scroll : int -> int -> unit Js.meth;
+    sessionStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    setInterval : (unit -> unit) Js.callback ->
+                  float -> Dom_html.interval_id Js.meth;
+    setTimeout : (unit -> unit) Js.callback ->
+                 float -> Dom_html.timeout_id Js.meth;
+    stop : unit Js.meth; top : Dom_html.window Js.t Js.readonly_prop;
+    undoManager : Dom_html.undoManager Js.t Js.readonly_prop > ->
+  < get : Dom_html.storage Js.t Js.optdef > Js.gen_prop
+)
+type(
+  < alert : Js.js_string Js.t -> unit Js.meth;
+    applicationCache : Dom_html.applicationCache Js.t Js.readonly_prop;
+    blur : unit Js.meth;
+    cancelAnimationFrame : Dom_html.animation_frame_request_id ->
+                           unit Js.meth;
+    clearInterval : Dom_html.interval_id -> unit Js.meth;
+    clearTimeout : Dom_html.timeout_id -> unit Js.meth; close : unit Js.meth;
+    closed : bool Js.t Js.readonly_prop;
+    confirm : Js.js_string Js.t -> bool Js.t Js.meth;
+    document : Dom_html.document Js.t Js.readonly_prop; focus : unit Js.meth;
+    frameElement : Dom_html.element Js.t Js.opt Js.readonly_prop;
+    getSelection : Dom_html.selection Js.t Js.meth;
+    history : Dom_html.history Js.t Js.readonly_prop;
+    innerHeight : int Js.optdef Js.readonly_prop;
+    innerWidth : int Js.optdef Js.readonly_prop;
+    localStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    location : Dom_html.location Js.t Js.readonly_prop;
+    name : Js.js_string Js.t Js.prop;
+    navigator : Dom_html.navigator Js.t Js.readonly_prop;
+    onbeforeunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+                     Dom_html.event_listener Js.prop;
+    onblur : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    ondblclick : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondrag : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    ondragend : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ondragenter : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragleave : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondragover : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    ondragstart : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    ondrop : (Dom_html.window Js.t, Dom_html.dragEvent Js.t)
+             Dom_html.event_listener Js.writeonly_prop;
+    onfocus : (Dom_html.window Js.t, Dom_html.event Js.t)
+              Dom_html.event_listener Js.prop;
+    onhashchange : (Dom_html.window Js.t, Dom_html.hashChangeEvent Js.t)
+                   Dom_html.event_listener Js.prop;
+    onkeydown : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onkeypress : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onkeyup : (Dom_html.window Js.t, Dom_html.keyboardEvent Js.t)
+              Dom_html.event_listener Js.writeonly_prop;
+    onload : (Dom_html.window Js.t, Dom_html.event Js.t)
+             Dom_html.event_listener Js.prop;
+    onmousedown : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmousemove : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseout : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                 Dom_html.event_listener Js.writeonly_prop;
+    onmouseover : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                  Dom_html.event_listener Js.writeonly_prop;
+    onmouseup : (Dom_html.window Js.t, Dom_html.mouseEvent Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    onoffline : (Dom_html.window Js.t, Dom_html.event Js.t)
+                Dom_html.event_listener Js.writeonly_prop;
+    ononline : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onorientationchange : (Dom_html.window Js.t, Dom_html.event Js.t)
+                          Dom_html.event_listener Js.prop;
+    onpopstate : (Dom_html.window Js.t, Dom_html.popStateEvent Js.t)
+                 Dom_html.event_listener Js.prop;
+    onresize : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    onscroll : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.writeonly_prop;
+    onunload : (Dom_html.window Js.t, Dom_html.event Js.t)
+               Dom_html.event_listener Js.prop;
+    open_ : Js.js_string Js.t ->
+            Js.js_string Js.t ->
+            Js.js_string Js.t Js.opt -> Dom_html.window Js.t Js.meth;
+    outerHeight : int Js.optdef Js.readonly_prop;
+    outerWidth : int Js.optdef Js.readonly_prop;
+    parent : Dom_html.window Js.t Js.readonly_prop; print : unit Js.meth;
+    prompt : Js.js_string Js.t ->
+             Js.js_string Js.t -> Js.js_string Js.t Js.opt Js.meth;
+    requestAnimationFrame : (float -> unit) Js.callback ->
+                            Dom_html.animation_frame_request_id Js.meth;
+    screen : Dom_html.screen Js.t Js.readonly_prop;
+    scroll : int -> int -> unit Js.meth;
+    sessionStorage : Dom_html.storage Js.t Js.optdef Js.readonly_prop;
+    setInterval : (unit -> unit) Js.callback ->
+                  float -> Dom_html.interval_id Js.meth;
+    setTimeout : (unit -> unit) Js.callback ->
+                 float -> Dom_html.timeout_id Js.meth;
+    stop : unit Js.meth; top : Dom_html.window Js.t Js.readonly_prop;
+    undoManager : Dom_html.undoManager Js.t Js.readonly_prop >
+  Js.t
+)
+type(
+  Dom_html.storage Js.t Js.optdef
+)
+ident(
+  def res "src/bootStorage.ml" 77 1671 1720 "src/bootStorage.ml" 77 1671 1720
+)
+type(
+  'a
+)
+type(
+  string
+)
+type(
+  Dom_html.window Js.t
+)
+ident(
+  int_ref jsoo_obj "src/bootStorage.ml" 77 1671 1689 "src/bootStorage.ml" 77 1671 1720
+)
+type(
+  Dom_html.window Js.t -> string -> 'a
+)
+ident(
+  ext_ref Js.Unsafe.get
+)
+type(
+  'a
+)
+ident(
+  def jsoo_res "src/bootStorage.ml" 77 1671 1689 "src/bootStorage.ml" 77 1671 1720
+)
+type(
+  Dom_html.window Js.t
+)
+ident(
+  def jsoo_obj "src/bootStorage.ml" 77 1671 1689 "src/bootStorage.ml" 77 1671 1720
+)
+"src/bootStorage.ml" 76 1649 1651 "src/bootStorage.ml" 78 1721 1727
+call(
+  stack
+)

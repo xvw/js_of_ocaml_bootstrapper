@@ -1,0 +1,40 @@
+### Starting build.
+# Target: src/bootstrapper.mli.depends, tags: { annot, bin_annot, debug, extension:mli, file:src/bootstrapper.mli, ocaml, ocamldep, pkg_camlp4, pkg_js_of_ocaml, pkg_js_of_ocaml.syntax, quiet, traverse }
+/home/nuki/.opam/4.02.1/bin/ocamlfind ocamldep -package camlp4 -package js_of_ocaml -syntax camlp4o -package js_of_ocaml.syntax -modules src/bootstrapper.mli > src/bootstrapper.mli.depends # cached
+# Target: src/bootstrapper.cmi, tags: { annot, bin_annot, byte, compile, debug, extension:mli, file:src/bootstrapper.mli, interf, ocaml, pkg_camlp4, pkg_js_of_ocaml, pkg_js_of_ocaml.syntax, quiet, traverse }
+/home/nuki/.opam/4.02.1/bin/ocamlfind ocamlc -c -g -annot -bin-annot -package camlp4 -package js_of_ocaml -syntax camlp4o -package js_of_ocaml.syntax -I src -o src/bootstrapper.cmi src/bootstrapper.mli # cached
+# Target: src/bootstrapper.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:src/bootstrapper.ml, ocaml, ocamldep, pkg_camlp4, pkg_js_of_ocaml, pkg_js_of_ocaml.syntax, quiet, traverse }
+/home/nuki/.opam/4.02.1/bin/ocamlfind ocamldep -package camlp4 -package js_of_ocaml -syntax camlp4o -package js_of_ocaml.syntax -modules src/bootstrapper.ml > src/bootstrapper.ml.depends # cached
+# Target: src/bootCanvas.mli.depends, tags: { annot, bin_annot, debug, extension:mli, file:src/bootCanvas.mli, ocaml, ocamldep, pkg_camlp4, pkg_js_of_ocaml, pkg_js_of_ocaml.syntax, quiet, traverse }
+/home/nuki/.opam/4.02.1/bin/ocamlfind ocamldep -package camlp4 -package js_of_ocaml -syntax camlp4o -package js_of_ocaml.syntax -modules src/bootCanvas.mli > src/bootCanvas.mli.depends # cached
+# Target: src/bootColor.mli.depends, tags: { annot, bin_annot, debug, extension:mli, file:src/bootColor.mli, ocaml, ocamldep, pkg_camlp4, pkg_js_of_ocaml, pkg_js_of_ocaml.syntax, quiet, traverse }
+/home/nuki/.opam/4.02.1/bin/ocamlfind ocamldep -package camlp4 -package js_of_ocaml -syntax camlp4o -package js_of_ocaml.syntax -modules src/bootColor.mli > src/bootColor.mli.depends # cached
+# Target: src/bootColor.cmi, tags: { annot, bin_annot, byte, compile, debug, extension:mli, file:src/bootColor.mli, interf, ocaml, pkg_camlp4, pkg_js_of_ocaml, pkg_js_of_ocaml.syntax, quiet, traverse }
+/home/nuki/.opam/4.02.1/bin/ocamlfind ocamlc -c -g -annot -bin-annot -package camlp4 -package js_of_ocaml -syntax camlp4o -package js_of_ocaml.syntax -I src -o src/bootColor.cmi src/bootColor.mli # cached
+# Target: src/bootCanvas.cmi, tags: { annot, bin_annot, byte, compile, debug, extension:mli, file:src/bootCanvas.mli, interf, ocaml, pkg_camlp4, pkg_js_of_ocaml, pkg_js_of_ocaml.syntax, quiet, traverse }
+/home/nuki/.opam/4.02.1/bin/ocamlfind ocamlc -c -g -annot -bin-annot -package camlp4 -package js_of_ocaml -syntax camlp4o -package js_of_ocaml.syntax -I src -o src/bootCanvas.cmi src/bootCanvas.mli # cached
+# Target: src/bootPervasives.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:src/bootPervasives.ml, ocaml, ocamldep, pkg_camlp4, pkg_js_of_ocaml, pkg_js_of_ocaml.syntax, quiet, traverse }
+/home/nuki/.opam/4.02.1/bin/ocamlfind ocamldep -package camlp4 -package js_of_ocaml -syntax camlp4o -package js_of_ocaml.syntax -modules src/bootPervasives.ml > src/bootPervasives.ml.depends # cached
+# Target: src/bootPervasives.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:src/bootPervasives.cmo, file:src/bootPervasives.ml, implem, ocaml, pkg_camlp4, pkg_js_of_ocaml, pkg_js_of_ocaml.syntax, quiet, traverse }
+/home/nuki/.opam/4.02.1/bin/ocamlfind ocamlc -c -g -annot -bin-annot -package camlp4 -package js_of_ocaml -syntax camlp4o -package js_of_ocaml.syntax -I src -o src/bootPervasives.cmo src/bootPervasives.ml # cached
+# Target: src/bootStorage.mli.depends, tags: { annot, bin_annot, debug, extension:mli, file:src/bootStorage.mli, ocaml, ocamldep, pkg_camlp4, pkg_js_of_ocaml, pkg_js_of_ocaml.syntax, quiet, traverse }
+/home/nuki/.opam/4.02.1/bin/ocamlfind ocamldep -package camlp4 -package js_of_ocaml -syntax camlp4o -package js_of_ocaml.syntax -modules src/bootStorage.mli > src/bootStorage.mli.depends # cached
+# Target: src/bootStorage.cmi, tags: { annot, bin_annot, byte, compile, debug, extension:mli, file:src/bootStorage.mli, interf, ocaml, pkg_camlp4, pkg_js_of_ocaml, pkg_js_of_ocaml.syntax, quiet, traverse }
+/home/nuki/.opam/4.02.1/bin/ocamlfind ocamlc -c -g -annot -bin-annot -package camlp4 -package js_of_ocaml -syntax camlp4o -package js_of_ocaml.syntax -I src -o src/bootStorage.cmi src/bootStorage.mli # cached
+# Target: src/bootstrapper.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:src/bootstrapper.cmo, file:src/bootstrapper.ml, implem, ocaml, pkg_camlp4, pkg_js_of_ocaml, pkg_js_of_ocaml.syntax, quiet, traverse }
+/home/nuki/.opam/4.02.1/bin/ocamlfind ocamlc -c -g -annot -bin-annot -package camlp4 -package js_of_ocaml -syntax camlp4o -package js_of_ocaml.syntax -I src -o src/bootstrapper.cmo src/bootstrapper.ml # cached
+# Target: src/bootColor.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:src/bootColor.ml, ocaml, ocamldep, pkg_camlp4, pkg_js_of_ocaml, pkg_js_of_ocaml.syntax, quiet, traverse }
+/home/nuki/.opam/4.02.1/bin/ocamlfind ocamldep -package camlp4 -package js_of_ocaml -syntax camlp4o -package js_of_ocaml.syntax -modules src/bootColor.ml > src/bootColor.ml.depends
+# Target: src/bootCanvas.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:src/bootCanvas.ml, ocaml, ocamldep, pkg_camlp4, pkg_js_of_ocaml, pkg_js_of_ocaml.syntax, quiet, traverse }
+/home/nuki/.opam/4.02.1/bin/ocamlfind ocamldep -package camlp4 -package js_of_ocaml -syntax camlp4o -package js_of_ocaml.syntax -modules src/bootCanvas.ml > src/bootCanvas.ml.depends
+# Target: src/bootStorage.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:src/bootStorage.ml, ocaml, ocamldep, pkg_camlp4, pkg_js_of_ocaml, pkg_js_of_ocaml.syntax, quiet, traverse }
+/home/nuki/.opam/4.02.1/bin/ocamlfind ocamldep -package camlp4 -package js_of_ocaml -syntax camlp4o -package js_of_ocaml.syntax -modules src/bootStorage.ml > src/bootStorage.ml.depends
+# Target: src/bootColor.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:src/bootColor.cmo, file:src/bootColor.ml, implem, ocaml, pkg_camlp4, pkg_js_of_ocaml, pkg_js_of_ocaml.syntax, quiet, traverse }
+/home/nuki/.opam/4.02.1/bin/ocamlfind ocamlc -c -g -annot -bin-annot -package camlp4 -package js_of_ocaml -syntax camlp4o -package js_of_ocaml.syntax -I src -o src/bootColor.cmo src/bootColor.ml
+# Target: src/bootCanvas.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:src/bootCanvas.cmo, file:src/bootCanvas.ml, implem, ocaml, pkg_camlp4, pkg_js_of_ocaml, pkg_js_of_ocaml.syntax, quiet, traverse }
+/home/nuki/.opam/4.02.1/bin/ocamlfind ocamlc -c -g -annot -bin-annot -package camlp4 -package js_of_ocaml -syntax camlp4o -package js_of_ocaml.syntax -I src -o src/bootCanvas.cmo src/bootCanvas.ml
++ /home/nuki/.opam/4.02.1/bin/ocamlfind ocamlc -c -g -annot -bin-annot -package camlp4 -package js_of_ocaml -syntax camlp4o -package js_of_ocaml.syntax -I src -o src/bootCanvas.cmo src/bootCanvas.ml
+File "src/bootCanvas.ml", line 334, characters 7-16:
+Error: Unbound module Get
+Command exited with code 2.
+# Compilation unsuccessful.
