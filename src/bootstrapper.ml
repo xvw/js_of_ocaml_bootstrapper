@@ -2,7 +2,6 @@
  * ~ provide a simple library for common uses   *)
 
 
-module Pervasives = Pervasives 
 module Option     = BootOption
 module Promise    = BootPromise
 module Event      = BootEvent
@@ -14,5 +13,5 @@ module Canvas     = BootCanvas
 module Storage    = BootStorage
 module Functor    = BootFunctor
   
-include Pervasives
+include BootPervasives
 include Functor
