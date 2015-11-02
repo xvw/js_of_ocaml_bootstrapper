@@ -40,7 +40,7 @@ val get_by_id_opt : string -> Dom_html.element Js.t option
 val find_node_opt : Dom_html.element Js.t -> string -> Dom_html.element Js.t option
 
 (** Retreive all Dom elements as a list *)
-val all_node : unit -> Dom_html.element Js.t list 
+val all_nodes : unit -> Dom_html.element Js.t list 
 
 (** {2 About attributes} *)
     

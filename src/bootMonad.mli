@@ -10,18 +10,18 @@ sig
       Returns a BASIC_INTERFACE
   *)
   module WithJoin (M : BootInterfaces.Monad.JOIN ) :
-    OmlInterfaces.Monad.BASIC_INTERFACE with type 'a t = 'a M.t
+    BootInterfaces.Monad.BASIC_INTERFACE with type 'a t = 'a M.t
 
   (** Creates the minimal context with bind.
       Returns a BASIC_INTERFACE
   *)
   module WithBind (M : BootInterfaces.Monad.BIND) :
-    OmlInterfaces.Monad.BASIC_INTERFACE with type 'a t = 'a M.t
+    BootInterfaces.Monad.BASIC_INTERFACE with type 'a t = 'a M.t
 
   (** Creates a complete context with a BASIC_INTERFACE 
   *)
   module Base (M : BootInterfaces.Monad.BASIC_INTERFACE) :
-    OmlInterfaces.Monad.INTERFACE with type 'a t = 'a M.t
+    BootInterfaces.Monad.INTERFACE with type 'a t = 'a M.t
 
   (** Creates a complete context with a BASIC_INTERFACE and a 
       PLUS interface

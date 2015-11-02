@@ -331,10 +331,10 @@ let image ?(id=None) ?(path=None) ~onload () =
   let img =
     Dom_html.createImg Dom_html.document
     |> Dom_html.CoerceTo.img
-    |> Get.unopt
+    |> BootHtml.unopt
   in
-  let _ = Option.unit_map (fun x -> img ## id <- (_s x)) id in
-  let _ = Option.unit_map (fun x -> img ## src <- (_s x)) path in
+  let _ = BootOption.unit_map (fun x -> img ## id <- (_s x)) id in
+  let _ = BootOption.unit_map (fun x -> img ## src <- (_s x)) path in
   let _ =
     if Js.to_bool (img ## complete)
     then onload(img)  
@@ -365,7 +365,7 @@ let font_to_s (size, fontname) =
 
 let fill_text ?(font = None) ?(max_width = None) str (x, y) =
   wrap_2d (fun canvas ctx ->
-      let _ = Option.unit_map (fun f -> ctx ## font <- font_to_s f) font in
+      let _ = BootOption.unit_map (fun f -> ctx ## font <- font_to_s f) font in
       match max_width with
       | Some mw -> ctx ## fillText_withWidth(_s str, x, y, mw)
       | _ -> ctx ## fillText(_s str, x, y) 
@@ -373,7 +373,7 @@ let fill_text ?(font = None) ?(max_width = None) str (x, y) =
 
 let stroke_text ?(font = None) ?(max_width = None) str (x, y) =
   wrap_2d (fun canvas ctx ->
-      let _ = Option.unit_map (fun f -> ctx ## font <- font_to_s f) font in
+      let _ = BootOption.unit_map (fun f -> ctx ## font <- font_to_s f) font in
       match max_width with
       | Some mw -> ctx ## strokeText_withWidth(_s str, x, y, mw)
       | _ -> ctx ## strokeText(_s str, x, y) 
@@ -384,6 +384,6 @@ let draw_text ?(font = None) ?(max_width = None) fc sc str (x, y) =
   wrap_2d (fun canvas ctx ->
       let _ = Internal.fill_stroke ctx fc sc in
       let _ =
-        Option.unit_map (fun _ -> fill_text ~font ~max_width str (x, y)) fc
-      in Option.unit_map (fun _ -> stroke_text ~font ~max_width str (x, y)) sc
+        BootOption.unit_map (fun _ -> fill_text ~font ~max_width str (x, y)) fc
+      in BootOption.unit_map (fun _ -> stroke_text ~font ~max_width str (x, y)) sc
     )

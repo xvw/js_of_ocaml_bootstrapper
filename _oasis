@@ -22,7 +22,7 @@ Library "js_of_ocaml_bootstrapper"
     BootMonad,
     BootOption,
     BootPromise,
-    BootEvents,
+    BootEvent,
     BootInterval,
     BootHtml,
     BootAjax,

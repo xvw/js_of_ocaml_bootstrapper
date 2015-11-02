@@ -1,3 +1,5 @@
+open BootPervasives
+
 let wakeup w x _ = let _ = Lwt.wakeup w () in x
 let wrap f = (fun x -> Lwt.return (f x))
 let run promise f elt = promise elt >>= (wrap f)

@@ -58,7 +58,7 @@ let remove_classes elt classes = List.iter (remove_class elt) classes
 
 let element ?(id = None) ?(classes = []) ?(into = None) f =
   let elt = f Dom_html.document in
-  let _   = Class.add_classes elt classes in
+  let _   = add_classes elt classes in
   let _   = BootOption.unit_map (fun x -> elt ## id <- (_s x)) id in
   let _   = BootOption.unit_map (fun x -> Dom.appendChild x elt) into
   in elt
@@ -76,7 +76,7 @@ let input_from_element x =
 let input_get_by_id_opt x =
   match get_by_id_opt x with
   | None -> None
-  | Some x -> Some (from_element x)
+  | Some x -> Some (input_from_element x)
                 
 let input_get_by_id x =
   get_by_id x
@@ -98,15 +98,15 @@ let input_create ?(id = None) ?(classes = []) ?(into = None) _type value =
 
 
 let load_library lnk = 
-  let h = Get.find Dom_html.document "head" in
+  let h = find_node Dom_html.document "head" in
   match lnk with 
   | `Css link ->
-    let l = Create.element ~into:(Some h) Dom_html.createLink in
-    let _ = Attribute.set l "rel" "stylesheet" in
-    let _ = Attribute.set l "type" "text/css" in
-    Attribute.set l "href" link 
+    let l = element ~into:(Some h) Dom_html.createLink in
+    let _ = set_attribute l "rel" "stylesheet" in
+    let _ = set_attribute l "type" "text/css" in
+    set_attribute l "href" link 
   | `Js link ->
-    let l = Create.element ~into:(Some h) Dom_html.createScript in
-    let _ = Attribute.set l "type" "text/javascript" in
-    Attribute.set l "src" link
+    let l = element ~into:(Some h) Dom_html.createScript in
+    let _ = set_attribute l "type" "text/javascript" in
+    set_attribute l "src" link
 
