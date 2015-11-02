@@ -1,3 +1,5 @@
+open BootPervasives
+
 let set ?(delay=0.1) f =
   BootEvent.delayed_loop ~delay f
     

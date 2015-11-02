@@ -13,96 +13,6 @@ module Color    = BootColor
 module Canvas   = BootCanvas
 module Storage  = BootStorage
 
-module Get =
-struct
-
-  let fail () = raise Element_not_found
-  let unopt x = Js.Opt.get x fail
-
-  let byId id =
-    Dom_html.document ## getElementById (_s id)
-    |> unopt
-
-  let find container selector =
-    container ## querySelector (_s selector)
-    |> unopt
-
-  let select container selector =
-    container ## querySelectorAll (_s selector)
-    |> Dom.list_of_nodeList
-
-  let byId_opt id = BootOption.safe byId id
-  let find_opt container selector =
-    BootOption.safe (fun x -> find x selector) container
-
-  let all () =
-    Dom_html.document ## getElementsByTagName (_s "*")
-    |> Dom.list_of_nodeList
-    
-end
-
-module Attribute =
-struct
-
-  let get elt attr =
-    let s_attr = _s attr in
-    if (elt ## hasAttribute (s_attr)) == Js._true
-    then
-      Some (
-        elt ## getAttribute (s_attr)
-        |> Get.unopt
-        |> s_
-      )
-    else None
-
-
-  let set elt attr value =
-    let s_attr = _s attr
-    and s_value = _s value in
-    elt ## setAttribute(s_attr, s_value) 
-
-  module Data =
-  struct
-    
-    let get elt data =
-      let attr = "data-"^data in
-      get elt attr
-
-    let set elt data value =
-      let attr = "data-"^data in
-      set elt attr value
-        
-  end
-    
-end
-
-module Class =
-struct
-
-  let add_one elt klass = elt ## classList ## add (_s klass)
-  let add elt classes = List.iter (add_one elt) classes
-  let remove_one elt klass =  elt ## classList ## remove (_s klass)
-  let remove elt classes = List.iter (remove_one elt) classes
-  
-end
-
-module Create =
-struct
-
-  let element ?(id = None) ?(classes = []) ?(into = None) f =
-    let elt = f Dom_html.document in
-    let _   = Class.add elt classes in
-    let _   = BootOption.unit_map (fun x -> elt ## id <- (_s x)) id in
-    let _   = BootOption.unit_map (fun x -> Dom.appendChild x elt) into
-    in elt
-
-  let text ?(into = None) value =
-    let elt = Dom_html.document ## createTextNode (_s value) in
-    let _   = BootOption.unit_map (fun x -> Dom.appendChild x elt) into
-    in elt
-  
-end
-
 
 let load_library lnk = 
   let h = Get.find Dom_html.document "head" in
@@ -116,40 +26,6 @@ let load_library lnk =
     let l = Create.element ~into:(Some h) Dom_html.createScript in
     let _ = Attribute.set l "type" "text/javascript" in
     Attribute.set l "src" link
-
-
-
-module Input =
-struct
-
-  let from_element x =
-    Dom_html.CoerceTo.input x
-    |> Get.unopt
-
-  let getById_opt x =
-    match Get.byId_opt x with
-    | None -> None
-    | Some x -> Some (from_element x)
-  
-  let getById x =
-    Get.byId x
-    |> from_element
-
-  let valueOf x =
-    (from_element x) ## value
-    |> s_
-
-  let isChecked x =
-    (from_element x) ## checked
-    |> Js.to_bool
-
-  let create ?(id = None) ?(classes = []) ?(into = None) _type value =
-    let f   = Dom_html.createInput ~_type:(_s _type) in
-    let elt = Create.element ~id ~classes ~into f in
-    let _   = elt ## value <- (_s value)
-    in elt
-  
-end
 
 module Ajax = struct
 
