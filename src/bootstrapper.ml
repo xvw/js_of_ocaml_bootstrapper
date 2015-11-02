@@ -2,32 +2,17 @@
  * ~ provide a simple library for common uses   *)
 
 include BootPervasives
-module Option  = BootOption
-module Promise = BootPromise
-module Color   = BootColor
-module Canvas  = BootCanvas
-module Storage = BootStorage
+    
+module Option   = BootOption
+module Promise  = BootPromise
+module Event    = BootEvent
+module Interval = BootInterval
+module Html     = BootHtml
+module Ajax     = BootAjax
+module Color    = BootColor
+module Canvas   = BootCanvas
+module Storage  = BootStorage
 
-
-module Event =
-struct
-
-  include Lwt_js_events
-  let bind = async_loop
-  let (>-) elt (event, f) =
-    let _ =
-      bind event elt
-        (fun a b ->
-           let _ = f a b in
-           Lwt.return_unit
-        ) in elt
-
-  let rec delayed_loop ?(delay=1.0) f =
-    let _ = f () in
-    Lwt_js.sleep delay
-    >>= (fun _ -> delayed_loop ~delay f)
-        
-end
 
 module Interval =
 struct
