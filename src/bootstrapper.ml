@@ -2,61 +2,12 @@
  * ~ provide a simple library for common uses   *)
 
 include BootPervasives
+module Option  = BootOption
+module Promise = BootPromise
 module Color   = BootColor
 module Canvas  = BootCanvas
 module Storage = BootStorage
 
-module Option =
-struct
-  
-  let safe f x = try Some (f x) with _ -> None
-    
-  let unit_map f = function
-    | Some e -> f e
-    | None -> ()
-      
-  let some x = Some x
-  let none = None
-  
-  let default value = function
-    | None -> value
-    | Some x -> x
-      
-  let map f = function
-    | None -> None
-    | Some x -> Some (f x)
-                  
-  let apply = function
-    | None -> (fun x -> x)
-    | Some f -> f
-      
-  let is_some = function
-    | Some _ -> true
-    | _ -> false
-      
-  let is_none = function
-    | None -> true
-    | _ -> false
-      
-end
-
-module Promise =
-struct
-
-  let wakeup w x _ = let _ = Lwt.wakeup w () in x
-  let wrap f = (fun x -> Lwt.return (f x))
-  let run promise f elt = promise elt >>= (wrap f)
-
-  let raw_onload elt () =
-    let thread, wakener = Lwt.wait () in
-    let _ = elt ## onload <-
-        Dom.handler (wakeup wakener Js._true)
-    in thread
-
-  let dom_onload () = raw_onload (Dom_html.window) ()
-  let img_onload i  = raw_onload i ()
-     
-end
 
 module Event =
 struct
@@ -115,9 +66,9 @@ struct
     container ## querySelectorAll (_s selector)
     |> Dom.list_of_nodeList
 
-  let byId_opt id = Option.safe byId id
+  let byId_opt id = BootOption.safe byId id
   let find_opt container selector =
-    Option.safe (fun x -> find x selector) container
+    BootOption.safe (fun x -> find x selector) container
 
   let all () =
     Dom_html.document ## getElementsByTagName (_s "*")
@@ -176,13 +127,13 @@ struct
   let element ?(id = None) ?(classes = []) ?(into = None) f =
     let elt = f Dom_html.document in
     let _   = Class.add elt classes in
-    let _   = Option.unit_map (fun x -> elt ## id <- (_s x)) id in
-    let _   = Option.unit_map (fun x -> Dom.appendChild x elt) into
+    let _   = BootOption.unit_map (fun x -> elt ## id <- (_s x)) id in
+    let _   = BootOption.unit_map (fun x -> Dom.appendChild x elt) into
     in elt
 
   let text ?(into = None) value =
     let elt = Dom_html.document ## createTextNode (_s value) in
-    let _   = Option.unit_map (fun x -> Dom.appendChild x elt) into
+    let _   = BootOption.unit_map (fun x -> Dom.appendChild x elt) into
     in elt
   
 end

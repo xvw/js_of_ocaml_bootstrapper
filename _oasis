@@ -18,6 +18,18 @@ Library "js_of_ocaml_bootstrapper"
   Modules:
     Bootstrapper,
     BootPervasives,
+    BootInterfaces,
+    BootMonad,
+    BootOption,
+    BootPromise,
+    BootEvents,
+    BootInterval,
+    BootGet,
+    BootAttributes,
+    BootCSSClass,
+    BootHtml,
+    BootInput,
+    BootAjax,
     BootColor,
     BootCanvas,
     BootStorage
