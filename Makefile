@@ -1,41 +1,14 @@
-# OASIS_START
-# DO NOT EDIT (digest: a3c674b4239234cbbe53afe090018954)
+SRC    = src
+BYTES  = bytes
+JS     = js
 
-SETUP = ocaml setup.ml
+OCAMLFIND = ocamlfind ocamlc
+PACKAGES  = -package js_of_ocaml -package js_of_ocaml.syntax -package js_of_ocaml_bootstrapper
+SYNTAX    = -syntax camlp4o
+COMPILER  = $(OCAMLFIND) $(PACKAGES) $(SYNTAX) -linkpkg -I $(SRC)
 
-build: setup.data
-	$(SETUP) -build $(BUILDFLAGS)
-
-doc: setup.data build
-	$(SETUP) -doc $(DOCFLAGS)
-
-test: setup.data build
-	$(SETUP) -test $(TESTFLAGS)
-
-all:
-	$(SETUP) -all $(ALLFLAGS)
-
-install: setup.data
-	$(SETUP) -install $(INSTALLFLAGS)
-
-uninstall: setup.data
-	$(SETUP) -uninstall $(UNINSTALLFLAGS)
-
-reinstall: setup.data
-	$(SETUP) -reinstall $(REINSTALLFLAGS)
-
-clean:
-	$(SETUP) -clean $(CLEANFLAGS)
-
-distclean:
-	$(SETUP) -distclean $(DISTCLEANFLAGS)
-
-setup.data:
-	$(SETUP) -configure $(CONFIGUREFLAGS)
-
-configure:
-	$(SETUP) -configure $(CONFIGUREFLAGS)
-
-.PHONY: build doc test all install uninstall reinstall clean distclean configure
-
-# OASIS_STOP
+custom.js:
+	mkdir -p $(BYTES)
+	mkdir -p $(JS)
+	$(COMPILER) -o $(BYTES)/custom.byte $(SRC)/custom.ml
+	js_of_ocaml -o $(JS)/$(@) $(BYTES)/custom.byte
