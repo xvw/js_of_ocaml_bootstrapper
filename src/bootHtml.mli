@@ -96,6 +96,27 @@ val element :
 (** Create a simple text node (maybe into another element *)
 val text : ?into:((Dom_html.element Js.t) option) -> string -> Dom.text Js.t
 
+(** {2 Dom manipulation} *)
+
+(** [prepend elt parent] add elt on the begining of parent and return elt*)
+val prepend : Dom_html.element Js.t -> Dom_html.element Js.t -> Dom_html.element Js.t
+
+
+(** [append parent elt] add elt in parent and return parent*)
+val append : Dom_html.element Js.t -> Dom_html.element Js.t -> Dom_html.element Js.t
+
+(** [elt <|> parent] same as [prepend elt parent] with no return*)
+val ( <|> ) : Dom_html.element Js.t -> Dom_html.element Js.t -> unit
+
+(** [parent <+> elt] same as [prepend elt parent] with no return*)
+val ( <+> ) : Dom_html.element Js.t -> Dom_html.element Js.t -> unit
+
+(** [iter_children f node] apply f on each child of de gived node *)
+val iter_children : (Dom.node Js.t -> unit) -> Dom_html.element Js.t -> unit
+
+(** remove all children of the gived element *)
+val remove_children : Dom_html.element Js.t -> unit
+
 (** {2 Inputs} *)
     
 (** Convert an abstract Dom element to a concrete Input *)

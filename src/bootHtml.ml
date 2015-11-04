@@ -68,6 +68,37 @@ let text ?(into = None) value =
   let _   = BootOption.unit_map (fun x -> Dom.appendChild x elt) into
   in elt
 
+let prepend elt parent =
+  let _ = Dom.insertBefore parent elt (parent ## firstChild) in
+  elt 
+
+let append parent elt =
+  let _ = Dom.appendChild parent elt  in
+  parent
+
+let ( <|> ) e p =
+  (prepend e p)
+  |> ignore
+  
+let ( <+> ) e p =
+  (append e p)
+  |> ignore
+
+let iter_children f node =
+  let nodeL = node ## childNodes in
+  let len = nodeL ## length in
+  for i = 0 to (pred len) do
+    Js.Opt.iter (nodeL ## item(i)) f
+  done
+
+let remove_children fnode =
+  let rec iter node =
+    match Js.Opt.to_option (node ## firstChild) with
+    | None -> ()
+    | Some child ->
+      let _ = node ## removeChild(child) in iter node
+  in iter fnode
+  
 
 let input_from_element x =
   Dom_html.CoerceTo.input x
