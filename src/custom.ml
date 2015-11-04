@@ -1,4 +1,12 @@
+(* A Simple todo-list using local storage *)
+
 open Bootstrapper
+
+type task = {
+  title : int
+; label : string
+; state : bool
+} deriving (Yojson)
 
 module Sample =
   Application (

@@ -3,7 +3,14 @@ BYTES  = bytes
 JS     = js
 
 OCAMLFIND = ocamlfind ocamlc
-PACKAGES  = -package js_of_ocaml -package js_of_ocaml.syntax -package js_of_ocaml_bootstrapper
+
+PACKAGES  = -package js_of_ocaml 
+PACKAGES += -package js_of_ocaml.syntax
+PACKAGES += -package js_of_ocaml_bootstrapper
+PACKAGES += -package deriving
+PACKAGES += -package deriving-yojson.syntax
+PACKAGES += -package deriving-yojson
+
 SYNTAX    = -syntax camlp4o
 COMPILER  = $(OCAMLFIND) $(PACKAGES) $(SYNTAX) -linkpkg -I $(SRC)
 
