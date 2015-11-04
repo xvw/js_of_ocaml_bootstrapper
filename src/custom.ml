@@ -51,7 +51,6 @@ let record_task t l =
   in ()
 
 let rewrite_ul ul =
-  (** to continue *)
   let childs = ul 
     
 let bind_event e t l u  =
