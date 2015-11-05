@@ -1,0 +1,36 @@
+body {
+    font-family: sans-serif;
+}
+
+input {
+    margin: 3px;
+}
+
+ul {
+    padding: 0;  
+}
+li {
+    list-style-type: none;
+    padding: 5px;
+    background-color: #fbfbfb;
+    margin: 4px;
+    display: flex;
+}
+
+.a_title {
+    font-weight: 900;
+    flex: 1;
+}
+
+.a_label {
+    flex: 1;
+}
+
+.finished {
+    background-color : #D9FFA8;
+    color : #459436;
+}
+
+.finished > span {
+    text-decoration: line-through ;
+}
