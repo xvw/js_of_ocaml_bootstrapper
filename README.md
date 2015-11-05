@@ -1,5 +1,6 @@
 # A Simple todo list using local storage
-[http://xvw.github.io/js_of_ocaml_bootstrapper/todolist/](Example)
+
+[Demo](http://xvw.github.io/js_of_ocaml_bootstrapper/todolist)
 
 ## Dependancies
 
