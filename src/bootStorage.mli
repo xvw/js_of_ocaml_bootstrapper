@@ -36,6 +36,19 @@ sig
   (** [Session.to_hashtbl ()] retreive all stored data as an Hashtbl *) 
   val to_hashtbl : unit -> (string, string) Hashtbl.t
 
+  (** [Session.map (fun key value -> ...))] map the function on each block *)
+  val map : (string -> string -> string) -> unit
+
+  (** [Session.fold (fun acc key value -> ...) default] fold on storage *)
+  val fold : ('a -> string -> string -> 'a) -> 'a -> 'a
+
+  (** [Session.filter (fun key value -> a_predicat)] use a predicat to retreive an according hashtable *)
+  val filter : (string -> string -> bool) -> (string, string) Hashtbl.t
+
+  (** [Session.iter (fun key value -> ... )] apply f on each cell *)
+  val iter : (string -> string -> unit) -> unit
+    
+
 end
 
 
@@ -61,7 +74,20 @@ sig
   (** [Local.length ()] give the total of stored object *) 
   val length : unit -> int
 
-  (** [Session.to_hashtbl ()] retreive all stored data as an Hashtbl *) 
+  (** [Local.to_hashtbl ()] retreive all stored data as an Hashtbl *) 
   val to_hashtbl : unit -> (string, string) Hashtbl.t
+
+  (** [Local.map (fun key value -> ...))] map the function on each block *)
+  val map : (string -> string -> string) -> unit
+
+  (** [Local.fold (fun acc key value -> ...) default] fold on storage *)
+  val fold : ('a -> string -> string -> 'a) -> 'a -> 'a
+
+  (** [Local.filter (fun key value -> a_predicat)] use a predicat to retreive an according hashtable *)
+  val filter : (string -> string -> bool) -> (string, string) Hashtbl.t
+
+  (** [Local.iter (fun key value -> ... )] apply f on each cell *)
+  val iter : (string -> string -> unit) -> unit
+    
 
 end
