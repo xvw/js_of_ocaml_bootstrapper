@@ -24,6 +24,7 @@ Library "js_of_ocaml_bootstrapper"
     BootPromise,
     BootEvent,
     BootInterval,
+    BootDevices,
     BootHtml,
     BootAjax,
     BootColor,

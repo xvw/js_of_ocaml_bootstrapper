@@ -5,6 +5,7 @@
 module Option     = BootOption
 module Promise    = BootPromise
 module Event      = BootEvent
+module Devices    = BootDevices
 module Interval   = BootInterval
 module Html       = BootHtml
 module Ajax       = BootAjax
