@@ -1,3 +1,5 @@
+> This project is completely rewritted 
+
 # Js_of_ocaml bootstrapper
 > A simple small library for MVP in OCaml and JavaScript
 
